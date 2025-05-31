@@ -1,4 +1,6 @@
 // icon-color: brown; icon-glyph: calendar-check;
+// Variables used by Scriptable.
+// These must be at the very top of the file. Do not edit.
 
 // === CONFIG ===
 const SHEET_API_URL = ""; // YOUR API URL here

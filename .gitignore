@@ -5,3 +5,6 @@ echo "*.pyc" >> .gitignore
 echo "*.class" >> .gitignore
 echo "*.log" >> .gitignore
 echo "Thumbs.db" >> .gitignore
+# Local config file with private data
+**/config.js
+

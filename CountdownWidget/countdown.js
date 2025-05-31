@@ -12,7 +12,7 @@ const titleSuffixes = {
   "🎂": "'s Birthday",
   "🥂": "'s Anniversary",
   "🗓": "", // relationships
-  "🔱": "",
+  "🔱": "", // Fetivals, etc
   "default": ""
 };
 

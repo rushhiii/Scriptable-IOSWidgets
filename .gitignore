@@ -1,0 +1,7 @@
+# echo ".DS_Store" >> .gitignore
+echo ".vscode/" >> .gitignore
+echo "node_modules/" >> .gitignore
+echo "*.pyc" >> .gitignore
+echo "*.class" >> .gitignore
+echo "*.log" >> .gitignore
+echo "Thumbs.db" >> .gitignore

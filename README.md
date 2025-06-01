@@ -1,104 +1,108 @@
-<!-- <h1 align="center"> Hi, welcome! </h1> -->
-<h1>👋 I'm Rushi Patel </h1>
-<!-- <img align="right" src="https://media.giphy.com/media/RbDKaczqWovIugyJmW/giphy.gif"
-width="250"/>
--->
+# Scriptable - scripts and widgets for iOS 
+Collection of widgets and scripts made using scriptable app for iOS
 
-- 🎓 I am a 2nd year Computer Science Student at Toronto Metropolitan
-University.
-- ⚡ I love working on automation and building new projects.
-- 🛠️ Skilled in working with **JavaScript, Python, and Google Sheets API**.
-- 💻 Exploring data processing, front-end development, and backend workflows.
-- 📈 Always open to learning and improving!
+![Scriptable App](./src/badges/scriptableBadge.svg) &nbsp; ![iOS](./src/badges/iOS-badge.svg)
+<!-- <img alt="Scriptable widgets" align="center" src="https://github.com/dharmikumbhani/scriptable/blob/main/images/Main%20Mockup.png" /> -->
+<img alt="Scriptable widgets" align="center" src="images/Main Mockup.png" />
+ <!-- [![twitter](https://awesome.re/badge-flat.svg)](https://awesome.re) -->
 
-![](https://komarev.com/ghpvc/?username=rushhiii&color=green)
-<a href="https://github.com/RishikaGhosh?tab=followers"><img
-        src="https://img.shields.io/github/followers/rushhiii?label=Followers&style=social" alt="GitHub Badge"></a>
+Scriptable is an app that lets you add cool, lightweight widgets as well as automation to your apple devices.
 
-<h2> Languages, Tools and Technologies </h2>
+<br/>
 
-<!-- <h3> Front-end and Automation </h3> -->
-<p align="center" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
-    <img src="https://img.shields.io/static/v1?style=for-the-badge&message=HTML5&color=E34F26&logo=HTML5&logoColor=FFFFFF&label="
-        alt="HTML5" />
-    <img src="https://img.shields.io/static/v1?style=for-the-badge&message=CSS3&color=1572B6&logo=CSS3&logoColor=FFFFFF&label="
-        alt="CSS3" />
-    <img src="https://img.shields.io/static/v1?style=for-the-badge&message=JavaScript&color=F7DF1E&logo=JavaScript&logoColor=000000&label="
-        alt="JavaScript" />
-    <img src="https://img.shields.io/static/v1?style=for-the-badge&message=Python&color=3776AB&logo=Python&logoColor=FFFFFF&label="
-        alt="Python" />
-    <img src="https://img.shields.io/static/v1?style=for-the-badge&message=Scriptable&color=000000&logo=Scriptable&logoColor=FFFFFF&label="
-        alt="Scriptable" />
-    <img src="https://img.shields.io/static/v1?style=for-the-badge&message=Google+Sheets+API&color=34A853&logo=Google+Sheets&logoColor=FFFFFF&label="
-        alt="Google Sheets API" />
-    <img src="https://img.shields.io/static/v1?style=for-the-badge&message=Node.js&color=339933&logo=Node.js&logoColor=FFFFFF&label="
-        alt="Node.js" />
-</p>
+## Table of Contents
+- [Scriptable - scripts and widgets for iOS](#scriptable---scripts-and-widgets-for-ios)
+  - [Table of Contents](#table-of-contents)
+  - [❏ List of widgets](#-list-of-widgets)
+    - [Notion Integrations](#notion-integrations)
+    - [Covid Tracker India](#covid-tracker-india)
+    - [Covid Tracker India v2](#covid-tracker-india-v2)
+    - [Insulter](#insulter)
+    - [Periodic Table](#periodic-table)
+    - [Quotes](#quotes)
+    - [Random Number Fact](#random-number-fact)
+  - [📖 How to use scriptable widgets?](#-how-to-use-scriptable-widgets)
+  - [✍️ Feedback](#️-feedback)
 
-<!-- <h3> APIs and Data </h3>
+<br/>
 
-<p align="center" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
-    <img src="https://img.shields.io/static/v1?style=for-the-badge&message=Google+Sheets+API&color=34A853&logo=Google+Sheets&logoColor=FFFFFF&label="
-        alt="Google Sheets API" />
-    <img src="https://img.shields.io/static/v1?style=for-the-badge&message=Node.js&color=339933&logo=Node.js&logoColor=FFFFFF&label="
-        alt="Node.js" />
-</p> -->
+## ❏ List of widgets
+### [Notion Integrations](https://github.com/dharmikumbhani/scriptable/tree/main/Notion%20Integrations)
+![Notion x Scriptable](images/notionIntegrations/NotionxScriptable.png) 
 
-<h2> My GitHub Stats </h2>
 
-<p width="100%" align="center" style="display: flex;justify-content: center;">
-    <!-- <p style="display: flex;justify-content: center;flex-wrap: wrap;"> -->
-    <!-- <p align="center"> -->
-    <!-- Original size: &&card_height:195px&&card_width:467px
-     &&card_height:171.82&&card_width:411.5  
-     height="171.82px" width="411.5px"
-    330.32px 137.93px 
-    -->
-    <img width="49.5%" height="171.82px"
-        src="https://github-readme-stats.vercel.app/api?username=rushhiii&theme=dark&show_icons=true&hide_border=true&count_private=true&&card_height:171.82px&&card_width:411.5px"
-        alt="rushhiii's Stats" /> <img width="49.5%" height="171.82px"
-        src="https://github-readme-streak-stats.herokuapp.com/?user=rushhiii&theme=dark&hide_border=true&&card_height:171.82px&&card_width:411.5px"
-        alt="rushhiii's Streak" />
-    <!-- <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rushhiii&theme=dark&show_icons=true&hide_border=true&layout=compact&langs_count=8"
-        alt="rushhiii's Top Languages" /> -->
-</p>
+<!-- ![iOS widget](./src/badges/large-widget-badge.svg) -->
+Scriptable widgets made using the Notion API.
 
-<!-- to modify the stats cards -->
-<!-- <a href="https://github.com/rushhiii/github-readme-stats">
-  <img height=200 align="center" src="https://github-readme-stats.vercel.app/api?username=rushhiii" />
-</a>
-<a href="https://github.com/rushhiii/convoychat">
-  <img height=200 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=rushhiii&layout=compact&langs_count=8&card_width=320" />
-</a> -->
+⚠️ Due to recent [closure](https://blog.covid19india.org/2021/08/07/end/) of the covid tracker API, the following widgets might not work!
+### [Covid Tracker India](https://github.com/dharmikumbhani/scriptable/tree/main/Covid%20Tracker%20-%20India)
+![Covid Tracker India Widget](./src/covidTrackerIndia/Covid-tracker-display-image.png) 
 
-<h2> Connect with Me </h2>
 
-<p align="center" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
-    <a align="center" href="https://github.com/rushhiii" target="_blank">
-        <img align="center"
-            src="https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white"
-            alt="GitHub" />
-    </a>
-    <a align="center" href="mailto:rushiofficial1205@gmail.com" target="_blank">
-        <img align="center"
-            src="https://img.shields.io/badge/gmail-%23D14836.svg?&style=for-the-badge&logo=gmail&logoColor=white"
-            alt="Gmail" />
-    </a>
-    <a align="center" href="https://linkedin.com/in/YourLinkedIn" target="_blank">
-        <img align="center"
-            src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"
-            alt="LinkedIn" />
-    </a>
-    <a align="center" href="https://www.instagram.com/YourInstagram" target="_blank">
-        <img align="center"
-            src="https://img.shields.io/badge/instagram-%23E4405F.svg?&style=for-the-badge&logo=instagram&logoColor=white"
-            alt="Instagram" />
-    </a><br>
+![iOS widget](./src/badges/small-widget-badge.svg)
 
-</p>
+Shows the latest number of newly confirmed cases and no of revcovered patients from any state in India.
 
-<!-- border-bottom:1px solid var(--borderColor-muted, var(--color-border-muted)); -->
+### [Covid Tracker India v2](https://github.com/dharmikumbhani/scriptable/tree/main/Covid%20Tracker%20v2%20-%20India)
+![Covid Tracker India Widget](./src/covidTrackerIndiaV2/CovidTrackerIndia-V2-display.png)
 
-<p align="center" style="border-top: 2px solid #3d444db3;margin-top:100px;">
-    💬 Let’s collaborate and build something amazing together!
-</p>
+![iOS widget](./src/badges/small-widget-badge.svg)
+
+Displays the latest number of cofirmed cases for any state in India along with a graph depciting the trend for the number of cases for the last 7 days.
+
+### [Insulter](https://github.com/dharmikumbhani/scriptable/tree/main/Insulter)
+![Evil Insults](./src/insulter/InsulterDisplay.png)
+
+![iOS widget](./src/badges/medium-widget-badge.svg)
+
+Petty self explanatory - Gives you a well deserved insult.
+
+### [Periodic Table](https://github.com/dharmikumbhani/scriptable/tree/main/Periodic%20Table)
+![Periodic Table Flashcard](./src/periodicTable/PeriodicTableDisplay.png)
+
+![iOS widget](./src/badges/large-widget-badge.svg)
+
+Get details about an element from the periodic table
+
+### [Quotes](https://github.com/dharmikumbhani/scriptable/tree/main/Quotes)
+![Quotes Widget](./src/quotes/QuotesDisplay.png) 
+
+![iOS widget](./src/badges/medium-widget-badge.svg)
+
+Shows a random quote from famous people like Alber Einstein, John Wolfgang von Goethe 
+
+### [Random Number Fact](https://github.com/dharmikumbhani/scriptable/tree/main/Random%20Number%20Fact)
+![Random Number Fact Widget](./src/RandomNumberFact/RandomNumberFactDisplay.png) 
+
+![iOS widget](./src/badges/medium-widget-badge.svg)
+
+Well gives you a rather intresting fact adout a randomly generated number.
+
+<br/>
+
+## 📖 How to use scriptable widgets?
+1. Download the [scriptable app](https://apps.apple.com/in/app/scriptable/id1405459188).
+2. Check if the scriptable folder is created  have created a folder having the name "scriptable" in your iCloud drive.
+3. Download the .js script of the respective widget and add it to that scriptable folder.
+4. Long Press anywhere on screen, click on "+" icon, select scriptable app and click on add widget with the size depending on the widget you choose.
+5. "**edit widget ⓘ**" by long pressing it to change the following configurations:
+    | Options        | Defaults |  Change to |      
+    | ------------- |:------------- |:-------------|
+    | Script     | Choose | Select widget |
+    | While Interacting (optional)  | Open App | Run Script |
+    | Parameters | Text | Configurable options, depending on widgets  |
+6. More info and configurable options (if any) are availble in the respective folders of widgets.
+
+<br/>
+
+## ✍️ Feedback
+If you have any feature/widget request or feedback on this feel free to DM me on [Twitter](https://twitter.com/DharmiKumbhani) or mail me at <dharmikumbhani201@gmail.com>
+widgets that can help us passively learn things should not be just limited to facts; but to various other domains as well, if you have any such idea in mind, feel free to reach out to me! 
+
+<br/>
+
+---
+
+<div align="center">
+  Made with 💙 for fun 😉 - DK
+</div>

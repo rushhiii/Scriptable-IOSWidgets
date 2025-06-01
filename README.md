@@ -46,6 +46,7 @@ Welcome to my curated collection of **Scriptable** widgets and scripts, crafted 
   <li><a style="color: white;"href="#feedback">Feedback</a></li>
 </ol>
 </div>
+
 ---
 
 <!-- Example section anchors for each script -->

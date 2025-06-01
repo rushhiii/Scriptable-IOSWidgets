@@ -1,4 +1,4 @@
-# 🎉 Countdown Widget for Scriptable
+# 🎉 Countdown Widget 
 
 A fully-featured countdown widget built using the [Scriptable app](https://scriptable.app) and powered by data from Google Sheets. It helps you track important upcoming events like birthdays, anniversaries, and more—right on your iOS home screen.
 

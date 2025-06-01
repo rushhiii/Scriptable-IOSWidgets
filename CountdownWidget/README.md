@@ -152,7 +152,7 @@ Here’s how to configure the widget for different modes:
 </p>
 
 > [!NOTE] 
-> widget confic panal
+> Here's is Screenshot of widget's confic panal_
 
 {add parma's instering image}
 

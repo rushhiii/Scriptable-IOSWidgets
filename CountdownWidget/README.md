@@ -151,9 +151,11 @@ Here’s how to configure the widget for different modes:
 </table>
 </p>
 
-like so,
+> [!NOTE] widget confic panal
 
 {add parma's instering image}
+
+
 
 ### **Examples**
 * **Show Age Mode:**
@@ -172,11 +174,11 @@ john,age
 ```
 col
 ```
+<br/>
 
 > [!Important]
-🔒 **Do not share your personal Web App URL publicly** to protect your Google Sheet data.
+🔒 **Do not share your personal Web App URL publicly** to protect your Google Sheet data.\
 💡 **You can always update the Google Sheet without modifying the widget script again!**
-
 
 
 ## 📷 Screenshots
@@ -184,19 +186,13 @@ col
 *(Add screenshots here of your widget in action!)*
 
 
+## 🙌 Feedback
+If you have any features requests or feedback on this widget, feel free to DM me on [instagram](https://www.instagram.com/the.tirth12?igsh=MTlvNGh5cm00YjJteg%3D%3D&utm_source=qr) or email me at <rushiofficial1205@email.com>.\
+Widgets that help us passively learn should not be limited to facts alone—they can extend into all kinds of domains. If you have any such idea in mind, let me know!
 
 ## 📜 License
 
 This project is licensed under the **MIT License**.
 Feel free to use, modify, and share—just give proper credit!
-
-
-
-## 🙌 Acknowledgments
-
-* Built for personal use and shared to help others.
-* Inspired by the flexibility of Scriptable and the power of Google Sheets for data management.
-
-
 
 Enjoy using this widget and feel free to share feedback or improvements! 🚀✨

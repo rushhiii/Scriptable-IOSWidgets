@@ -31,7 +31,7 @@ Depending on the widget size and parameters, it displays:
 
 - Create a Google Sheet with columns like:  
   | name | date       | icon | color  |  
-  ||||--|  
+  |------|------------|------|--------|  
   | Mom | 2003-09-25 | 🎂   | #2980b9 |  
   | Dad   | 1975-07-01 | 🎂   | #F79F39 |  
 

@@ -2,7 +2,7 @@
 
 A fully-featured countdown widget built using the [Scriptable app](https://scriptable.app) and powered by data from Google Sheets. It helps you track important upcoming events like birthdays, anniversaries, and more—right on your iOS home screen.
 
----
+
 
 ## ✨ Features
 
@@ -12,7 +12,7 @@ A fully-featured countdown widget built using the [Scriptable app](https://scrip
 - 🎨 **Vibrant Themes**: Automatically assigns color themes to events.
 - ⚙️ **Widget Modes**: Supports multiple widget sizes and display styles.
 
----
+
 
 ## 🚀 How It Works
 
@@ -23,7 +23,7 @@ Depending on the widget size and parameters, it displays:
 ✅ **Grid view** (for `col` parameter)  
 ✅ **List view** (default for medium/large widgets)  
 
----
+
 
 ## 🔧 Setup and Usage
 
@@ -31,7 +31,7 @@ Depending on the widget size and parameters, it displays:
 
 - Create a Google Sheet with columns like:  
   | name | date       | icon | color  |  
-  |------|------------|------|--------|  
+  ||||--|  
   | Mom | 2003-09-25 | 🎂   | #2980b9 |  
   | Dad   | 1975-07-01 | 🎂   | #F79F39 |  
 
@@ -62,7 +62,7 @@ Depending on the widget size and parameters, it displays:
 6. Click **Deploy** and **Authorize access**.  
 7. Copy the **Web App URL** (e.g., `https://script.google.com/macros/s/AKfycb.../exec`).
 
----
+
 
 ### 3️⃣ Insert Your API URL into the Script
 
@@ -76,7 +76,7 @@ Replace the URL with **your own** Web App URL you just created.
 
 ✅ Save the script.
 
----
+
 
 ### 4️⃣ Using in Scriptable
 
@@ -84,7 +84,7 @@ Replace the URL with **your own** Web App URL you just created.
 * On your home screen, add a Scriptable widget and select this script.
 * Customize widget parameters as needed (see below).
 
----
+
 
 ## 🛠️ Widget Usage
 
@@ -134,33 +134,33 @@ Here’s how to configure the widget for different modes:
   col
   ```
 
----
+
 
 ## ⚠️ Important
 
 🔒 **Do not share your personal Web App URL publicly** to protect your Google Sheet data.
 💡 **You can always update the Google Sheet without modifying the widget script again!**
 
----
+
 
 ## 📷 Screenshots
 
 *(Add screenshots here of your widget in action!)*
 
----
+
 
 ## 📜 License
 
 This project is licensed under the **MIT License**.
 Feel free to use, modify, and share—just give proper credit!
 
----
+
 
 ## 🙌 Acknowledgments
 
 * Built for personal use and shared to help others.
 * Inspired by the flexibility of Scriptable and the power of Google Sheets for data management.
 
----
+
 
 Enjoy using this widget and feel free to share feedback or improvements! 🚀✨

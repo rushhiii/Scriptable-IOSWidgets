@@ -46,17 +46,21 @@ University.
 
 <h2> My GitHub Stats </h2>
 
-<!-- <p width="100%" align="center" style="display: flex; justify-content: center; flex-wrap: wrap;"> -->
-<p style="display: flex;justify-content: center;flex-wrap: wrap;">
-<!-- <p> -->
-    <img height="195px"
-        src="https://github-readme-stats.vercel.app/api?username=rushhiii&theme=dark&show_icons=true&hide_border=true&count_private=true&&card_width=467px"
-        alt="rushhiii's Stats" />
-        <img height="195px"
-        src="https://github-readme-streak-stats.herokuapp.com/?user=rushhiii&theme=dark&hide_border=true&&card_width=467px"
+<p width="100%" align="center" style="display: flex;justify-content: center;">
+    <!-- <p style="display: flex;justify-content: center;flex-wrap: wrap;"> -->
+    <!-- <p align="center"> -->
+    <!-- Original size: &&card_height:195px&&card_width:467px
+     &&card_height:171.82&&card_width:411.5  
+     height="171.82px" width="411.5px"
+    330.32px 137.93px 
+    -->
+    <img width="49.5%" height="171.82px"
+        src="https://github-readme-stats.vercel.app/api?username=rushhiii&theme=dark&show_icons=true&hide_border=true&count_private=true&&card_height:171.82px&&card_width:411.5px"
+        alt="rushhiii's Stats" /> <img width="49.5%" height="171.82px"
+        src="https://github-readme-streak-stats.herokuapp.com/?user=rushhiii&theme=dark&hide_border=true&&card_height:171.82px&&card_width:411.5px"
         alt="rushhiii's Streak" />
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rushhiii&theme=dark&show_icons=true&hide_border=true&layout=compact&&card_width=467px"
-        alt="rushhiii's Top Languages" />
+    <!-- <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rushhiii&theme=dark&show_icons=true&hide_border=true&layout=compact&langs_count=8"
+        alt="rushhiii's Top Languages" /> -->
 </p>
 
 <!-- to modify the stats cards -->

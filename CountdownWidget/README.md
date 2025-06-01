@@ -158,7 +158,7 @@ Here’s how to configure the widget for different modes:
 </table>
 </p>
 
-> [!NOTE] 
+<!-- [!NOTE] --> 
 > _Here's a Screenshot of widget's config panal_
 
 {add parma's instering image}

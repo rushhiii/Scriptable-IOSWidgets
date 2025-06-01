@@ -123,7 +123,7 @@ Here’s how to configure the widget for different modes:
     - **Displays:** A scrollable list of the top upcoming events with countdowns.
 
 
-### 🔹 **Parameters Configuration**
+3. **Parameters Configuration**
 
 <p align="center">
 
@@ -159,7 +159,7 @@ Here’s how to configure the widget for different modes:
 </p>
 
 > [!NOTE] 
-> _Here's a Screenshot of widget's confic panal_
+> _Here's a Screenshot of widget's config panal_
 
 {add parma's instering image}
 

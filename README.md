@@ -6,45 +6,45 @@ Welcome to my curated collection of **Scriptable** widgets and scripts, crafted 
 <img alt="Scriptable widgets" align="center" src="images/Main Mockup.png" />
 
 
-> What is Scriptable? <br>
-Scriptable is an incredibly versatile app that allows you to build custom widgets and automate tasks directly on your Apple devices. From interactive calendars to dynamic quotes and real-time weather updates, my collection showcases how Scriptable can transform your device into a dynamic dashboard.
+> [!note] What is Scriptable? <br>
+> Scriptable is an incredibly versatile IOS app that allows you to build custom widgets and automate tasks directly on your Apple devices.
 
+ From interactive calendars to dynamic quotes and real-time weather updates, my collection showcases how Scriptable can transform your device into a dynamic dashboard.\
 Explore, customize, and enjoy these widgets and scripts to make your iOS experience more fun and functional! 🚀✨
 
 <br/>
 
 ## Table of Contents
 <ol>
-  <li><a href="#scriptable">Scriptable Overview</a></li>
-  <li>
-    <a href="#list-of-widgets">List of Widgets</a>
+  <li><a style="color: white;" href="#scriptable">Scriptable Overview</a></li>
+  <li><a style="color: white;"href="#list-of-widgets">List of Widgets</a>
     <ol>
-      <li><a href="#1-myweatherscript-v10js">1-MyWeatherScript-v1.0.js</a></li>
-      <li><a href="#3-timeprogress-ipadlockscreenjs">3-TimeProgress-iPadLockScreen.js</a></li>
-      <li><a href="#countdown-onjs">Countdown-ON.js</a></li>
-      <li><a href="#countdownsjs">Countdowns.js</a></li>
-      <li><a href="#homewidgetjs">HomeWidget.js</a></li>
-      <li><a href="#howoldmijs">HowOldmi.js</a></li>
-      <li><a href="#myhabitkitwidgetjs">MyHabitKitWidget.js</a></li>
-      <li><a href="#myquotewidget-ofjs">MyQuoteWidget-OF.js</a></li>
-      <li><a href="#myquotewidget-onjs">MyQuoteWidget-ON.js</a></li>
-      <li><a href="#myunischedulewidget-ofjs">MyUniScheduleWidget-OF.js</a></li>
-      <li><a href="#myunischedulewidgetjs">MyUniScheduleWidget.js</a></li>
-      <li><a href="#myweatherwidgetjs">MyWeatherWidget.js</a></li>
-      <li><a href="#ourquotesjs">OurQuotes.js</a></li>
-      <li><a href="#qclocktwojs">QlockTwo.js</a></li>
-      <li><a href="#rjs">R.js</a></li>
-      <li><a href="#scriptdudejs">ScriptDude.js</a></li>
-      <li><a href="#stoicquotejs">StoicQuote.js</a></li>
-      <li><a href="#timeprogressjs">TimeProgress.js</a></li>
-      <li><a href="#trackprogressjs">TrackProgress.js</a></li>
-      <li><a href="#ts1js">ts1.js</a></li>
-      <li><a href="#ts2js">ts2.js</a></li>
-      <li><a href="#wearclraccohindujs">WearClrAccoHindu.js</a></li>
+      <li><a style="color: white;"href="#1-myweatherscript-v10js">1-MyWeatherScript-v1.0.js</a></li>
+      <li><a style="color: white;"href="#3-timeprogress-ipadlockscreenjs">3-TimeProgress-iPadLockScreen.js</a></li>
+      <li><a style="color: white;"href="#countdown-onjs">Countdown-ON.js</a></li>
+      <li><a style="color: white;"href="#countdownsjs">Countdowns.js</a></li>
+      <li><a style="color: white;"href="#homewidgetjs">HomeWidget.js</a></li>
+      <li><a style="color: white;"href="#howoldmijs">HowOldmi.js</a></li>
+      <li><a style="color: white;"href="#myhabitkitwidgetjs">MyHabitKitWidget.js</a></li>
+      <li><a style="color: white;"href="#myquotewidget-ofjs">MyQuoteWidget-OF.js</a></li>
+      <li><a style="color: white;"href="#myquotewidget-onjs">MyQuoteWidget-ON.js</a></li>
+      <li><a style="color: white;"href="#myunischedulewidget-ofjs">MyUniScheduleWidget-OF.js</a></li>
+      <li><a style="color: white;"href="#myunischedulewidgetjs">MyUniScheduleWidget.js</a></li>
+      <li><a style="color: white;"href="#myweatherwidgetjs">MyWeatherWidget.js</a></li>
+      <li><a style="color: white;"href="#ourquotesjs">OurQuotes.js</a></li>
+      <li><a style="color: white;"href="#qclocktwojs">QlockTwo.js</a></li>
+      <li><a style="color: white;"href="#rjs">R.js</a></li>
+      <li><a style="color: white;"href="#scriptdudejs">ScriptDude.js</a></li>
+      <li><a style="color: white;"href="#stoicquotejs">StoicQuote.js</a></li>
+      <li><a style="color: white;"href="#timeprogressjs">TimeProgress.js</a></li>
+      <li><a style="color: white;"href="#trackprogressjs">TrackProgress.js</a></li>
+      <li><a style="color: white;"href="#ts1js">ts1.js</a></li>
+      <li><a style="color: white;"href="#ts2js">ts2.js</a></li>
+      <li><a style="color: white;"href="#wearclraccohindujs">WearClrAccoHindu.js</a></li>
     </ol>
   </li>
-  <li><a href="#how-to-use-scriptable-widgets">How to Use Scriptable Widgets?</a></li>
-  <li><a href="#feedback">Feedback</a></li>
+  <li><a style="color: white;"href="#how-to-use-scriptable-widgets">How to Use Scriptable Widgets?</a></li>
+  <li><a style="color: white;"href="#feedback">Feedback</a></li>
 </ol>
 
 ---

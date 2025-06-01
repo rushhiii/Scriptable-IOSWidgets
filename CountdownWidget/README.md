@@ -160,8 +160,8 @@ Here’s how to configure the widget for different modes:
 
 <!-- [!NOTE] --> 
 > _Here's a Screenshot of widget's config panal_
-
-{add parma's instering image}
+ 
+<img height="10%" width="20%" src="./src/countdown/countdown_config_panal.png" alt="countdown_config_panal.png"/>
 
 
 

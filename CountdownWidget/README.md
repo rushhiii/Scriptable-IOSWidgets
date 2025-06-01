@@ -151,7 +151,8 @@ Here’s how to configure the widget for different modes:
 </table>
 </p>
 
-> [!NOTE] widget confic panal
+> [!NOTE] 
+> widget confic panal
 
 {add parma's instering image}
 

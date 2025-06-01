@@ -6,7 +6,7 @@ Welcome to my curated collection of **Scriptable** widgets and scripts, crafted 
 <img alt="Scriptable widgets" align="center" src="images/Main Mockup.png" />
 
 
-> [!note] What is Scriptable? <br>
+> [!NOTE] What is Scriptable? <br>
 > Scriptable is an incredibly versatile IOS app that allows you to build custom widgets and automate tasks directly on your Apple devices.
 
  From interactive calendars to dynamic quotes and real-time weather updates, my collection showcases how Scriptable can transform your device into a dynamic dashboard.\

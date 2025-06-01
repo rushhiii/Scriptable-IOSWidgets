@@ -164,7 +164,7 @@ Here’s how to configure the widget for different modes:
 
 <!-- ![cien](./src/countdown/countdown_config_panal.png) --> 
 
-<img height="auto" min-width="200px" max-width="500px" src="../src/countdown/countdown_config_panal.png" alt="countdown_config_panal.png">
+<img height="auto" src="../src/countdown/countdown_config_panal.png" alt="countdown_config_panal.png">
 
 
 

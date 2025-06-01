@@ -146,7 +146,14 @@ Here’s how to configure the widget for different modes:
   <tr>
     <td>Parameters</td>
     <td>Text</td>
-    <td>For example:<br/>- <code>age</code> to show age in small widget.<br/>- <code>2</code> to select second event.<br/>- <code>john,age</code> to select by name and show age (order doesn’t matter).<br/>- <code>col</code> to enable grid view (best for large widgets).</td>
+    <td>For example:<br/>
+      <ul>
+        <li> <code>age</code> to show age in small widget. </li>
+        <li> <code>2</code> to select second event. </li>
+        <li> <code>john,age</code> to select by name and show age (order doesn’t matter). </li>
+        <li> <code>col</code> to enable grid view (best for large widgets). </li>
+      </ul>
+    </td>
   </tr>
 </table>
 </p>

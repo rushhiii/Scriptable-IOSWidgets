@@ -27,7 +27,7 @@ Depending on the widget size and parameters, it displays:
 
 ## 🔧 Setup and Usage
 
-### 1️⃣ Create Your Google Sheets Database
+### 1️. Create Your Google Sheets Database
 
 - Create a Google Sheet with columns like:  
   | name | date       | icon | color  |  
@@ -37,22 +37,46 @@ Depending on the widget size and parameters, it displays:
 
 - Format the **date** column as YYYY-MM-DD for best results.
 
-### 2️⃣ Publish Your Google Sheet as a Web App
+### 2️. Publish Your Google Sheet as a Web App
 
 1. In Google Sheets, click **Extensions > Apps Script**.  
 2. In the script editor, paste this example code:
 
     ```javascript
-    function doGet(e) {
-      const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Sheet1");
+    function doGet() {
+      const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
       const data = sheet.getDataRange().getValues();
-      const headers = data[0];
-      const jsonData = data.slice(1).map(row => {
-        let obj = {};
-        row.forEach((cell, i) => obj[headers[i]] = cell);
-        return obj;
-      });
-      return ContentService.createTextOutput(JSON.stringify(jsonData)).setMimeType(ContentService.MimeType.JSON);
+      const events = [];
+      for (let i = 1; i < data.length; i++) {
+        const row = data[i];
+        const name = row[0];
+        const date = row[1];
+        const icon = row[2] || "📅";
+        const color = row[3] || "";
+        // Skip empty rows
+        if (!name || !date) continue;
+        // Always format the date string as "YYYY-MM-DD"
+        let formattedDate;
+        if (date instanceof Date) {
+          formattedDate = Utilities.formatDate(date, Session.getScriptTimeZone(), "yyyy-MM-dd");
+        } else {
+          formattedDate = date; // fallback to what's in the cell
+        }
+        // Build event object
+        const event = {
+          name: name,
+          date: formattedDate,
+          icon: icon
+        };
+        // Only add color if present
+        if (color) {
+          event.color = color;
+        }
+        events.push(event);
+      }
+      return ContentService
+        .createTextOutput(JSON.stringify(events))
+        .setMimeType(ContentService.MimeType.JSON);
     }
     ```
 
@@ -64,7 +88,7 @@ Depending on the widget size and parameters, it displays:
 
 
 
-### 3️⃣ Insert Your API URL into the Script
+### 3️. Insert Your API URL into the Script
 
 In the **`countdown.js`** script file, find the line:
 
@@ -78,7 +102,7 @@ Replace the URL with **your own** Web App URL you just created.
 
 
 
-### 4️⃣ Using in Scriptable
+### 4️ Using in Scriptable
 
 * Copy the updated `countdown.js` script to a new script in the Scriptable app.
 * On your home screen, add a Scriptable widget and select this script.
@@ -90,54 +114,66 @@ Replace the URL with **your own** Web App URL you just created.
 
 Here’s how to configure the widget for different modes:
 
-### 🔹 **Default List View**
-
-* **Applies to:** Medium and Large widgets by default.
-* **Displays:** A scrollable list of the top upcoming events with countdowns.
-
-### 🔹 **Single Event View (Small Widget)**
-
-* **Applies to:** Small widgets by default.
-* **Displays:** The next upcoming event with days left, age (if a birthday/anniversary), and date.
-
-#### 🔹 Show Age Mode (Small Widget)
-
-* Add `"age"` to the widget parameter in the Scriptable widget config.
-* Example parameter:
-
-  ```
-  age
-  ```
-* **Displays:** Age or years together for birthdays and anniversaries in the small widget.
-
-#### 🔹 Select a Specific Event (Small Widget)
-
-* Use the **name** or **index** of an event in the widget parameter.
-* Example parameter to select second event:
-
-  ```
-  2
-  ```
-* Example parameter to select by name and show age (NOTE: **the order doesn’t matter** as long as it’s separated by a comma):
-
-  ```
-  john,age
-  ```
-
-### 🔹 **Grid View**
-
-* Add `"col"` to the widget parameter to enable grid view.
-* Works best with large widgets for a 2-column grid of upcoming events.
-* Example parameter:
-
-  ```
-  col
-  ```
+1. **Single Event View (Small Widget)**
+   * **Applies to:** Small widgets by default.  
+   * **Displays:** The next upcoming event with days left, age (if a birthday/anniversary is today), and date.
+  
+2. **Default List View**
+    - **Applies to:** Medium and Large widgets by default.  
+    - **Displays:** A scrollable list of the top upcoming events with countdowns.
 
 
+### 🔹 **Parameters Configuration**
 
-## ⚠️ Important
+<p align="center">
 
+<table>
+  <tr>
+    <th>Option</th>
+    <th>Defaults</th>
+    <th>Change to</th>
+  </tr>
+  <tr>
+    <td>Script</td>
+    <td>Choose</td>
+    <td>Widget Name (e.g., Countdown Widget)</td>
+  </tr>
+  <tr>
+    <td>While Interacting (optional)</td>
+    <td>Open App</td>
+    <td>Run Script</td>
+  </tr>
+  <tr>
+    <td>Parameters</td>
+    <td>Text</td>
+    <td>For example:<br/>- <code>age</code> to show age in small widget.<br/>- <code>2</code> to select second event.<br/>- <code>john,age</code> to select by name and show age (order doesn’t matter).<br/>- <code>col</code> to enable grid view (best for large widgets).</td>
+  </tr>
+</table>
+</p>
+
+like so,
+
+{add parma's instering image}
+
+### **Examples**
+* **Show Age Mode:**
+```
+age
+```
+* **Select by index:**
+```
+2
+```
+* **Select by name and show age:**
+```
+john,age
+```
+* **Enable Grid View:**
+```
+col
+```
+
+> [!Important]
 🔒 **Do not share your personal Web App URL publicly** to protect your Google Sheet data.
 💡 **You can always update the Google Sheet without modifying the widget script again!**
 

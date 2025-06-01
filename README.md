@@ -3,14 +3,12 @@
 
 Welcome to my curated collection of **Scriptable** widgets and scripts, crafted to bring more power and personalization to your iOS home screen.
 
-<img alt="Scriptable widgets" align="center" src="images/Main Mockup.png" />
+<img alt="widgets showcase" align="center" src=".src/widgets showcase.png" />
 
 
-> [!NOTE]  
-> Scriptable is an incredibly versatile IOS app that allows you to build custom widgets and automate tasks directly on your Apple devices.
-
- From interactive calendars to dynamic quotes and real-time weather updates, my collection showcases how Scriptable can transform your device into a dynamic dashboard.\
-Explore, customize, and enjoy these widgets and scripts to make your iOS experience more fun and functional! 🚀✨
+- Scriptable is an incredibly versatile IOS app that allows you to build custom widgets and automate tasks directly on your Apple devices.
+- From interactive calendars to dynamic quotes and real-time weather updates, my collection showcases how Scriptable can transform your device into a dynamic dashboard.\
+- Explore, customize, and enjoy these widgets and scripts to make your iOS experience more fun and functional! 🚀✨
 
 <br/>
 
@@ -157,10 +155,8 @@ Well gives you a rather intresting fact adout a randomly generated number.
 If you have any feature/widget request or feedback on this feel free to DM me on [Twitter](https://twitter.com/DharmiKumbhani) or mail me at <dharmikumbhani201@gmail.com>
 widgets that can help us passively learn things should not be just limited to facts; but to various other domains as well, if you have any such idea in mind, feel free to reach out to me! 
 
+##
 <br/>
-
----
-
 <div align="center">
-  Made with 💙 for fun 😉 - DK
+  Made with 💙 for fun 😉 - RP
 </div>

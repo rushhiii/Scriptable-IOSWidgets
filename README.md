@@ -69,22 +69,22 @@ University.
 <h2> Connect with Me </h2>
 
 <p align="center" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
-    <a href="https://github.com/rushhiii" target="_blank">
+    <a align="center" href="https://github.com/rushhiii" target="_blank">
         <img align="center"
             src="https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white"
             alt="GitHub" />
     </a>
-    <a href="mailto:rushiofficial1205@gmail.com" target="_blank">
+    <a align="center" href="mailto:rushiofficial1205@gmail.com" target="_blank">
         <img align="center"
             src="https://img.shields.io/badge/gmail-%23D14836.svg?&style=for-the-badge&logo=gmail&logoColor=white"
             alt="Gmail" />
     </a>
-    <a href="https://linkedin.com/in/YourLinkedIn" target="_blank">
+    <a align="center" href="https://linkedin.com/in/YourLinkedIn" target="_blank">
         <img align="center"
             src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"
             alt="LinkedIn" />
     </a>
-    <a href="https://www.instagram.com/YourInstagram" target="_blank">
+    <a align="center" href="https://www.instagram.com/YourInstagram" target="_blank">
         <img align="center"
             src="https://img.shields.io/badge/instagram-%23E4405F.svg?&style=for-the-badge&logo=instagram&logoColor=white"
             alt="Instagram" />

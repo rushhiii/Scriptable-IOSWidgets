@@ -1,4 +1,4 @@
-# Scriptable - scripts and widgets for iOS 
+# IOS Widgets made with Scriptable 
 Collection of widgets and scripts made using scriptable app for iOS
 
 ![Scriptable App](./src/badges/scriptableBadge.svg) &nbsp; ![iOS](./src/badges/iOS-badge.svg)
@@ -11,7 +11,7 @@ Scriptable is an app that lets you add cool, lightweight widgets as well as auto
 <br/>
 
 ## Table of Contents
-- [Scriptable - scripts and widgets for iOS](#scriptable---scripts-and-widgets-for-ios)
+- [IOS Widgets made with Scriptable](#ios-widgets-made-with-scriptable)
   - [Table of Contents](#table-of-contents)
   - [❏ List of widgets](#-list-of-widgets)
     - [Notion Integrations](#notion-integrations)

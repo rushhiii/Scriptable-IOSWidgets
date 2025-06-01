@@ -1,17 +1,75 @@
-# Scriptable scripts 
-Collection of widgets and scripts made using scriptable app for iOS
-
+# Scriptable
 ![Scriptable App](./src/badges/scriptableBadge.svg) &nbsp; ![iOS](./src/badges/iOS-badge.svg)
-<!-- <img alt="Scriptable widgets" align="center" src="https://github.com/dharmikumbhani/scriptable/blob/main/images/Main%20Mockup.png" /> -->
-<img alt="Scriptable widgets" align="center" src="images/Main Mockup.png" />
- <!-- [![twitter](https://awesome.re/badge-flat.svg)](https://awesome.re) -->
 
-Scriptable is an app that lets you add cool, lightweight widgets as well as automation to your apple devices.
+Welcome to my curated collection of **Scriptable** widgets and scripts, crafted to bring more power and personalization to your iOS home screen.
+
+<img alt="Scriptable widgets" align="center" src="images/Main Mockup.png" />
+
+
+> What is Scriptable? <br>
+Scriptable is an incredibly versatile app that allows you to build custom widgets and automate tasks directly on your Apple devices. From interactive calendars to dynamic quotes and real-time weather updates, my collection showcases how Scriptable can transform your device into a dynamic dashboard.
+
+Explore, customize, and enjoy these widgets and scripts to make your iOS experience more fun and functional! 🚀✨
 
 <br/>
 
 ## Table of Contents
-- [Scriptable scripts](#scriptable-scripts)
+<ol>
+  <li><a href="#scriptable">Scriptable Overview</a></li>
+  <li>
+    <a href="#list-of-widgets">List of Widgets</a>
+    <ol>
+      <li><a href="#1-myweatherscript-v10js">1-MyWeatherScript-v1.0.js</a></li>
+      <li><a href="#3-timeprogress-ipadlockscreenjs">3-TimeProgress-iPadLockScreen.js</a></li>
+      <li><a href="#countdown-onjs">Countdown-ON.js</a></li>
+      <li><a href="#countdownsjs">Countdowns.js</a></li>
+      <li><a href="#homewidgetjs">HomeWidget.js</a></li>
+      <li><a href="#howoldmijs">HowOldmi.js</a></li>
+      <li><a href="#myhabitkitwidgetjs">MyHabitKitWidget.js</a></li>
+      <li><a href="#myquotewidget-ofjs">MyQuoteWidget-OF.js</a></li>
+      <li><a href="#myquotewidget-onjs">MyQuoteWidget-ON.js</a></li>
+      <li><a href="#myunischedulewidget-ofjs">MyUniScheduleWidget-OF.js</a></li>
+      <li><a href="#myunischedulewidgetjs">MyUniScheduleWidget.js</a></li>
+      <li><a href="#myweatherwidgetjs">MyWeatherWidget.js</a></li>
+      <li><a href="#ourquotesjs">OurQuotes.js</a></li>
+      <li><a href="#qclocktwojs">QlockTwo.js</a></li>
+      <li><a href="#rjs">R.js</a></li>
+      <li><a href="#scriptdudejs">ScriptDude.js</a></li>
+      <li><a href="#stoicquotejs">StoicQuote.js</a></li>
+      <li><a href="#timeprogressjs">TimeProgress.js</a></li>
+      <li><a href="#trackprogressjs">TrackProgress.js</a></li>
+      <li><a href="#ts1js">ts1.js</a></li>
+      <li><a href="#ts2js">ts2.js</a></li>
+      <li><a href="#wearclraccohindujs">WearClrAccoHindu.js</a></li>
+    </ol>
+  </li>
+  <li><a href="#how-to-use-scriptable-widgets">How to Use Scriptable Widgets?</a></li>
+  <li><a href="#feedback">Feedback</a></li>
+</ol>
+
+---
+
+<!-- Example section anchors for each script -->
+## 📜 1-MyWeatherScript-v1.0.js <a name="1-myweatherscript-v10js"></a>
+_Description / Screenshot / Usage info_
+
+## 📜 3-TimeProgress-iPadLockScreen.js <a name="3-timeprogress-ipadlockscreenjs"></a>
+_Description / Screenshot / Usage info_
+
+## 📜 Countdown-ON.js <a name="countdown-onjs"></a>
+_Description / Screenshot / Usage info_
+
+...
+
+## 🛠️ How to Use Scriptable Widgets? <a name="how-to-use-scriptable-widgets"></a>
+_Instructions / guide_
+
+## ✍️ Feedback <a name="feedback"></a>
+_Contact info / feedback options_
+
+---
+
+<!-- - [Scriptable scripts](#scriptable-scripts)
   - [Table of Contents](#table-of-contents)
   - [❏ List of widgets](#-list-of-widgets)
     - [Notion Integrations](#notion-integrations)
@@ -23,10 +81,10 @@ Scriptable is an app that lets you add cool, lightweight widgets as well as auto
     - [Random Number Fact](#random-number-fact)
   - [📖 How to use scriptable widgets?](#-how-to-use-scriptable-widgets)
   - [✍️ Feedback](#️-feedback)
-
+ -->
 <br/>
 
-## ❏ List of widgets
+## List of widgets
 ### [Notion Integrations](https://github.com/dharmikumbhani/scriptable/tree/main/Notion%20Integrations)
 ![Notion x Scriptable](images/notionIntegrations/NotionxScriptable.png) 
 

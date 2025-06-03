@@ -98,13 +98,13 @@ const SHEET_API_URL = "https://script.google.com/macros/s/AKfycb.../exec";
 
 Replace the URL with **your own** Web App URL you just created.
 
-✅ Save the script.
+Than finally **Save the script**.
 
 
 
 ### 4️ Using in Scriptable
 
-* Copy the updated `countdown.js` script to a new script in the Scriptable app.
+* Copy the updated `CountdownWidget.js` script to a new script in the Scriptable app.
 * On your home screen, add a Scriptable widget and select this script.
 * Customize widget parameters as needed (see below).
 
@@ -120,7 +120,7 @@ Here’s how to configure the widget for different modes:
   
 2. **Default List View**
     - **Applies to:** Medium and Large widgets by default.  
-    - **Displays:** A scrollable list of the top upcoming events with countdowns.
+    - **Displays:** list of the top upcoming events with countdowns.
 
 
 3. **Parameters Configuration**
@@ -165,7 +165,6 @@ Here’s how to configure the widget for different modes:
 <!-- ![cien](./src/countdown/countdown_config_panal.png) --> 
 
 <img height="auto" width="500px" src="../src/countdown/countdown_config_panal.png" alt="countdown_config_panal.png">
-
 
 
 

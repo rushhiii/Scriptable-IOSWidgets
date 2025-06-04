@@ -190,19 +190,19 @@ Use the following options when editing the widget:
 
 > _Small Widgets_ 
 
-| <img src="../src/countdown/countdown_s.png" width="160"/> | <img src="../src/countdown/countdown_age_s.png" width="160"/> |
+| <img src="../src/countdown/countdown_s.png" width="160"/> | <img src="../src/countdown/countdown_age_s.PNG" width="160"/> |
 |:--:|:--:|
-| <img src="../src/countdown/countdown_bday_s.PNG" width="160"/> | <img src="../src/countdown/countdown_1_s.png" width="160"/> |
+| <img src="../src/countdown/countdown_bday_s.PNG" width="160"/> | <img src="../src/countdown/countdown_1_s.PNG" width="160"/> |
 
 > _Medium Widgets_
 
-| <img src="../src/countdown/countdown_m.png" width="260"/> | <img src="../src/countdown/countdown_col_m.png" width="260"/> |
+| <img src="../src/countdown/countdown_m.PNG" width="260"/> | <img src="../src/countdown/countdown_col_m.PNG" width="260"/> |
 |:--:|:--:|
 
 
 > _Large Widgets_
 
-| <img src="../src/countdown/countdown_l.png" width="360"/> | <img src="../src/countdown/countdown_col_l.png" width="360"/> |
+| <img src="../src/countdown/countdown_l.PNG" width="360"/> | <img src="../src/countdown/countdown_col_l.PNG" width="360"/> |
 |:--:|:--:|
 
 

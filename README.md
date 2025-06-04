@@ -164,29 +164,28 @@ Well gives you a rather intresting fact adout a randomly generated number. -->
 
 1. **Install Scriptable**
 
-Download the free **[Scriptable app](https://apps.apple.com/in/app/scriptable/id1405459188)** from the App Store on your iPhone or iPad.
+* Download the free **[Scriptable app](https://apps.apple.com/in/app/scriptable/id1405459188)** from the App Store on your iPhone or iPad.
 
 2. **Set Up the Scriptable Folder**
 
-Ensure a folder named `Scriptable` exists in your iCloud Drive:
-
+* Ensure a folder named `Scriptable` exists in your iCloud Drive:
 * Open the **Files app**
 * Navigate to **iCloud Drive**
 * If not already present, create a folder named `Scriptable` (case-sensitive)
 
 3. **Download Widget Scripts**
 
-From this repository:
+* From this repository:
 
-* Locate the `.js` file for the widget you want to use
-* Download and save it to the `Scriptable` folder in your iCloud Drive
+  * Locate the `.js` file for the widget you want to use
+  * Download and save it to the `Scriptable` folder in your iCloud Drive
 
 4. **Add the Widget to Your Home Screen**
 
-1. Long-press on the home screen to enter **jiggle mode**
-2. Tap the **“+”** icon (top-left corner)
-3. Search for **Scriptable** and choose the desired **widget size** (Small / Medium / Large)
-4. Tap **Add Widget**
+   1. Long-press on the home screen to enter **jiggle mode**
+   2. Tap the **“+”** icon (top-left corner)
+   3. Search for **Scriptable** and choose the desired **widget size** (Small / Medium / Large)
+   4. Tap **Add Widget**
 
 5. **Configure the Widget**
 

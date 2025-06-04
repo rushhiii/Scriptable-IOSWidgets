@@ -111,7 +111,7 @@ Use the following options when editing the widget:
   <tr>
     <td>Parameters</td>
     <td>Text</td>
-    <td>Check below</td>
+    <td> [Check below](#notes) </td>
       </ul>
     </td>
   </tr>
@@ -122,9 +122,9 @@ Use the following options when editing the widget:
 <img height="auto" width="500px" src="../src/countdown/countdown_config_panal.png" alt="countdown_config_panal.png">
 
 <br/>
+<a name="notes"></a>
 
 > [!NOTE]
-> **Important Notes:**
 >
 > * `col` parameter works **only for Medium and Large** widgets.
 >
@@ -150,7 +150,7 @@ Use the following options when editing the widget:
 
 
 
-
+**Important Notes:**
 * `col` parameter works **only for Medium and Large** widgets.
 
    * **Medium widget** shows top **4** events.

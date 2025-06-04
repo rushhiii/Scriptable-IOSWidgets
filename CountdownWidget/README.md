@@ -123,8 +123,33 @@ Use the following options when editing the widget:
 
 <br/>
 
-> [!IMPORTANT]
-> hkgh
+> [!NOTE] Important Notes
+> 🧠 **Important Notes:**
+>
+> * `col` parameter works **only for Medium and Large** widgets.
+>
+>   * **Medium widget** shows top **4** events.
+>   * **Large widget** shows top **10** events.
+> * If no `col` is used, widget defaults to **list view**:
+>
+>   * **Medium:** top **3** events.
+>   * **Large:** top **7** events.
+> * In **small** widgets:
+>
+>   * Type any name from your Google Sheet (e.g., `mom`, `dad`) to show that person's event.
+>
+>     * If the emoji is 🎂, it will automatically append `'s Birthday`.
+>     * If it's 🥂, it appends `'s Anniversary`.
+>     * *It only supports these two emojis, but you can always add more to your liking by updating the `titleSuffixes` array.*
+>   * You can also use numeric indexes (e.g., `1`, `2`) to select an upcoming event by position.
+>   * Default is the **most upcoming event**.
+>   * Using `age` shows the years passed since the event date — useful for birthdays or anniversaries.
+>
+>     * If today is the event date, countdown is hidden and only age is shown.
+
+
+
+
 
 * `col` parameter works **only for Medium and Large** widgets.
 

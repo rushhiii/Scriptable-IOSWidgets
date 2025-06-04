@@ -130,6 +130,7 @@ Use the following options when editing the widget:
 <div id="note"></div>
 
 > [!NOTE]
+> 
 > * `col` parameter works **only for Medium and Large** widgets.
 >
 >   * **Medium widget** shows top **4** events.
@@ -150,31 +151,28 @@ Use the following options when editing the widget:
 >   * Using `age` shows the years passed since the event date — useful for birthdays or anniversaries.
 >
 >     * If today is the event date, countdown is hidden and only age is shown.
+> 
+> *  **Pagination (`pg`)**:
+>    * Use `pg1`, `pg2`, `pg3`, etc., to display **multiple pages** of events.
+> 
+>       * In **list view** (default):
+>           * **Medium widget**: each page displays **3 events**.
+>         * **Large widget**: each page displays **7 events**.
+>       * In **grid view** (`col`):
+>
+>         * **Medium widget**: each page displays **4 events**.
+>         * **Large widget**: each page displays **10 events**.
+>
+>     * Example:
+>       * `pg2`: shows the second page of events.
+>       * `col,pg3`: shows the third page of events in grid view.
+>
+> * **Offline Fallback & Regular Sync**:
+>
+>   * Events are automatically cached locally in the `.cache` folder.
+>   * Widget gracefully **falls back to cached data** when offline.
+>   * Data automatically updates daily at **2:00 AM**.
 
-
-
-
-**Important Notes:**
-* `col` parameter works **only for Medium and Large** widgets.
-
-   * **Medium widget** shows top **4** events.
-   * **Large widget** shows top **10** events.
- * If no `col` is used, widget defaults to **list view**:
-
-   * **Medium:** top **3** events.
-   * **Large:** top **7** events.
- * In **small** widgets:
-
-   * Type any name from your Google Sheet (e.g., `mom`, `dad`) to show that person's event.
-
-     * If the emoji is 🎂, it will automatically append `'s Birthday`.
-     * If it's 🥂, it appends `'s Anniversary`.
-     * It only supports these two emojis, but you can always add more to your liking by updating the `titleSuffixes` array.
-   * You can also use numeric indexes (e.g., `1`, `2`) to select an upcoming event by position.
-   * Default is the **most upcoming event**.
-   * Using `age` shows the years passed since the event date — useful for birthdays or anniversaries.
-
-     * If today is the event date, countdown is hidden and only age is shown.
 
 ## 📷 Screenshots
 

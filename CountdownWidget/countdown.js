@@ -28,7 +28,7 @@ async function loadEventData() {
       const data = JSON.parse(fm.readString(dataPath));
       return data;
     } else {
-      throw new Error("No data available online or locally, please refer to the steps on the repo.");
+      throw new Error("No data available online or locally.");
     }
   }
 }
@@ -429,9 +429,9 @@ const gridConfig = {
 
 const configSize = gridConfig[size] || gridConfig["small"];
 
-if (param.includes("col")) {
+if (param && param.includes("col")) {
   const { rows, cols, cellHeight, cellWidth, fontSize, padding, spacing } = configSize;
-  
+
   // Pagination logic for Grid View
   const itemsPerPage = rows * cols;
   const startIdx = (page - 1) * itemsPerPage;
@@ -623,6 +623,7 @@ if (config.runsInApp) {
   }
 
   await table.present();
+
   Script.complete();
 } else {
   Script.setWidget(widget);

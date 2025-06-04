@@ -188,17 +188,35 @@ Use the following options when editing the widget:
 
 -->
 
-<div style="disply:flex;justify-content:start;flex-wrap:wrap;gap:5px;">
-  <img src="../src/countdown/countdown_s.PNG" width="160" />
-  <img src="../src/countdown/countdown_age_s.PNG" width="160" />
-  <img src="../src/countdown/countdown_bday_s.PNG" width="160" />
-  <img src="../src/countdown/countdown_1_s.PNG" width="160" />
-  <img src="../src/countdown/countdown_m.PNG" width="160" />
-  <img src="../src/countdown/countdown_col_m.PNG" width="160" />
-  <img src="../src/countdown/countdown_l.PNG" width="160" />
-  <img src="../src/countdown/countdown_col_l.PNG" width="160" />
-</div>
+> __Small Widgets__
+<!-- 
+![](../src/countdown/countdown_s.PNG)
+![](../src/countdown/countdown_age_s.PNG)
+![](../src/countdown/countdown_bday_s.PNG)
+![](../src/countdown/countdown_1_s.PNG) -->
 
+<table>
+  <tr>
+    <td align="center"><img src="../src/countdown/countdown_s.PNG" width="160"/></td>
+    <td align="center"><img src="../src/countdown/countdown_age_s.PNG" width="160"/></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="../src/countdown/countdown_bday_s.PNG" width="160"/></td>
+    <td align="center" colspan="3"><img src="../src/countdown/countdown_1_s.PNG" width="160"/></td>
+  </tr>
+</table>
+
+
+
+> __Medium Widgets__
+
+| ![](../src/countdown/countdown_m.PNG) | ![](../src/countdown/countdown_col_m.PNG) |
+|:--:|:--:|
+
+> __Large Widgets__
+
+| ![](../src/countdown/countdown_l.PNG) | ![](../src/countdown/countdown_col_l.PNG) |
+|:--:|:--:|
 
 ## 🙌 Feedback
 

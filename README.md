@@ -3,7 +3,8 @@
 
 Welcome to my curated collection of **Scriptable** widgets and scripts, crafted to bring more power and personalization to your iOS home screen.
 
-<img alt="widgets showcase" align="center" src=".src/widgets showcase.png" />
+<!-- <img alt="widgets showcase" align="center" src=".src/widgets showcase.png" /> -->
+<img alt="Mockup wall" width="100%" align="center" src="./src/scriptable_mockup_wall.png" />
 
 
 - Scriptable is an incredibly versatile IOS app that allows you to build custom widgets and automate tasks directly on your Apple devices.
@@ -20,7 +21,7 @@ Welcome to my curated collection of **Scriptable** widgets and scripts, crafted 
     <ol>
       <li><a style="color: white;"href="#1-myweatherscript-v10js">1-MyWeatherScript-v1.0.js</a></li>
       <li><a style="color: white;"href="#3-timeprogress-ipadlockscreenjs">3-TimeProgress-iPadLockScreen.js</a></li>
-      <li><a style="color: white;"href="#countdown-onjs">Countdown-ON.js</a></li>
+      <li><a style="color: white;"href="#countdown.js">Countdown.js</a></li>
       <li><a style="color: white;"href="#countdownsjs">Countdowns.js</a></li>
       <li><a style="color: white;"href="#homewidgetjs">HomeWidget.js</a></li>
       <li><a style="color: white;"href="#howoldmijs">HowOldmi.js</a></li>
@@ -138,27 +139,73 @@ Well gives you a rather intresting fact adout a randomly generated number.
 
 <br/>
 
-## 📖 How to use scriptable widgets?
-1. Download the [scriptable app](https://apps.apple.com/in/app/scriptable/id1405459188).
-2. Check if the scriptable folder is created  have created a folder having the name "scriptable" in your iCloud drive.
-3. Download the .js script of the respective widget and add it to that scriptable folder.
-4. Long Press anywhere on screen, click on "+" icon, select scriptable app and click on add widget with the size depending on the widget you choose.
-5. "**edit widget ⓘ**" by long pressing it to change the following configurations:
-    | Options        | Defaults |  Change to |      
-    | ------------- |:------------- |:-------------|
-    | Script     | Choose | Select widget |
-    | While Interacting (optional)  | Open App | Run Script |
-    | Parameters | Text | Configurable options, depending on widgets  |
-6. More info and configurable options (if any) are availble in the respective folders of widgets.
+## 📖 How to Use These Scriptable Widgets?
+
+1. **Install Scriptable**
+
+Download the free **[Scriptable app](https://apps.apple.com/in/app/scriptable/id1405459188)** from the App Store on your iPhone or iPad.
+
+---
+2. **Set Up the Scriptable Folder**
+
+Ensure a folder named `Scriptable` exists in your iCloud Drive:
+
+* Open the **Files app**
+* Navigate to **iCloud Drive**
+* If not already present, create a folder named `Scriptable` (case-sensitive)
+
+---
+
+3. **Download Widget Scripts**
+
+From this repository:
+
+* Locate the `.js` file for the widget you want to use
+* Download and save it to the `Scriptable` folder in your iCloud Drive
+
+4. **Add the Widget to Your Home Screen**
+
+1. Long-press on the home screen to enter **jiggle mode**
+2. Tap the **“+”** icon (top-left corner)
+3. Search for **Scriptable** and choose the desired **widget size** (Small / Medium / Large)
+4. Tap **Add Widget**
+
+---
+
+5. **Configure the Widget**
+
+After adding the widget:
+
+1. **Long-press** the widget → Tap **“Edit Widget”**
+2. Adjust the following settings:
+
+| Setting              | Default    | What to Change                                                   |
+| -------------------- | ---------- | ---------------------------------------------------------------- |
+| **Script**           | `Choose`   | Select your downloaded widget script                             |
+| **When Interacting** | `Open App` | `Run Script` *(optional)*                                        |
+| **Parameter**        | `Empty`    | Provide any specific config text for the widget (see docs below) |
+
+6. **Widget-Specific Options**
+
+Some widgets support extra customization (e.g., theme, filters, category, API keys, etc.).\
+Refer to the widget's own folder or the script's header comments to see what parameters are supported.
 
 <br/>
 
-## ✍️ Feedback
-If you have any feature/widget request or feedback on this feel free to DM me on [Twitter](https://twitter.com/DharmiKumbhani) or mail me at <dharmikumbhani201@gmail.com>
-widgets that can help us passively learn things should not be just limited to facts; but to various other domains as well, if you have any such idea in mind, feel free to reach out to me! 
+## 🙌 Feedback
+
+Have feature ideas or issues? DM me on [Instagram](https://www.instagram.com/the.tirth12) or email me at [rushiofficial1205@email.com](mailto:rushiofficial1205@email.com).
+
+Widgets shouldn’t be limited to timers—I’d love to build tools that help you passively learn, reflect, or stay organized. If you have a unique concept in mind, I’d love to collaborate.
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+Feel free to fork, build upon, and remix with attribution.
 
 ##
-<br/>
-<div align="center">
-  Made with 💙 for fun 😉 - RP
-</div>
+
+<p align="center">
+Enjoy using this widget ~ RP
+</p>

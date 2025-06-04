@@ -1,204 +1,206 @@
-# 🎉 Countdown Widget
+# Scriptable
+![Scriptable App](./src/badges/scriptableBadge.svg) &nbsp; ![iOS](./src/badges/iOS-badge.svg)
 
-A lightweight and customizable countdown widget built using the [Scriptable app](https://scriptable.app), powered by Google Sheets. It helps you track upcoming events like birthdays, anniversaries, or deadlines—right from your iOS home screen.
+Welcome to my curated collection of **Scriptable** widgets and scripts, crafted to bring more power and personalization to your iOS home screen.
 
-## ✨ Features
+<!-- <img alt="widgets showcase" align="center" src=".src/widgets showcase.png" /> -->
+<img alt="Mockup wall" width="100%" align="center" src="./src/scriptable_mockup_wall.png" />
 
-* 🗓️ **Dynamic Countdown**: Displays days remaining to an event.
-* 🎂 **Age Display**: Automatically shows age or anniversary years.
-* 📅 **Google Sheets Integration**: Events loaded from your own sheet.
-* 🎨 **Color Customization**: Assign vibrant colors and icons per event.
-* ⚙️ **Flexible Layouts**: Adaptable to different widget sizes and views.
 
-## 🚀 How It Works
-
-The widget fetches events from a Google Sheets Web App link and automatically displays the nearest upcoming event(s). Depending on widget size and provided parameters, it can show:
-
-* A **single event** (Small widget)
-* A **grid of events** (use `col` parameter)
-* A **list of upcoming events** (default for Medium and Large widgets)
-
-## 🔧 Setup
-
-### 1. Prepare Google Sheets
-
-Create a sheet like this:
-
-| name | date       | icon | color   |
-| ---- | ---------- | ---- | ------- |
-| Mom  | 2003-09-25 | 🎂   | #2980b9 |
-| Dad  | 1975-07-01 | 🎂   | #F79F39 |
-
-> Ensure dates are formatted as `YYYY-MM-DD`.
-
-### 2. Turn Sheet into Web App
-
-1. Go to **Extensions > Apps Script**.
-2. Paste this code:
-
-```js
-function doGet() {
-  const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-  const data = sheet.getDataRange().getValues();
-  const events = [];
-  for (let i = 1; i < data.length; i++) {
-    const [name, date, icon = "🗓️", color = ""] = data[i];
-    if (!name || !date) continue;
-    let formattedDate = date instanceof Date
-      ? Utilities.formatDate(date, Session.getScriptTimeZone(), "yyyy-MM-dd")
-      : date;
-    let event = { name, date: formattedDate, icon };
-    if (color) event.color = color;
-    events.push(event);
-  }
-  return ContentService.createTextOutput(JSON.stringify(events))
-      .setMimeType(ContentService.MimeType.JSON);
-}
-```
-
-3. **Deploy > New Deployment**
-4. Select type **Web app**
-5. Set access to **Anyone**
-6. Click **Deploy**, then copy the **Web App URL**
-
-### 3. Link Scriptable Script
-
-In your `countdown.js` file, update:
-
-```js
-const SHEET_API_URL = "https://script.google.com/macros/s/YOUR_ID/exec";
-```
-
-Then save the script in Scriptable.
-
-### 4. Add Widget
-
-1. **Download** the [Scriptable app](https://apps.apple.com/in/app/scriptable/id1405459188) from the App Store.
-2. **Option A – Upload Method**
-
-   * **Download** the [`CountdownWidget.js`](./Countdown.js) script from this repository.
-   * Move it into the `Scriptable` folder in your **iCloud Drive** (this folder is created automatically after installing the Scriptable app).
-3. **Option B – Manual Method**
-
-   * Open the Scriptable app.
-   * Tap the **+** icon to create a new script.
-   * **Copy and paste** the script content from this repo manually.
-   * Name the script however you'd like (e.g., `Countdown Widget`).
-4. Long-press anywhere on your iOS Home Screen to enter "jiggle mode", tap the **+** button on the top-left, and scroll to add a **Scriptable** widget.
-5. Choose the desired **widget size** (Small/Medium/Large) and tap **\[+ Add Widget]**.
-6. Long-press the newly added widget, tap **Edit Widget ⓘ**, and configure the **script and parameter values** as described [see below](#️-configure-parameters).
-
-## ⚙️ Configure Parameters
-
-Use the following options when editing the widget:
-
-<table>
-  <tr>
-    <th>Option</th>
-    <th>Defaults</th>
-    <th>Change to</th>
-  </tr>
-  <tr>
-    <td>Script</td>
-    <td>Choose</td>
-    <td>Widget Name (e.g., Countdown Widget)</td>
-  </tr>
-  <tr>
-    <td>While Interacting (optional)</td>
-    <td>Open App</td>
-    <td>Run Script</td>
-  </tr>
-  <tr>
-    <td>Parameters</td>
-    <td>Text</td>
-    <td>
-      <ul>
-        <li>For e.g., <code>age</code>, <code>2</code>, <code>john,age</code>, <code>col</code>    
-        </li>
-        <li><a href="#note">Read below</a> for more instructions</li>
-      </ul>
-      </ul>
-    </td>
-  </tr>
-</table>
-
-> _Here's a Screenshot of widget's config panal_
-
-<img height="auto" width="500px" src="../src/countdown/countdown_config_panal.png" alt="countdown_config_panal.png">
+- Scriptable is an incredibly versatile IOS app that allows you to build custom widgets and automate tasks directly on your Apple devices.
+- From interactive calendars to dynamic quotes and real-time weather updates, my collection showcases how Scriptable can transform your device into a dynamic dashboard.
+- Explore, customize, and enjoy these widgets and scripts to make your iOS experience more fun and functional!
 
 <br/>
-<div id="note"></div>
 
-> [!NOTE]
-> 
-> * `col` parameter works **only for Medium and Large** widgets.
->
->   * **Medium widget** shows top **4** events.
->   * **Large widget** shows top **10** events.
-> * If no `col` is used, widget defaults to **list view**:
->
->   * **Medium:** top **3** events.
->   * **Large:** top **7** events.
-> * In **small** widgets:
->
->   * Type any name from your Google Sheet (e.g., `mom`, `dad`) to show that person's event.
->
->     * If the emoji is 🎂, it will automatically append `'s Birthday`.
->     * If it's 🥂, it appends `'s Anniversary`.
->     * *It only supports these two emojis, but you can always add more to your liking by updating the `titleSuffixes` array.*
->   * You can also use numeric indexes (e.g., `1`, `2`) to select an upcoming event by position.
->   * Default is the **most upcoming event**.
->   * Using `age` shows the years passed since the event date — useful for birthdays or anniversaries.
->
->    * If today is the event date, countdown is hidden and only age is shown.
-> 
-> *  **Pagination (`pg`)**:
->    * Use `pg1`, `pg2`, `pg3`, etc., to display **multiple pages** of events.
-> 
->       * In **list view** (default):
->           * **Medium widget**: each page displays **3 events**.
->         * **Large widget**: each page displays **7 events**.
->       * In **grid view** (`col`):
->
->         * **Medium widget**: each page displays **4 events**.
->         * **Large widget**: each page displays **10 events**.
->
->     * Example:
->       * `pg2`: shows the second page of events.
->       * `col,pg3`: shows the third page of events in grid view.
->
-> * **Offline Fallback & Regular Sync**:
->
->   * Events are automatically cached locally in the `.cache` folder.
->   * Widget gracefully **falls back to cached data** when offline.
->   * Data automatically updates daily at **2:00 AM**.
-
-
-## 📷 Screenshots
-
-<!--
-
-| ![](../src/countdown/countdown_s.png) | ![](../src/countdown/countdown_age_s.PNG) | ![](../src/countdown//countdown_bday_s.PNG) |
-|:--:|:--:|:--:|
-| Countdown | Age Display | On Birthday |
-
-| ![](../src/countdown/countdown_m.PNG) | ![](../src/countdown//countdown_col_m.PNG) | ![](../src/countdown//countdown_l.PNG) |
-|:--:|:--:|:--:|
-| Medium Widget | Color View | Large View |
-
--->
-
-<div style="disply:flex;justify-content:start;flex-wrap:wrap;gap:5px;">
-  <img src="../src/countdown/countdown_s.PNG" width="160" />
-  <img src="../src/countdown/countdown_age_s.PNG" width="160" />
-  <img src="../src/countdown/countdown_bday_s.PNG" width="160" />
-  <img src="../src/countdown/countdown_1_s.PNG" width="160" />
-  <img src="../src/countdown/countdown_m.PNG" width="160" />
-  <img src="../src/countdown/countdown_col_m.PNG" width="160" />
-  <img src="../src/countdown/countdown_l.PNG" width="160" />
-  <img src="../src/countdown/countdown_col_l.PNG" width="160" />
+## Table of Contents
+<div style="color: white;"> 
+<ol>
+  <li><a style="color: white;" href="#scriptable">Scriptable Overview</a></li>
+  <li><a style="color: white;"href="#list-of-widgets">List of Widgets</a>
+    <ol>
+      <li><a style="color: white;"href="#1-myweatherscript-v10js">1-MyWeatherScript-v1.0.js</a></li>
+      <li><a style="color: white;"href="#3-timeprogress-ipadlockscreenjs">3-TimeProgress-iPadLockScreen.js</a></li>
+      <li><a style="color: white;"href="#countdown.js">Countdown.js</a></li>
+      <li><a style="color: white;"href="#countdownsjs">Countdowns.js</a></li>
+      <li><a style="color: white;"href="#homewidgetjs">HomeWidget.js</a></li>
+      <li><a style="color: white;"href="#howoldmijs">HowOldmi.js</a></li>
+      <li><a style="color: white;"href="#myhabitkitwidgetjs">MyHabitKitWidget.js</a></li>
+      <li><a style="color: white;"href="#myquotewidget-ofjs">MyQuoteWidget-OF.js</a></li>
+      <li><a style="color: white;"href="#myquotewidget-onjs">MyQuoteWidget-ON.js</a></li>
+      <li><a style="color: white;"href="#myunischedulewidget-ofjs">MyUniScheduleWidget-OF.js</a></li>
+      <li><a style="color: white;"href="#myunischedulewidgetjs">MyUniScheduleWidget.js</a></li>
+      <li><a style="color: white;"href="#myweatherwidgetjs">MyWeatherWidget.js</a></li>
+      <li><a style="color: white;"href="#ourquotesjs">OurQuotes.js</a></li>
+      <li><a style="color: white;"href="#qclocktwojs">QlockTwo.js</a></li>
+      <li><a style="color: white;"href="#rjs">R.js</a></li>
+      <li><a style="color: white;"href="#scriptdudejs">ScriptDude.js</a></li>
+      <li><a style="color: white;"href="#stoicquotejs">StoicQuote.js</a></li>
+      <li><a style="color: white;"href="#timeprogressjs">TimeProgress.js</a></li>
+      <li><a style="color: white;"href="#trackprogressjs">TrackProgress.js</a></li>
+      <li><a style="color: white;"href="#ts1js">ts1.js</a></li>
+      <li><a style="color: white;"href="#ts2js">ts2.js</a></li>
+      <li><a style="color: white;"href="#wearclraccohindujs">WearClrAccoHindu.js</a></li>
+    </ol>
+  </li>
+  <li><a style="color: white;"href="#how-to-use-scriptable-widgets">How to Use Scriptable Widgets?</a></li>
+  <li><a style="color: white;"href="#feedback">Feedback</a></li>
+</ol>
 </div>
 
+---
+
+<!-- Example section anchors for each script -->
+## 📜 1-MyWeatherScript-v1.0.js <a name="1-myweatherscript-v10js"></a>
+_Description / Screenshot / Usage info_
+
+## 📜 3-TimeProgress-iPadLockScreen.js <a name="3-timeprogress-ipadlockscreenjs"></a>
+_Description / Screenshot / Usage info_
+
+## 📜 Countdown-ON.js <a name="countdown-onjs"></a>
+_Description / Screenshot / Usage info_
+
+...
+
+## 🛠️ How to Use Scriptable Widgets? <a name="how-to-use-scriptable-widgets"></a>
+_Instructions / guide_
+
+## ✍️ Feedback <a name="feedback"></a>
+_Contact info / feedback options_
+
+---
+
+<!-- - [Scriptable scripts](#scriptable-scripts)
+  - [Table of Contents](#table-of-contents)
+  - [❏ List of widgets](#-list-of-widgets)
+    - [Notion Integrations](#notion-integrations)
+    - [Covid Tracker India](#covid-tracker-india)
+    - [Covid Tracker India v2](#covid-tracker-india-v2)
+    - [Insulter](#insulter)
+    - [Periodic Table](#periodic-table)
+    - [Quotes](#quotes)
+    - [Random Number Fact](#random-number-fact)
+  - [📖 How to use scriptable widgets?](#-how-to-use-scriptable-widgets)
+  - [✍️ Feedback](#️-feedback)
+ -->
+<br/>
+
+## List of widgets
+### [Notion Integrations](https://github.com/dharmikumbhani/scriptable/tree/main/Notion%20Integrations)
+![Notion x Scriptable](images/notionIntegrations/NotionxScriptable.png) 
+
+
+<!-- ![iOS widget](./src/badges/large-widget-badge.svg) -->
+Scriptable widgets made using the Notion API.
+
+⚠️ Due to recent [closure](https://blog.covid19india.org/2021/08/07/end/) of the covid tracker API, the following widgets might not work!
+### [Covid Tracker India](https://github.com/dharmikumbhani/scriptable/tree/main/Covid%20Tracker%20-%20India)
+![Covid Tracker India Widget](./src/covidTrackerIndia/Covid-tracker-display-image.png) 
+
+
+![iOS widget](./src/badges/small-widget-badge.svg)
+
+Shows the latest number of newly confirmed cases and no of revcovered patients from any state in India.
+
+### [Covid Tracker India v2](https://github.com/dharmikumbhani/scriptable/tree/main/Covid%20Tracker%20v2%20-%20India)
+![Covid Tracker India Widget](./src/covidTrackerIndiaV2/CovidTrackerIndia-V2-display.png)
+
+![iOS widget](./src/badges/small-widget-badge.svg)
+
+Displays the latest number of cofirmed cases for any state in India along with a graph depciting the trend for the number of cases for the last 7 days.
+
+### [Insulter](https://github.com/dharmikumbhani/scriptable/tree/main/Insulter)
+![Evil Insults](./src/insulter/InsulterDisplay.png)
+
+![iOS widget](./src/badges/medium-widget-badge.svg)
+
+Petty self explanatory - Gives you a well deserved insult.
+
+### [Periodic Table](https://github.com/dharmikumbhani/scriptable/tree/main/Periodic%20Table)
+![Periodic Table Flashcard](./src/periodicTable/PeriodicTableDisplay.png)
+
+![iOS widget](./src/badges/large-widget-badge.svg)
+
+Get details about an element from the periodic table
+
+### [Quotes](https://github.com/dharmikumbhani/scriptable/tree/main/Quotes)
+![Quotes Widget](./src/quotes/QuotesDisplay.png) 
+
+![iOS widget](./src/badges/medium-widget-badge.svg)
+
+Shows a random quote from famous people like Alber Einstein, John Wolfgang von Goethe 
+
+### [Random Number Fact](https://github.com/dharmikumbhani/scriptable/tree/main/Random%20Number%20Fact)
+![Random Number Fact Widget](./src/RandomNumberFact/RandomNumberFactDisplay.png) 
+
+![iOS widget](./src/badges/medium-widget-badge.svg)
+
+Well gives you a rather intresting fact adout a randomly generated number.
+
+<br/>
+
+## 📖 How to use scriptable widgets?
+Absolutely! Here's a clean, polished, and beginner-friendly version of your instructions — perfect for your GitHub repo’s `README.md`. I've kept the tone professional and clear, with improved grammar, layout, and consistency:
+
+---
+
+## 📲 How to Use These Scriptable Widgets
+
+Follow these steps to add and configure any widget from this repository:
+
+### 1. **Install Scriptable**
+
+Download the free **[Scriptable app](https://apps.apple.com/in/app/scriptable/id1405459188)** from the App Store on your iPhone or iPad.
+
+---
+
+### 2. **Set Up the Scriptable Folder**
+
+Ensure a folder named `Scriptable` exists in your iCloud Drive:
+
+* Open the **Files app**
+* Navigate to **iCloud Drive**
+* If not already present, create a folder named `Scriptable` (case-sensitive)
+
+---
+
+### 3. **Download Widget Scripts**
+
+From this repository:
+
+* Locate the `.js` file for the widget you want to use
+* Download and save it to the `Scriptable` folder in your iCloud Drive
+
+---
+
+### 4. **Add the Widget to Your Home Screen**
+
+1. Long-press on the home screen to enter **jiggle mode**
+2. Tap the **“+”** icon (top-left corner)
+3. Search for **Scriptable** and choose the desired **widget size** (Small / Medium / Large)
+4. Tap **Add Widget**
+
+---
+
+### 5. **Configure the Widget**
+
+After adding the widget:
+
+1. **Long-press** the widget → Tap **“Edit Widget”**
+2. Adjust the following settings:
+
+| Setting              | Default    | What to Change                                                   |
+| -------------------- | ---------- | ---------------------------------------------------------------- |
+| **Script**           | `Choose`   | Select your downloaded widget script                             |
+| **When Interacting** | `Open App` | `Run Script` *(optional)*                                        |
+| **Parameter**        | `Empty`    | Provide any specific config text for the widget (see docs below) |
+
+### 6. **Widget-Specific Options**
+
+Some widgets support extra customization (e.g., theme, filters, category, API keys, etc.).\
+Refer to the widget's own folder or the script's header comments to see what parameters are supported.
+
+<br/>
 
 ## 🙌 Feedback
 

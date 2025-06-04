@@ -111,7 +111,12 @@ Use the following options when editing the widget:
   <tr>
     <td>Parameters</td>
     <td>Text</td>
-    <td> Check NOTE below </td>
+    <td>
+      <ul>
+        <li>For e.g., <code>age</code>, <code>2</code>, <code>john,age</code>, <code>col</code>    
+        </li>
+        <li><a href="#note">Read below</a> for more instructions</li>
+      </ul>
       </ul>
     </td>
   </tr>
@@ -122,6 +127,7 @@ Use the following options when editing the widget:
 <img height="auto" width="500px" src="../src/countdown/countdown_config_panal.png" alt="countdown_config_panal.png">
 
 <br/>
+<div id="note"></div>
 
 > [!NOTE]
 > * `col` parameter works **only for Medium and Large** widgets.

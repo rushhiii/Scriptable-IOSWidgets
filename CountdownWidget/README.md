@@ -124,6 +124,7 @@ Use the following options when editing the widget:
 <br/>
 
 > [!IMPORTANT]
+> hkgh
 
 * `col` parameter works **only for Medium and Large** widgets.
 

@@ -123,8 +123,8 @@ Use the following options when editing the widget:
 
 <br/>
 
-> [!NOTE] Important Notes
-> 🧠 **Important Notes:**
+> [!NOTE]
+> **Important Notes:**
 >
 > * `col` parameter works **only for Medium and Large** widgets.
 >
@@ -174,7 +174,7 @@ Use the following options when editing the widget:
 
 ## 📷 Screenshots
 
-*(Insert previews here of small/medium/large widgets with transparent backgrounds.)*
+
 
 ## 🙌 Feedback
 
@@ -190,4 +190,6 @@ Feel free to fork, build upon, and remix with attribution.
 
 ##
 
-Enjoy using this widget \~ RP
+<p align="center">
+Enjoy using this widget ~ RP
+</p>

@@ -2,8 +2,6 @@
 
 A lightweight and customizable countdown widget built using the [Scriptable app](https://scriptable.app), powered by Google Sheets. It helps you track upcoming events like birthdays, anniversaries, or deadlines—right from your iOS home screen.
 
-
-
 ## ✨ Features
 
 * 🗓️ **Dynamic Countdown**: Displays days remaining to an event.
@@ -12,7 +10,6 @@ A lightweight and customizable countdown widget built using the [Scriptable app]
 * 🎨 **Color Customization**: Assign vibrant colors and icons per event.
 * ⚙️ **Flexible Layouts**: Adaptable to different widget sizes and views.
 
-
 ## 🚀 How It Works
 
 The widget fetches events from a Google Sheets Web App link and automatically displays the nearest upcoming event(s). Depending on widget size and provided parameters, it can show:
@@ -20,7 +17,6 @@ The widget fetches events from a Google Sheets Web App link and automatically di
 * A **single event** (Small widget)
 * A **grid of events** (use `col` parameter)
 * A **list of upcoming events** (default for Medium and Large widgets)
-
 
 ## 🔧 Setup
 
@@ -90,8 +86,7 @@ Then save the script in Scriptable.
    * Name the script however you'd like (e.g., `Countdown Widget`).
 4. Long-press anywhere on your iOS Home Screen to enter "jiggle mode", tap the **+** button on the top-left, and scroll to add a **Scriptable** widget.
 5. Choose the desired **widget size** (Small/Medium/Large) and tap **\[+ Add Widget]**.
-6. Long-press the newly added widget, tap **Edit Widget ⓘ**, and configure the **script and parameter values** as described [see below](Configure Parameters).
-
+6. Long-press the newly added widget, tap **Edit Widget ⓘ**, and configure the **script and parameter values** as described [see below](#️-configure-parameters).
 
 ## ⚙️ Configure Parameters
 
@@ -116,58 +111,50 @@ Use the following options when editing the widget:
   <tr>
     <td>Parameters</td>
     <td>Text</td>
-    <td>For example:<br/>
-      <ul>
-        <li> <code>age</code> to show age in small widget. </li>
-        <li> <code>2</code> to select second event. </li>
-        <li> <code>john,age</code> to select by name and show age (order doesn’t matter). </li>
-        <li> <code>col</code> to enable grid view (best for large widgets). </li>
+    <td>Check below</td>
       </ul>
     </td>
   </tr>
 </table>
-</p>
 
-#### Parameter Examples
+> _Here's a Screenshot of widget's config panal_
 
-* Show **age**:
+<img height="auto" width="500px" src="../src/countdown/countdown_config_panal.png" alt="countdown_config_panal.png">
 
-  ```
-  age
-  ```
-* Show **second event**:
+<br/>
 
-  ```
-  2
-  ```
-* Show **event by name** with age:
+> [!Important]
 
-  ```
-  john,age
-  ```
-* Enable **grid view**:
+* `col` parameter works **only for Medium and Large** widgets.
 
-  ```
-  col
-  ```
+   * **Medium widget** shows top **4** events.
+   * **Large widget** shows top **10** events.
+ * If no `col` is used, widget defaults to **list view**:
 
-> Tip: You can combine parameters. Order doesn't matter (e.g., `col,age` is valid).
+   * **Medium:** top **3** events.
+   * **Large:** top **7** events.
+ * In **small** widgets:
 
+   * Type any name from your Google Sheet (e.g., `mom`, `dad`) to show that person's event.
 
+     * If the emoji is 🎂, it will automatically append `'s Birthday`.
+     * If it's 🥂, it appends `'s Anniversary`.
+     * It only supports these two emojis, but you can always add more to your liking by updating the `titleSuffixes` array.
+   * You can also use numeric indexes (e.g., `1`, `2`) to select an upcoming event by position.
+   * Default is the **most upcoming event**.
+   * Using `age` shows the years passed since the event date — useful for birthdays or anniversaries.
+
+     * If today is the event date, countdown is hidden and only age is shown.
 
 ## 📷 Screenshots
 
 *(Insert previews here of small/medium/large widgets with transparent backgrounds.)*
-
-
 
 ## 🙌 Feedback
 
 Have feature ideas or issues? DM me on [Instagram](https://www.instagram.com/the.tirth12) or email me at [rushiofficial1205@email.com](mailto:rushiofficial1205@email.com).
 
 Widgets shouldn’t be limited to timers—I’d love to build tools that help you passively learn, reflect, or stay organized. If you have a unique concept in mind, I’d love to collaborate.
-
-
 
 ## 📜 License
 
@@ -177,4 +164,4 @@ Feel free to fork, build upon, and remix with attribution.
 
 ##
 
-Enjoy using this widget ~ RP
+Enjoy using this widget \~ RP

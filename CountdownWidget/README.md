@@ -150,7 +150,7 @@ Use the following options when editing the widget:
 >   * Default is the **most upcoming event**.
 >   * Using `age` shows the years passed since the event date — useful for birthdays or anniversaries.
 >
->     * If today is the event date, countdown is hidden and only age is shown.
+>    * If today is the event date, countdown is hidden and only age is shown.
 > 
 > *  **Pagination (`pg`)**:
 >    * Use `pg1`, `pg2`, `pg3`, etc., to display **multiple pages** of events.

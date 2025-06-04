@@ -170,8 +170,6 @@ From this repository:
 3. Search for **Scriptable** and choose the desired **widget size** (Small / Medium / Large)
 4. Tap **Add Widget**
 
----
-
 5. **Configure the Widget**
 
 After adding the widget:

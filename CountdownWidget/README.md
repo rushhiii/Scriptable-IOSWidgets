@@ -190,9 +190,9 @@ Use the following options when editing the widget:
 
 > _Small Widgets_
 
-| ![](../src/countdown/countdown_s.PNG) | ![](../src/countdown/countdown_age_s.PNG) |
+| <img src="../src/countdown/countdown_s.PNG" width="160"/> | <img src="../src/countdown/countdown_age_s.PNG" width="160"/> |
 |:--:|:--:|
-|![](../src/countdown/countdown_bday_s.PNG) | ![](../src/countdown/countdown_1_s.PNG) |
+| <img src="../src/countdown/countdown_bday_s.PNG" width="160"/> | <img src="../src/countdown/countdown_1_s.PNG" width="160"/> |
 
 > _Medium Widgets_
 

@@ -8,21 +8,49 @@ const colorPalette = ["#CB2443", "#8e44ad", "#2980b9", "#F79F39", "#CEA834", "#7
 
 // === Fetch Data from Google Sheets Web App (instead of local JSON) ===
 const req = new Request(SHEET_API_URL);
-const events = await req.loadJSON();
+
+// === Local cache setup ===
+const fm = FileManager.iCloud();
+const dataDir = fm.joinPath(fm.documentsDirectory(), ".cache");
+if (!fm.fileExists(dataDir)) fm.createDirectory(dataDir);
+
+const dataPath = fm.joinPath(dataDir, "events_cache.json");
+
+// Fetch data from online or fallback to local cache
+async function loadEventData() {
+  try {
+    const req = new Request(SHEET_API_URL);
+    const data = await req.loadJSON();
+    fm.writeString(dataPath, JSON.stringify(data)); // update local cache
+    return data;
+  } catch (e) {
+    if (fm.fileExists(dataPath)) {
+      const data = JSON.parse(fm.readString(dataPath));
+      return data;
+    } else {
+      throw new Error("No data available online or locally, please refer to the steps on the repo.");
+    }
+  }
+}
+
+const events = await loadEventData();
+
+
+// const events = await req.loadJSON();
 
 const titleSuffixes = {
   "🎂": "'s Birthday",
   "🥂": "'s Anniversary",
   "🗓": "", // relationships
-  "🔱": "", // Fetivals, etc
+  "🔱": "",
   "default": ""
 };
 
 const ageSuffixMap = {
   "🎂": ["turning ", ""],
-  "🥂": ["", " years together"],
-  "🔱": ["", " years observed"],
-  "🗓": ["", " years together"],
+  "🥂": ["", " yrs together"],
+  "🔱": ["", " yrs observed"],
+  "🗓": ["", " yrs together"],
   "default": ["turning ", " years"]
 };
 
@@ -36,7 +64,7 @@ const todaySuffixes = {
 
 
 // === Load local files ===
-const fm = FileManager.iCloud();
+// const fm = FileManager.iCloud();
 
 // === Load Custom Roboto Font ===
 const fontPath = fm.joinPath(fm.joinPath(fm.documentsDirectory(), ".fonts"), "Roboto-Regular.ttf");
@@ -53,24 +81,50 @@ const repeatIcon = fm.readImage(repeatPath);
 const param = args.widgetParameter ? args.widgetParameter.trim().toLowerCase() : null;
 let selectedEvent = events[0]; // default: soonest event
 let showAgeMode = false; // default off
+let page = 1; // default page
 
-if (param && param !== "col") {
-  const parts = param.split(',').map(p => p.trim());
-  if (parts.includes("age")) showAgeMode = true;
+if (param) {
+  const parts = param.split(',').map(p => p.trim().toLowerCase());
 
-  const otherParam = parts.find(p => p !== "age");
-  if (otherParam) {
-    if (!isNaN(otherParam)) {
-      const index = parseInt(otherParam) - 1;
+  parts.forEach(p => {
+    if (p.startsWith("pg")) {
+      // Handle pagination (pg1, pg2, etc.)
+      page = parseInt(p.slice(2)) || 1;
+    } else if (p === "age") {
+      // Activate age display mode
+      showAgeMode = true;
+    } else if (!isNaN(p)) {
+      // Select event by numeric index
+      const index = parseInt(p) - 1;
       if (index >= 0 && index < events.length) {
         selectedEvent = events[index];
       }
     } else {
-      const match = events.find(e => e.name.toLowerCase().includes(otherParam));
+      // Select event by matching name (case-insensitive)
+      const match = events.find(e => e.name.toLowerCase().includes(p));
       if (match) selectedEvent = match;
     }
-  }
+  });
 }
+
+
+// if (param && param !== "col") {
+//   const parts = param.split(',').map(p => p.trim());
+//   if (parts.includes("age")) showAgeMode = true;
+
+//   const otherParam = parts.find(p => p !== "age");
+//   if (otherParam) {
+//     if (!isNaN(otherParam)) {
+//       const index = parseInt(otherParam) - 1;
+//       if (index >= 0 && index < events.length) {
+//         selectedEvent = events[index];
+//       }
+//     } else {
+//       const match = events.find(e => e.name.toLowerCase().includes(otherParam));
+//       if (match) selectedEvent = match;
+//     }
+//   }
+// }
 
 // === Countdown Utils ===
 function upcomingDateInCurrentYear(dateStr) {
@@ -319,14 +373,29 @@ if (size === "small") {
     }
 
   } else {
-    // Pushs the section up
-    main.addSpacer(0);
+    const { birthDate, thisYearBday, ageDecimal } = calculateAgeData(event.date, today);
+    let ageDisplay;
+    let k = 5; // font size offset
+    ageDisplay = (thisYearBday <= today) ? (parseFloat(ageDecimal) + 1).toFixed(0) : (ageDecimal).toFixed(0);
 
-    // === days left
-    const middleRow = main.addStack();
-    middleRow.layoutVertically();
-    createStyledLabel(middleRow, `${days}`, mainFontsize + 27, "light");
-    createStyledLabel(middleRow, `days left`, mainFontsize + 2,);
+
+    if (thisYearBday.getTime() === today.getTime()) {
+      main.addSpacer();
+      const middleRow = main.addStack();
+      middleRow.layoutVertically();
+      const turningAge = middleRow.addStack();
+      turningAge.layoutHorizontally();
+      createStyledLabel(turningAge, suffixArr[0], mainFontsize + k - 1);
+      createStyledLabel(turningAge, `${ageDisplay}!`, mainFontsize + k, "semibold");
+      createStyledLabel(turningAge, suffixArr[1], mainFontsize + k - 1);
+    } else {
+      // === days left
+      main.addSpacer(0); // Pushs the section up
+      const middleRow = main.addStack();
+      middleRow.layoutVertically();
+      createStyledLabel(middleRow, `${days}`, mainFontsize + 27, "light");
+      createStyledLabel(middleRow, `days left`, mainFontsize + 2,);
+    }
   }
   main.addSpacer();
 
@@ -360,14 +429,17 @@ const gridConfig = {
 
 const configSize = gridConfig[size] || gridConfig["small"];
 
-if (param === "col") {
+if (param.includes("col")) {
   const { rows, cols, cellHeight, cellWidth, fontSize, padding, spacing } = configSize;
-  const maxVisible = rows * cols;
-  const visible = events.slice(0, maxVisible);
+  
+  // Pagination logic for Grid View
+  const itemsPerPage = rows * cols;
+  const startIdx = (page - 1) * itemsPerPage;
+  const pagedEvents = events.slice(startIdx, startIdx + itemsPerPage);
 
-  // Pad with null to fill grid
-  while (visible.length < maxVisible) visible.push(null);
-  // === Build Grid ===
+  // Pad with null if fewer items remain
+  while (pagedEvents.length < itemsPerPage) pagedEvents.push(null);
+
   for (let r = 0; r < rows; r++) {
     const row = widget.addStack();
     row.layoutHorizontally();
@@ -375,52 +447,31 @@ if (param === "col") {
 
     for (let c = 0; c < cols; c++) {
       const index = r * cols + c;
-      const item = visible[index];
+      const item = pagedEvents[index];
 
       const cell = row.addStack();
       cell.layoutVertically();
       cell.size = new Size(cellWidth, cellHeight);
       cell.cornerRadius = 12;
-      cell.setPadding(padding, padding, padding, 0);
+      cell.setPadding(padding, padding, padding, padding);
       cell.centerAlignContent();
 
       if (item) {
         const days = daysUntil(item.date);
         const formattedDate = formatDate(item.date);
-
-        const colorIndex = (r * cols + c * 2) % colorPalette.length;
+        const colorIndex = (startIdx + index) % colorPalette.length;
         cell.backgroundColor = new Color(item.color || colorPalette[colorIndex]);
 
         const rowStack = cell.addStack();
-        rowStack.layoutHorizontally();
+        rowStack.layoutVertically();
         rowStack.centerAlignContent();
-        rowStack.spacing = 6;
+        rowStack.spacing = 2;
 
-        // === Left info stack
-        const info = rowStack.addStack();
-        info.layoutVertically();
-        info.spacing = 2;
-
-        // Title
-        createStyledLabel(info, `${item.icon || "📅"} ${item.name}`, fontSize.title, "bold", { minScale: 0.8, lineLimit: 1 });
-
-        // Date
-        createStyledLabel(info, formattedDate, fontSize.text, { lineLimit: 2 });
-
-        rowStack.addSpacer();
-
-        // === Right countdown
-        const counter = rowStack.addStack();
-        counter.layoutVertically();
-        counter.backgroundColor = new Color("#0000004B");
-        counter.setPadding(4, 6, 4, 6);
-        counter.size = new Size(45, cellHeight);
-        counter.centerAlignContent();
-
-        createStyledLabel(counter, `${days}`, fontSize.title + 2, "heavy");
-        createStyledLabel(counter, `days left`, fontSize.text);
+        createStyledLabel(rowStack, `${item.icon || "📅"} ${item.name}`, fontSize.title, "bold", { minScale: 0.8, lineLimit: 1 });
+        createStyledLabel(rowStack, formattedDate, fontSize.text, { lineLimit: 1 });
+        createStyledLabel(rowStack, `${days} days left`, fontSize.text, "medium", { lineLimit: 1 });
       } else {
-        cell.backgroundColor = new Color("#00000000"); // transparent
+        cell.backgroundColor = new Color("#00000000"); // transparent placeholder
       }
     }
 
@@ -439,9 +490,16 @@ if (param === "col") {
   const maxItems = size === "large" ? 7 : 3;
   widget.backgroundColor = new Color("#000000");
 
-  for (let i = 0; i < maxItems; i++) {
-    const event = events[i];
+  // === Pagination Logic ===
+  const itemsPerPage = size === "large" ? 7 : 3;
+  const startIdx = (page - 1) * itemsPerPage;
+  const pagedEvents = events.slice(startIdx, startIdx + itemsPerPage);
+
+  // for (let i = 0; i < maxItems; i++) { // normal loop
+  for (let i = 0; i < pagedEvents.length; i++) { // paged loop
+    const event = pagedEvents[i];
     const days = daysUntil(event.date);
+
 
     const row = widget.addStack();
     row.layoutHorizontally();
@@ -515,6 +573,58 @@ if (param === "col") {
   }
 }
 
-widget.refreshAfterDate = new Date(Date.now() + 60 * 60 * 1000);
-Script.setWidget(widget);
-Script.complete();
+// Refresh widget daily at 2 AM
+function getNext2AM() {
+  const now = new Date();
+  const nextRefresh = new Date(now);
+  nextRefresh.setHours(2, 0, 0, 0); // Set to 2:00 AM today
+  if (now >= nextRefresh) {
+    nextRefresh.setDate(nextRefresh.getDate() + 1); // if past 2 AM, schedule for next day
+  }
+  return nextRefresh;
+}
+
+// widget.refreshAfterDate = getNext2AM();
+
+
+widget.refreshAfterDate = new Date(Date.now() + 60 * 60 * 1000); // refresh hourly
+// For in-app runs (scrolling view)
+if (config.runsInApp) {
+  const table = new UITable();
+  table.showSeparators = false;
+  table.backgroundColor = new Color("#000000");
+
+  for (const event of events) {
+    const days = daysUntil(event.date);
+    const row = new UITableRow();
+    row.height = 80;
+    row.backgroundColor = new Color("#1e1e1e");
+
+    // Combine emoji and event details into a single left-aligned cell
+    const leftText = `${event.icon}  ${event.icon === "🎂" ? event.name + "'s Birthday" : event.name}\n📅 ${formatDate(event.date)}`;
+    const leftCell = row.addText(leftText);
+    leftCell.titleFont = Font.semiboldSystemFont(16);
+    leftCell.subtitleFont = Font.systemFont(13);
+    leftCell.titleColor = Color.white();
+    leftCell.subtitleColor = Color.gray();
+    leftCell.widthWeight = 0.7;
+    leftCell.leftAligned();
+
+    // Days left in a right-aligned cell
+    const daysCell = row.addText(`${days}\ndays left`);
+    daysCell.titleFont = Font.semiboldSystemFont(16);
+    daysCell.subtitleFont = Font.systemFont(13);
+    daysCell.titleColor = Color.white();
+    daysCell.subtitleColor = Color.gray();
+    daysCell.widthWeight = 0.3;
+    daysCell.rightAligned();
+
+    table.addRow(row);
+  }
+
+  await table.present();
+  Script.complete();
+} else {
+  Script.setWidget(widget);
+  Script.complete();
+}

@@ -175,10 +175,10 @@ Well gives you a rather intresting fact adout a randomly generated number. -->
 
 3. **Download Widget Scripts**
 
-   * From this repository:
+  * From this repository:
 
-     * Locate the `.js` file for the widget you want to use
-     * Download and save it to the `Scriptable` folder in your iCloud Drive
+    * Locate the `.js` file for the widget you want to use
+    * Download and save it to the `Scriptable` folder in your iCloud Drive
 
 4. **Add the Widget to Your Home Screen**
 

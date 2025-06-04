@@ -123,7 +123,7 @@ Use the following options when editing the widget:
 
 <br/>
 
-> [!Important]
+> [!IMPORTANT]
 
 * `col` parameter works **only for Medium and Large** widgets.
 

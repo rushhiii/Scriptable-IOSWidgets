@@ -189,10 +189,10 @@ Well gives you a rather intresting fact adout a randomly generated number. -->
 
 5. **Configure the Widget**
 
-After adding the widget:
+* After adding the widget:
 
-1. **Long-press** the widget → Tap **“Edit Widget”**
-2. Adjust the following settings:
+  1. **Long-press** the widget → Tap **“Edit Widget”**
+  2. Adjust the following settings:
 
 | Setting              | Default    | What to Change                                                   |
 | -------------------- | ---------- | ---------------------------------------------------------------- |
@@ -202,7 +202,7 @@ After adding the widget:
 
 6. **Widget-Specific Options**
 
-Some widgets support extra customization (e.g., theme, filters, category, API keys, etc.).\
+* Some widgets support extra customization (e.g., theme, filters, category, API keys, etc.).\
 Refer to the widget's own folder or the script's header comments to see what parameters are supported.
 
 <br/>

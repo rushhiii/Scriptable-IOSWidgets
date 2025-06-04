@@ -176,6 +176,8 @@ Use the following options when editing the widget:
 
 ## 📷 Screenshots
 
+<!--
+
 | ![](../src/countdown/countdown_s.png) | ![](../src/countdown/countdown_age_s.PNG) | ![](../src/countdown//countdown_bday_s.PNG) |
 |:--:|:--:|:--:|
 | Countdown | Age Display | On Birthday |
@@ -184,6 +186,18 @@ Use the following options when editing the widget:
 |:--:|:--:|:--:|
 | Medium Widget | Color View | Large View |
 
+-->
+
+<div style="disply:flex;justify-content:start;flex-wrap:wrap;gap:5px;">
+  <img src="../src/countdown/countdown_s.PNG" width="160" />
+  <img src="../src/countdown/countdown_age_s.PNG" width="160" />
+  <img src="../src/countdown/countdown_bday_s.PNG" width="160" />
+  <img src="../src/countdown/countdown_1_s.PNG" width="160" />
+  <img src="../src/countdown/countdown_m.PNG" width="160" />
+  <img src="../src/countdown/countdown_col_m.PNG" width="160" />
+  <img src="../src/countdown/countdown_l.PNG" width="160" />
+  <img src="../src/countdown/countdown_col_l.PNG" width="160" />
+</div>
 
 
 ## 🙌 Feedback

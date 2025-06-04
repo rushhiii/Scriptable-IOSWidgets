@@ -189,23 +189,10 @@ Use the following options when editing the widget:
 -->
 
 > __Small Widgets__
-<!-- 
-![](../src/countdown/countdown_s.PNG)
-![](../src/countdown/countdown_age_s.PNG)
-![](../src/countdown/countdown_bday_s.PNG)
-![](../src/countdown/countdown_1_s.PNG) -->
 
-<table>
-  <tr>
-    <td align="center"><img src="../src/countdown/countdown_s.PNG" width="160"/></td>
-    <td align="center"><img src="../src/countdown/countdown_age_s.PNG" width="160"/></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="../src/countdown/countdown_bday_s.PNG" width="160"/></td>
-    <td align="center" colspan="3"><img src="../src/countdown/countdown_1_s.PNG" width="160"/></td>
-  </tr>
-</table>
-
+| ![](../src/countdown/countdown_s.PNG) | ![](../src/countdown/countdown_age_s.PNG) |
+|:--:|:--:|
+|![](../src/countdown/countdown_bday_s.PNG) | ![](../src/countdown/countdown_1_s.PNG) |
 
 
 > __Medium Widgets__

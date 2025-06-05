@@ -1,10 +1,10 @@
 # Scriptable
-![Scriptable App](./src/badges/scriptableBadge.svg) &nbsp; ![iOS](./src/badges/iOS-badge.svg)
+![Scriptable App](./.src/badges/scriptableBadge.svg) &nbsp; ![iOS](./.src/badges/iOS-badge.svg)
 
 Welcome to my curated collection of **Scriptable** widgets and scripts, crafted to bring more power and personalization to your iOS home screen.
 
 <!-- <img alt="widgets showcase" align="center" src=".src/widgets showcase.png" /> -->
-<img alt="Mockup wall" width="100%" align="center" src="./src/scriptable_mockup_wall.png" />
+<img alt="Mockup wall" width="100%" align="center" src="./.src/scriptable_mockup_wall.png" />
 
 <br>
 
@@ -99,9 +99,9 @@ _Contact info / feedback options_ -->
 
 <!-- ### [Countdown](https://github.com/rushhiii/Scriptable-IOSWidgets/tree/main/Countdown) -->
 
-### [Countdown](../src/countdown/countdown.js)
+### [Countdown](./Countdown%20Widget/MyCountdowns.js)
 
-![Countdown Widget](../src/countdown/countdown_display.png)
+![Countdown Widget](./.src/countdown/countdown_display.png)
 
 📆 **Track life’s important moments—right from your home screen.**\
 The **Countdown Widget** helps you stay on top of upcoming events like birthdays, anniversaries, holidays, or personal milestones. It supports **multiple display modes** based on widget size (Small, Medium, Large) and can be fully customized using script parameters. You can show specific events, display color-coded grids, or even track multiple events in column layout. The widget fetches data from a local `.json` or a connected Google Sheet for dynamic updates.

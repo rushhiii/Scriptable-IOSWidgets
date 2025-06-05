@@ -106,7 +106,7 @@ The widget is set to automatically refresh every 30 minutes:
 widget.refreshAfterDate = new Date(Date.now() + 30 * 60 * 1000);
 ```
 
-## 🖼️ Sample Layouts
+## 📸 Screenshots
 
 |         Small Example         |         Medium Example         |         Large Example         |
 | :---------------------------: | :----------------------------: | :---------------------------: |

@@ -141,8 +141,7 @@ Widgets shouldn’t be limited to timers—I’d love to build tools that help y
 
 ## 📜 License
 
-This project is licensed under the **MIT License**.
-
+This project is licensed under the **MIT License**.\
 Feel free to fork, build upon, and remix with attribution.
 
 ##

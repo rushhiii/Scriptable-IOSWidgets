@@ -17,15 +17,15 @@ Welcome to my curated collection of **Scriptable** widgets and scripts, crafted 
 ## Table of Contents
 <ul>
   <li><a  href="#scriptable">Scriptable Overview</a></li>
-  <li><a href="#list-of-widgets">List of Widgets</a>
-    <ol>
+  <li><a href="#📜-list-of-widgets">List of Widgets</a>
+    <ul>
       <li><a href="#countdown">MyCountdowns</a></li>
       <li><a href="#myquotes">MyQuotes</a></li>
-    </ol>
+    </ul>
   </li>
-  <li><a  href="#how-to-use-These-scriptable-widgets">How to Use Scriptable Widgets?</a></li>
-  <li><a href="#feedback">Feedback</a></li>
-  <li><a href="#license">License</a></li>
+  <li><a  href="#📖-how-to-use-these-scriptable-widgets?">How to Use Scriptable Widgets?</a></li>
+  <li><a href="#🙌-feedback">Feedback</a></li>
+  <li><a href="#📜-license">License</a></li>
 </ul>
 
 <!-- <ol>
@@ -94,14 +94,16 @@ _Contact info / feedback options_ -->
  -->
 <br/>
 
-## 📜 List of widgets
+## 📜 List of Widgets
 
 
-### [Countdown](https://github.com/rushhiii/Scriptable-IOSWidgets/tree/main/Countdown)
+<!-- ### [Countdown](https://github.com/rushhiii/Scriptable-IOSWidgets/tree/main/Countdown) -->
+
+### [Countdown](../src/countdown/countdown.js)
 
 ![Countdown Widget](../src/countdown/countdown_display.png)
 
-📆 **Track life’s important moments—right from your home screen.**
+📆 **Track life’s important moments—right from your home screen.**\
 The **Countdown Widget** helps you stay on top of upcoming events like birthdays, anniversaries, holidays, or personal milestones. It supports **multiple display modes** based on widget size (Small, Medium, Large) and can be fully customized using script parameters. You can show specific events, display color-coded grids, or even track multiple events in column layout. The widget fetches data from a local `.json` or a connected Google Sheet for dynamic updates.
 
 

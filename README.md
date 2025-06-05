@@ -164,14 +164,14 @@ Well gives you a rather intresting fact adout a randomly generated number. -->
 
 1. **Install Scriptable**
 
-  * Download the free **[Scriptable app](https://apps.apple.com/in/app/scriptable/id1405459188)** from the App Store on your iPhone or iPad.
+     * Download the free **[Scriptable app](https://apps.apple.com/in/app/scriptable/id1405459188)** from the App Store on your iPhone or iPad.
 
 2. **Set Up the Scriptable Folder**
 
-  * Ensure a folder named `Scriptable` exists in your iCloud Drive:
-  * Open the **Files app**
-  * Navigate to **iCloud Drive**
-  * If not already present, create a folder named `Scriptable` (case-sensitive)
+     * Ensure a folder named `Scriptable` exists in your iCloud Drive:
+     * Open the **Files app**
+     * Navigate to **iCloud Drive**
+     * If not already present, create a folder named `Scriptable` (case-sensitive)
 
 3. **Download Widget Scripts**
 
@@ -202,8 +202,8 @@ Well gives you a rather intresting fact adout a randomly generated number. -->
 
 6. **Widget-Specific Options**
 
-  * Some widgets support extra customization (e.g., theme, filters, category, API keys, etc.).\
-  Refer to the widget's own folder or the script's header comments to see what parameters are supported.
+     * Some widgets support extra customization (e.g., theme, filters, category, API keys, etc.).\
+     Refer to the widget's own folder or the script's header comments to see what parameters are supported.
 
 <br/>
 

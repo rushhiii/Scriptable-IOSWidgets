@@ -1,4 +1,4 @@
-# 🖊️ My Quotes Widget
+# ✒️ My Quotes Widget
 
 ![smartquote](https://user-images.githubusercontent.com/your-image-here.png)
 
@@ -10,7 +10,6 @@ It supports:
 - Size-aware filtering for small, medium, and large widgets
 
 > Built using [Scriptable](https://scriptable.app) and the Google Visualization API.
-
 
 ## ✨ Features
 
@@ -41,8 +40,8 @@ Each category (e.g., `gita`, `zen`) should be a separate tab.
 If no font or background color is specified for a quote, the widget loads a random fallback from:
 
 ```
-.source/dark\_theme\_color\_pairs.json
-````
+.source/dark_theme_color_pairs.json
+```
 
 Each entry should follow:
 
@@ -51,11 +50,11 @@ Each entry should follow:
   { "font": "#FFFFFF", "background": "#1A1A1A" },
   { "font": "#E0E0E0", "background": "#2C3E50" }
 ]
-````
+```
 
 ## 📦 Local File Requirements
 
-* `.source/dark_theme_color_pairs.json`
+* `.source/dark_theme_color_pairs.json`  
   (optional, for color fallback)
 
 * *(Optional)* `.fonts/` directory for custom font loading (currently unused)
@@ -80,7 +79,6 @@ if (!config.runsInWidget) await widget.presentMedium();
 2. **Copy the Widget Code** from this repo into a new script in Scriptable
 3. Save the script as `QuoteWidget.js`
 4. Create the folders:
-
    * `Scriptable/.source/` → for `dark_theme_color_pairs.json`
    * *(optional)* `Scriptable/.fonts/` → for custom font support
 5. *(Optional)* Add your own `quote spreadsheet` to Google Sheets and update the `SHEET_ID`
@@ -122,7 +120,6 @@ The **order doesn't matter**. Examples:
 - `m` → Medium
 - `l` → Large
 
-
 ## 📸 Screenshot
 
 *(Replace with your actual screenshots)*
@@ -130,8 +127,6 @@ The **order doesn't matter**. Examples:
 | Small                        | Medium                        | Large                        |
 | ---------------------------- | ----------------------------- | ---------------------------- |
 | ![](./screenshots/small.png) | ![](./screenshots/medium.png) | ![](./screenshots/large.png) |
-
-
 
 ## 🙌 Feedback
 
@@ -141,7 +136,7 @@ Widgets shouldn’t be limited to timers—I’d love to build tools that help y
 
 ## 📜 License
 
-This project is licensed under the **MIT License**.\
+This project is licensed under the **MIT License**.  
 Feel free to fork, build upon, and remix with attribution.
 
 ##

@@ -1,13 +1,15 @@
 // icon-color: purple; icon-glyph: quote-right;
 
 // === Start: Param Handling ===
-const defaultCategory = "aurelius";
+const defaultCategory = "machiavelli";
 // const defaultCategory = "kafka";
 const defaultSize = config.widgetFamily === "small" ? "s" : config.widgetFamily === "medium" ? "m" : "l";
 const validSizes = ["s", "m", "l"];
-const validCategories = ["myquotes", "gita", "zen", "machiavelli", "aurelius", "fyodor", "kafka"];
+const validCategories = ["myquotes", "gita", "test", "zen", "machiavelli", "aurelius", "fyodor", "kafka"];
 
+// const param = args.widgetParameter ? args.widgetParameter.trim().toLowerCase() : `${defaultCategory}`;
 const param = args.widgetParameter ? args.widgetParameter.trim().toLowerCase() : defaultCategory;
+// const param = args.widgetParameter ? args.widgetParameter.trim().toLowerCase() : "540";
 const parts = param.split(",");
 let category = defaultCategory;
 let sizeParam = defaultSize;
@@ -43,7 +45,6 @@ if (!validCategories.includes(category)) {
   return;
 }
 
-// === End: Param Handling ===
 const fm = FileManager.iCloud();
 // myQuotes, test ,gita, zen, machiavelli, Aurelius, fyodor, kafka
 // const defaultParam = "machiavelli";
@@ -83,109 +84,58 @@ function getColorPairFromJSON() {
   }
 }
 
-
-async function getQuoteFromSheet(indexOverride = null) {
+async function getQuoteFromSheet(rowNumber = null) {
   try {
     const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=${category}`;
     const req = new Request(url);
-    let raw;
+    const raw = await req.loadString();
 
-    try {
-      raw = await req.loadString();
-    } catch (fetchErr) {
-      console.error(`❌ Failed to load sheet tab "${category}"`, fetchErr);
-      return { quote: "No quotes available (invalid tab).", author: "" };
-    }
-
-    let json;
-    try {
-      json = JSON.parse(raw.match(/google.visualization.Query.setResponse\((.+)\)/)[1]);
-    } catch (parseErr) {
-      console.error(`❌ Failed to parse quote JSON from tab "${category}"`, parseErr);
-      return { quote: "No quotes available (parse error).", author: "" };
-    }
-
+    const json = JSON.parse(raw.match(/google.visualization.Query.setResponse\((.+)\)/)[1]);
     const rows = json.table.rows.map(r => r.c.map(c => (c ? c.v : "")));
+
     const usable = rows.filter(r => r[0] && r[1]);
-    if (usable.length === 0) return { quote: "No quotes found.", author: "" };
 
-    const dailyIndex = getDailyIndex(usable.length, widgetSize);
-    let index = indexOverride !== null ? indexOverride : dailyIndex;
-    if (index >= usable.length) index = usable.length - 1;
-    if (index < 0) index = 0;
-
-    // let index = dailyIndex;
-    let attempts = 0;
-    const maxAttempts = usable.length;
-
-    let quote, author, fontHex, bgHex;
-    let found = false;
-
-    while (attempts < maxAttempts) {
-      // this checks and displays the quote which would fix redaly less of the index entered
-      [quote, author, fontHex, bgHex] = usable[index];
-      if (!isQuoteTooLong(quote, author, widgetSize)) {
-        found = true;
-        break;
-      }
-
-      // this display the quote at that index even if it is too long
-    //   if (indexOverride !== null) {
-    //     [quote, author, fontHex, bgHex] = usable[index];
-    //   } else {
-    //     while (attempts < maxAttempts) {
-    //       [quote, author, fontHex, bgHex] = usable[index];
-    //       if (!isQuoteTooLong(quote, author, widgetSize)) {
-    //         found = true;
-    //         break;
-    //       }
-    //       index = (index + 1) % usable.length;
-    //       attempts++;
-    //     }
-
-    //     if (!found) {
-    //       [quote, author, fontHex, bgHex] = usable[dailyIndex];
-    //     }
-    //   }
-
-      index = (index + 1) % usable.length;
-      attempts++;
+    let row;
+    if (rowNumber !== null && rowNumber >= 2) {
+      row = rows[rowNumber - 1]; // Spreadsheet row 544 → rows[542]
     }
 
-    if (!found) {
-      [quote, author, fontHex, bgHex] = usable[dailyIndex];
-    }
+    if (!row || !row[0]) {
+  console.warn(`⚠️ No valid quote at row ${rowNumber}, falling back to filtered random`);
+  
+  // Try to find a usable quote that fits the widget size
+  const fitting = usable.filter(([q, a]) => !isQuoteTooLong(q, a, widgetSize));
 
-    let fontColor = getColor(fontHex);
-    let backgroundColor = getColor(bgHex);
+  if (fitting.length > 0) {
+    // row = fitting[Math.floor(Math.random() * fitting.length)];
+    const dailyIndex = getDailyIndex(fitting.length, widgetSize);
+row = fitting[dailyIndex];
 
-    if (
-      fontColor?.hex.toUpperCase() === "#000000" &&
-      backgroundColor?.hex.toUpperCase() === "#FFFFFF"
-    ) {
-      const fallback = getColorPairFromJSON();
-      fontColor = fallback.fontColor;
-      backgroundColor = fallback.backgroundColor;
-    }
+  } else {
+    // If none fit, fall back to truly random
+    console.warn("⚠️ No short enough quote found, using random long one");
+    row = usable[Math.floor(Math.random() * usable.length)];
+  }
+}
 
-    console.log(`📆 Today's quote (${widgetSize}): ${quote} — ${author}`);
-    console.log(`🎯 Final index used: ${index}`);
-    console.log(`✅ Total quotes available: ${usable.length}`);
 
+    const [quote, author, fontHex, bgHex] = row;
 
     return {
       quote,
       author,
-      fontColor,
-      backgroundColor
+      fontColor: getColor(fontHex),
+      backgroundColor: getColor(bgHex)
     };
   } catch (err) {
-    console.error("🔥 Unexpected error in getQuoteFromSheet()", err);
-    return { quote: "Something went wrong.", author: "" };
+    console.error("🔥 Error fetching or parsing sheet data:", err);
+    return {
+      quote: "Something went wrong.",
+      author: ""
+    };
   }
-
-
 }
+
 
 
 // Utility to get repeatable index based on current day
@@ -202,7 +152,7 @@ const mfs = 14;
 const lfs = 16;
 
 function isQuoteTooLong(quote, author, sizeKey) {
-  const totalText = `“${quote}”`;
+  const totalText = `“${quote}”— ${author}`;
   const length = totalText.length;
 
   if (sizeKey === "s") {

@@ -71,7 +71,7 @@ function minutesBetween(date1, date2) {
   const totalMinutes = Math.round((date2 - date1) / (1000 * 60));
   const hours = Math.floor(totalMinutes / 60);
   const minutes = totalMinutes % 60;
-  
+
   if (hours > 0 && minutes > 0) {
     return `${hours} hr ${minutes} min`;
   } else if (hours > 0) {
@@ -117,7 +117,7 @@ async function fetchScheduleFromSheet() {
 // === BUILD WIDGET ===
 // async function buildWidget(schedule, size, fullView = false, customDayName = null) {
 async function buildWidget(schedule, size, fullView = false, customDayName = null, customTitle = null) {
-const w = new ListWidget();
+  const w = new ListWidget();
   const today = getNowTime();
   const dayName = customDayName || today.toLocaleString("en-US", { weekday: "long" });
   w.backgroundGradient = getGradient(dayName);
@@ -149,7 +149,7 @@ const w = new ListWidget();
 
       if (classes.length === 0) {
         const noClass = column.addText("✅ No classes");
-        noClass.font = Font.systemFont(allOverFont-4);
+        noClass.font = Font.systemFont(allOverFont - 4);
         noClass.textColor = Color.lightGray();
       } else {
         for (const c of classes) {
@@ -157,37 +157,37 @@ const w = new ListWidget();
           classStack.layoutVertically();
           classStack.topAlignContent();
           classStack.spacing = 2;
-        
+
           const startDate = parseTime24(c.Start);
           const endDate = parseTime24(c.End);
           const now = getNowTime();
           const nowTime = new Date(0, 0, 0, now.getHours(), now.getMinutes());
           const isNow = nowTime >= startDate && nowTime < endDate;
-        
-          const fontTitle = isNow ? Font.boldSystemFont(allOverFont-4) : Font.systemFont(allOverFont-4);
-          const fontDetails = isNow ? Font.boldSystemFont(allOverFont-6) : Font.systemFont(allOverFont-6);
-          const fontLocation = isNow ? Font.boldSystemFont(allOverFont-6) : Font.systemFont(allOverFont-6);
-        
+
+          const fontTitle = isNow ? Font.boldSystemFont(allOverFont - 4) : Font.systemFont(allOverFont - 4);
+          const fontDetails = isNow ? Font.boldSystemFont(allOverFont - 6) : Font.systemFont(allOverFont - 6);
+          const fontLocation = isNow ? Font.boldSystemFont(allOverFont - 6) : Font.systemFont(allOverFont - 6);
+
           const title = classStack.addText(`${c.Title} (${c.Type})`);
           title.font = fontTitle;
           title.textColor = Color.white();
-        
+
           const timeRange = formatShortTimeRange(startDate, endDate);
           const details = classStack.addText(`Sec ${c.Section} · ${timeRange}`);
           details.font = fontDetails;
           details.textColor = Color.gray();
-        
+
           const location = classStack.addText(`${c.Building} · ${c.Location}`);
           location.font = fontLocation;
           location.textColor = Color.lightGray();
-        
+
           column.addSpacer(4); // Add some space between class blocks
         }
       }
 
       column.addSpacer(4);
       const summary = column.addText(`📚 ${classes.length} class${classes.length !== 1 ? "es" : ""}`);
-      summary.font = Font.systemFont(allOverFont-5);
+      summary.font = Font.systemFont(allOverFont - 5);
       summary.textColor = Color.gray();
 
       row.addSpacer(8);
@@ -235,15 +235,15 @@ const w = new ListWidget();
         const row = w.addStack();
         row.layoutHorizontally();
         row.centerAlignContent();
-        
+
         const classesToShow = todayClasses.slice(0, 2); // max 2 classes
-        
+
         for (const c of classesToShow) {
           const col = row.addStack();
           col.layoutVertically();
           col.centerAlignContent();
           col.spacing = 2;
-          
+
           const startDate = parseTime24(c.Start);
           const endDate = parseTime24(c.End);
           const isNow = nowTime >= startDate && nowTime < endDate;
@@ -251,68 +251,68 @@ const w = new ListWidget();
           const fontTitle = isNow ? Font.boldSystemFont(14) : Font.systemFont(14);
           const fontDetails = isNow ? Font.boldSystemFont(12) : Font.systemFont(12);
           const fontLocation = isNow ? Font.boldSystemFont(12) : Font.systemFont(12);
-      
+
 
           const title = col.addText(`${c.Title} (${c.Type})`);
           title.font = fontTitle;
           title.textColor = Color.white();
-  
+
           const timeRange = formatShortTimeRange(startDate, endDate);
           const details = col.addText(`Sec ${c.Section} · ${timeRange}`);
           details.font = fontDetails;
           details.textColor = Color.gray();
-  
+
           const location = col.addText(`${c.Building} · ${c.Location}`);
           location.font = fontLocation;
           location.textColor = Color.lightGray();
-  
-          
+
+
           row.addSpacer(15); // Space between columns
         }
-        
+
       } else {
         for (const c of todayClasses.slice(0, show)) {
-        const stack = w.addStack();
-        stack.layoutVertically();
+          const stack = w.addStack();
+          stack.layoutVertically();
 
-        // stack.addSpacer(5);
+          // stack.addSpacer(5);
 
-        const startDate = parseTime24(c.Start);
-        const endDate = parseTime24(c.End);
-        const isNow = nowTime >= startDate && nowTime < endDate;
+          const startDate = parseTime24(c.Start);
+          const endDate = parseTime24(c.End);
+          const isNow = nowTime >= startDate && nowTime < endDate;
 
-        // const title = stack.addText(`${c.Title} (${c.Type})`);
-        // title.font = (size !== "small" && isNow) ? Font.boldSystemFont(14) : Font.systemFont(14);
-        // title.textColor = Color.white();
+          // const title = stack.addText(`${c.Title} (${c.Type})`);
+          // title.font = (size !== "small" && isNow) ? Font.boldSystemFont(14) : Font.systemFont(14);
+          // title.textColor = Color.white();
 
-        // const timeRange = formatShortTimeRange(startDate, endDate);
-        // const details = stack.addText(`Sec ${c.Section} · ${timeRange}`);
-        // details.font = Font.systemFont(12);
-        // details.textColor = Color.gray();
+          // const timeRange = formatShortTimeRange(startDate, endDate);
+          // const details = stack.addText(`Sec ${c.Section} · ${timeRange}`);
+          // details.font = Font.systemFont(12);
+          // details.textColor = Color.gray();
 
-        // const location = stack.addText(`${c.Building} · ${c.Location}`);
-        // location.font = Font.systemFont(12);
-        // location.textColor = Color.lightGray();
+          // const location = stack.addText(`${c.Building} · ${c.Location}`);
+          // location.font = Font.systemFont(12);
+          // location.textColor = Color.lightGray();
 
-        const fontTitle = (size !== "small" && isNow) ? Font.boldSystemFont(14) : Font.systemFont(14);
-        const fontDetails = (size !== "small" && isNow) ? Font.boldSystemFont(12) : Font.systemFont(12);
-        const fontLocation = (size !== "small" && isNow) ? Font.boldSystemFont(12) : Font.systemFont(12);
+          const fontTitle = (size !== "small" && isNow) ? Font.boldSystemFont(14) : Font.systemFont(14);
+          const fontDetails = (size !== "small" && isNow) ? Font.boldSystemFont(12) : Font.systemFont(12);
+          const fontLocation = (size !== "small" && isNow) ? Font.boldSystemFont(12) : Font.systemFont(12);
 
-        const title = stack.addText(`${c.Title} (${c.Type})`);
-        title.font = fontTitle;
-        title.textColor = Color.white();
+          const title = stack.addText(`${c.Title} (${c.Type})`);
+          title.font = fontTitle;
+          title.textColor = Color.white();
 
-        const timeRange = formatShortTimeRange(startDate, endDate);
-        const details = stack.addText(`Sec ${c.Section} · ${timeRange}`);
-        details.font = fontDetails;
-        details.textColor = Color.gray();
+          const timeRange = formatShortTimeRange(startDate, endDate);
+          const details = stack.addText(`Sec ${c.Section} · ${timeRange}`);
+          details.font = fontDetails;
+          details.textColor = Color.gray();
 
-        const location = stack.addText(`${c.Building} · ${c.Location}`);
-        location.font = fontLocation;
-        location.textColor = Color.lightGray();
+          const location = stack.addText(`${c.Building} · ${c.Location}`);
+          location.font = fontLocation;
+          location.textColor = Color.lightGray();
 
-        stack.addSpacer(8);
-        }        
+          stack.addSpacer(8);
+        }
         // w.addSpacer(8);
       }
     }

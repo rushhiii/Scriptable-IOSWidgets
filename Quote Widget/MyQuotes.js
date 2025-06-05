@@ -101,22 +101,22 @@ async function getQuoteFromSheet(rowNumber = null) {
     }
 
     if (!row || !row[0]) {
-  console.warn(`⚠️ No valid quote at row ${rowNumber}, falling back to filtered random`);
-  
-  // Try to find a usable quote that fits the widget size
-  const fitting = usable.filter(([q, a]) => !isQuoteTooLong(q, a, widgetSize));
+      console.warn(`⚠️ No valid quote at row ${rowNumber}, falling back to filtered random`);
 
-  if (fitting.length > 0) {
-    // row = fitting[Math.floor(Math.random() * fitting.length)];
-    const dailyIndex = getDailyIndex(fitting.length, widgetSize);
-row = fitting[dailyIndex];
+      // Try to find a usable quote that fits the widget size
+      const fitting = usable.filter(([q, a]) => !isQuoteTooLong(q, a, widgetSize));
 
-  } else {
-    // If none fit, fall back to truly random
-    console.warn("⚠️ No short enough quote found, using random long one");
-    row = usable[Math.floor(Math.random() * usable.length)];
-  }
-}
+      if (fitting.length > 0) {
+        // row = fitting[Math.floor(Math.random() * fitting.length)];
+        const dailyIndex = getDailyIndex(fitting.length, widgetSize);
+        row = fitting[dailyIndex];
+
+      } else {
+        // If none fit, fall back to truly random
+        console.warn("⚠️ No short enough quote found, using random long one");
+        row = usable[Math.floor(Math.random() * usable.length)];
+      }
+    }
 
 
     const [quote, author, fontHex, bgHex] = row;

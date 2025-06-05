@@ -71,7 +71,19 @@ const SHEET_API_URL = "https://script.google.com/macros/s/YOUR_ID/exec";
 
 Then save the script in Scriptable.
 
-### 4. Add Widget
+### 4. Load Repeat Icon
+
+If you see a ❗ warning or square character instead of the **repeat icon**, it's likely because the required icon font isn't available. To fix this:
+
+1. **Download the `repeat.png` icon** from the repository’s `assets` folder (or use your own).
+2. Save it inside your `iCloud Drive > Scriptable > .assets` folder.
+3. Ensure the file is named exactly: `repeat.png`
+4. The widget will automatically load this icon when it detects a recurring event.
+
+> 🔧 Tip: You can replace `repeat.png` with any custom icon (e.g., circular arrows) — just make sure it’s 60x60 px and in PNG format.
+
+
+### 5. Add Widget
 
 1. **Download** the [Scriptable app](https://apps.apple.com/in/app/scriptable/id1405459188) from the App Store.
 2. **Option A – Upload Method**

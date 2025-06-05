@@ -72,7 +72,7 @@ await fm.downloadFileFromiCloud(fontPath);
 const roboto = (size) => new Font(fontPath, size);
 
 // === Load Repeat Icon ===
-const repeatPath = fm.joinPath(fm.joinPath(fm.documentsDirectory(), ".source"), "repeat_icon.png");
+const repeatPath = fm.joinPath(fm.joinPath(fm.documentsDirectory(), ".assets"), "repeat_icon.png");
 await fm.downloadFileFromiCloud(repeatPath);
 const repeatIcon = fm.readImage(repeatPath);
 

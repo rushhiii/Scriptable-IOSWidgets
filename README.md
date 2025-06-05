@@ -211,7 +211,7 @@ Well gives you a rather intresting fact adout a randomly generated number. -->
 
 ## 🙌 Feedback
 
-Have feature ideas or issues? DM me on [Instagram](https://www.instagram.com/the.tirth12) or email me at [rushiofficial1205@gmail.com](mailto:rushiofficial1205@gmail.com).
+Have feature ideas or issues? DM me on [Instagram](https://www.instagram.com/the.tirth12) or email me at <rushiofficial1205@gmail.com>.
 
 Widgets shouldn’t be limited to timers—I’d love to build tools that help you passively learn, reflect, or stay organized. If you have a unique concept in mind, I’d love to collaborate.
 

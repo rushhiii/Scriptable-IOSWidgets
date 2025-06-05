@@ -1,4 +1,11 @@
 # ⛅ Dynamic Weather Widget
+![Scriptable](https://img.shields.io/badge/Scriptable-Compatible-purple)
+![Widget Size](https://img.shields.io/badge/Supports-Small%2C%20Medium%2C%20Large-blue)
+![API](https://img.shields.io/badge/API-OpenWeatherMap-orange)
+![Location](https://img.shields.io/badge/Location-GPS%20Auto--Detect-green)
+![Theme](https://img.shields.io/badge/Theme-Gradient%20Backgrounds-9cf)
+![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
+![Last Updated](https://img.shields.io/badge/Updated-June%202025-yellow)
 
 A clean and elegant iOS weather widget built with [Scriptable](https://scriptable.app), fetching real-time data from the **OpenWeather API**. The widget adapts layout and font size based on weather conditions and city names for improved readability.
 

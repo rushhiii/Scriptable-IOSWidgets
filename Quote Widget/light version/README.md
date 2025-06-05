@@ -1,4 +1,11 @@
 # 🪶 Daily ZenQuotes Widget
+![Scriptable](https://img.shields.io/badge/Scriptable-Compatible-purple)
+![Widget Size](https://img.shields.io/badge/Supports-Small%2C%20Medium%2C%20Large-blue)
+![API](https://img.shields.io/badge/API-ZenQuotes.io-orange)
+![Theme](https://img.shields.io/badge/Theme-Light%20%26%20Dark%20Mode-9cf)
+![Offline Fallback](https://img.shields.io/badge/Fallback-Offline%20Support-lightgrey)
+![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
+![Last Updated](https://img.shields.io/badge/Updated-June%202025-yellow)
 
 image
 

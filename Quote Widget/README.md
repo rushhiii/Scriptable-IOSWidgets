@@ -1,4 +1,11 @@
 # ✒️ My Quotes Widget
+![Scriptable](https://img.shields.io/badge/Scriptable-Compatible-purple)
+![Widget Size](https://img.shields.io/badge/Supports-Small%2C%20Medium%2C%20Large-blue)
+![Data Source](https://img.shields.io/badge/Data-Google%20Sheet%20(CSV)-green)
+![Customization](https://img.shields.io/badge/Styling-Dynamic%20Colors%20%2B%20Size-aware-orange)
+![Theme](https://img.shields.io/badge/Theme-Dark%20Fallbacks%20%2B%20Customizable-9cf)
+![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
+![Last Updated](https://img.shields.io/badge/Updated-June%202025-yellow)
 
 ![smartquote](https://user-images.githubusercontent.com/your-image-here.png)
 

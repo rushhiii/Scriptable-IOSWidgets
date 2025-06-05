@@ -1,4 +1,10 @@
 # ⏳ Modular Time Progress
+![Scriptable](https://img.shields.io/badge/Scriptable-Compatible-purple)
+![Widget Size](https://img.shields.io/badge/Supports-Small%2C%20Medium%2C%20Large-blue)
+![Display Modes](https://img.shields.io/badge/Modes-Alarm%2C%20Day%2C%20Week%2C%20Month%2C%20Year-lightgrey)
+![Theme](https://img.shields.io/badge/Theme-Dark%20Gradient-black)
+![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
+![Last Updated](https://img.shields.io/badge/Updated-June%202025-yellow)
 
 ![Modular Time Progress](images/timeProgress/demo-grid.png)
 

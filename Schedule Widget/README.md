@@ -1,4 +1,11 @@
 # 📅 Class Schedule Viewer
+![Scriptable](https://img.shields.io/badge/Scriptable-Compatible-purple)
+![Widget Size](https://img.shields.io/badge/Supports-Small%2C%20Medium%2C%20Large-blue)
+![Data Source](https://img.shields.io/badge/Data-Google%20Sheets-brightgreen)
+![Schedule Type](https://img.shields.io/badge/Schedule-Dynamic%20Class%20View-lightgrey)
+![Theme](https://img.shields.io/badge/Theme-Gradient%20by%20Weekday-9cf)
+![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
+![Last Updated](https://img.shields.io/badge/Updated-June%202025-yellow)
 
 ![schedule-widget](https://user-images.githubusercontent.com/your-image-here.png)
 

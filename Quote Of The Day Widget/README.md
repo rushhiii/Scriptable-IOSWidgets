@@ -1,4 +1,4 @@
-# Smart Quote Widget
+# 🖊️ My Quotes Widget
 
 ![smartquote](https://user-images.githubusercontent.com/your-image-here.png)
 
@@ -74,7 +74,7 @@ To force refresh during development, use:
 if (!config.runsInWidget) await widget.presentMedium();
 ```
 
-## 🚀 Installation Guide
+## 🔧 Installation Guide
 
 1. **Install Scriptable** from the App Store
 2. **Copy the Widget Code** from this repo into a new script in Scriptable

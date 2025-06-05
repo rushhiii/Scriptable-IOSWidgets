@@ -1,8 +1,8 @@
 // icon-color: brown; icon-glyph: feather;
 // Variables used by Scriptable.
 // These must be at the very top of the file. Do not edit.
-// Quote Widget (zenquotes API)
 
+// Quote Widget (zenquotes API)
 const quoteApiUrl = "https://zenquotes.io/api/today";
 
 const param = args.widgetParameter ? args.widgetParameter.trim().toLowerCase() : "dark";

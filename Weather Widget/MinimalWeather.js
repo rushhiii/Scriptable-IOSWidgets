@@ -84,7 +84,7 @@ async function getCurrentLocation() {
 // Function to fetch weather data 
 async function fetchWeatherData(latitude, longitude) { 
     // example
-    // https://api.openweathermap.org/data/2.5/weather?lat=43.7878784&lon=-79.6622848&appid=bead6f18f6a295a4f6f4ff8daba6c363&units=metric
+    // https://api.openweathermap.org/data/2.5/weather?lat=43.7878784&lon=-79.6622848&appid=API_KEY&units=metric
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=${WEATHER_UNITS}`; 
     try { 
 

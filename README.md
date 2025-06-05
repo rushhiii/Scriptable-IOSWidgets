@@ -99,7 +99,7 @@ _Contact info / feedback options_ -->
 
 <!-- ### [Countdown](https://github.com/rushhiii/Scriptable-IOSWidgets/tree/main/Countdown) -->
 
-### [Countdown](./Countdown%20Widget/MyCountdowns.js)
+### [Countdown](./Countdown%20Widget)
 
 ![Countdown Widget](./.src/countdown/countdown_display.png)
 

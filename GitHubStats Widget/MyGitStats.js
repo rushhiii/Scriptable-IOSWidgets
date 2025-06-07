@@ -1,12 +1,10 @@
 // icon-color: black; icon-glyph: github;
 
-const username = "rushhiii";
+const username = "rushhiii"; // replace with your github username
 const token = Keychain.get("github_token"); // replace this with you token
 
-// const rawParam = args.widgetParameter || "";
+const rawParam = args.widgetParameter || "night";
 // const rawParam = args.widgetParameter || "rushhiii/Scriptable-IOSWidgets,views,indigo";
-// const [repoPath, statType = "", themeParam = "auto"] = rawParam.split(",").map(s => s.trim());
-const rawParam = args.widgetParameter || "";
 const parts = rawParam.split(",").map(s => s.trim());
 
 let repoPath = "";
@@ -29,12 +27,13 @@ if (parts.length === 3) {
   }
 }
 
-
-const size = config.widgetFamily || "medium";
+const size = config.widgetFamily || "large";
+// const size = config.widgetFamily || "medium";
+// const size = config.widgetFamily || "small";
 const UI = {
   small: { font: 12, headfont: 24, lineSpacing: 4, logo: 26, pad: 10 },
-  medium: { font: 13, headfont: 20, lineSpacing: 5, logo: 38, pad: 12 },
-  large: { font: 14, headfont: 32, lineSpacing: 6, logo: 34, pad: 14 }
+  medium: { font: 13, headfont: 24, lineSpacing: 5, logo: 38, pad: 14 },
+  large: { font: 14, headfont: 26, lineSpacing: 6, logo: 55, pad: 16 }
 }[size];
 
 const now = new Date();
@@ -44,19 +43,94 @@ const thisYearStart = new Date(year, 0, 1).toISOString();
 const today = now.toISOString();
 
 const themePresets = {
+  // auto: Device.isUsingDarkAppearance()
+  //   ? { colors: ["#0b0e2c", "#000000"], locations: [0, 1], head: "#ffffff", text: "#909692", acc: "#3094ff" }
+  //   : { colors: ["#e6f2f1", "#bff2c2"], locations: [0, 1], head: "#000000", text: "#5a615c", acc: "#006edb" },
+
   auto: Device.isUsingDarkAppearance()
-    ? { colors: ["#0b0e2c", "#000000"], locations: [0, 1], head: "#ffffff", text: "#909692", acc: "#3094ff" }
-    : { colors: ["#e6f2f1", "#bff2c2"], locations: [0, 1], head: "#000000", text: "#5a615c", acc: "#006edb" },
+    ? {
+      colors: ["#000244", "#000233", "#000000"],
+      locations: [0, 0.5, 1],
+      head: "#ffffff", text: "#909692", acc: "#ffffff"
+    }
+    : {
+      colors: [
+        "#E1F5FE", // Very light sky blue
+        "#B3E5FC", // Soft cyan
+        "#81D4FA", // True sky blue
+        "#4FC3F7", // Deeper cyan
+        "#29B6F6"  // iOS-like vibrant blue
+      ],
+      locations: [0.0, 0.25, 0.5, 0.75, 1.0],
+      head: "#000000",        // dark title/icon
+      text: "#32555f",         // bluish-gray text
+      acc: "#007AFF"          // standard iOS accent blue
+    },
+
 
   blue: {
-    colors: ["#0d1117", "#1E2838", "#1f6feb"],
-    locations: [1.0, 0.5, 0.0],
-    head: "#ffffff", text: "#c0c0c0", acc: "#58a6ff"
+    // colors: ["#0d1117", "#1E2838", "#1f6feb"],
+    // locations: [1.0, 0.5, 0.0],
+    // head: "#ffffff", text: "#c0c0c0", acc: "#58a6ff"
+    colors: ["#0A0C1C", "#121C3C", "#263B73"],
+    locations: [0, 0.5, 1],
+    head: "#ffffff",
+    text: "#c0c0c0",
+    acc: "#8ac7ff"
+
   },
-  green: {
+  gray: {
+    colors: [
+      "#202631", // Cloudy navy gray
+      "#2D3440", // Muted slate
+      "#3C4454", // Blue-gray storm cloud
+      "#525D6F", // Electric gray blue
+      "#7A8699"  // Lighter edge storm sky
+    ],
+    locations: [0.0, 0.25, 0.5, 0.75, 1.0],
+    head: "#EAEAEA",       // soft lightning white
+    text: "#C7CCD5",       // light gray
+    acc: "#8AB4F8"         // stormy blue accent
+
+  },
+  night: {
+    colors: [
+      "#000000", // Pure black
+      "#04050A", // Subtle hint of navy
+      "#0A0F1A", // Faint cool midnight
+      "#111827"  // Deep twilight blue-gray
+    ],
+    locations: [0.0, 0.4, 0.75, 1.0],
+    head: "#ffffff",        // bright title/icon
+    text: "#B0B8C0",        // soft gray text
+    acc: "#42A5F5"
+  },
+  day: {
+    colors: [
+      "#E1F5FE", // Very light sky blue
+      "#B3E5FC", // Soft cyan
+      "#81D4FA", // True sky blue
+      "#4FC3F7", // Deeper cyan
+      "#29B6F6"  // iOS-like vibrant blue
+    ],
+    locations: [0.0, 0.25, 0.5, 0.75, 1.0],
+    head: "#000000",        // dark title/icon
+    text: "#32555f",         // bluish-gray text
+    acc: "#007AFF"          // standard iOS accent blue
+
+  },
+
+  gitgreen: {
     colors: ["#defefa", "#bfffd1"],
     locations: [0, 1],
     head: "#000000", text: "#5a615c", acc: "#000000"
+  },
+  green: {
+    colors: ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"],
+    locations: [0.0, 0.25, 0.5, 0.75, 1.0],
+    head: "#0a0e27", // 0a0e27
+    text: "#000000",
+    acc: "#216e39"
   },
   indigo: {
     colors: ["#000244", "#000233", "#000000"],
@@ -324,13 +398,13 @@ function renderSmallLayout(w, { userInfo, language, ghStats, repoStats, logoImg,
   if (repoStats) {
     const row = w.addStack();
     row.layoutHorizontally();
-    row.centerAlignContent(); // bottomAlignContent
+    row.centerAlignContent();
 
     const head = row.addText(username);
     head.font = Font.mediumSystemFont(UI.headfont);
     head.textColor = headClr;
     // head.lineLimit = 2;
-    head.minimumScaleFactor = 0.8;
+    head.minimumScaleFactor = 0.6;
 
     row.addSpacer();
 
@@ -348,11 +422,11 @@ function renderSmallLayout(w, { userInfo, language, ghStats, repoStats, logoImg,
     statTitle.font = Font.systemFont(UI.font);
     statTitle.textColor = textClr;
   } else {
-    w.addSpacer();
+    w.addSpacer(0);
 
     const header = w.addStack();
     header.layoutHorizontally();
-    header.centerAlignContent(); // bottomAlignContent
+    header.centerAlignContent();
 
     const title = header.addText(`${username}'s GitHub Stats`);
     title.font = Font.boldSystemFont(UI.font);
@@ -367,8 +441,8 @@ function renderSmallLayout(w, { userInfo, language, ghStats, repoStats, logoImg,
     // w.addSpacer(6);
     w.addSpacer();
 
-
-    addLine("Curr Streak", `${ghStats.currentStreak} days`, "🔥");
+    // max 5
+    addLine("Curr Streak", `${ghStats.currentStreak} d`, "🔥");
     addLine(`Commits ('${yearLabel})`, ghStats.commits2025, "🕒");
     addLine("Contributions", ghStats.totalContributions, "📅");
     // addLine("PRs", ghStats.totalPRs, "🔃");
@@ -386,9 +460,9 @@ function renderSmallLayout(w, { userInfo, language, ghStats, repoStats, logoImg,
 
 }
 
-function renderMediumLayout(w, { userInfo, language, ghStats, repoStats, logoImg, headClr, textClr, accClr }) {
+function renderMediumLayout(w, { userInfo, language, ghStats, logoImg, headClr, textClr, accClr }) {
   w.setPadding(UI.pad, UI.pad, UI.pad, UI.pad);
-  // w.addSpacer();
+  w.addSpacer();
 
   const header = w.addStack();
   header.layoutHorizontally();
@@ -397,48 +471,69 @@ function renderMediumLayout(w, { userInfo, language, ghStats, repoStats, logoImg
   const title = header.addText(`${username}'s GitHub Stats`);
   title.font = Font.boldSystemFont(UI.headfont);
   title.textColor = headClr;
+  title.minimumScaleFactor = 0.8;
+  title.lineLimit = 2;
 
   header.addSpacer();
 
   const logo = header.addImage(logoImg);
   logo.imageSize = new Size(UI.logo, UI.logo);
-   logo.tintColor = headClr;
+  logo.tintColor = headClr;
 
   // w.addSpacer(UI.lineSpacing);
-  // w.addSpacer();
+  w.addSpacer();
 
   const addLine = (label, value, icon = "") => {
     if (typeof value === "number" && value <= 1) return;
     if (!value || value === 0) return;
     const line = w.addText(`${icon} ${label}: ${value}`);
     line.font = Font.mediumSystemFont(UI.font);
-    line.textColor = Color.lightGray();
+    line.textColor = textClr;
     w.addSpacer(UI.lineSpacing);
   };
 
 
-  addLine("Followers", userInfo.followers, "👥");
-  addLine("Following", userInfo.following, "🔄");
-  if (language) addLine("Top Language", language, "💻");
-
-  addLine("Curr Streak", `${ghStats.currentStreak} days`, "🔥");
-  addLine(`Commits ('${yearLabel})`, ghStats.commits2025, "🕒");
-  addLine("Contributions", ghStats.totalContributions, "📅");
-  // addLine("PRs", ghStats.totalPRs, "🔃");
-  // addLine("Repos", userInfo.public_repos, "📦");
-  addLine("Public Repos", userInfo.public_repos, "📦");
-  addLine("Followers", userInfo.followers, "👥");
-  // addLine("Following", userInfo.following, "🔄");
   // if (language) addLine("Top Language", language, "💻");
-  // addLine("Total Commits (all-time)", ghStats.totalCommits, "📜");
-  // addLine("Total Issues", ghStats.totalIssues, "❗");
-  // addLine("Repos", userInfo.public_repos, "📦");
+  // max 5
+  addLine("Current Streak", `${ghStats.currentStreak} days`, "🔥");
   // addLine("Longest Streak", `${ghStats.longestStreak} days`, "🏆");
-  // w.addSpacer();
+  addLine(`Commits (${year})`, ghStats.commits2025, "🕒");
+  addLine("Total Commits (all-time)", ghStats.totalCommits, "📜");
+  addLine("Contributions", ghStats.totalContributions, "📅");
+  addLine("Public Repos", userInfo.public_repos, "📦");
+  // addLine("Total Issues", ghStats.totalIssues, "❗");
+  // addLine("PRs", ghStats.totalPRs, "🔃");
+  // if (language) addLine("Top Language", language, "💻");
+  // addLine("Followers", userInfo.followers, "👥");
+  // addLine("Following", userInfo.following, "🔄");
+
+  w.addSpacer();
 
 }
 
-function renderLargeLayout(w, { userInfo, language, ghStats, logoImg }) {
+function renderLargeLayout(w, { userInfo, language, ghStats, logoImg, headClr, textClr, accClr }) {
+  w.setPadding(UI.pad, UI.pad, UI.pad, UI.pad);
+  w.addSpacer(0);
+
+  const header = w.addStack();
+  header.layoutHorizontally();
+  header.centerAlignContent(); // bottomAlignContent
+
+  const title = header.addText(`${username}'s GitHub Stats`);
+  title.font = Font.boldSystemFont(UI.headfont);
+  title.textColor = headClr;
+  title.minimumScaleFactor = 0.8;
+  title.lineLimit = 2;
+
+  header.addSpacer();
+
+  const logo = header.addImage(logoImg);
+  logo.imageSize = new Size(UI.logo, UI.logo);
+  logo.tintColor = headClr;
+
+  w.addSpacer();
+
+
   const grid = w.addStack();
   grid.layoutHorizontally();
 
@@ -462,15 +557,21 @@ function renderLargeLayout(w, { userInfo, language, ghStats, logoImg }) {
   addTo(col1, "Commits (2025)", ghStats.commits2025, "🕒");
   addTo(col1, "Streak", `${ghStats.currentStreak}d`, "🔥");
 
+  grid.addSpacer();
+
   addTo(col2, "Issues", ghStats.totalIssues, "❗");
   addTo(col2, "PRs", ghStats.totalPRs, "🔃");
   addTo(col2, "Total Commits", ghStats.totalCommits, "📜");
   addTo(col2, "Longest", `${ghStats.longestStreak}d`, "🏆");
+
+  w.addSpacer();
+
 }
 
 
 const widget = await createWidget();
 // if (!config.runsInWidget) await widget.presentSmall();
-if (!config.runsInWidget) await widget.presentMedium();
+// if (!config.runsInWidget) await widget.presentMedium();
+if (!config.runsInWidget) await widget.presentLarge();
 Script.setWidget(widget);
 Script.complete();

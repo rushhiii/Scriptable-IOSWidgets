@@ -157,59 +157,19 @@ This widget supports **small**, **medium**, and **large** sizes. You can also pa
 📅 **The Class Schedule Widget** syncs your school or university timetable from a public Google Sheet and automatically displays today’s classes. It adapts to the widget size: from showing only the current class to displaying a full weekly schedule with a beautiful gradient background per weekday.\
 This widget supports **small**, **medium**, and **large** views. You can also simulate different days or class times using widget parameters.
 
+### [Modular Time Progress](./Modular%20Time%20Progress)
 
+![timeProgress Widget](./.src/countdown/countdown_display.png)
 
-<!-- 
-## List of widgets
-### [Notion Integrations](https://github.com/dharmikumbhani/scriptable/tree/main/Notion%20Integrations)
-![Notion x Scriptable](images/notionIntegrations/NotionxScriptable.png) 
+⏳ **The Modular Time Progress Widget** lets you visualize your life in motion— from the minutes in your day to the weeks in your year. This fully modular Scriptable widget supports multiple modes like day, week, month, year, and week number views. Each mode features a clean, minimalist design with gradient themes and dynamic progress animations.\
+Use parameters like `day`, `month`, or `weeknumring` to customize each instance — perfect for stacking small, medium, or large widgets for a complete time dashboard.
 
+### [Dynamic Weather Widget](./Weather%20Widget)
 
-Scriptable widgets made using the Notion API.
+![Weather Widget](./.src/countdown/countdown_display.png)
 
-⚠️ Due to recent [closure](https://blog.covid19india.org/2021/08/07/end/) of the covid tracker API, the following widgets might not work!
-### [Covid Tracker India](https://github.com/dharmikumbhani/scriptable/tree/main/Covid%20Tracker%20-%20India)
-![Covid Tracker India Widget](./src/covidTrackerIndia/Covid-tracker-display-image.png) 
-
-
-![iOS widget](./src/badges/small-widget-badge.svg)
-
-Shows the latest number of newly confirmed cases and no of revcovered patients from any state in India.
-
-### [Covid Tracker India v2](https://github.com/dharmikumbhani/scriptable/tree/main/Covid%20Tracker%20v2%20-%20India)
-![Covid Tracker India Widget](./src/covidTrackerIndiaV2/CovidTrackerIndia-V2-display.png)
-
-![iOS widget](./src/badges/small-widget-badge.svg)
-
-Displays the latest number of cofirmed cases for any state in India along with a graph depciting the trend for the number of cases for the last 7 days.
-
-### [Insulter](https://github.com/dharmikumbhani/scriptable/tree/main/Insulter)
-![Evil Insults](./src/insulter/InsulterDisplay.png)
-
-![iOS widget](./src/badges/medium-widget-badge.svg)
-
-Petty self explanatory - Gives you a well deserved insult.
-
-### [Periodic Table](https://github.com/dharmikumbhani/scriptable/tree/main/Periodic%20Table)
-![Periodic Table Flashcard](./src/periodicTable/PeriodicTableDisplay.png)
-
-![iOS widget](./src/badges/large-widget-badge.svg)
-
-Get details about an element from the periodic table
-
-### [Quotes](https://github.com/dharmikumbhani/scriptable/tree/main/Quotes)
-![Quotes Widget](./src/quotes/QuotesDisplay.png) 
-
-![iOS widget](./src/badges/medium-widget-badge.svg)
-
-Shows a random quote from famous people like Alber Einstein, John Wolfgang von Goethe 
-
-### [Random Number Fact](https://github.com/dharmikumbhani/scriptable/tree/main/Random%20Number%20Fact)
-![Random Number Fact Widget](./src/RandomNumberFact/RandomNumberFactDisplay.png) 
-
-![iOS widget](./src/badges/medium-widget-badge.svg)
-
-Well gives you a rather intresting fact adout a randomly generated number. -->
+⛅ **The Dynamic Weather Widget** gives you real-time weather data in a stylish, minimal layout. It auto-detects your current location, fetches current conditions from OpenWeatherMap, and presents the info with dynamically sized text and gradient backgrounds. Whether you use it in small, medium, or large format — it adapts gracefully.\
+Customize temperature units, color gradients, and update intervals to fit your aesthetic and practical needs.
 
 <br/>
 

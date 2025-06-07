@@ -35,7 +35,7 @@ Welcome to my curated collection of **Scriptable** widgets and scripts, crafted 
     <ul>
       <li><a href="#countdown">Countdown Widget</a></li>
       <li><a href="#myquotes">Quote Widget</a></li>
-      <li><a href="#githubstats">GitHubStats Widget</a></li>
+      <li><a href="#github-stats-widget">GitHubStats Widget</a></li>
       <li><a href="#dynamic-weather-widget">Weather Widget</a></li>
       <li><a href="#class-schedule-viewer">Schedule Widget</a></li>
       <li><a href="#modular-time-progress">TimeProgress Widget</a></li>
@@ -103,7 +103,12 @@ Use parameters like `day`, `month`, or `weeknumring` to customize each instance 
 ⛅ **The Dynamic Weather Widget** gives you real-time weather data in a stylish, minimal layout. It auto-detects your current location, fetches current conditions from OpenWeatherMap, and presents the info with dynamically sized text and gradient backgrounds. Whether you use it in small, medium, or large format — it adapts gracefully.\
 Customize temperature units, color gradients, and update intervals to fit your aesthetic and practical needs.
 
-### [GitHubStats Widget](./GitHubStats%20Widget)
+### [GitHub Stats Widget](./GitHubStats%20Widget)
+
+![GitHubStats Widget](./.src/countdown/countdown_display.png)
+
+📊 **Track your GitHub contributions, commits, stars, PRs, and more** — all from your iOS Home Screen. This dynamic widget leverages GitHub's GraphQL and REST APIs to show profile or repo-specific stats using multiple themes and widget sizes.\
+Supports Small, Medium, and Large layouts with parameter-based customization for themes and content. Keep your dev grind visible. Because contribution streaks matter.
 
 <br/>
 

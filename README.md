@@ -36,11 +36,11 @@ Welcome to my curated collection of **Scriptable** widgets and scripts, crafted 
       <li><a href="#countdown">Countdown Widget</a></li>
       <li><a href="#myquotes">Quote Widget</a></li>
       <li><a href="#githubstats">GitHubStats Widget</a></li>
-      <li><a href="#weather">Weather Widget</a></li>
-      <li><a href="#schedule">Schedule Widget</a></li>
-      <li><a href="#timeprogress">TimeProgress Widget</a></li>
+      <li><a href="#dynamic-weather-widget">Weather Widget</a></li>
+      <li><a href="#class-schedule-viewer">Schedule Widget</a></li>
+      <li><a href="#modular-time-progress">TimeProgress Widget</a></li>
       <li><a href="#birthday">Birthday Widget</a></li>
-      <li><a href="#hinduwear">HinduClrWear Widget</a></li>
+      <li><a href="#hinduclrwear">HinduClrWear Widget</a></li>
     </ul>
   </li>
   <li><a href="#📖-how-to-use-these-scriptable-widgets?">How to Use Scriptable Widgets?</a></li>
@@ -48,77 +48,9 @@ Welcome to my curated collection of **Scriptable** widgets and scripts, crafted 
   <li><a href="#📜-license">License</a></li>
 </ul>
 
-
-<!-- <ol>
-  <li><a  href="#scriptable">Scriptable Overview</a></li>
-  <li><a href="#list-of-widgets">List of Widgets</a>
-    <ol>
-      <li><a href="#1-myweatherscript-v10js">1-MyWeatherScript-v1.0.js</a></li>
-      <li><a href="#3-timeprogress-ipadlockscreenjs">3-TimeProgress-iPadLockScreen.js</a></li>
-      <li><a href="#countdown.js">Countdown.js</a></li>
-      <li><a href="#countdownsjs">Countdowns.js</a></li>
-      <li><a href="#homewidgetjs">HomeWidget.js</a></li>
-      <li><a href="#howoldmijs">HowOldmi.js</a></li>
-      <li><a href="#myhabitkitwidgetjs">MyHabitKitWidget.js</a></li>
-      <li><a href="#myquotewidget-ofjs">MyQuoteWidget-OF.js</a></li>
-      <li><a href="#myquotewidget-onjs">MyQuoteWidget-ON.js</a></li>
-      <li><a href="#myunischedulewidget-ofjs">MyUniScheduleWidget-OF.js</a></li>
-      <li><a href="#myunischedulewidgetjs">MyUniScheduleWidget.js</a></li>
-      <li><a href="#myweatherwidgetjs">MyWeatherWidget.js</a></li>
-      <li><a href="#ourquotesjs">OurQuotes.js</a></li>
-      <li><a href="#qclocktwojs">QlockTwo.js</a></li>
-      <li><a href="#rjs">R.js</a></li>
-      <li><a href="#scriptdudejs">ScriptDude.js</a></li>
-      <li><a href="#stoicquotejs">StoicQuote.js</a></li>
-      <li><a href="#timeprogressjs">TimeProgress.js</a></li>
-      <li><a href="#trackprogressjs">TrackProgress.js</a></li>
-      <li><a href="#ts1js">ts1.js</a></li>
-      <li><a href="#ts2js">ts2.js</a></li>
-      <li><a href="#wearclraccohindujs">WearClrAccoHindu.js</a></li>
-    </ol>
-  </li>
-  <li><a  href="#how-to-use-These-scriptable-widgets">How to Use Scriptable Widgets?</a></li>
-  <li><a href="#feedback">Feedback</a></li>
-</ol>
--->
-
-<!-- Example section anchors for each script -->
-<!-- ## 📜 1-MyWeatherScript-v1.0.js <a name="1-myweatherscript-v10js"></a>
-_Description / Screenshot / Usage info_
-
-## 📜 3-TimeProgress-iPadLockScreen.js <a name="3-timeprogress-ipadlockscreenjs"></a>
-_Description / Screenshot / Usage info_
-
-## 📜 Countdown-ON.js <a name="countdown-onjs"></a>
-_Description / Screenshot / Usage info_
-
-...
-
-## 🛠️ How to Use Scriptable Widgets? <a name="how-to-use-scriptable-widgets"></a>
-_Instructions / guide_
-
-## ✍️ Feedback <a name="feedback"></a>
-_Contact info / feedback options_ -->
-
-<!-- - [Scriptable scripts](#scriptable-scripts)
-  - [Table of Contents](#table-of-contents)
-  - [❏ List of widgets](#-list-of-widgets)
-    - [Notion Integrations](#notion-integrations)
-    - [Covid Tracker India](#covid-tracker-india)
-    - [Covid Tracker India v2](#covid-tracker-india-v2)
-    - [Insulter](#insulter)
-    - [Periodic Table](#periodic-table)
-    - [Quotes](#quotes)
-    - [Random Number Fact](#random-number-fact)
-  - [📖 How to use scriptable widgets?](#-how-to-use-scriptable-widgets)
-  - [✍️ Feedback](#️-feedback)
- -->
 <br/>
 
 ## 📜 List of Widgets
-
-
-<!-- ### [Countdown](https://github.com/rushhiii/Scriptable-IOSWidgets/tree/main/Countdown) -->
 
 ### [Countdown](./Countdown%20Widget)
 
@@ -170,6 +102,8 @@ Use parameters like `day`, `month`, or `weeknumring` to customize each instance 
 
 ⛅ **The Dynamic Weather Widget** gives you real-time weather data in a stylish, minimal layout. It auto-detects your current location, fetches current conditions from OpenWeatherMap, and presents the info with dynamically sized text and gradient backgrounds. Whether you use it in small, medium, or large format — it adapts gracefully.\
 Customize temperature units, color gradients, and update intervals to fit your aesthetic and practical needs.
+
+### [GitHubStats Widget](./GitHubStats%20Widget)
 
 <br/>
 

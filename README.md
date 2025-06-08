@@ -130,10 +130,13 @@ Looking to explore more creative widgets? Check out these amazing developers and
 <h3><a href="https://github.com/dharmikumbhani/scriptable">@dharmikumbhani</a></h3>
 <ul>
   <li><strong>Notion Integrations</strong> – Widgets linked to your Notion tasks, notes, or pages.  
-    <a href="https://github.com/dharmikumbhani/scriptable/tree/main/Notion%20Integrations">🔗 View</a>
+    🔗 <a href="https://github.com/dharmikumbhani/scriptable/tree/main/Notion%20Integrations">View</a>
   </li>
-  <li><strong>Periodic Table (Elements)</strong> This widget after some interval randomly chooses one of 119 elements and displays useful information about it.
-    <a href="https://github.com/dharmikumbhani/scriptable/tree/main/Periodic%20Table">🔗 View</a>
+  <li><strong>Periodic Table (Elements)</strong> This widget randomly chooses one of 119 elements and displays useful information about it.
+    🔗 <a href="https://github.com/dharmikumbhani/scriptable/tree/main/Periodic%20Table">View</a>
+  </li>
+  <li><strong>Random Number Fact</strong> This widget randomly chooses a number and gives a facton that number.
+   🔗 <a href="https://github.com/dharmikumbhani/scriptable/tree/main/Random%20Number%20Fact">View</a>
   </li>
 </ul>
 

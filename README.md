@@ -114,7 +114,7 @@ Supports Small, Medium, and Large layouts with parameter-based customization for
 
 Looking to explore more creative widgets? Check out these amazing developers and their unique Scriptable projects:
 
-<h3><a href="https://github.com/rayanrajani/Scriptable-Widgets">@rayanrajani</a></h3>
+<!-- <h3><a href="https://github.com/rayanrajani/Scriptable-Widgets">@rayanrajani</a></h3>
 <ul>
   <li>📅 <strong>Today Widget</strong> – Shows time, weather, calendar, and battery in one clean layout.  
     <a href="https://github.com/rayanrajani/Scriptable-Widgets/tree/main/Today%20Widget">🔗 View</a>
@@ -125,22 +125,19 @@ Looking to explore more creative widgets? Check out these amazing developers and
   <li>🪙 <strong>Crypto Widget</strong> – Displays real-time crypto prices from CoinGecko.  
     <a href="https://github.com/rayanrajani/Scriptable-Widgets/tree/main/Crypto%20Widget">🔗 View</a>
   </li>
-</ul>
+</ul> -->
 
 <h3><a href="https://github.com/dharmikumbhani/scriptable">@dharmikumbhani</a></h3>
 <ul>
-  <li>🧾 <strong>Notion Integrations</strong> – Widgets linked to your Notion tasks, notes, or pages.  
+  <li><strong>Notion Integrations</strong> – Widgets linked to your Notion tasks, notes, or pages.  
     <a href="https://github.com/dharmikumbhani/scriptable/tree/main/Notion%20Integrations">🔗 View</a>
   </li>
-  <li>🦠 <strong>Covid Tracker (India)</strong> – Now-retired widget that tracked India’s COVID stats.  
-    <a href="https://github.com/dharmikumbhani/scriptable/tree/main/Covid%20Tracker%20-%20India">🔗 View</a>
-  </li>
-  <li>📊 <strong>Finance Widget</strong> – Track stock prices, currency exchange, or portfolios.  
-    <a href="https://github.com/dharmikumbhani/scriptable/tree/main/Finance%20Widget">🔗 View</a>
+  <li><strong>Periodic Table (Elements)</strong> This widget after some interval randomly chooses one of 119 elements and displays useful information about it.
+    <a href="https://github.com/dharmikumbhani/scriptable/tree/main/Periodic%20Table">🔗 View</a>
   </li>
 </ul>
 
-<h3><a href="https://github.com/whatkurtisdoing">@whatkurtisdoing</a></h3>
+<!-- <h3><a href="https://github.com/whatkurtisdoing">@whatkurtisdoing</a></h3>
 <ul>
   <li>📅 <strong>Habit Tracker</strong> – GitHub-style grid showing daily habit completion.  
     <a href="https://github.com/whatkurtisdoing/scriptable-habit-tracker">🔗 View</a>
@@ -163,7 +160,7 @@ Looking to explore more creative widgets? Check out these amazing developers and
     <a href="https://github.com/jordansinger/Apple-Watch-Widgets">🔗 View</a>
   </li>
 </ul>
-
+ -->
 
 > 🧠 Inspiration doesn’t stop here. Browse GitHub with keyword `scriptable` and see how far people have taken this app.
 

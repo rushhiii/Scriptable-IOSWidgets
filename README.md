@@ -172,7 +172,7 @@ Looking to explore more creative widgets? Check out these amazing developers and
 
 </ul>
 
-> 🧠 Inspiration doesn’t stop here. Browse GitHub with keyword `scriptable` and see how far people have taken this app. [list](https://github.com/dersvenhesse/awesome-scriptable)
+> 🧠 Inspiration doesn’t stop here. Browse GitHub with keyword `scriptable` and see how far people have taken this app. [List](https://github.com/dersvenhesse/awesome-scriptable)
 
 
 <br/>

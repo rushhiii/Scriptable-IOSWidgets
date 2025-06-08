@@ -110,6 +110,21 @@ Customize temperature units, color gradients, and update intervals to fit your a
 📊 **Track your GitHub contributions, commits, stars, PRs, and more** — all from your iOS Home Screen. This dynamic widget leverages GitHub's GraphQL and REST APIs to show profile or repo-specific stats using multiple themes and widget sizes.\
 Supports Small, Medium, and Large layouts with parameter-based customization for themes and content. Keep your dev grind visible. Because contribution streaks matter.
 
+## 🌐 Other Cool Scriptable Widgets
+
+Looking to explore more creative widgets? Check out these amazing developers and their unique Scriptable projects:
+
+| Creator                                                    | Highlights                                                             | Repo Link                                                                                               |
+| ---------------------------------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| **[@rayanrajani](https://github.com/rayanrajani)**         | Beautifully themed countdowns, profile widgets, and home setups        | [rayanrajani/Scriptable-Widgets](https://github.com/rayanrajani/Scriptable-Widgets)                     |
+| **[@dharmikumbhani](https://github.com/dharmikumbhani)**   | Notion integrations, finance dashboards, India COVID tracker, and more | [dharmikumbhani/scriptable](https://github.com/dharmikumbhani/scriptable)                               |
+| **[@whatkurtisdoing](https://github.com/whatkurtisdoing)** | Clean and minimal habit tracker widgets (GitHub-style)                 | [whatkurtisdoing/scriptable-habit-tracker](https://github.com/whatkurtisdoing/scriptable-habit-tracker) |
+| **[@JordanSinger](https://github.com/jordansinger)**       | Apple-style mock widgets for app concepting and design                 | [jordansinger/Apple-Watch-Widgets](https://github.com/jordansinger/Apple-Watch-Widgets)                 |
+| **[@kevinkub](https://github.com/kevinkub)**               | Dark-mode dashboard widgets with crypto, weather, and calendar         | [kevinkub/Scriptable-Widgets](https://github.com/kevinkub/Scriptable-Widgets)                           |
+
+> 🧠 Inspiration doesn’t stop here. Browse GitHub with keyword `scriptable` and see how far people have taken this app.
+
+
 <br/>
 
 ## 📖 How to Use These Scriptable Widgets?

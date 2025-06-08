@@ -110,22 +110,9 @@ Customize temperature units, color gradients, and update intervals to fit your a
 📊 **Track your GitHub contributions, commits, stars, PRs, and more** — all from your iOS Home Screen. This dynamic widget leverages GitHub's GraphQL and REST APIs to show profile or repo-specific stats using multiple themes and widget sizes.\
 Supports Small, Medium, and Large layouts with parameter-based customization for themes and content. Keep your dev grind visible. Because contribution streaks matter.
 
-## 🌐 Other Mentionable Scriptable Widgets
+## 🌐 Other Mentionable Widgets
 
 Looking to explore more creative widgets? Check out these amazing developers and their unique Scriptable projects:
-
-<!-- <h3><a href="https://github.com/rayanrajani/Scriptable-Widgets">@rayanrajani</a></h3>
-<ul>
-  <li>📅 <strong>Today Widget</strong> – Shows time, weather, calendar, and battery in one clean layout.  
-    <a href="https://github.com/rayanrajani/Scriptable-Widgets/tree/main/Today%20Widget">🔗 View</a>
-  </li>
-  <li>💻 <strong>GitHub Widget</strong> – Stylish GitHub stats widget with your profile info.  
-    <a href="https://github.com/rayanrajani/Scriptable-Widgets/tree/main/GitHub%20Widget">🔗 View</a>
-  </li>
-  <li>🪙 <strong>Crypto Widget</strong> – Displays real-time crypto prices from CoinGecko.  
-    <a href="https://github.com/rayanrajani/Scriptable-Widgets/tree/main/Crypto%20Widget">🔗 View</a>
-  </li>
-</ul> -->
 
 <h3><a href="https://github.com/dharmikumbhani/scriptable">@dharmikumbhani</a></h3>
 <ul>
@@ -140,32 +127,38 @@ Looking to explore more creative widgets? Check out these amazing developers and
   </li>
 </ul>
 
-<!-- <h3><a href="https://github.com/whatkurtisdoing">@whatkurtisdoing</a></h3>
+<h3><a href="https://github.com/anviqs/">@anviqs</a></h3>
 <ul>
-  <li>📅 <strong>Habit Tracker</strong> – GitHub-style grid showing daily habit completion.  
-    <a href="https://github.com/whatkurtisdoing/scriptable-habit-tracker">🔗 View</a>
+  <li><strong>Habit Tracker</strong> – Track your daily progress across up to six habits directly from your Home Screen with a clean and minimal design.  
+    🔗 <a href="https://github.com/anviqs/Scriptable-Habit-Tracker-Widget-iOS/tree/main?tab=readme-ov-file#habit-tracker-widget">View</a>
   </li>
 </ul>
 
-<h3><a href="https://github.com/kevinkub">@kevinkub</a></h3>
+<h3><a href="https://github.com/anviqs/">@anviqs</a></h3>
 <ul>
-  <li>🕹 <strong>Dashboard Widget</strong> – Unified layout for weather, battery, calendar, and to-do.  
-    <a href="https://github.com/kevinkub/Scriptable-Widgets/tree/main/Dashboard%20Widget">🔗 View</a>
-  </li>
-  <li>📈 <strong>Crypto Prices</strong> – Shows BTC, ETH, and other prices in dark-mode UI.  
-    <a href="https://github.com/kevinkub/Scriptable-Widgets/tree/main/Crypto%20Price%20Widget">🔗 View</a>
+  <li><strong>Habit Tracker</strong> – Track your daily progress across up to six habits directly from your Home Screen with a clean and minimal design.  
+    🔗 <a href="https://github.com/anviqs/Scriptable-Habit-Tracker-Widget-iOS/tree/main?tab=readme-ov-file#habit-tracker-widget">View</a>
   </li>
 </ul>
 
-<h3><a href="https://github.com/jordansinger">@jordansinger</a></h3>
+<h3><a href="https://github.com/doersino/scriptable-widgets">@marcjulianschwarz</a></h3>
 <ul>
-  <li>⌚ <strong>Apple Watch UI Concepts</strong> – Not real widgets, but stunning mockups for inspiration.  
-    <a href="https://github.com/jordansinger/Apple-Watch-Widgets">🔗 View</a>
+  <li><strong>Small Seasons</strong> – Scriptable widget that displays the current sekki ("small season").  
+    🔗 <a href="https://github.com/doersino/scriptable-widgets/tree/main/small-seasons">View</a>
   </li>
-</ul>
- -->
+  <li><strong>Binary Date</strong> – Scriptable widget that displays the current date in binary.  
+    🔗 <a href="https://github.com/doersino/scriptable-widgets/tree/main/binary-date">View</a>
+  </li>
+  <li><strong>location</strong> – Scriptable widget that shows your current location using satellite imagery from Google Maps.  
+    🔗 <a href="https://github.com/doersino/scriptable-widgets/tree/main/location-location-location">View</a>
+  </li>
+  <li><strong>Aerialbot lite</strong> – Scriptable widget that shows a random location in the world.  
+    🔗 <a href="https://github.com/doersino/scriptable-widgets/tree/main/aerialbot-lite">View</a>
+  </li>
 
-> 🧠 Inspiration doesn’t stop here. Browse GitHub with keyword `scriptable` and see how far people have taken this app.
+</ul>
+
+> 🧠 Inspiration doesn’t stop here. Browse GitHub with keyword `scriptable` and see how far people have taken this app. [list](https://github.com/dersvenhesse/awesome-scriptable)
 
 
 <br/>

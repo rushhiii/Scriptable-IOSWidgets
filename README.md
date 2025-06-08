@@ -134,7 +134,21 @@ Looking to explore more creative widgets? Check out these amazing developers and
   </li>
 </ul>
 
-<h3><a href="https://github.com/anviqs/">@anviqs</a></h3>
+<h3><a href="https://github.com/bitKrakenCode">@bitKrakenCode</a></h3>
+<ul>
+  <li><strong>Word Clock</strong> – word clock widget inspired by QlockTwo.  
+    🔗 <a href="https://github.com/bitKrakenCode/ScriptableWordClockWidget">View</a>
+  </li>
+</ul>
+
+<h3><a href="https://github.com/lwitzani">@lwitzani</a></h3>
+<ul>
+  <li><strong>Days Until Birthday</strong> – up to 20 people of your contacts are shown simultaneously with their birthday and how many days are left.  
+    🔗 <a href="https://github.com/lwitzani/daysUntilBirthday">View</a>
+  </li>
+</ul>
+
+<h3><a href="https://github.com/bitKrakenCode/">@anviqs</a></h3>
 <ul>
   <li><strong>Habit Tracker</strong> – Track your daily progress across up to six habits directly from your Home Screen with a clean and minimal design.  
     🔗 <a href="https://github.com/anviqs/Scriptable-Habit-Tracker-Widget-iOS/tree/main?tab=readme-ov-file#habit-tracker-widget">View</a>

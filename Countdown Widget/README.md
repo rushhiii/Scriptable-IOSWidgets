@@ -7,9 +7,11 @@
 ![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
 ![Last Updated](https://img.shields.io/badge/Updated-June%202025-yellow)
 
+![countdown widget](../.src/countdown/countdow_showcase.png)
+
 A lightweight and customizable countdown widget built using the [Scriptable app](https://scriptable.app), powered by Google Sheets. It helps you track upcoming events like birthdays, anniversaries, or deadlines—right from your iOS home screen.
 
-> **Mention** minimal design widget
+> **Mention:** Minimal design widget
 > https://jvscholz.com/blog/countdown.html
 > if the links dosent work look in the [backup](./backup) foolder
 

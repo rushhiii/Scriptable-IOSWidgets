@@ -83,7 +83,7 @@ Feel free to modify these in the script for a more personal palette.
 
 ## 📸 Screenshots
 
-<img width="60%" src="../.src/birthday/birthday_s.png">
+<img width="160px" src="../.src/birthday/birthday_s.png">
 
 ## 🙌 Feedback
 

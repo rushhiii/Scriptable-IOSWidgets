@@ -66,13 +66,14 @@ The **Countdown Widget** helps you stay on top of upcoming events like birthdays
 
 <img width="60%" src=".src/birthday/birthday_showcase.png">
 
-
 🎉 The **Birthday Widget** gives you a beautiful, minimal way to reflect on your life.\
 It shows your **exact age** (to 2 decimal places), **total days lived**, and a **progress ring** indicating how close you are to your next birthday. Designed for the **Small widget size**, it offers a clean dark-gradient background and supports **parameter customization** to set your name and birthdate. You’ll see your name (e.g., “Rushi’s Life”), a countdown ring that updates daily, and age stats—all in one elegant glance.
 
 ### [HinduClrWear](./HinduClrWear%20Widget)
 
-![HinduClrWear Widget](./.src/countdown/countdown_display.png)
+<!-- ![HinduClrWear Widget](./.src/hinduclrwear/hinduclrwear_showcase.png) -->
+
+<img width="80%" src="./.src/hinduclrwear/hinduclrwear_showcase.png">
 
 🧘‍♂️ **The Hindu Color Wear Widget** offers daily color suggestions based on traditional Hindu practices.\
 Each day of the week is mapped to a specific color, deity, and spiritual quality—helping you dress with intention and align your energy. The widget supports **all three sizes** (Small, Medium, Large) and changes layout accordingly: Small shows today’s color, Medium displays a full week grid, and Large includes spiritual reasoning. No parameters needed—it auto-detects the day and works offline.

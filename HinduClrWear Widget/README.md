@@ -6,6 +6,9 @@
 ![Offline](https://img.shields.io/badge/Works%20Offline-Yes-brightgreen)
 ![Last Updated](https://img.shields.io/badge/Updated-June%202025-yellow)
 
+<img width="100%" src="../.src/hinduclrwear/hinduclrwear_showcase.png">
+
+
 This Scriptable widget recommends what color to wear each day based on Hindu tradition.  
 Each day is linked to a color, deity, and spiritual intention — designed to help you feel aligned, energized, and centered.
 
@@ -85,6 +88,11 @@ Each day's color is defined by an array in the script like:
 Feel free to customize this array for regional traditions or alternate meanings.
 
 ## 📸 Screenshots
+
+> _Small Widget_
+<img src="../.src/hinduclrwear/hinduclrwear_s.png" width="160"/>
+<img src="../.src/hinduclrwear/hinduclrwear_m.png" width="260"/>
+<img src="../.src/hinduclrwear/hinduclrwear_l.png" width="360"/>
 
 
 ## 🙌 Feedback

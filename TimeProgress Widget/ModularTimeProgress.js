@@ -592,66 +592,91 @@ async function renderMonthProgressWidget() {
 
 
 async function renderYearProgressWidget() {
-// icon-color: gold; icon-glyph: chart-pie;
+  // icon-color: gold; icon-glyph: chart-pie;
 
-// --- Customizable Variables ---
-const WIDGET_BACKGROUND_COLOR_1 = "#202020"; // Top gradient
-const WIDGET_BACKGROUND_COLOR_2 = "#000000"; // Bottom gradient
-const PROGRESS_COLOR = "#FFD700";
-const PROGRESS_BACKGROUND_COLOR = "#4a4a4a";
-const TITLE_COLOR = "#ffffff";
-const DETAILS_COLOR = "#aaaaaa";
-const PERCENT_COLOR = "#ffffff";
-const PERCENT_SYMBOL_COLOR = "#aaaaaa";
+  // --- Customizable Variables ---
+  const WIDGET_BACKGROUND_COLOR_1 = "#202020"; // Top gradient
+  const WIDGET_BACKGROUND_COLOR_2 = "#000000"; // Bottom gradient
+  const PROGRESS_COLOR = "#FFD700";
+  const PROGRESS_BACKGROUND_COLOR = "#4a4a4a";
+  const TITLE_COLOR = "#ffffff";
+  const DETAILS_COLOR = "#aaaaaa";
+  const PERCENT_COLOR = "#ffffff";
+  const PERCENT_SYMBOL_COLOR = "#aaaaaa";
 
-const CANVAS_SIZE = 45;
-const RADIUS = 18;
-const LINE_WIDTH = 7;
+  const CANVAS_SIZE = 45;
+  const RADIUS = 18;
+  const LINE_WIDTH = 7;
 
-const TITLE_FONT_SIZE = 18;
-const DETAILS_FONT_SIZE = 12;
-const PERCENT_FONT_SIZE = 35;
-const PERCENT_SYMBOL_FONT_SIZE = 14;
+  const TITLE_FONT_SIZE = 18;
+  const DETAILS_FONT_SIZE = 12;
+  const PERCENT_FONT_SIZE = 35;
+  const PERCENT_SYMBOL_FONT_SIZE = 14;
 
-const WIDGET_PADDING_TOP = 0;
-const WIDGET_PADDING_LEFT = 14;
-const WIDGET_PADDING_BOTTOM = 0;
-const WIDGET_PADDING_RIGHT = 0;
-const WIDGET_SPACING = 4;
+  const WIDGET_PADDING_TOP = 0;
+  const WIDGET_PADDING_LEFT = 14;
+  const WIDGET_PADDING_BOTTOM = 0;
+  const WIDGET_PADDING_RIGHT = 0;
+  const WIDGET_SPACING = 4;
 
-const CIRCLE_PADDING_TOP = 0;
-const CIRCLE_PADDING_LEFT = 0;
-const CIRCLE_PADDING_BOTTOM = 0;
-const CIRCLE_PADDING_RIGHT = 0;
+  const CIRCLE_PADDING_TOP = 0;
+  const CIRCLE_PADDING_LEFT = 0;
+  const CIRCLE_PADDING_BOTTOM = 0;
+  const CIRCLE_PADDING_RIGHT = 0;
 
-const TEXT_PADDING_TOP = 2;
-const TEXT_PADDING_BOTTOM = 2;
-const TEXT_PADDING_LEFT = 0;
-const TEXT_PADDING_RIGHT = 0;
+  const TEXT_PADDING_TOP = 2;
+  const TEXT_PADDING_BOTTOM = 2;
+  const TEXT_PADDING_LEFT = 0;
+  const TEXT_PADDING_RIGHT = 0;
 
-const PERCENT_PADDING_TOP = 0;
-const PERCENT_PADDING_LEFT = 0;
-const PERCENT_PADDING_BOTTOM = 0;
-const PERCENT_PADDING_RIGHT = 0;
-const PERCENT_SPACING = 0;
-// --- End Customizable Variables ---
+  const PERCENT_PADDING_TOP = 0;
+  const PERCENT_PADDING_LEFT = 0;
+  const PERCENT_PADDING_BOTTOM = 0;
+  const PERCENT_PADDING_RIGHT = 0;
+  const PERCENT_SPACING = 0;
+  // --- End Customizable Variables ---
 
-// Get current date and year
-const NOW = new Date();
-const currentYear = NOW.getFullYear();
-const startOfYear = new Date(currentYear, 0, 1);
-const endOfYear = new Date(currentYear + 1, 0, 1);
-const daysPassed = Math.floor((NOW - startOfYear) / 86400000) + 1;
-const totalDays = Math.floor((endOfYear - startOfYear) / 86400000);
-const progress = daysPassed / totalDays;
+  // Get current date and year
+  const NOW = new Date();
+  const currentYear = NOW.getFullYear();
+  const startOfYear = new Date(currentYear, 0, 1);
+  const endOfYear = new Date(currentYear + 1, 0, 1);
+  const daysPassed = Math.floor((NOW - startOfYear) / 86400000) + 1;
+  const totalDays = Math.floor((endOfYear - startOfYear) / 86400000);
+  const progress = daysPassed / totalDays;
 
-// === Truncate percent instead of rounding ===
-const rawPercent = progress * 100;
-const percent = Math.floor(rawPercent * 100) / 100;
-const percentText = percent.toFixed(2);
+  // === Truncate percent instead of rounding ===
+  const rawPercent = progress * 100;
+  const percent = Math.floor(rawPercent * 100) / 100;
+  const percentText = percent.toFixed(2);
 
-// === Draw circular progress ===
-function drawProgressRing(progress) {
+  function createProgressBarImage(total, current, width, height, fillColor, backgroundColor) {
+    const context = new DrawContext();
+    context.size = new Size(width, height);
+    context.opaque = false;
+    context.respectScreenScale = true;
+
+    // Draw background bar
+    const bgPath = new Path();
+    bgPath.addRoundedRect(new Rect(0, 0, width, height), height / 2, height / 2);
+    context.setFillColor(backgroundColor);
+    context.addPath(bgPath);
+    context.fillPath();
+
+    // Draw filled portion
+    const progressWidth = Math.floor(width * Math.min(current / total, 1));
+    const fillPath = new Path();
+    fillPath.addRoundedRect(new Rect(0, 0, progressWidth, height), height / 2, height / 2);
+    context.setFillColor(fillColor);
+    context.addPath(fillPath);
+    context.fillPath();
+
+    return context.getImage();
+  }
+
+
+  // === Draw circular progress ===
+  function drawProgressRing(progress) {
     const context = new DrawContext();
     context.size = new Size(CANVAS_SIZE, CANVAS_SIZE);
     context.opaque = false;
@@ -663,173 +688,197 @@ function drawProgressRing(progress) {
     context.setStrokeColor(new Color(PROGRESS_BACKGROUND_COLOR));
     context.setLineWidth(LINE_WIDTH);
     context.strokeEllipse(new Rect(
-        center.x - RADIUS,
-        center.y - RADIUS,
-        RADIUS * 2,
-        RADIUS * 2
+      center.x - RADIUS,
+      center.y - RADIUS,
+      RADIUS * 2,
+      RADIUS * 2
     ));
 
     // Progress dots
     context.setFillColor(new Color(PROGRESS_COLOR));
     const totalDegrees = 360 * progress;
     for (let i = 0; i < totalDegrees; i += 3.6) {
-        const angle = (i - 90) * (Math.PI / 180);
-        const x = center.x + RADIUS * Math.cos(angle);
-        const y = center.y + RADIUS * Math.sin(angle);
-        context.fillEllipse(
-            new Rect(x - LINE_WIDTH / 2, y - LINE_WIDTH / 2, LINE_WIDTH, LINE_WIDTH)
-        );
+      const angle = (i - 90) * (Math.PI / 180);
+      const x = center.x + RADIUS * Math.cos(angle);
+      const y = center.y + RADIUS * Math.sin(angle);
+      context.fillEllipse(
+        new Rect(x - LINE_WIDTH / 2, y - LINE_WIDTH / 2, LINE_WIDTH, LINE_WIDTH)
+      );
     }
 
     return context.getImage();
-}
-
-let widget;
-
-if (config.widgetFamily === "large") {
-  // === LARGE LAYOUT (dot-grid) ===
-widget = new ListWidget();
-widget.backgroundColor = new Color("#000000");
-
-// === Config ===
-const PADDING = 20; // 26
-const CIRCLE_SIZE = 9;
-const CIRCLE_SPACING = 5;
-const TEXT_SPACING = 18;
-const GOLD_FILLED = new Color("#FFD700");
-const GOLD_DIMMED = new Color("#FFD700", 0.25);
-
-const AVAILABLE_WIDTH = 360 - (2 * PADDING);
-const TOTAL_CIRCLE_SIZE = CIRCLE_SIZE + CIRCLE_SPACING;
-const COLUMNS = Math.floor(AVAILABLE_WIDTH / TOTAL_CIRCLE_SIZE);
-const ROWS = Math.ceil(365 / COLUMNS);
-
-widget.setPadding(PADDING, PADDING, PADDING, PADDING);
-// widget.useDefaultPadding();
-
-
-
-// === Center container stack ===
-const mainStack = widget.addStack();
-mainStack.layoutVertically();
-mainStack.centerAlignContent();
-
-// const footerStack = mainStack.addStack();
-// footerStack.centerAlignContent();
-// footerStack.layoutHorizontally();
-// footerStack.topAlignContent();
-// footerStack.layoutVertically();
-
-
-
-// mainStack.addSpacer(TEXT_SPACING-10);
-
-
-// === Dot grid ===
-const gridStack = mainStack.addStack();
-gridStack.layoutVertically();
-gridStack.centerAlignContent();
-gridStack.spacing = CIRCLE_SPACING;
-
-const circleFont = Font.systemFont(CIRCLE_SIZE);
-
-for (let row = 0; row < ROWS; row++) {
-  const rowStack = gridStack.addStack();
-  rowStack.layoutHorizontally();
-  rowStack.centerAlignContent();
-  rowStack.spacing = CIRCLE_SPACING;
-
-  for (let col = 0; col < COLUMNS; col++) {
-    const day = row * COLUMNS + col + 1;
-    if (day > 365) continue;
-
-    const circle = rowStack.addText("●");
-    circle.font = circleFont;
-    circle.lineLimit = 1;
-    circle.textColor = day <= daysPassed ? GOLD_FILLED : GOLD_DIMMED;
   }
-}
 
-mainStack.addSpacer(TEXT_SPACING-8);
+  let widget;
 
-// === Day count text ===
+  if (config.widgetFamily === "large") {
+    // === LARGE LAYOUT (dot-grid) ===
+    widget = new ListWidget();
+    widget.backgroundColor = new Color("#000000");
 
-// footerStack.addSpacer();
+    // === Config ===
+    const PADDING = 20; // 26
+    const CIRCLE_SIZE = 9;
+    const CIRCLE_SPACING = 5;
+    const TEXT_SPACING = 18;
+    const GOLD_FILLED = new Color("#FFD700");
+    const GOLD_DIMMED = new Color("#FFD700", 0.25);
 
-const yearText = mainStack.addText(`${currentYear} Progress`);
-yearText.font = new Font("Menlo", 14);
-// yearText.textColor = GOLD_FILLED;
-yearText.textColor = Color.white();
+    const AVAILABLE_WIDTH = 360 - (2 * PADDING);
+    const TOTAL_CIRCLE_SIZE = CIRCLE_SIZE + CIRCLE_SPACING;
+    const COLUMNS = Math.floor(AVAILABLE_WIDTH / TOTAL_CIRCLE_SIZE);
+    const ROWS = Math.ceil(365 / COLUMNS);
 
-mainStack.addSpacer(3);
-
-const dayspasstext = mainStack.addText(`${daysPassed}d/${totalDays}d · Passed`);
-dayspasstext.font = new Font("Menlo", 12);
-// dayspasstext.textColor = GOLD_FILLED;
-dayspasstext.textColor = new Color(DETAILS_COLOR);
-
-}
-
-else if (config.widgetFamily === "medium") {
-  widget = new ListWidget();
-  const gradient = new LinearGradient();
-  gradient.colors = [new Color(WIDGET_BACKGROUND_COLOR_1), new Color(WIDGET_BACKGROUND_COLOR_2)];
-  gradient.locations = [0, 1];
-  widget.backgroundGradient = gradient;
-//   widget.setPadding(16, 16, 16, 16);
-// const PADDING = 20; 
-// widget.setPadding(PADDING, PADDING, PADDING, PADDING);
-widget.useDefaultPadding();
-
-
-  const mainStack = widget.addStack();
-//   mainStack.layoutVertically();
-//   mainStack.size = new Size(0, 0); // force auto sizing
-//   mainStack.layoutVertically();
-  mainStack.layoutHorizontally();
-
-  // === Top-left Text Stack ===
-  const textStack = mainStack.addStack();
-  textStack.layoutVertically();
-  textStack.spacing = 4;
-//   textStack.leftAlign();
-
-  const title = textStack.addText(`${currentYear} Progress`);
-  title.font = Font.boldSystemFont(27);
-  title.textColor = new Color(TITLE_COLOR);
-
-  const subtext = textStack.addText(`${daysPassed}d / ${totalDays}d · Passed`);
-  subtext.font = Font.mediumSystemFont(16);
-  subtext.textColor = new Color(DETAILS_COLOR);
-
-  const percentTextStack = textStack.addStack();
-  percentTextStack.layoutHorizontally();
-  percentTextStack.spacing = 2;
-//   percentTextStack.leftAlign();
-
-  const percentVal = percentTextStack.addText(`${percentText}%`);
-  percentVal.font = Font.boldSystemFont(25);
-  percentVal.textColor = new Color(PERCENT_COLOR);
-
-//   const percentSym = percentTextStack.addText(" %");
-//   percentSym.font = Font.boldSystemFont(25);
-//   percentSym.textColor = new Color(PERCENT_SYMBOL_COLOR);
-//   percentSym.centerAlignText();
-
-  mainStack.addSpacer(); // pushes the ring to the bottom
-
-  // === Bottom-right Ring Stack ===
-  const ringStack = mainStack.addStack();
-  ringStack.layoutVertically();
-  ringStack.addSpacer(); // pushes ring to far right
-
-  const ringImg = drawProgressRing(progress);
-  const ring = ringStack.addImage(ringImg);
-  ring.imageSize = new Size(55, 55);
+    widget.setPadding(PADDING, PADDING, PADDING, PADDING);
+    // widget.useDefaultPadding();
 
 
 
-} else {
+    // === Center container stack ===
+    const mainStack = widget.addStack();
+    mainStack.layoutVertically();
+    mainStack.centerAlignContent();
+
+    // const footerStack = mainStack.addStack();
+    // footerStack.centerAlignContent();
+    // footerStack.layoutHorizontally();
+    // footerStack.topAlignContent();
+    // footerStack.layoutVertically();
+
+
+
+    // mainStack.addSpacer(TEXT_SPACING-10);
+
+
+    // === Dot grid ===
+    const gridStack = mainStack.addStack();
+    gridStack.layoutVertically();
+    gridStack.centerAlignContent();
+    gridStack.spacing = CIRCLE_SPACING;
+
+    const circleFont = Font.systemFont(CIRCLE_SIZE);
+
+    for (let row = 0; row < ROWS; row++) {
+      const rowStack = gridStack.addStack();
+      rowStack.layoutHorizontally();
+      rowStack.centerAlignContent();
+      rowStack.spacing = CIRCLE_SPACING;
+
+      for (let col = 0; col < COLUMNS; col++) {
+        const day = row * COLUMNS + col + 1;
+        if (day > 365) continue;
+
+        const circle = rowStack.addText("●");
+        circle.font = circleFont;
+        circle.lineLimit = 1;
+        circle.textColor = day <= daysPassed ? GOLD_FILLED : GOLD_DIMMED;
+      }
+    }
+
+    mainStack.addSpacer(TEXT_SPACING - 8);
+
+    // === Day count text ===
+
+    // footerStack.addSpacer();
+
+    const yearText = mainStack.addText(`${currentYear} Progress`);
+    yearText.font = new Font("Menlo", 14);
+    // yearText.textColor = GOLD_FILLED;
+    yearText.textColor = Color.white();
+
+    mainStack.addSpacer(3);
+
+    const dayspasstext = mainStack.addText(`${daysPassed}d/${totalDays}d · Passed`);
+    dayspasstext.font = new Font("Menlo", 12);
+    // dayspasstext.textColor = GOLD_FILLED;
+    dayspasstext.textColor = new Color(DETAILS_COLOR);
+
+  }
+
+  else if (config.widgetFamily === "medium") {
+    widget = new ListWidget();
+    const gradient = new LinearGradient();
+    gradient.colors = [new Color(WIDGET_BACKGROUND_COLOR_1), new Color(WIDGET_BACKGROUND_COLOR_2)];
+    gradient.locations = [0, 1];
+    widget.backgroundGradient = gradient;
+    //   widget.setPadding(16, 16, 16, 16);
+    // const PADDING = 20; 
+    // widget.setPadding(PADDING, PADDING, PADDING, PADDING);
+    widget.useDefaultPadding();
+
+
+    const mainStack = widget.addStack();
+    mainStack.layoutVertically();
+    mainStack.size = new Size(0, 0); // force auto sizing
+    mainStack.layoutVertically();
+    //   mainStack.layoutHorizontally();
+
+    mainStack.addSpacer(); // pushes the ring to the bottom
+
+
+    // === Top-left Text Stack ===
+    const textStack = mainStack.addStack();
+    textStack.layoutVertically();
+    textStack.spacing = 4;
+    //   textStack.leftAlign();
+
+    const title = textStack.addText(`${currentYear} Progress`);
+    title.font = Font.boldSystemFont(27);
+    title.textColor = new Color(TITLE_COLOR);
+
+
+    const subtext = textStack.addText(`${daysPassed}d / ${totalDays}d · Passed`);
+    subtext.font = Font.mediumSystemFont(16);
+    subtext.textColor = new Color(DETAILS_COLOR);
+
+
+    const percentTextStack = textStack.addStack();
+    percentTextStack.layoutHorizontally();
+    percentTextStack.spacing = 2;
+    //   percentTextStack.leftAlign();
+
+    const percentVal = percentTextStack.addText(`${percentText}`);
+    percentVal.font = Font.boldSystemFont(25);
+    percentVal.textColor = new Color(PERCENT_COLOR);
+
+    const percentSym = percentTextStack.addText("%");
+    percentSym.font = Font.boldSystemFont(24);
+    percentSym.textColor = new Color(PERCENT_SYMBOL_COLOR);
+    //   percentSym.centerAlignText();
+
+
+    mainStack.addSpacer(); // pushes the ring to the bottom
+
+    // === Bottom-right Ring Stack ===
+    //   const ringStack = mainStack.addStack();
+    //   ringStack.layoutVertically();
+    //   ringStack.addSpacer(); // pushes ring to far right
+
+    //   const ringImg = drawProgressRing(progress);
+    //   const ring = ringStack.addImage(ringImg);
+    //   ring.imageSize = new Size(55, 55);
+
+    // === Bottom-right Progress Bar ===
+    const barStack = mainStack.addStack();
+    //   barStack.layoutVertically();
+    //   barStack.addSpacer(5);
+
+    const barWidth = 329;
+    const barHeight = 12;
+
+    const progressBarImage = createProgressBarImage(
+      totalDays, daysPassed,
+      barWidth, barHeight,
+      new Color(PROGRESS_COLOR),
+      new Color(PROGRESS_COLOR, 0.25)
+    );
+
+    const progressImage = barStack.addImage(progressBarImage);
+    progressImage.imageSize = new Size(barWidth, barHeight);
+
+    mainStack.addSpacer(); // pushes the ring to the bottom
+
+  } else {
 
 
     // === Create widget layout ===
@@ -880,18 +929,19 @@ widget.useDefaultPadding();
     percentSymbol.textColor = new Color(PERCENT_SYMBOL_COLOR);
     percentSymbol.lineLimit = 1;
 
-}
-// === Run widget ===
-if (config.runsInWidget) {
+  }
+  // === Run widget ===
+  if (config.runsInWidget) {
     Script.setWidget(widget);
-} else {
+  } else {
     if (config.widgetFamily === "large") {
-        await widget.presentLarge();
+      await widget.presentLarge();
     } else {
-        await widget.presentSmall();
+      await widget.presentSmall();
     }
-}
-Script.complete();
+  }
+  Script.complete();
+
 }
 
 async function renderWeekNumRingWidget() {

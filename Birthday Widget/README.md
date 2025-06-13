@@ -7,6 +7,8 @@
 ![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
 ![Last Updated](https://img.shields.io/badge/Updated-June%202025-yellow)
 
+<img width="60%" src="../.src/birthday/birthday_showcase.png">
+
 A minimalist Scriptable widget that shows:
 - 🎂 Your age in years (accurate to 2 decimals)
 - 📅 Total days lived
@@ -81,11 +83,7 @@ Feel free to modify these in the script for a more personal palette.
 
 ## 📸 Screenshots
 
-*(Replace below with your own screenshots)*
-
-| Preview |
-|--------|
-| ![](./screenshots/birthday_preview.png) |
+<img width="60%" src="../.src/birthday/birthday_s.png">
 
 ## 🙌 Feedback
 

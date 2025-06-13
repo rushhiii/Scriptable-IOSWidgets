@@ -90,7 +90,8 @@ Feel free to customize this array for regional traditions or alternate meanings.
 ## 📸 Screenshots
 
 > _Small Widget_
-<img src="../.src/hinduclrwear/hinduclrwear_s.png" width="160"/> <img src="../.src/hinduclrwear/hinduclrwear_m.png" width="260"/> <img src="../.src/hinduclrwear/hinduclrwear_l.png" width="360"/>
+
+<img src="../.src/hinduclrwear/hinduclrwear_l.png" width="360"/> <img src="../.src/hinduclrwear/hinduclrwear_s.png" width="160"/> <img src="../.src/hinduclrwear/hinduclrwear_m.png" width="260"/> 
 
 
 ## 🙌 Feedback

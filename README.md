@@ -61,8 +61,11 @@ The **Countdown Widget** helps you stay on top of upcoming events like birthdays
 
 ### [Birthday](./Birthday%20Widget)
 
+<!-- 
+![Birthday Widget](.src/birthday/birthday_showcase.png) -->
 
-![Birthday Widget](.src/birthday/birthday_showcase.png)
+<img width="60%" src=".src/birthday/birthday_showcase.png">
+
 
 🎉 The **Birthday Widget** gives you a beautiful, minimal way to reflect on your life.\
 It shows your **exact age** (to 2 decimal places), **total days lived**, and a **progress ring** indicating how close you are to your next birthday. Designed for the **Small widget size**, it offers a clean dark-gradient background and supports **parameter customization** to set your name and birthdate. You’ll see your name (e.g., “Rushi’s Life”), a countdown ring that updates daily, and age stats—all in one elegant glance.
@@ -76,7 +79,7 @@ Each day of the week is mapped to a specific color, deity, and spiritual quality
 
 ### [MyQuotes](./MyQuotes%20Widget)
 
-![MyQuotes Widget](./.src/countdown/countdown_display.png)
+![MyQuotes Widget](./.src/)
 
 💬 **The Quote of the Day Widget** delivers a daily dose of inspiration, wisdom, or stoic reflection.\
 Based on the selected category (like *Zen*, *Gita*, *Aurelius*, or *Kafka*), it fetches quotes dynamically from a Google Sheet. The widget adapts its size and style to fit the quote length and device size, and refreshes every night at midnight. Font and background colors can be pulled from the sheet or randomized from a curated palette.\

@@ -98,7 +98,9 @@ Use parameters like `day`, `month`, or `weeknumring` to customize each instance 
 
 ### [Dynamic Weather Widget](./Weather%20Widget)
 
-![Weather Widget](.src/weather/weather_showcase_s.png)
+<!-- ![Weather Widget](.src/weather/weather_showcase_s.png) -->
+
+<img width="70%" src="./.src/weather/weather_showcase_s.png">
 
 ⛅ **The Dynamic Weather Widget** gives you real-time weather data in a stylish, minimal layout. It auto-detects your current location, fetches current conditions from OpenWeatherMap, and presents the info with dynamically sized text and gradient backgrounds. Whether you use it in small, medium, or large format — it adapts gracefully.\
 Customize temperature units, color gradients, and update intervals to fit your aesthetic and practical needs.

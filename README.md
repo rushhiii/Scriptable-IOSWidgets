@@ -62,7 +62,7 @@ The **Countdown Widget** helps you stay on top of upcoming events like birthdays
 ### [Birthday](./Birthday%20Widget)
 
 
-![Birthday Widget](./.src/countdown/countdown_display.png)
+![Birthday Widget](.src/birthday/birthday_showcase.png)
 
 🎉 The **Birthday Widget** gives you a beautiful, minimal way to reflect on your life.\
 It shows your **exact age** (to 2 decimal places), **total days lived**, and a **progress ring** indicating how close you are to your next birthday. Designed for the **Small widget size**, it offers a clean dark-gradient background and supports **parameter customization** to set your name and birthdate. You’ll see your name (e.g., “Rushi’s Life”), a countdown ring that updates daily, and age stats—all in one elegant glance.
@@ -98,7 +98,7 @@ Use parameters like `day`, `month`, or `weeknumring` to customize each instance 
 
 ### [Dynamic Weather Widget](./Weather%20Widget)
 
-![Weather Widget](./.src/countdown/countdown_display.png)
+![Weather Widget](.src/weather/weather_showcase_s.png)
 
 ⛅ **The Dynamic Weather Widget** gives you real-time weather data in a stylish, minimal layout. It auto-detects your current location, fetches current conditions from OpenWeatherMap, and presents the info with dynamically sized text and gradient backgrounds. Whether you use it in small, medium, or large format — it adapts gracefully.\
 Customize temperature units, color gradients, and update intervals to fit your aesthetic and practical needs.

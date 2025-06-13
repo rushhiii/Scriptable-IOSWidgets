@@ -7,6 +7,8 @@
 ![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
 ![Last Updated](https://img.shields.io/badge/Updated-June%202025-yellow)
 
+![weather widget](../.src/weather/weather_showcase_s.png)
+
 A clean and elegant iOS weather widget built with [Scriptable](https://scriptable.app), fetching real-time data from the **OpenWeather API**. The widget adapts layout and font size based on weather conditions and city names for improved readability.
 
 ## ✨ Features
@@ -108,11 +110,11 @@ widget.refreshAfterDate = new Date(Date.now() + 30 * 60 * 1000);
 
 ## 📸 Screenshots
 
-|         Small Example         |         Medium Example         |         Large Example         |
-| :---------------------------: | :----------------------------: | :---------------------------: |
-| ![](../src/weather/small.png) | ![](../src/weather/medium.png) | ![](../src/weather/large.png) |
+![](../.src/weather/weather_showcase.png)
+<!-- ![](../.src/weather/weather1.png) 
+![](../.src/weather/weather2.png)  -->
 
-> Replace above paths with your actual screenshots if you'd like to showcase.
+> NOTE: The the values may differ bassed on your current location, the above are just some examples
 
 ## 🙌 Feedback & Credits
 

@@ -82,7 +82,9 @@ Each day of the week is mapped to a specific color, deity, and spiritual quality
 <!-- ![MyQuotes Widget](.src/quote/quote_showcase.png)
  -->
 
-<img width="100%" src=".src/quote/quote_showcase.png">
+<img width="60%" src=".src/quote/quote_showcase_1.png">
+
+<!-- <img width="100%" src=".src/quote/quote_showcase.png"> -->
 
 💬 **The Quote of the Day Widget** delivers a daily dose of inspiration, wisdom, or stoic reflection.\
 Based on the selected category (like *Zen*, *Gita*, *Aurelius*, or *Kafka*), it fetches quotes dynamically from a Google Sheet. The widget adapts its size and style to fit the quote length and device size, and refreshes every night at midnight. Font and background colors can be pulled from the sheet or randomized from a curated palette.\

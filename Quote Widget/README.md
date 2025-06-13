@@ -7,7 +7,9 @@
 ![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
 ![Last Updated](https://img.shields.io/badge/Updated-June%202025-yellow)
 
-![smartquote](https://user-images.githubusercontent.com/your-image-here.png)
+![smartquote](../.src/quote/quote_showcase.png)
+
+
 
 This iOS widget fetches a quote from your personal Google Sheet and displays it with dynamic styling.  
 It supports:
@@ -129,11 +131,23 @@ The **order doesn't matter**. Examples:
 
 ## 📸 Screenshot
 
-*(Replace with your actual screenshots)*
+> _Small Widgets_
 
-| Small                        | Medium                        | Large                        |
-| ---------------------------- | ----------------------------- | ---------------------------- |
-| ![](./screenshots/small.png) | ![](./screenshots/medium.png) | ![](./screenshots/large.png) |
+| <img src="../.src/quotes/quote_s.png" width="160"/> | <img src="../.src/quotes/quote_s_1.png" width="160"/> |
+|:--:|:--:|
+| <img src="../.src/quotes/quote_s_2.png" width="160"/> | <img src="../.src/quotes/quote_s_3.png" width="160"/> |
+
+> _Medium Widgets_
+ 
+| <img src="../.src/quotes/quote_m_1.png" width="260"/> | <img src="../.src/quotes/quote_m_2.png" width="260"/> |
+|:--:|:--:|
+| <img src="../.src/quotes/quote_m_3.png" width="260"/> | <img src="../.src/quotes/quote_m_4.png" width="260"/> |
+
+> _Large Widgets_
+
+| <img src="../.src/quotes/quote_l_1.png" width="360"/> | <img src="../.src/quotes/quote_l_2.png" width="360"/> |
+|:--:|:--:|
+
 
 ## 🙌 Feedback
 

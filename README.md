@@ -82,7 +82,7 @@ Each day of the week is mapped to a specific color, deity, and spiritual quality
 <!-- ![MyQuotes Widget](.src/quote/quote_showcase.png)
  -->
 
-<img width="60%" src=".src/quote/quote_showcase_1.png">
+<img width="60%" src=".src/quotes/quote_showcase_1.png">
 
 <!-- <img width="100%" src=".src/quote/quote_showcase.png"> -->
 

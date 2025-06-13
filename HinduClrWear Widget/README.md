@@ -89,12 +89,10 @@ Feel free to customize this array for regional traditions or alternate meanings.
 
 ## 📸 Screenshots
 
-> _Small Widget_
-
-<img src="../.src/hinduclrwear/hinduclrwear_l.png" width="360"/> <img src="../.src/hinduclrwear/hinduclrwear_m.png" height="150"/>
-
 |  <img src="../.src/hinduclrwear/hinduclrwear_m.png" height="150"/> | <img src="../.src/hinduclrwear/hinduclrwear_s.png" height="150"/> | 
 |:--:|:--:|
+
+<img src="../.src/hinduclrwear/hinduclrwear_l.png" width="360"/> 
 
 
 ## 🙌 Feedback

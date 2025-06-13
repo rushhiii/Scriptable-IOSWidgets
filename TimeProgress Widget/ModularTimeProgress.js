@@ -1,15 +1,114 @@
 // Variables used by Scriptable.
 // These must be at the very top of the file. Do not edit.
 // icon-color: purple; icon-glyph: hourglass-half;
-// Modular Time Progress Widget — supports: day, month, year, weeknumdot, weeknumring, week
+// Modular Time Progress Widget — supports: day, month, year, weeknumdot, weeknum, week
 
 
 // Invalid parameter.
-// Use 'alarm' , 'day', 'month', 'year', 'weeknumdot', 'weeknumring', or 'week'.
+// Use 'alarm' , 'day', 'month', 'year', 'weeknumdot', 'weeknum', or 'week'.
 const PARAM = args.widgetParameter ? args.widgetParameter.toLowerCase() : "default";
 
 function isLeapYear(year) {
   return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+}
+
+async function renderAlarms() {
+  // 12-hour format with AM/PM - Alarm Widget
+  const alarms = [
+    "9:00 PM", // Night
+    "5:30 AM", // Arise
+  ];
+
+  // const clrBg = new Color("#1e1e1e"); 
+  const clrBg = Color.Black;
+  const clrTxt = Color.White;
+  const clrSubTxt = Color.Gray;
+
+
+  // === HELPER FUNCTIONS ===
+  function parse12HrTimeToDate(timeStr) {
+    const [time, modifier] = timeStr.toUpperCase().split(" ");
+    let [hours, minutes] = time.split(":").map(Number);
+
+    if (modifier === "PM" && hours < 12) hours += 12;
+    if (modifier === "AM" && hours === 12) hours = 0;
+
+    const now = new Date();
+    const alarm = new Date(now);
+    alarm.setHours(hours, minutes, 0, 0);
+    return alarm;
+  }
+
+  function getNextAlarmTime(alarmStrings) {
+    const now = new Date();
+    const todayAlarms = alarmStrings.map(parse12HrTimeToDate).sort((a, b) => a - b);
+
+    for (let alarm of todayAlarms) {
+      if (alarm > now) return alarm;
+    }
+
+    // If all alarms passed, return first alarm for tomorrow
+    const tomorrow = parse12HrTimeToDate(alarmStrings[0]);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    return tomorrow;
+  }
+
+  function formatCountdown(ms) {
+    const totalSec = Math.floor(ms / 1000);
+    const hrs = Math.floor(totalSec / 3600);
+    const mins = Math.floor((totalSec % 3600) / 60);
+    const secs = totalSec % 60;
+    return `${hrs}h ${mins}m ${secs}s`;
+  }
+
+  function format12HrTime(date) {
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours === 0 ? 12 : hours;
+    const minuteStr = minutes.toString().padStart(2, '0');
+    return `${hours}:${minuteStr} ${ampm}`;
+  }
+
+  // === BUILD WIDGET ===
+
+  function createWidget() {
+    const nextAlarm = getNextAlarmTime(alarms);
+    const countdown = formatCountdown(nextAlarm - new Date());
+
+    const widget = new ListWidget();
+    widget.backgroundColor = clrBg;
+
+    const title = widget.addText("⏰ Next Alarm");
+    title.font = Font.boldSystemFont(16);
+    title.textColor = clrTxt;
+
+    widget.addSpacer(5);
+
+    const timeText = widget.addText(format12HrTime(nextAlarm));
+    timeText.font = Font.semiboldSystemFont(22);
+    timeText.textColor = clrTxt;
+
+    widget.addSpacer(2);
+
+    const countdownText = widget.addText(`⏳ ${countdown}`);
+    countdownText.font = Font.systemFont(16);
+    countdownText.textColor = clrSubTxt;
+
+    return widget;
+  }
+
+  const widget = await createWidget();
+
+  if (config.runsInWidget) {
+    Script.setWidget(widget);
+  } else {
+    widget.presentMedium();
+    // widget.presentSmall();
+  }
+
+  Script.complete();
 }
 
 async function renderWeekProgressWidget() {
@@ -493,64 +592,66 @@ async function renderMonthProgressWidget() {
 
 
 async function renderYearProgressWidget() {
-  // --- Customizable Variables ---
-  const WIDGET_BACKGROUND_COLOR_1 = "#202020"; // #000000
-  const WIDGET_BACKGROUND_COLOR_2 = "#000000";
-  const PROGRESS_COLOR = "#FFD700";
-  const PROGRESS_BACKGROUND_COLOR = "#4a4a4a";
-  const TITLE_COLOR = "#ffffff";
-  const DETAILS_COLOR = "#aaaaaa";
-  const PERCENT_COLOR = "#ffffff";
-  const PERCENT_SYMBOL_COLOR = "#aaaaaa";
+// icon-color: gold; icon-glyph: chart-pie;
 
-  const CANVAS_SIZE = 45;
-  const RADIUS = 18;
-  const LINE_WIDTH = 7;
+// --- Customizable Variables ---
+const WIDGET_BACKGROUND_COLOR_1 = "#202020"; // Top gradient
+const WIDGET_BACKGROUND_COLOR_2 = "#000000"; // Bottom gradient
+const PROGRESS_COLOR = "#FFD700";
+const PROGRESS_BACKGROUND_COLOR = "#4a4a4a";
+const TITLE_COLOR = "#ffffff";
+const DETAILS_COLOR = "#aaaaaa";
+const PERCENT_COLOR = "#ffffff";
+const PERCENT_SYMBOL_COLOR = "#aaaaaa";
 
-  const TITLE_FONT_SIZE = 18;
-  const DETAILS_FONT_SIZE = 12;
-  const PERCENT_FONT_SIZE = 35;
-  const PERCENT_SYMBOL_FONT_SIZE = 14;
+const CANVAS_SIZE = 45;
+const RADIUS = 18;
+const LINE_WIDTH = 7;
 
-  const WIDGET_PADDING_TOP = 0;
-  const WIDGET_PADDING_LEFT = 14;
-  const WIDGET_PADDING_BOTTOM = 0;
-  const WIDGET_PADDING_RIGHT = 0;
-  const WIDGET_SPACING = 4;
+const TITLE_FONT_SIZE = 18;
+const DETAILS_FONT_SIZE = 12;
+const PERCENT_FONT_SIZE = 35;
+const PERCENT_SYMBOL_FONT_SIZE = 14;
 
-  const CIRCLE_PADDING_TOP = 0;
-  const CIRCLE_PADDING_LEFT = 0;
-  const CIRCLE_PADDING_BOTTOM = 0;
-  const CIRCLE_PADDING_RIGHT = 0;
+const WIDGET_PADDING_TOP = 0;
+const WIDGET_PADDING_LEFT = 14;
+const WIDGET_PADDING_BOTTOM = 0;
+const WIDGET_PADDING_RIGHT = 0;
+const WIDGET_SPACING = 4;
 
-  const TEXT_PADDING_TOP = 2;
-  const TEXT_PADDING_BOTTOM = 2;
-  const TEXT_PADDING_LEFT = 0;
-  const TEXT_PADDING_RIGHT = 0;
+const CIRCLE_PADDING_TOP = 0;
+const CIRCLE_PADDING_LEFT = 0;
+const CIRCLE_PADDING_BOTTOM = 0;
+const CIRCLE_PADDING_RIGHT = 0;
 
-  const PERCENT_PADDING_TOP = 0;
-  const PERCENT_PADDING_LEFT = 0;
-  const PERCENT_PADDING_BOTTOM = 0;
-  const PERCENT_PADDING_RIGHT = 0;
-  const PERCENT_SPACING = 0;
+const TEXT_PADDING_TOP = 2;
+const TEXT_PADDING_BOTTOM = 2;
+const TEXT_PADDING_LEFT = 0;
+const TEXT_PADDING_RIGHT = 0;
 
-  // --- End Customizable Variables ---
+const PERCENT_PADDING_TOP = 0;
+const PERCENT_PADDING_LEFT = 0;
+const PERCENT_PADDING_BOTTOM = 0;
+const PERCENT_PADDING_RIGHT = 0;
+const PERCENT_SPACING = 0;
+// --- End Customizable Variables ---
 
-  // Get current date and year
-  const now = new Date();
-  const currentYear = now.getFullYear();
+// Get current date and year
+const NOW = new Date();
+const currentYear = NOW.getFullYear();
+const startOfYear = new Date(currentYear, 0, 1);
+const endOfYear = new Date(currentYear + 1, 0, 1);
+const daysPassed = Math.floor((NOW - startOfYear) / 86400000) + 1;
+const totalDays = Math.floor((endOfYear - startOfYear) / 86400000);
+const progress = daysPassed / totalDays;
 
-  // Calculate days passed in the current year
-  const startOfYear = new Date(currentYear, 0, 1);
-  const endOfYear = new Date(currentYear + 1, 0, 1);
-  const msInDay = 1000 * 60 * 60 * 24;
-  const totalDays = Math.floor((endOfYear - startOfYear) / msInDay);
-  const daysPassed = Math.floor((now - startOfYear) / msInDay);
-  const progress = daysPassed / totalDays;
-  const percentText = (progress * 100).toFixed(2);
+// === Truncate percent instead of rounding ===
+const rawPercent = progress * 100;
+const percent = Math.floor(rawPercent * 100) / 100;
+const percentText = percent.toFixed(2);
 
-  // Draw circular progress bar
-  function drawProgressRing(progress) {
+// === Draw circular progress ===
+function drawProgressRing(progress) {
     const context = new DrawContext();
     context.size = new Size(CANVAS_SIZE, CANVAS_SIZE);
     context.opaque = false;
@@ -562,80 +663,235 @@ async function renderYearProgressWidget() {
     context.setStrokeColor(new Color(PROGRESS_BACKGROUND_COLOR));
     context.setLineWidth(LINE_WIDTH);
     context.strokeEllipse(new Rect(
-      center.x - RADIUS,
-      center.y - RADIUS,
-      RADIUS * 2,
-      RADIUS * 2
+        center.x - RADIUS,
+        center.y - RADIUS,
+        RADIUS * 2,
+        RADIUS * 2
     ));
 
     // Progress dots
     context.setFillColor(new Color(PROGRESS_COLOR));
     const totalDegrees = 360 * progress;
-
     for (let i = 0; i < totalDegrees; i += 3.6) {
-      const angle = (i - 90) * (Math.PI / 180);
-      const x = center.x + RADIUS * Math.cos(angle);
-      const y = center.y + RADIUS * Math.sin(angle);
-      context.fillEllipse(
-        new Rect(x - LINE_WIDTH / 2, y - LINE_WIDTH / 2, LINE_WIDTH, LINE_WIDTH)
-      );
+        const angle = (i - 90) * (Math.PI / 180);
+        const x = center.x + RADIUS * Math.cos(angle);
+        const y = center.y + RADIUS * Math.sin(angle);
+        context.fillEllipse(
+            new Rect(x - LINE_WIDTH / 2, y - LINE_WIDTH / 2, LINE_WIDTH, LINE_WIDTH)
+        );
     }
 
     return context.getImage();
-  }
+}
 
-  // Create widget
-  const widget = new ListWidget();
+let widget;
+
+if (config.widgetFamily === "large") {
+  // === LARGE LAYOUT (dot-grid) ===
+widget = new ListWidget();
+widget.backgroundColor = new Color("#000000");
+
+// === Config ===
+const PADDING = 20; // 26
+const CIRCLE_SIZE = 9;
+const CIRCLE_SPACING = 5;
+const TEXT_SPACING = 18;
+const GOLD_FILLED = new Color("#FFD700");
+const GOLD_DIMMED = new Color("#FFD700", 0.25);
+
+const AVAILABLE_WIDTH = 360 - (2 * PADDING);
+const TOTAL_CIRCLE_SIZE = CIRCLE_SIZE + CIRCLE_SPACING;
+const COLUMNS = Math.floor(AVAILABLE_WIDTH / TOTAL_CIRCLE_SIZE);
+const ROWS = Math.ceil(365 / COLUMNS);
+
+widget.setPadding(PADDING, PADDING, PADDING, PADDING);
+// widget.useDefaultPadding();
+
+
+
+// === Center container stack ===
+const mainStack = widget.addStack();
+mainStack.layoutVertically();
+mainStack.centerAlignContent();
+
+// const footerStack = mainStack.addStack();
+// footerStack.centerAlignContent();
+// footerStack.layoutHorizontally();
+// footerStack.topAlignContent();
+// footerStack.layoutVertically();
+
+
+
+// mainStack.addSpacer(TEXT_SPACING-10);
+
+
+// === Dot grid ===
+const gridStack = mainStack.addStack();
+gridStack.layoutVertically();
+gridStack.centerAlignContent();
+gridStack.spacing = CIRCLE_SPACING;
+
+const circleFont = Font.systemFont(CIRCLE_SIZE);
+
+for (let row = 0; row < ROWS; row++) {
+  const rowStack = gridStack.addStack();
+  rowStack.layoutHorizontally();
+  rowStack.centerAlignContent();
+  rowStack.spacing = CIRCLE_SPACING;
+
+  for (let col = 0; col < COLUMNS; col++) {
+    const day = row * COLUMNS + col + 1;
+    if (day > 365) continue;
+
+    const circle = rowStack.addText("●");
+    circle.font = circleFont;
+    circle.lineLimit = 1;
+    circle.textColor = day <= daysPassed ? GOLD_FILLED : GOLD_DIMMED;
+  }
+}
+
+mainStack.addSpacer(TEXT_SPACING-8);
+
+// === Day count text ===
+
+// footerStack.addSpacer();
+
+const yearText = mainStack.addText(`${currentYear} Progress`);
+yearText.font = new Font("Menlo", 14);
+// yearText.textColor = GOLD_FILLED;
+yearText.textColor = Color.white();
+
+mainStack.addSpacer(3);
+
+const dayspasstext = mainStack.addText(`${daysPassed}d/${totalDays}d · Passed`);
+dayspasstext.font = new Font("Menlo", 12);
+// dayspasstext.textColor = GOLD_FILLED;
+dayspasstext.textColor = new Color(DETAILS_COLOR);
+
+}
+
+else if (config.widgetFamily === "medium") {
+  widget = new ListWidget();
   const gradient = new LinearGradient();
   gradient.colors = [new Color(WIDGET_BACKGROUND_COLOR_1), new Color(WIDGET_BACKGROUND_COLOR_2)];
   gradient.locations = [0, 1];
   widget.backgroundGradient = gradient;
-  widget.setPadding(WIDGET_PADDING_TOP, WIDGET_PADDING_LEFT, WIDGET_PADDING_BOTTOM, WIDGET_PADDING_RIGHT);
-  widget.spacing = WIDGET_SPACING;
+//   widget.setPadding(16, 16, 16, 16);
+// const PADDING = 20; 
+// widget.setPadding(PADDING, PADDING, PADDING, PADDING);
+widget.useDefaultPadding();
 
-  // Top-left progress circle
-  const circleStack = widget.addStack();
-  circleStack.layoutHorizontally();
-  circleStack.setPadding(CIRCLE_PADDING_TOP, CIRCLE_PADDING_LEFT, CIRCLE_PADDING_BOTTOM, CIRCLE_PADDING_RIGHT);
-  const progressImage = drawProgressRing(progress);
-  const circleImg = circleStack.addImage(progressImage);
-  circleImg.imageSize = new Size(CANVAS_SIZE, CANVAS_SIZE);
-  circleImg.leftAlignImage();
 
-  // Add text block (below)
-  const textStack = widget.addStack();
+  const mainStack = widget.addStack();
+//   mainStack.layoutVertically();
+//   mainStack.size = new Size(0, 0); // force auto sizing
+//   mainStack.layoutVertically();
+  mainStack.layoutHorizontally();
+
+  // === Top-left Text Stack ===
+  const textStack = mainStack.addStack();
   textStack.layoutVertically();
+  textStack.spacing = 4;
+//   textStack.leftAlign();
 
-  const titleText = widget.addText(`${currentYear} Progress`);
-  titleText.textColor = new Color(TITLE_COLOR);
-  titleText.font = Font.boldSystemFont(TITLE_FONT_SIZE);
-  titleText.leftAlignText();
-  textStack.setPadding(TEXT_PADDING_TOP, TEXT_PADDING_LEFT, TEXT_PADDING_BOTTOM, TEXT_PADDING_RIGHT);
+  const title = textStack.addText(`${currentYear} Progress`);
+  title.font = Font.boldSystemFont(27);
+  title.textColor = new Color(TITLE_COLOR);
 
-  const detailsText = widget.addText(`${daysPassed}d/${totalDays}d · Passed`);
-  detailsText.textColor = new Color(DETAILS_COLOR);
-  detailsText.font = Font.boldSystemFont(DETAILS_FONT_SIZE);
-  detailsText.leftAlignText();
+  const subtext = textStack.addText(`${daysPassed}d / ${totalDays}d · Passed`);
+  subtext.font = Font.mediumSystemFont(16);
+  subtext.textColor = new Color(DETAILS_COLOR);
 
-  // Add percentage display
-  const percentStack = widget.addStack();
-  percentStack.setPadding(PERCENT_PADDING_TOP, PERCENT_PADDING_LEFT, PERCENT_PADDING_BOTTOM, PERCENT_PADDING_RIGHT);
-  percentStack.centerAlignContent();
-  percentStack.spacing = PERCENT_SPACING;
+  const percentTextStack = textStack.addStack();
+  percentTextStack.layoutHorizontally();
+  percentTextStack.spacing = 2;
+//   percentTextStack.leftAlign();
 
-  const percentValue = percentStack.addText(`${percentText}`);
-  percentValue.font = Font.boldSystemFont(PERCENT_FONT_SIZE);
-  percentValue.textColor = new Color(PERCENT_COLOR);
+  const percentVal = percentTextStack.addText(`${percentText}%`);
+  percentVal.font = Font.boldSystemFont(25);
+  percentVal.textColor = new Color(PERCENT_COLOR);
 
-  const percentSymbol = percentStack.addText(" %");
-  percentSymbol.font = Font.boldSystemFont(PERCENT_SYMBOL_FONT_SIZE);
-  percentSymbol.textColor = new Color(PERCENT_SYMBOL_COLOR);
-  percentSymbol.lineLimit = 1;
+//   const percentSym = percentTextStack.addText(" %");
+//   percentSym.font = Font.boldSystemFont(25);
+//   percentSym.textColor = new Color(PERCENT_SYMBOL_COLOR);
+//   percentSym.centerAlignText();
 
-  // Finalize
-  Script.setWidget(widget);
-  widget.presentSmall();
-  Script.complete();
+  mainStack.addSpacer(); // pushes the ring to the bottom
+
+  // === Bottom-right Ring Stack ===
+  const ringStack = mainStack.addStack();
+  ringStack.layoutVertically();
+  ringStack.addSpacer(); // pushes ring to far right
+
+  const ringImg = drawProgressRing(progress);
+  const ring = ringStack.addImage(ringImg);
+  ring.imageSize = new Size(55, 55);
+
+
+
+} else {
+
+
+    // === Create widget layout ===
+    widget = new ListWidget();
+    const gradient = new LinearGradient();
+    gradient.colors = [new Color(WIDGET_BACKGROUND_COLOR_1), new Color(WIDGET_BACKGROUND_COLOR_2)];
+    gradient.locations = [0, 1];
+    widget.backgroundGradient = gradient;
+    widget.setPadding(WIDGET_PADDING_TOP, WIDGET_PADDING_LEFT, WIDGET_PADDING_BOTTOM, WIDGET_PADDING_RIGHT);
+    widget.spacing = WIDGET_SPACING;
+
+    // Top-left progress circle
+    const circleStack = widget.addStack();
+    circleStack.layoutHorizontally();
+    circleStack.setPadding(CIRCLE_PADDING_TOP, CIRCLE_PADDING_LEFT, CIRCLE_PADDING_BOTTOM, CIRCLE_PADDING_RIGHT);
+    const progressImage = drawProgressRing(progress);
+    const circleImg = circleStack.addImage(progressImage);
+    circleImg.imageSize = new Size(CANVAS_SIZE, CANVAS_SIZE);
+    circleImg.leftAlignImage();
+
+    // Text block below
+    const textStack = widget.addStack();
+    textStack.layoutVertically();
+
+    const titleText = widget.addText(`${currentYear} Progress`);
+    titleText.textColor = new Color(TITLE_COLOR);
+    titleText.font = Font.boldSystemFont(TITLE_FONT_SIZE);
+    titleText.leftAlignText();
+    textStack.setPadding(TEXT_PADDING_TOP, TEXT_PADDING_LEFT, TEXT_PADDING_BOTTOM, TEXT_PADDING_RIGHT);
+
+    const detailsText = widget.addText(`${daysPassed}d/${totalDays}d · Passed`);
+    detailsText.textColor = new Color(DETAILS_COLOR);
+    detailsText.font = Font.boldSystemFont(DETAILS_FONT_SIZE);
+    detailsText.leftAlignText();
+
+    // Percentage display
+    const percentStack = widget.addStack();
+    percentStack.setPadding(PERCENT_PADDING_TOP, PERCENT_PADDING_LEFT, PERCENT_PADDING_BOTTOM, PERCENT_PADDING_RIGHT);
+    percentStack.centerAlignContent();
+    percentStack.spacing = PERCENT_SPACING;
+
+    const percentValue = percentStack.addText(`${percentText}`);
+    percentValue.font = Font.boldSystemFont(PERCENT_FONT_SIZE);
+    percentValue.textColor = new Color(PERCENT_COLOR);
+
+    const percentSymbol = percentStack.addText(" %");
+    percentSymbol.font = Font.boldSystemFont(PERCENT_SYMBOL_FONT_SIZE);
+    percentSymbol.textColor = new Color(PERCENT_SYMBOL_COLOR);
+    percentSymbol.lineLimit = 1;
+
+}
+// === Run widget ===
+if (config.runsInWidget) {
+    Script.setWidget(widget);
+} else {
+    if (config.widgetFamily === "large") {
+        await widget.presentLarge();
+    } else {
+        await widget.presentSmall();
+    }
+}
+Script.complete();
 }
 
 async function renderWeekNumRingWidget() {
@@ -988,6 +1244,9 @@ function renderPlaceholderWidget(label) {
 
 // === Dispatcher ===
 switch (PARAM) {
+  case "alarm":
+    renderAlarms();
+    break;
   case "weeknumdot":
     renderWeekNumDotWidget();
     break;
@@ -1003,7 +1262,7 @@ switch (PARAM) {
   case "week":
     renderWeekProgressWidget();
     break;
-  case "weeknumring":
+  case "weeknum":
     renderWeekNumRingWidget();
     break;
   case "default":

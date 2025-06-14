@@ -102,7 +102,7 @@ This widget supports **small**, **medium**, and **large** views. You can also si
 
 ### [Modular Time Progress](./Modular%20Time%20Progress)
 
-![timeProgress Widget](./.src/countdown/countdown_display.png)
+![timeProgress Widget](./.src/timeprogress/timeprogress_showcase.png)
 
 ⏳ **The Modular Time Progress Widget** lets you visualize your life in motion— from the minutes in your day to the weeks in your year. This fully modular Scriptable widget supports multiple modes like day, week, month, year, and week number views. Each mode features a clean, minimalist design with gradient themes and dynamic progress animations.\
 Use parameters like `day`, `month`, or `weeknumring` to customize each instance — perfect for stacking small, medium, or large widgets for a complete time dashboard.

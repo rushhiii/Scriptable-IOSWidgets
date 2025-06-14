@@ -6,7 +6,7 @@
 ![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
 ![Last Updated](https://img.shields.io/badge/Updated-June%202025-yellow)
 
-![Modular Time Progress](images/timeProgress/demo-grid.png)
+![Modular Time Progress](../.src/timeprogress/timeprogress_showcase.png)
 
 Visualize your day, week, month, year, and more — all in one modular and minimalist design Scriptable widget.
 
@@ -43,6 +43,20 @@ Visualize your day, week, month, year, and more — all in one modular and minim
 
 ## 📸 Screenshots
 
+| <img src="../.src/timeprogress/timeprogress_s_1.png" width="160"/> | <img src="../.src/timeprogress/timeprogress_s_2.png" width="160"/> |
+|:--:|:--:|
+| <img src="../.src/timeprogress/timeprogress_s_3.png" width="160"/> | <img src="../.src/timeprogress/timeprogress_s_4.png" width="160"/> |
+| <img src="../.src/timeprogress/timeprogress_s_5.png" width="160"/> | <img src="../.src/timeprogress/timeprogress_s_6.png" width="160"/> |
+
+
+| <img src="../.src/timeprogress/timeprogress_m_1.png" width="260"/> | <img src="../.src/timeprogress/timeprogress_m_2.png" width="260"/> |
+|:--:|:--:|
+
+
+| <img src="../.src/timeprogress/timeprogress_l.png" width="360"/> |
+|:--:|
+
+
 ### Day Progress (`day`)
 
 Displays progress through the current day as a circular progress ring.
@@ -73,11 +87,6 @@ Dot grid marking each week of the year.
 
 ![Week Dot](images/timeProgress/week-dots.png)
 
-### Week Number Ring View (`weeknumring`)
-
-Animated ring showing progress through all 52 weeks.
-
-![Week Ring](images/timeProgress/weeknum-ring.png)
 
 ### Default Mode (`default`)
 

@@ -143,8 +143,11 @@ Feel free to modify these for your aesthetic preference.
 
 > _large Widget_
 
-| <img src="../.src/schedule/schedule_l.png" width="360"/> | <img src="../.src/schedule/schedule_l_1.png" width="360"/> |
-|:--:|:--:|
+<!-- | <img src="../.src/schedule/schedule_l.png" width="360"/> | <img src="../.src/schedule/schedule_l_1.png" width="360"/> |
+|:--:|:--:| -->
+
+<img src="../.src/schedule/schedule_l.png" width="360"/> <img src="../.src/schedule/schedule_l_1.png" width="360"/>
+
 
 
 

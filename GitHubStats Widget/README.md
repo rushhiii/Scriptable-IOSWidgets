@@ -160,12 +160,12 @@ night
 
 > _Medium Widgets_
 
-<!-- | <img src="../.src/githubstats/githubstats_m_1.png" width="260"/> | <img src="../.src/githubstats/githubstats_m_2.png" width="260"/> |
+| <img src="../.src/githubstats/githubstats_m_1.png" width="260"/> | <img src="../.src/githubstats/githubstats_m_2.png" width="260"/> |
 |:--:|:--:|
-| <img src="../.src/githubstats/githubstats_m_3.png" width="260"/> | <img src="../.src/githubstats/githubstats_m_4.png" width="260"/> | -->
+| <img src="../.src/githubstats/githubstats_m_3.png" width="260"/> | <img src="../.src/githubstats/githubstats_m_4.png" width="260"/> |
 
-<img src="../.src/githubstats/githubstats_m_1.png" width="260"/> <img src="../.src/githubstats/githubstats_m_2.png" width="260"/>
-<img src="../.src/githubstats/githubstats_m_3.png" width="260"/> <img src="../.src/githubstats/githubstats_m_4.png" width="260"/>
+<!-- <img src="../.src/githubstats/githubstats_m_1.png" width="260"/> <img src="../.src/githubstats/githubstats_m_2.png" width="260"/>
+<img src="../.src/githubstats/githubstats_m_3.png" width="260"/> <img src="../.src/githubstats/githubstats_m_4.png" width="260"/> -->
 
 > _Large Widget_
 

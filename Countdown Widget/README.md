@@ -227,7 +227,7 @@ Use the following options when editing the widget:
 
 > _Large Widgets_
 
-| <img src="../.src/countdown/countdown_l.PNG" width="360"/> | <img src="../.src/countdown/countdown_col_l.PNG" width="360"/> |
+| <img src="../.src/countdown/countdown_l.PNG" width="360"/> | <img src="../.src/countdown/countdown_col_l.png" width="360"/> |
 |:--:|:--:|
 
 

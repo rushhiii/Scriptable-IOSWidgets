@@ -131,9 +131,21 @@ Feel free to modify these for your aesthetic preference.
 
 ## 📸 Screenshot
 
-| Small                     | Medium                     | Large                     |
-|---------------------------|----------------------------|---------------------------|
-| ![](./screenshots/small.png) | ![](./screenshots/medium.png) | ![](./screenshots/large.png) |
+> _Small Widget_
+
+| <img src="../.src/schedule/schedule_s.png" width="160"/> | <img src="../.src/schedule/schedule_s_1.png" width="160"/> |
+|:--:|:--:|
+
+> _Medium Widget_
+
+| <img src="../.src/schedule/schedule_m.png" width="260"/> |
+|:--:|
+
+> _large Widget_
+
+| <img src="../.src/schedule/schedule_l.png" width="360"/> | <img src="../.src/schedule/schedule_l_1.png" width="360"/> |
+|:--:|:--:|
+
 
 
 ## 🧪 Development Tips

@@ -133,13 +133,16 @@ Feel free to modify these for your aesthetic preference.
 
 > _Small Widget_
 
-| <img src="../.src/schedule/schedule_s.png" width="160"/> | <img src="../.src/schedule/schedule_s_1.png" width="160"/> |
-|:--:|:--:|
+<!-- | <img src="../.src/schedule/schedule_s.png" width="160"/> | <img src="../.src/schedule/schedule_s_1.png" width="160"/> |
+|:--:|:--:| -->
+<img src="../.src/schedule/schedule_s.png" width="160"/> <img src="../.src/schedule/schedule_s_1.png" width="160"/>
 
 > _Medium Widget_
-
+<!-- 
 | <img src="../.src/schedule/schedule_m.png" width="260"/> |
-|:--:|
+|:--:| -->
+
+<img src="../.src/schedule/schedule_m.png" width="260"/>
 
 > _large Widget_
 

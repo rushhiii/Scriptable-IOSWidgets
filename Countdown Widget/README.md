@@ -215,7 +215,7 @@ Use the following options when editing the widget:
 
 > _Small Widgets_ 
 
-| <img src="../.src/countdown/countdown_s.png" width="160"/> | <img src="../.src/countdown/countdown_age_s.PNG" width="160"/> |
+| <img src="../.src/countdown/countdown_s.PNG" width="160"/> | <img src="../.src/countdown/countdown_age_s.PNG" width="160"/> |
 |:--:|:--:|
 | <img src="../.src/countdown/countdown_bday_s.PNG" width="160"/> | <img src="../.src/countdown/countdown_1_s.PNG" width="160"/> |
 

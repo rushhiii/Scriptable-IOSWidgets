@@ -3,8 +3,6 @@
 const username = "rushhiii"; // replace with your github username
 const token = Keychain.get("github_token"); // replace this with you token
 
-// this version supports heatmap, for small and medium sie widgets
-
 // const size = config.widgetFamily || "large";
 // const size = config.widgetFamily || "medium";
 const size = config.widgetFamily || "small";
@@ -12,7 +10,7 @@ const size = config.widgetFamily || "small";
 
 const themePresets = {
   auto: Device.isUsingDarkAppearance()
-    ? { colors: ["#000244", "#000233","#000000"], locations: [0.0,0.5,1.0], head: "#ffffff", text: "#909692", acc: "#3094ff" }
+    ? { colors: ["#000244", "#000233", "#000000"], locations: [0.0, 0.5, 1.0], head: "#ffffff", text: "#909692", acc: "#3094ff" }
     : { colors: ["#e6f2f1", "#bff2c2"], locations: [0, 1], head: "#000000", text: "#5a615c", acc: "#006edb" },
 
 
@@ -136,6 +134,23 @@ const themePresets = {
 };
 
 const heatmapThemes = {
+
+  auto: Device.isUsingDarkAppearance()
+    ? {
+      bg: ["#ffffff", "#f0f0f0", "#ECECEC"],
+      text: "#000000",
+      // accent: "#A0A0A0",
+      accent: size === "small" ? "#A0A0A0" : "#30a14e",
+      box: ["#CDCDCD", "#9be9a8", "#40c463", "#30a14e", "#216e39"]
+    }
+    : {
+      bg: ["#000000", "#0a1c0f", "#003f0c"],
+      text: "#ffffff",
+      accent: "#00ff4e",
+      box: ["#444", "#003f0c", "#006815", "#00bb1e", "#00ff4e"]
+
+    },
+
   light: {
     bg: ["#ffffff", "#f0f0f0", "#ECECEC"],
     text: "#000000",
@@ -143,7 +158,7 @@ const heatmapThemes = {
     accent: size === "small" ? "#A0A0A0" : "#30a14e",
     box: ["#CDCDCD", "#9be9a8", "#40c463", "#30a14e", "#216e39"]
   },
-  dark: { 
+  dark: {
     bg: ["#000000", "#0a1c0f", "#003f0c"],
     text: "#ffffff",
     accent: "#00ff4e",
@@ -162,9 +177,10 @@ const heatmapThemes = {
 
 // console.log(token);
 
-// const rawParam = args.widgetParameter || "rushhiii/Scriptable-IOSWidgets,views,indigo";
-
 const rawParam = args.widgetParameter || "";
+
+// const rawParam = args.widgetParameter || "";
+// const rawParam = args.widgetParameter || "heatmap";
 const parts = rawParam.toLowerCase().split(",").map(s => s.trim());
 
 let isHeatmap = false;
@@ -344,7 +360,7 @@ async function fetchTopLanguage() {
 }
 
 // async function fetchRepoStat(repoPath, statType) {
-  
+
 //   const baseUrl = `https://api.github.com/repos/${repoPath}`;
 //   const headers = { Authorization: `Bearer ${token}` };
 
@@ -428,7 +444,7 @@ async function fetchRepoStat(repoPath, statType) {
 
   const ghStats = await fetchGraphQLStats();
   // console.log(ghStats);
-// console.log("currentStreak:", ghStats?.currentStreak);
+  // console.log("currentStreak:", ghStats?.currentStreak);
 
   const userInfo = await fetchUserInfo();
 
@@ -439,14 +455,14 @@ async function fetchRepoStat(repoPath, statType) {
   // let value = 0;
   // let label = "";
 
-  
+
   let statValue = 0;
   let type = "";
   if (statType === "stars") {
     statValue = json.stargazers_count;
     type = stars;
   } else if (statType === "commits") {
-    // const commitsReq = new Request(`${baseUrl}/commits?per_page=1`);
+    // const commitsReq = new Request(`${repoUrl}/commits?per_page=1`);
     // commitsReq.headers = headers;
     // const commits = await commitsReq.loadJSON();
     // const link = commitsReq.response.headers["link"];
@@ -456,8 +472,8 @@ async function fetchRepoStat(repoPath, statType) {
     statValue = ghStats.commits2025;
     type = `${year} commits`;
   } else if (statType === "views") {
-    const viewsReq = new Request(`${baseUrl}/traffic/views`);
-    viewsReq.headers = headers;
+    const viewsReq = new Request(`${repoUrl}/traffic/views`);
+    // viewsReq.headers = headers;
     const views = await viewsReq.loadJSON();
     statValue = views.count || 0;
     type = "views";
@@ -545,7 +561,7 @@ async function fetchRepoStat(repoPath, statType) {
   // }
 
   // return { label, value, title, link };
-     return {
+  return {
     name: json.name,
     statValue,
     url: json.html_url,
@@ -856,20 +872,20 @@ async function createHeatmapSmallWidget() {
     // label.centerAlignText();
     // label.minimumScaleFactor = 0.7;
     // label.addSpacer();
-const labelWrap = col.addStack();
-labelWrap.layoutHorizontally();
-labelWrap.size = new Size(boxSize, boxSize); // restricts label width
-labelWrap.centerAlignContent(); // center horizontally
+    const labelWrap = col.addStack();
+    labelWrap.layoutHorizontally();
+    labelWrap.size = new Size(boxSize, boxSize); // restricts label width
+    labelWrap.centerAlignContent(); // center horizontally
 
-// addSpacer() on both sides for dead-center label
-// labelWrap.addSpacer();
-const label = labelWrap.addText(days[w]);
-label.font = Font.systemFont(UI.font); // slight bump from -2
-label.textColor = new Color(heatmapThemes[themeParam].accent);
-label.centerAlignText();
-label.lineLimit = 1;
-// label.minimumScaleFactor = 0.5;
-// labelWrap.addSpacer();
+    // addSpacer() on both sides for dead-center label
+    // labelWrap.addSpacer();
+    const label = labelWrap.addText(days[w]);
+    label.font = Font.systemFont(UI.font); // slight bump from -2
+    label.textColor = new Color(heatmapThemes[themeParam].accent);
+    label.centerAlignText();
+    label.lineLimit = 1;
+    // label.minimumScaleFactor = 0.5;
+    // labelWrap.addSpacer();
 
 
 
@@ -1002,12 +1018,12 @@ async function createWidget() {
   //   "followers", "issues", "prs", "following", "followers"
   // ].includes(statType);
   const showRepoStats =
-  [
-    "stars", "commits", "views",
-    "currstreak", "contributions", "allcommits",
-    "repos", "longstreak", "followers", "following",
-    "issues", "prs"
-  ].includes(statType);
+    [
+      "stars", "commits", "views",
+      "currstreak", "contributions", "allcommits",
+      "repos", "longstreak", "followers", "following",
+      "issues", "prs"
+    ].includes(statType);
 
   const repoStats = showRepoStats ? await fetchRepoStat(repoPath, statType) : null;
   const logoImg = await new Request("https://i.imgur.com/MJzROGa.png").loadImage();
@@ -1076,13 +1092,13 @@ function renderSmallLayout(w, { userInfo, language, ghStats, repoStats, logoImg,
     // statTitle.font = Font.systemFont(UI.font);
     // statTitle.textColor = textClr;
     if (repoPath) {
-        const statTitle = w.addText(`${repoStats.name} (${repoStats.type})`);
-    statTitle.font = Font.systemFont(UI.font);
-    statTitle.textColor = textClr;
+      const statTitle = w.addText(`${repoStats.name} (${repoStats.type})`);
+      statTitle.font = Font.systemFont(UI.font);
+      statTitle.textColor = textClr;
     } else {
-        const statTitle = w.addText(`${repoStats.type}`);
-    statTitle.font = Font.systemFont(UI.font);
-    statTitle.textColor = textClr;
+      const statTitle = w.addText(`${repoStats.type}`);
+      statTitle.font = Font.systemFont(UI.font);
+      statTitle.textColor = textClr;
     }
   } else {
     w.addSpacer(0);
@@ -1161,6 +1177,7 @@ function renderMediumLayout(w, { userInfo, language, ghStats, logoImg, headClr, 
   addLine("Current Streak", `${ghStats.currentStreak} days`, "🔥");
   // addLine("Longest Streak", `${ghStats.longestStreak} days`, "🏆");
   addLine(`Commits (${year})`, ghStats.commits2025, "🕒");
+  // addLine(`Commits ('${yearLabel})`, ghStats.commits2025, "🕒");
   addLine("Total Commits (all-time)", ghStats.totalCommits, "📜");
   addLine("Contributions", ghStats.totalContributions, "📅");
   addLine("Public Repos", userInfo.public_repos, "📦");
@@ -1199,6 +1216,7 @@ function renderLargeLayout(w, { userInfo, language, ghStats, logoImg, headClr, t
 
   const grid = w.addStack();
   grid.layoutHorizontally();
+  // grid.centerAlignContent();
 
   const col1 = grid.addStack();
   col1.layoutVertically();
@@ -1210,22 +1228,46 @@ function renderLargeLayout(w, { userInfo, language, ghStats, logoImg, headClr, t
     if (typeof value === "number" && value <= 1) return;
     if (!value || value === 0) return;
     const line = stack.addText(`${icon} ${label}: ${value}`);
-    line.font = Font.mediumSystemFont(UI.font);
+    line.font = Font.mediumSystemFont(UI.font+4);
     line.textColor = Color.lightGray();
     stack.addSpacer(UI.lineSpacing);
   };
 
+  // addTo(col1, "Public Repos", userInfo.public_repos, "📦");
+  // addTo(col1, "Followers", userInfo.followers, "👥");
+  // // addTo(col1, "Commits (2025)", ghStats.commits2025, "🕒");
+  // addTo(col1, `Commits('${yearLabel})`, ghStats.commits2025, "🕒");
+  // addTo(col1, "Streak", `${ghStats.currentStreak}d`, "🔥");
+
+  // grid.addSpacer(5);
+
+  // addTo(col2, "Issues", ghStats.totalIssues, "❗");
+  // addTo(col2, "PRs", ghStats.totalPRs, "🔃");
+  // addTo(col2, "Total Commits", ghStats.totalCommits, "📜");
+  // addTo(col2, "Longest", `${ghStats.longestStreak}d`, "🏆");
+
+  // grid.addSpacer(0);
+
   addTo(col1, "Public Repos", userInfo.public_repos, "📦");
   addTo(col1, "Followers", userInfo.followers, "👥");
-  addTo(col1, "Commits (2025)", ghStats.commits2025, "🕒");
+  addTo(col1, `Commits ('${year})`, ghStats.commits2025, "🕒");
+  addTo(col1, "Total Commits", ghStats.totalCommits, "📜");
   addTo(col1, "Streak", `${ghStats.currentStreak}d`, "🔥");
+  addTo(col1, "Longest", `${ghStats.longestStreak}d`, "🏆");
+  addTo(col1, "Issues", ghStats.totalIssues, "❗");
+  addTo(col1, "PRs", ghStats.totalPRs, "🔃");
 
-  grid.addSpacer();
+  // grid.addSpacer(5);
 
-  addTo(col2, "Issues", ghStats.totalIssues, "❗");
-  addTo(col2, "PRs", ghStats.totalPRs, "🔃");
-  addTo(col2, "Total Commits", ghStats.totalCommits, "📜");
-  addTo(col2, "Longest", `${ghStats.longestStreak}d`, "🏆");
+  // addTo(col2, "Issues", "99", "❗");
+  // addTo(col2, "PRs", "99", "🔃");
+  // addTo(col2, "Total Commits", "999", "📜");
+  // addTo(col2, "Longest", `999d`, "🏆");
+
+
+  // grid.addSpacer(0);
+
+
 
   w.addSpacer();
 

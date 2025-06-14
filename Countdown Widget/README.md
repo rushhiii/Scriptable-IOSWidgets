@@ -149,7 +149,7 @@ Use the following options when editing the widget:
 
 > _Here's a Screenshot of widget's config panal_
 
-<img height="auto" width="500px" src="../.src/countdown/countdown_config_panal.png" alt="countdown_config_panal.png">
+<img height="auto" width="500px" src="../.src/countdown/countdown_config_panal.PNG" alt="countdown_config_panal.png">
 
 <br/>
 <div id="note"></div>

@@ -8,7 +8,9 @@
 ![Scriptable Widget](https://img.shields.io/badge/Scriptable-iOS%20Widget-black?style=flat-square\&logo=apple)
 
 
-![Widget Preview](https://i.imgur.com/MJzROGa.png)
+<!-- ![github logo](https://i.imgur.com/MJzROGa.png) -->
+
+<img src="../.src/githubstats/githubstats_showcase.png">
 
 Track your GitHub stats — commits, contributions, streaks, PRs, issues, and repo insights — all beautifully displayed on your iOS home screen using Scriptable.
 
@@ -149,8 +151,25 @@ night
 
 ### 🖼 Screenshots
 
-Add a few screenshots here once ready — especially for small/medium/large layouts.
+> _Small Widget_
 
+| <img src="../.src/githubstats/githubstats_s_1.png" width="160"/> | <img src="../.src/githubstats/githubstats_s_2.png" width="160"/> |
+|:--:|:--:|
+| <img src="../.src/githubstats/githubstats_s_3.png" width="160"/> | <img src="../.src/githubstats/githubstats_s_4.png" width="160"/> |
+| <img src="../.src/githubstats/githubstats_s_5.png" width="160"/> | <img src="../.src/githubstats/githubstats_s_6.png" width="160"/> |
+
+> _Medium Widgets_
+
+<!-- | <img src="../.src/githubstats/githubstats_m_1.png" width="260"/> | <img src="../.src/githubstats/githubstats_m_2.png" width="260"/> |
+|:--:|:--:|
+| <img src="../.src/githubstats/githubstats_m_3.png" width="260"/> | <img src="../.src/githubstats/githubstats_m_4.png" width="260"/> | -->
+
+<img src="../.src/githubstats/githubstats_m_1.png" width="260"/> <img src="../.src/githubstats/githubstats_m_2.png" width="260"/>
+<img src="../.src/githubstats/githubstats_m_3.png" width="260"/> <img src="../.src/githubstats/githubstats_m_4.png" width="260"/>
+
+> _Large Widget_
+
+<img src="../.src/githubstats/githubstats_l.png" width="360"/>
 
 ## 🙌 Feedback
 

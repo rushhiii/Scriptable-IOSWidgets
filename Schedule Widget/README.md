@@ -7,7 +7,9 @@
 ![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
 ![Last Updated](https://img.shields.io/badge/Updated-June%202025-yellow)
 
-![schedule-widget](https://user-images.githubusercontent.com/your-image-here.png)
+<!-- ![schedule-widget](https://user-images.githubusercontent.com/your-image-here.png) -->
+
+![Schedule Widget](../.src/schedule/schedule_showcase.png)
 
 A powerful iOS widget built with **Scriptable** that displays your university or high school class schedule directly from a public Google Sheet.  
 

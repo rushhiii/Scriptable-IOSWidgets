@@ -93,7 +93,9 @@ This widget supports **small**, **medium**, and **large** sizes. You can also pa
 
 ### [Class Schedule Viewer](./Schedule%20Widget)
 
-![Schedule Widget](./.src/countdown/countdown_display.png)
+<!-- ![Schedule Widget](./.src/schedule/schedule_showcase_1.png) -->
+
+<img width="60%" src="./.src/schedule/schedule_showcase_1.png">
 
 📅 **The Class Schedule Widget** syncs your school or university timetable from a public Google Sheet and automatically displays today’s classes. It adapts to the widget size: from showing only the current class to displaying a full weekly schedule with a beautiful gradient background per weekday.\
 This widget supports **small**, **medium**, and **large** views. You can also simulate different days or class times using widget parameters.

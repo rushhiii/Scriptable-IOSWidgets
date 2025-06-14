@@ -142,7 +142,7 @@ Feel free to modify these for your aesthetic preference.
 | <img src="../.src/schedule/schedule_m.png" width="260"/> |
 |:--:| -->
 
-<img src="../.src/schedule/schedule_m.png" width="260"/>
+<img src="../.src/schedule/schedule_m.png" width="360"/>
 
 > _large Widget_
 

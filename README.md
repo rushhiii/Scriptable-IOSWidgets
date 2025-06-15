@@ -1,10 +1,10 @@
 # Scriptable
-![Scriptable App](./.src/badges/scriptableBadge.svg) &nbsp; ![iOS](./.src/badges/iOS-badge.svg)
+![Scriptable App](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/8f58656dd322a300196bc236f302d8f82d744691/.src/badges/scriptableBadge.svg) &nbsp; ![iOS](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/8f58656dd322a300196bc236f302d8f82d744691/.src/badges/iOS-badge.svg)
 
 Welcome to my curated collection of **Scriptable** widgets and scripts, crafted to bring more power and personalization to your iOS home screen.
 
 <!-- <img alt="widgets showcase" align="center" src=".src/widgets showcase.png" /> -->
-<img alt="Mockup wall" width="100%" align="center" src="./.src/scriptable_mockup_wall.png" />
+<img alt="Mockup wall" width="100%" align="center" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/8f58656dd322a300196bc236f302d8f82d744691/.src/scriptable_mockup_wall.png" />
 
 <br>
 
@@ -31,7 +31,7 @@ Welcome to my curated collection of **Scriptable** widgets and scripts, crafted 
 
 <ul>
   <li><a href="#scriptable">Scriptable Overview</a></li>
-  <li><a href="#📜-list-of-widgets">List of Widgets</a>
+  <li><a href="#-list-of-widgets">List of Widgets</a>
     <ul>
       <li><a href="#countdown">Countdown Widget</a></li>
       <li><a href="#myquotes">Quote Widget</a></li>
@@ -43,9 +43,9 @@ Welcome to my curated collection of **Scriptable** widgets and scripts, crafted 
       <li><a href="#hinduclrwear">HinduClrWear Widget</a></li>
     </ul>
   </li>
-  <li><a href="#📖-how-to-use-these-scriptable-widgets?">How to Use Scriptable Widgets?</a></li>
-  <li><a href="#🙌-feedback">Feedback</a></li>
-  <li><a href="#📜-license">License</a></li>
+  <li><a href="#-how-to-use-these-scriptable-widgets?">How to Use Scriptable Widgets?</a></li>
+  <li><a href="#-feedback">Feedback</a></li>
+  <li><a href="#-license">License</a></li>
 </ul>
 
 <br/>
@@ -71,9 +71,9 @@ It shows your **exact age** (to 2 decimal places), **total days lived**, and a *
 
 ### [HinduClrWear](./HinduClrWear%20Widget)
 
-<!-- ![HinduClrWear Widget](./.src/hinduclrwear/hinduclrwear_showcase.png) -->
+<!-- ![HinduClrWear Widget](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/8f58656dd322a300196bc236f302d8f82d744691/.src/hinduclrwear/hinduclrwear_showcase.png) -->
 
-<img width="80%" src="./.src/hinduclrwear/hinduclrwear_showcase.png">
+<img width="80%" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/8f58656dd322a300196bc236f302d8f82d744691/.src/hinduclrwear/hinduclrwear_showcase.png">
 
 🧘‍♂️ **The Hindu Color Wear Widget** offers daily color suggestions based on traditional Hindu practices.\
 Each day of the week is mapped to a specific color, deity, and spiritual quality—helping you dress with intention and align your energy. The widget supports **all three sizes** (Small, Medium, Large) and changes layout accordingly: Small shows today’s color, Medium displays a full week grid, and Large includes spiritual reasoning. No parameters needed—it auto-detects the day and works offline.
@@ -93,16 +93,16 @@ This widget supports **small**, **medium**, and **large** sizes. You can also pa
 
 ### [Class Schedule Viewer](./Schedule%20Widget)
 
-<!-- ![Schedule Widget](./.src/schedule/schedule_showcase_1.png) -->
+<!-- ![Schedule Widget](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/8f58656dd322a300196bc236f302d8f82d744691/.src/schedule/schedule_showcase_1.png) -->
 
-<img width="60%" src="./.src/schedule/schedule_showcase_1.png">
+<img width="60%" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/8f58656dd322a300196bc236f302d8f82d744691/.src/schedule/schedule_showcase_1.png">
 
 📅 **The Class Schedule Widget** syncs your school or university timetable from a public Google Sheet and automatically displays today’s classes. It adapts to the widget size: from showing only the current class to displaying a full weekly schedule with a beautiful gradient background per weekday.\
 This widget supports **small**, **medium**, and **large** views. You can also simulate different days or class times using widget parameters.
 
 ### [Modular Time Progress](./Modular%20Time%20Progress)
 
-![timeProgress Widget](./.src/timeprogress/timeprogress_showcase.png)
+![timeProgress Widget](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/8f58656dd322a300196bc236f302d8f82d744691/.src/timeprogress/timeprogress_showcase.png)
 
 ⏳ **The Modular Time Progress Widget** lets you visualize your life in motion— from the minutes in your day to the weeks in your year. This fully modular Scriptable widget supports multiple modes like day, week, month, year, and week number views. Each mode features a clean, minimalist design with gradient themes and dynamic progress animations.\
 Use parameters like `day`, `month`, or `weeknumring` to customize each instance — perfect for stacking small, medium, or large widgets for a complete time dashboard.
@@ -111,14 +111,14 @@ Use parameters like `day`, `month`, or `weeknumring` to customize each instance 
 
 <!-- ![Weather Widget](.src/weather/weather_showcase_s.png) -->
 
-<img width="60%" src="./.src/weather/weather_showcase_s.png">
+<img width="60%" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/8f58656dd322a300196bc236f302d8f82d744691/.src/weather/weather_showcase_s.png">
 
 ⛅ **The Dynamic Weather Widget** gives you real-time weather data in a stylish, minimal layout. It auto-detects your current location, fetches current conditions from OpenWeatherMap, and presents the info with dynamically sized text and gradient backgrounds. Whether you use it in small, medium, or large format — it adapts gracefully.\
 Customize temperature units, color gradients, and update intervals to fit your aesthetic and practical needs.
 
 ### [GitHub Stats Widget](./GitHubStats%20Widget)
 
-![GitHubStats Widget](./.src/githubstats/githubstats_showcase.png)
+![GitHubStats Widget](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/8f58656dd322a300196bc236f302d8f82d744691/.src/githubstats/githubstats_showcase.png)
 
 📊 **Track your GitHub contributions, commits, stars, PRs, and more** — all from your iOS Home Screen. This dynamic widget leverages GitHub's GraphQL and REST APIs to show profile or repo-specific stats using multiple themes and widget sizes.\
 Supports Small, Medium, and Large layouts with parameter-based customization for themes and content. Keep your dev grind visible. Because contribution streaks matter.

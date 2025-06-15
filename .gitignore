@@ -5,8 +5,7 @@ echo "*.pyc" >> .gitignore
 echo "*.class" >> .gitignore
 echo "*.log" >> .gitignore
 echo "Thumbs.db" >> .gitignore
-echo "temp.md" >> .gitignore
-echo "temp.html" >> .gitignore
+echo "testing.md" >> .gitignore
 # Local config file with private data
 **/config.js
 

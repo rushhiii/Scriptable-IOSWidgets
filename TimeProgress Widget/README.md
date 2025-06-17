@@ -40,7 +40,7 @@ Visualize your day, week, month, year, and more — all in one modular and minim
    * **Parameter:** Any of the valid options (see below)
 
 > For visual variety, try stacking different widget sizes and parameters.
-
+<!-- 
 ## 📸 Screenshots
 
 | <img src="../.src/timeprogress/timeprogress_s_1.png" width="160"/> | <img src="../.src/timeprogress/timeprogress_s_2.png" width="160"/> |
@@ -54,7 +54,7 @@ Visualize your day, week, month, year, and more — all in one modular and minim
 
 
 | <img src="../.src/timeprogress/timeprogress_l.png" width="360"/> |
-|:--:|
+|:--:| -->
 
 
 ### Day Progress (`day`)

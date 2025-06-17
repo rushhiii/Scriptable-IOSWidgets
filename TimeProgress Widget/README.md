@@ -59,34 +59,46 @@ Visualize your day, week, month, year, and more — all in one modular and minim
 
 ### Day Progress (`day`)
 
+
 Displays progress through the current day as a circular progress ring.
 
-![Day Preview](images/timeProgress/day.png)
+![add Day Preview](images/timeProgress/day.png)
+<!-- <img src="../.src/timeprogress/" width="160"/> -->
 
 ### Month Progress (`month`)
 
 Dot grid showing how far you are into the current month.
 
-![Month Preview](images/timeProgress/month.png)
+<!-- ![Month Preview](images/timeProgress/month.png) -->
+<img src="../.src/timeprogress/timeprogress_s_2.png" width="160"/>
 
 ### Year Progress (`year`)
 
 Circular ring showing yearly progress with days passed.
 
-![Year Preview](images/timeProgress/year.png)
+<!-- ![Year Preview](images/timeProgress/year.png) -->
+<img src="../.src/timeprogress/timeprogress_s_1.png" width="160"/> <img src="../.src/timeprogress/timeprogress_m_1.png" width="260"/>
+<img src="../.src/timeprogress/timeprogress_l.png" width="360"/>
 
 ### Week Progress (`week`)
 
 Displays how far you are through the current week.
 
-![Week Ring](images/timeProgress/week-ring.png)
+<!-- ![Week Ring](images/timeProgress/week-ring.png) -->
+<img src="../.src/timeprogress/timeprogress_s_5.png" width="160"/>
+
+### Week Number Dot View (`weeknum`)
+
+Circular ring showing yearly progress with weeks passed.
+
+<img src="../.src/timeprogress/timeprogress_s_4.png" width="160"/>
 
 ### Week Number Dot View (`weeknumdot`)
 
 Dot grid marking each week of the year.
 
-![Week Dot](images/timeProgress/week-dots.png)
-
+<!-- ![Week Dot](images/timeProgress/week-dots.png) -->
+<img src="../.src/timeprogress/timeprogress_s_3.png" width="160"/>
 
 ### Default Mode (`default`)
 
@@ -97,7 +109,10 @@ Stacked bars showing:
 * This Month
 * This Year
 
-![Default Preview](images/timeProgress/default.png)
+<!-- ![Default Preview](images/timeProgress/default.png) -->
+<img src="../.src/timeprogress/timeprogress_m_2.png" width="260"/> <img src="../.src/timeprogress/timeprogress_s_6.png" width="160"/> 
+
+
 
 ## Configure Parameters
 

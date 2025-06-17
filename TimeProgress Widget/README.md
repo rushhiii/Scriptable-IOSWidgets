@@ -77,7 +77,7 @@ Dot grid showing how far you are into the current month.
 Circular ring showing yearly progress with days passed.
 
 <!-- ![Year Preview](images/timeProgress/year.png) -->
-<img src="../.src/timeprogress/timeprogress_s_1.png" width="160"/> <img src="../.src/timeprogress/timeprogress_m_1.png" width="260"/>
+<img src="../.src/timeprogress/timeprogress_s_1.png" width="160"/> <img src="../.src/timeprogress/timeprogress_m_1.png" height="160"/><br>
 <img src="../.src/timeprogress/timeprogress_l.png" width="360"/>
 
 ### Week Progress (`week`)
@@ -110,7 +110,7 @@ Stacked bars showing:
 * This Year
 
 <!-- ![Default Preview](images/timeProgress/default.png) -->
-<img src="../.src/timeprogress/timeprogress_m_2.png" width="260"/> <img src="../.src/timeprogress/timeprogress_s_6.png" width="160"/> 
+<img src="../.src/timeprogress/timeprogress_m_2.png" height="150"/> <img src="../.src/timeprogress/timeprogress_s_6.png" height="150"/> 
 
 
 

@@ -64,8 +64,7 @@ Visualize your day, week, month, year, and more — all in one modular and minim
 
 Displays progress through the current day as a circular progress ring.
 
-![add Day Preview](images/timeProgress/day.png)
-<!-- <img src="../.src/timeprogress/" width="160"/> -->
+<img src="../.src/timeprogress/timeprogress_s_7.png" width="160"/>
 
 ### Month Progress (`month`)
 
@@ -125,7 +124,6 @@ Stacked bars showing:
 | `year`               | Yearly progress ring (0–100%)                 |
 | `week`               | Weekly ring progress                          |
 | `weeknumdot`         | 52-week grid, active/inactive dots            |
-| `weeknumring`        | 52-week circular progress ring                |
 | `default` (or empty) | Stacked progress bars: day, week, month, year |
 
 > Parameters are **case-insensitive**. Use lowercase for best results.

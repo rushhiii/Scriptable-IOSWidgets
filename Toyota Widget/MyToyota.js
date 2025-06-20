@@ -18,9 +18,34 @@ const textColor = Color.white()
 const secondaryTextColor = new Color("#AAAAAA")
 const accentColor = new Color("#F5F5F5")
 
-// Toyota Car Widget - Part 2: Entry
-const widget = new ListWidget()
-widget.backgroundColor = backgroundColor
+// Toyota Car Widget - Part 3: Large Layout
+async function buildLargeWidget(widget) {
+  const imgReq = new Request(carInfo.imageURL)
+  const carImage = await imgReq.loadImage()
+
+  const imgStack = widget.addStack()
+  imgStack.size = new Size(0, 160)
+  imgStack.centerAlignContent()
+  const image = imgStack.addImage(carImage)
+  image.imageSize = new Size(320, 160)
+  image.cornerRadius = 10
+  image.resizable = true
+  widget.addSpacer(10)
+
+  const brandStack = widget.addStack()
+  brandStack.centerAlignContent()
+  const logo = brandStack.addText("🚗  " + carInfo.brand)
+  logo.font = Font.mediumSystemFont(16)
+  logo.textColor = textColor
+  widget.addSpacer(2)
+
+  const modelText = widget.addText(carInfo.model)
+  modelText.font = Font.semiboldSystemFont(20)
+  modelText.textColor = accentColor
+  widget.addSpacer(8)
+
+  addDetailsGrid(widget)
+}
 
 if (widgetSize === "large") {
   await buildLargeWidget(widget)

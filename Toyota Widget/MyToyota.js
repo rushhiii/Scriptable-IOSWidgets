@@ -120,5 +120,6 @@ function addDetailText(widget, label, value) {
   lbl.font = Font.mediumSystemFont(12)
 
   const val = row.addText(value.toString())
-  val.te
-
+  val.textColor = textColor
+  val.font = Font.mediumSystemFont(12)
+}

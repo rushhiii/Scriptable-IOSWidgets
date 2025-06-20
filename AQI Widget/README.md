@@ -45,6 +45,7 @@ In the `air_widget.js` script, update the `API_KEY` variable with your OpenWeath
 
 ```js
 const API_KEY = "YOUR_API_HERE"; // OpenWeatherMap API key
+```
 
 ### 3. Add the Script to Scriptable
 

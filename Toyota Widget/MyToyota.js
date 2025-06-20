@@ -95,6 +95,18 @@ function addDetailBlock(stack, label, value) {
   val.textColor = textColor
 }
 
+// Toyota Car Widget - Part 7: Add label/value to compact view
+function addDetailText(widget, label, value) {
+  const row = widget.addStack()
+  const lbl = row.addText(`${label}: `)
+  lbl.textColor = secondaryTextColor
+  lbl.font = Font.mediumSystemFont(12)
+
+  const val = row.addText(value.toString())
+  val.textColor = textColor
+  val.font = Font.mediumSystemFont(12)
+}
+
 
 
 if (widgetSize === "large") {

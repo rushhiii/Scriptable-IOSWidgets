@@ -1,7 +1,11 @@
-// Toyota Car Widget - Part 1: Setup & Fake Data
+// ─── Toyota Car Widget by @rushhiii ───
+// Displays a modern dashboard for your car in all widget sizes
+// Large widget includes car image, others show text details
+// ──────────────────────────────────────
+
+// ── 1. Config & Mock Data ──
 const widgetSize = config.widgetFamily || 'large'
 
-// Placeholder data
 const carInfo = {
   brand: "Toyota",
   model: "Corolla",
@@ -9,16 +13,30 @@ const carInfo = {
   mileage: "23,456 miles",
   fuel: "Gasoline",
   status: "Locked",
-  imageURL: "https://cdn.motor1.com/images/mgl/VVVg1/s1/2020-toyota-corolla.jpg", // Replace with custom image if needed
+  imageURL: "https://cdn.motor1.com/images/mgl/VVVg1/s1/2020-toyota-corolla.jpg"
 }
 
-// Theme config
+// ── 2. Theme ──
 const backgroundColor = new Color("#111111")
 const textColor = Color.white()
 const secondaryTextColor = new Color("#AAAAAA")
 const accentColor = new Color("#F5F5F5")
 
-// Toyota Car Widget - Part 3: Large Layout
+// ── 3. Create Widget ──
+const widget = new ListWidget()
+widget.backgroundColor = backgroundColor
+
+if (widgetSize === "large") {
+  await buildLargeWidget(widget)
+} else {
+  buildCompactWidget(widget)
+}
+
+Script.setWidget(widget)
+if (config.runsInApp) await widget.presentMedium()
+Script.complete()
+
+// ── 4. Large Widget Layout ──
 async function buildLargeWidget(widget) {
   const imgReq = new Request(carInfo.imageURL)
   const carImage = await imgReq.loadImage()
@@ -47,7 +65,7 @@ async function buildLargeWidget(widget) {
   addDetailsGrid(widget)
 }
 
-// Toyota Car Widget - Part 4: Detail Grid for Large Widget
+// ── 5. Detail Grid for Large ──
 function addDetailsGrid(widget) {
   const grid = widget.addStack()
   grid.layoutVertically()
@@ -65,7 +83,21 @@ function addDetailsGrid(widget) {
   addDetailBlock(row2, "Status", carInfo.status)
 }
 
-// Toyota Car Widget - Part 6: Text-only layout for small/medium
+// ── 6. Detail Block Renderer ──
+function addDetailBlock(stack, label, value) {
+  const block = stack.addStack()
+  block.layoutVertically()
+
+  const lbl = block.addText(label)
+  lbl.font = Font.mediumSystemFont(11)
+  lbl.textColor = secondaryTextColor
+
+  const val = block.addText(value.toString())
+  val.font = Font.boldSystemFont(14)
+  val.textColor = textColor
+}
+
+// ── 7. Compact Widget Layout (Small/Medium) ──
 function buildCompactWidget(widget) {
   widget.setPadding(12, 14, 12, 14)
 
@@ -80,22 +112,7 @@ function buildCompactWidget(widget) {
   addDetailText(widget, "Status", carInfo.status)
 }
 
-
-// Toyota Car Widget - Part 5: Add key-value detail box
-function addDetailBlock(stack, label, value) {
-  const block = stack.addStack()
-  block.layoutVertically()
-
-  const lbl = block.addText(label)
-  lbl.font = Font.mediumSystemFont(11)
-  lbl.textColor = secondaryTextColor
-
-  const val = block.addText(value.toString())
-  val.font = Font.boldSystemFont(14)
-  val.textColor = textColor
-}
-
-// Toyota Car Widget - Part 7: Add label/value to compact view
+// ── 8. Compact Text Row ──
 function addDetailText(widget, label, value) {
   const row = widget.addStack()
   const lbl = row.addText(`${label}: `)
@@ -103,21 +120,5 @@ function addDetailText(widget, label, value) {
   lbl.font = Font.mediumSystemFont(12)
 
   const val = row.addText(value.toString())
-  val.textColor = textColor
-  val.font = Font.mediumSystemFont(12)
-}
+  val.te
 
-// Toyota Car Widget - Part 8: Auto-preview fallback
-if (config.runsInApp) {
-  await widget.presentMedium()
-}
-
-if (widgetSize === "large") {
-  await buildLargeWidget(widget)
-} else {
-  buildCompactWidget(widget)
-}
-
-Script.setWidget(widget)
-widget.presentPreview()
-Script.complete()

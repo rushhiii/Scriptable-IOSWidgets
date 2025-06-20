@@ -17,3 +17,17 @@ const backgroundColor = new Color("#111111")
 const textColor = Color.white()
 const secondaryTextColor = new Color("#AAAAAA")
 const accentColor = new Color("#F5F5F5")
+
+// Toyota Car Widget - Part 2: Entry
+const widget = new ListWidget()
+widget.backgroundColor = backgroundColor
+
+if (widgetSize === "large") {
+  await buildLargeWidget(widget)
+} else {
+  buildCompactWidget(widget)
+}
+
+Script.setWidget(widget)
+widget.presentPreview()
+Script.complete()

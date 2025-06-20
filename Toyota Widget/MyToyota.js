@@ -66,6 +66,22 @@ function addDetailsGrid(widget) {
 }
 
 
+// Toyota Car Widget - Part 5: Add key-value detail box
+function addDetailBlock(stack, label, value) {
+  const block = stack.addStack()
+  block.layoutVertically()
+
+  const lbl = block.addText(label)
+  lbl.font = Font.mediumSystemFont(11)
+  lbl.textColor = secondaryTextColor
+
+  const val = block.addText(value.toString())
+  val.font = Font.boldSystemFont(14)
+  val.textColor = textColor
+}
+
+
+
 if (widgetSize === "large") {
   await buildLargeWidget(widget)
 } else {

@@ -65,6 +65,21 @@ function addDetailsGrid(widget) {
   addDetailBlock(row2, "Status", carInfo.status)
 }
 
+// Toyota Car Widget - Part 6: Text-only layout for small/medium
+function buildCompactWidget(widget) {
+  widget.setPadding(12, 14, 12, 14)
+
+  const title = widget.addText(`${carInfo.brand} ${carInfo.model}`)
+  title.font = Font.boldSystemFont(16)
+  title.textColor = textColor
+  widget.addSpacer(6)
+
+  addDetailText(widget, "Year", carInfo.year)
+  addDetailText(widget, "Mileage", carInfo.mileage)
+  addDetailText(widget, "Fuel", carInfo.fuel)
+  addDetailText(widget, "Status", carInfo.status)
+}
+
 
 if (widgetSize === "large") {
   await buildLargeWidget(widget)

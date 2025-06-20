@@ -107,7 +107,10 @@ function addDetailText(widget, label, value) {
   val.font = Font.mediumSystemFont(12)
 }
 
-
+// Toyota Car Widget - Part 8: Auto-preview fallback
+if (config.runsInApp) {
+  await widget.presentMedium()
+}
 
 if (widgetSize === "large") {
   await buildLargeWidget(widget)

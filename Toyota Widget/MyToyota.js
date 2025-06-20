@@ -47,6 +47,25 @@ async function buildLargeWidget(widget) {
   addDetailsGrid(widget)
 }
 
+// Toyota Car Widget - Part 4: Detail Grid for Large Widget
+function addDetailsGrid(widget) {
+  const grid = widget.addStack()
+  grid.layoutVertically()
+
+  const row1 = grid.addStack()
+  addDetailBlock(row1, "Year", carInfo.year)
+  row1.addSpacer()
+  addDetailBlock(row1, "Mileage", carInfo.mileage)
+
+  widget.addSpacer(4)
+
+  const row2 = grid.addStack()
+  addDetailBlock(row2, "Fuel", carInfo.fuel)
+  row2.addSpacer()
+  addDetailBlock(row2, "Status", carInfo.status)
+}
+
+
 if (widgetSize === "large") {
   await buildLargeWidget(widget)
 } else {

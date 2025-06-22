@@ -1,9 +1,6 @@
-<<<<<<< Updated upstream
-=======
 // Variables used by Scriptable.
 // These must be at the very top of the file. Do not edit.
 // icon-color: #00C3FF; icon-glyph: magic;
->>>>>>> Stashed changes
 // ─── Toyota Car Widget by @rushhiii ───
 // Displays a modern dashboard for your car in all widget sizes
 // Large widget includes car image, others show text details

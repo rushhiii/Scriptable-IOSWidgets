@@ -86,15 +86,3 @@ function addDetailsGrid(widget) {
   row2.addSpacer()
   addDetailBlock(row2, "Status", carInfo.status)
 }
-
-// ── 6. Detail Block Renderer ──
-function addDetailBlock(stack, label, value) {
-  const block = stack.addStack()
-  block.layoutVertically()
-
-  const lbl = block.addText(label)
-  lbl.font = Font.mediumSystemFont(11)
-  lbl.textColor = secondaryTextColor
-
-  const val = block.addText(value.toString())
-  val.font = Font.boldSystemFont(14)

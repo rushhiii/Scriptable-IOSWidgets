@@ -98,25 +98,3 @@ function addDetailBlock(stack, label, value) {
 
   const val = block.addText(value.toString())
   val.font = Font.boldSystemFont(14)
-<<<<<<< Updated upstream
-  val.textColor = textColor
-}
-
-// ── 7. Compact Widget Layout (Small/Medium) ──
-function buildCompactWidget(widget) {
-  widget.setPadding(12, 14, 12, 14)
-
-  const title = widget.addText(`${carInfo.brand} ${carInfo.model}`)
-  title.font = Font.boldSystemFont(16)
-  title.textColor = textColor
-  widget.addSpacer(6)
-
-  addDetailText(widget, "Year", carInfo.year)
-  addDetailText(widget, "Mileage", carInfo.mileage)
-  addDetailText(widget, "Fuel", carInfo.fuel)
-  addDetailText(widget, "Status", carInfo.status)
-}
-=======
-  val.textColor = textColor;
-}
->>>>>>> Stashed changes

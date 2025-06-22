@@ -98,6 +98,7 @@ function addDetailBlock(stack, label, value) {
 
   const val = block.addText(value.toString())
   val.font = Font.boldSystemFont(14)
+<<<<<<< Updated upstream
   val.textColor = textColor
 }
 
@@ -115,3 +116,7 @@ function buildCompactWidget(widget) {
   addDetailText(widget, "Fuel", carInfo.fuel)
   addDetailText(widget, "Status", carInfo.status)
 }
+=======
+  val.textColor = textColor;
+}
+>>>>>>> Stashed changes

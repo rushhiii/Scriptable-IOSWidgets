@@ -8,7 +8,7 @@
 
 // ── 1. Config & Mock Data ──
 // const widgetSize = config.widgetFamily || 'large'
-const widgetSize = config.widgetFamily || 'medium' // Change to 'small' or 'large' as needed
+// const widgetSize = config.widgetFamily || 'medium' // Change to 'small' or 'large' as needed
 
 const carInfo = {
   brand: "Toyota",
@@ -114,16 +114,4 @@ function buildCompactWidget(widget) {
   addDetailText(widget, "Mileage", carInfo.mileage)
   addDetailText(widget, "Fuel", carInfo.fuel)
   addDetailText(widget, "Status", carInfo.status)
-}
-
-// ── 8. Compact Text Row ──
-function addDetailText(widget, label, value) {
-  const row = widget.addStack()
-  const lbl = row.addText(`${label}: `)
-  lbl.textColor = secondaryTextColor
-  lbl.font = Font.mediumSystemFont(12)
-
-  const val = row.addText(value.toString())
-  val.textColor = textColor
-  val.font = Font.mediumSystemFont(12)
 }

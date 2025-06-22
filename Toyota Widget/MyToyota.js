@@ -86,4 +86,3 @@ function addDetailsGrid(widget) {
   row2.addSpacer()
   addDetailBlock(row2, "Status", carInfo.status)
 }
-

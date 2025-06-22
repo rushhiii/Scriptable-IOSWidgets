@@ -7,7 +7,8 @@
 // ──────────────────────────────────────
 
 // ── 1. Config & Mock Data ──
-const widgetSize = config.widgetFamily || 'large'
+// const widgetSize = config.widgetFamily || 'large'
+const widgetSize = config.widgetFamily || 'medium' // Change to 'small' or 'large' as needed
 
 const carInfo = {
   brand: "Toyota",

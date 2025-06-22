@@ -98,5 +98,3 @@ function addDetailBlock(stack, label, value) {
 
   const val = block.addText(value.toString())
   val.font = Font.boldSystemFont(14)
-  val.textColor = textColor
-}

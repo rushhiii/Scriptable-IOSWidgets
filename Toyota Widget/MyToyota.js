@@ -1,3 +1,6 @@
+// Variables used by Scriptable.
+// These must be at the very top of the file. Do not edit.
+// icon-color: gray; icon-glyph: magic;
 // ─── Toyota Car Widget by @rushhiii ───
 // Displays a modern dashboard for your car in all widget sizes
 // Large widget includes car image, others show text details
@@ -13,7 +16,7 @@ const carInfo = {
   mileage: "23,456 miles",
   fuel: "Gasoline",
   status: "Locked",
-  imageURL: "https://cdn.motor1.com/images/mgl/VVVg1/s1/2020-toyota-corolla.jpg"
+  imageURL: "https://dbhdyzvm8lm25.cloudfront.net/stills_0640_png/MY2020/13478/13478_st0640_116.png"
 }
 
 // ── 2. Theme ──
@@ -33,7 +36,7 @@ if (widgetSize === "large") {
 }
 
 Script.setWidget(widget)
-if (config.runsInApp) await widget.presentMedium()
+if (config.runsInApp) await widget.presentLarge()
 Script.complete()
 
 // ── 4. Large Widget Layout ──

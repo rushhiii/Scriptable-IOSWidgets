@@ -99,6 +99,7 @@ function addDetailBlock(stack, label, value) {
   const val = block.addText(value.toString())
   val.font = Font.boldSystemFont(14)
   val.textColor = textColor
+<<<<<<< Updated upstream
 }
 
 // ── 7. Compact Widget Layout (Small/Medium) ──
@@ -127,3 +128,6 @@ function addDetailText(widget, label, value) {
   val.textColor = textColor
   val.font = Font.mediumSystemFont(12)
 }
+=======
+}
+>>>>>>> Stashed changes

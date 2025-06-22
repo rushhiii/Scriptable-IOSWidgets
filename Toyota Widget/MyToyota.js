@@ -7,8 +7,8 @@
 // ──────────────────────────────────────
 
 // ── 1. Config & Mock Data ──
-const widgetSize = config.widgetFamily || 'small'
 // const widgetSize = config.widgetFamily || 'large'
+const widgetSize = config.widgetFamily || 'medium' // Change to 'small' or 'large' as needed
 
 const carInfo = {
   brand: "Toyota",
@@ -24,7 +24,6 @@ const carInfo = {
 const backgroundColor = new Color("#000000")
 const textColor = Color.white()
 const secondaryTextColor = new Color("#AAAAAA")
-const accentColor = new Color("#F5F5F5")
 const accentColor = new Color("#253E8F")
 
 // ── 3. Create Widget ──

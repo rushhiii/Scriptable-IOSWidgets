@@ -1173,6 +1173,8 @@ async function createWidget() {
     case "large": renderLargeLayout(w, data); break;
   }
 
+  w.url = `https://github.com/${username}`;
+
   return w;
 }
 

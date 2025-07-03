@@ -3,8 +3,8 @@
 const username = "rushhiii"; // replace with your github username
 const token = Keychain.get("github_token"); // replace this with you token
 
-const size = config.widgetFamily || "large";
-// const size = config.widgetFamily || "medium";
+// const size = config.widgetFamily || "large";
+const size = config.widgetFamily || "medium";
 // const size = config.widgetFamily || "small";
 
 
@@ -12,44 +12,6 @@ const themePresets = {
   auto: Device.isUsingDarkAppearance()
     ? { colors: ["#000244", "#000233", "#000000"], locations: [0.0, 0.5, 1.0], head: "#ffffff", text: "#909692", acc: "#3094ff" }
     : { colors: ["#e6f2f1", "#bff2c2"], locations: [0, 1], head: "#000000", text: "#5a615c", acc: "#006edb" },
-
-
-
-  // auto: Device.isUsingDarkAppearance()
-  //   ? {
-  //           colors: [
-  //       "#E1F5FE", // Very light sky blue
-  //       "#B3E5FC", // Soft cyan
-  //       "#81D4FA", // True sky blue
-  //       "#4FC3F7", // Deeper cyan
-  //       "#29B6F6"  // iOS-like vibrant blue
-  //     ],
-  //     locations: [0.0, 0.25, 0.5, 0.75, 1.0],
-  //     head: "#000000",        // dark title/icon
-  //     text: "#32555f",         // bluish-gray text
-  //     acc: "#007AFF"          // standard iOS accent blue
-
-  //     // colors: ["#000244", "#000233", "#000000"],
-  //     // locations: [0, 0.5, 1],
-  //     // head: "#ffffff", text: "#909692", acc: "#ffffff"
-  //   }
-  //   : {
-  //           colors: ["#000244", "#000233", "#000000"],
-  //     locations: [0, 0.5, 1],
-  //     head: "#ffffff", text: "#909692", acc: "#ffffff"
-
-  //     // colors: [
-  //     //   "#E1F5FE", // Very light sky blue
-  //     //   "#B3E5FC", // Soft cyan
-  //     //   "#81D4FA", // True sky blue
-  //     //   "#4FC3F7", // Deeper cyan
-  //     //   "#29B6F6"  // iOS-like vibrant blue
-  //     // ],
-  //     // locations: [0.0, 0.25, 0.5, 0.75, 1.0],
-  //     // head: "#000000",        // dark title/icon
-  //     // text: "#32555f",         // bluish-gray text
-  //     // acc: "#007AFF"          // standard iOS accent blue
-  //   },
 
 
   blue: {
@@ -134,7 +96,6 @@ const themePresets = {
 };
 
 const heatmapThemes = {
-
   auto: Device.isUsingDarkAppearance()
     ? {
       bg: ["#0d1117", "#0d1117", "#0d1117"],
@@ -145,15 +106,12 @@ const heatmapThemes = {
     : {
       bg: ["#ffffff", "#ffffff", "#ffffff"],
       text: "#000000",
-      // accent: "#A0A0A0",
       accent: size === "small" ? "#A0A0A0" : "#116329",
       box: ["#eff2f5", "#aceebb", "#4ac26b", "#2da44e", "#116329"]
-
     },
   light: {
     bg: ["#ffffff", "#ffffff", "#ffffff"],
     text: "#000000",
-    // accent: "#A0A0A0",
     accent: size === "small" ? "#A0A0A0" : "#116329",
     box: ["#eff2f5", "#aceebb", "#4ac26b", "#2da44e", "#116329"]
   },
@@ -174,6 +132,61 @@ const heatmapThemes = {
     text: "#0a0e27",
     accent: "#216e39",
     box: ["#CACACA", "#9be9a8", "#40c463", "#30a14e", "#216e39"]
+  },
+  // New themes added below
+  forestCalm: {
+    bg: ["#0d1117", "#0d1117", "#0d1117"],
+    text: "#e9f5db",
+    accent: "#95d5b2",
+    box: ["#0d1b1e", "#1b4332", "#2d6a4f", "#52b788", "#95d5b2"]
+  },
+  forestCanopy: {
+    bg: ["#0d1117", "#0d1117", "#0d1117"],
+    text: "#f4a261",
+    accent: "#80ffdb",
+    box: ["#0d1b1e", "#1d3a3f", "#3a7d44", "#57cc99", "#80ffdb"]
+  },
+  cyberPurple: {
+    bg: ["#0d1117", "#0d1117", "#0d1117"],
+    text: "#ffffff",
+    accent: "#c77dff",
+    box: ["#1a1a2e", "#4b0082", "#6a0dad", "#9b59b6", "#c77dff"]
+  },
+  sunsetGold: {
+    bg: ["#0d1117", "#0d1117", "#0d1117"],
+    text: "#ffffff",
+    accent: "#fcd34d",
+    box: ["#1a1a1a", "#a05a2c", "#e76f51", "#f4a261", "#fcd34d"]
+  },
+  nordBlueV1: {
+    bg: ["#0d1117", "#0d1117", "#0d1117"],
+    text: "#00bfff",
+    accent: "#ffd700",
+    box: ["#1a1a2e", "#113f67", "#1c7293", "#00bfff", "#ffd700"]
+  },
+  nordBlueV2: {
+    bg: ["#0d1117", "#0d1117", "#0d1117"],
+    text: "#c9d1d9",
+    accent: "#43D0FF",
+    box: ["#1a1a2e", "#113f67", "#1c7293", "#0086B3", "#43D0FF", "#ffd700"]
+  },
+  sunsetDusk: {
+    bg: ["#0d1117", "#0d1117", "#0d1117"],
+    text: "#f9c74f",
+    accent: "#ff8e9e",
+    box: ["#1e1e2e", "#42275a", "#734b6d", "#b06ab3", "#ff8e9e"]
+  },
+  earthyWarm: {
+    bg: ["#0d1117", "#0d1117", "#0d1117"],
+    text: "#7fb069",
+    accent: "#fae588",
+    box: ["#1a120b", "#3c2a21", "#9a5b13", "#d4a017", "#fae588"]
+  },
+  arcticIce: {
+    bg: ["#0d1117", "#0d1117", "#0d1117"],
+    text: "#ff6d00",
+    accent: "#e0e1dd",
+    box: ["#050505", "#1b263b", "#415a77", "#778da9", "#e0e1dd"]
   }
 };
 
@@ -199,34 +212,45 @@ const langColors = {
 };
 
 
-// console.log(token);
-
 const rawParam = args.widgetParameter || "";
+// const rawParam = args.widgetParameter || "heatmap,forestCalm";
+// const parts = rawParam.toLowerCase().split(",").map(s => s.trim());
+const parts = rawParam.split(",").map(s => s.trim());
 
-// const rawParam = args.widgetParameter || "";
-// const rawParam = args.widgetParameter || "heatmap";
-const parts = rawParam.toLowerCase().split(",").map(s => s.trim());
-
+// With this improved version:
 let isHeatmap = parts.includes("heatmap");
 let repoPath = "";
 let statType = "";
-let themeParam = "auto";
+let themeParam = "";
 
+// First pass - look for stat type and repo path
 for (let part of parts) {
   if (part === "heatmap") continue;
-
+  
   if (["stars", "commits", "views", "currstreak", "contributions", "allcommits", "repos", "longstreak", "followers", "following", "issues", "prs"].includes(part)) {
     statType = part;
   } else if (part.includes("/")) {
     repoPath = part;
-  } else if (isHeatmap && (part in heatmapThemes)) {
-    themeParam = part;
-  } else if (!isHeatmap && (part in themePresets)) {
-    themeParam = part;
   }
 }
 
-// const themeParam = parts.find(p => p in themePresets) || "auto";
+// Second pass - look for theme (prioritize heatmap themes if in heatmap mode)
+for (let part of parts) {
+  if (part === "heatmap") continue;
+  
+  if (isHeatmap && heatmapThemes[part]) {
+    themeParam = part;
+    break;
+  } else if (!isHeatmap && themePresets[part]) {
+    themeParam = part;
+    break;
+  }
+}
+
+// Default theme if none specified
+if (!themeParam) {
+  themeParam = isHeatmap ? "auto" : "auto";
+}
 
 
 const UI = {
@@ -242,13 +266,7 @@ const thisYearStart = new Date(year, 0, 1).toISOString();
 const today = now.toISOString();
 
 
-// const selectedTheme = themeParam in themePresets ? themePresets[themeParam] : themePresets.auto;
-const selectedTheme =
-  isHeatmap
-    ? (themeParam in heatmapThemes ? heatmapThemes[themeParam] : heatmapThemes.auto)
-    : (themeParam in themePresets ? themePresets[themeParam] : themePresets.auto);
-
-// const selectedTheme = themePresets[themeParam.toLowerCase()] || themePresets.auto;
+const selectedTheme = themePresets[themeParam];
 
 function getHeatmapColor(count) {
   const boxes = heatmapThemes[themeParam].box;
@@ -260,27 +278,13 @@ function getHeatmapColor(count) {
   return new Color(boxes[0]);
 }
 
-// function createGradientBackground() {
-//   // const colors = heatmapThemes[themeParam]?.bg || heatmapThemes.dark.bg;
-//   const theme = heatmapThemes[themeParam].bg;
-//   const gradient = new LinearGradient();
-//   // gradient.colors = colors.map(c => new Color(c));
-//   // gradient.colors = heatmapThemes.themeParam.bg.map(c => new Color(c));
-//   gradient.colors = theme.map(c => new Color(c));
-//   // gradient.locations = [1.0, 0.5, 0.0];
-//   gradient.locations = [0.0, 0.5, 1.0];
-//   return gradient;
-// }
-
 function createGradientBackground() {
-  const theme = heatmapThemes[themeParam] || heatmapThemes.auto;
+  const theme = heatmapThemes[themeParam];
   const gradient = new LinearGradient();
   gradient.colors = theme.bg.map(c => new Color(c));
   gradient.locations = [0.0, 0.5, 1.0];
   return gradient;
 }
-
-
 
 function makeGradient(theme) {
   const g = new LinearGradient();
@@ -288,15 +292,6 @@ function makeGradient(theme) {
   g.locations = theme.locations;
   return g;
 }
-
-
-// Dates for yearly contributions
-// const now = new Date();
-// const year = new Date().getFullYear();
-// const shortyearLabel = `${year.toString().slice(-2)}`; // e.g., "25'"
-
-// const thisYearStart = new Date(now.getFullYear(), 0, 1).toISOString();
-// const today = now.toISOString();
 
 // === GRAPHQL Query ===
 const graphQLQuery = `
@@ -391,68 +386,6 @@ async function fetchUserInfo() {
   return await req.loadJSON();
 }
 
-// async function fetchTopLanguage() {
-//   const req = new Request(`https://api.github.com/users/${username}/repos?per_page=100`);
-//   req.headers = { Authorization: `Bearer ${token}` };
-//   const data = await req.loadJSON();
-//   const langCount = {};
-//   for (let repo of data) {
-//     const lang = repo.language;
-//     if (lang) langCount[lang] = (langCount[lang] || 0) + 1;
-//   }
-//   return Object.entries(langCount).sort((a, b) => b[1] - a[1])[0]?.[0] || null;
-// }
-
-// fetchTopLanguagesShortform
-// async function fetchTopLanguage(limit = 8) {
-//   const req = new Request(`https://api.github.com/users/${username}/repos?per_page=100`);
-//   req.headers = { Authorization: `Bearer ${token}` };
-//   const data = await req.loadJSON();
-
-//   const langCount = {};
-//   let total = 0;
-
-//   for (let repo of data) {
-//     const lang = repo.language;
-//     if (lang) {
-//       langCount[lang] = (langCount[lang] || 0) + 1;
-//       total++;
-//     }
-//   }
-
-//   // Sort and keep top N
-//   const topLangs = Object.entries(langCount)
-//     .sort((a, b) => b[1] - a[1])
-//     .slice(0, limit);
-
-//   // Shortform map
-//   const shortMap = {
-//     JavaScript: "JS",
-//     TypeScript: "TS",
-//     Python: "PY",
-//     Java: "JAVA",
-//     C: "C",
-//     "C++": "CPP",
-//     "C#": "CS",
-//     HTML: "HTML",
-//     CSS: "CSS",
-//     PHP: "PHP",
-//     Ruby: "RB",
-//     Shell: "SH",
-//     Go: "GO",
-//     Kotlin: "KT",
-//     Swift: "SW",
-//     Rust: "RS",
-//   };
-
-//   // Format
-//   return topLangs.map(([lang, count]) => {
-//     const short = shortMap[lang] || lang.slice(0, 3).toUpperCase();
-//     const percent = ((count / total) * 100).toFixed(0);
-//     return `${short} ${percent}%`;
-//   }).join(" | ");
-// }
-
 async function fetchTopLanguage(limit = 12) {
   // async function fetchTopLanguagesShortform(limit = 6) {
   const req = new Request(`https://api.github.com/users/${username}/repos?per_page=100`);
@@ -487,77 +420,6 @@ async function fetchTopLanguage(limit = 12) {
     });
 }
 
-
-// async function fetchRepoStat(repoPath, statType) {
-
-//   const baseUrl = `https://api.github.com/repos/${repoPath}`;
-//   const headers = { Authorization: `Bearer ${token}` };
-
-//   const req = new Request(baseUrl);
-//   req.headers = headers;
-//   const json = await req.loadJSON();
-//   const ghStats = await fetchGraphQLStats();
-//   const userInfo = await fetchUserInfo();
-
-
-//   let statValue = 0;
-//   let type = "";
-//   if (statType === "stars") {
-//     statValue = json.stargazers_count;
-//     type = stars;
-//   } else if (statType === "commits") {
-//     // const commitsReq = new Request(`${baseUrl}/commits?per_page=1`);
-//     // commitsReq.headers = headers;
-//     // const commits = await commitsReq.loadJSON();
-//     // const link = commitsReq.response.headers["link"];
-//     // const lastPage = link?.match(/&page=(\d+)>; rel="last"/)?.[1];
-//     // statValue = lastPage ? parseInt(lastPage) : commits.length;
-
-//     statValue = ghStats.commits2025;
-//     type = `${year} commits`;
-//   } else if (statType === "views") {
-//     const viewsReq = new Request(`${baseUrl}/traffic/views`);
-//     viewsReq.headers = headers;
-//     const views = await viewsReq.loadJSON();
-//     statValue = views.count || 0;
-//     type = "views";
-//   } else if (statType === "currstreak") {
-//     statValue = ghStats.currentStreak;
-//     type = "current streak";
-//   } else if (statType === "contributions") {
-//     statValue = ghStats.totalContributions;
-//     type = "contributions";
-//   } else if (statType === "allcommits") {
-//     statValue = ghStats.totalCommits;
-//     type = "total commits";
-//   } else if (statType === "repos") {
-//     statValue = userInfo.public_repos;
-//     type = "repos";
-//   } else if (statType === "longstreak") {
-//     statValue = ghStats.longestStreak;
-//     type = "longest streak";
-//   } else if (statType === "followers") {
-//     statValue = userInfo.followers;
-//     type = "Followers";
-//   } else if (statType === "following") {
-//     statValue = userInfo.following;
-//     type = "Following";
-//   } else if (statType === "prs") {
-//     statValue = ghStats.totalPRs;
-//     type = "PRs";
-//   } else if (statType === "issues") {
-//     statValue = ghStats.totalIssues;
-//     type = "Total Issues";
-//   }
-
-//   return {
-//     name: json.name,
-//     statValue,
-//     url: json.html_url,
-//     type
-//   };
-// }
-
 async function fetchRepoStat(repoPath, statType) {
   let json = {};
   let repoName = "";
@@ -591,13 +453,6 @@ async function fetchRepoStat(repoPath, statType) {
     statValue = json.stargazers_count;
     type = "stars";
   } else if (statType === "commits") {
-    // const commitsReq = new Request(`${repoUrl}/commits?per_page=1`);
-    // commitsReq.headers = headers;
-    // const commits = await commitsReq.loadJSON();
-    // const link = commitsReq.response.headers["link"];
-    // const lastPage = link?.match(/&page=(\d+)>; rel="last"/)?.[1];
-    // statValue = lastPage ? parseInt(lastPage) : commits.length;
-
     statValue = ghStats.commits2025;
     type = `${year} commits`;
   } else if (statType === "views") {
@@ -638,60 +493,6 @@ async function fetchRepoStat(repoPath, statType) {
     type = "Total Issues";
   }
 
-  // switch (statType) {
-  //   case "views":
-  //     value = json?.views?.count || 0;
-  //     label = "Views";
-  //     break;
-  //   case "stars":
-  //     value = json?.stargazers_count || 0;
-  //     label = "Stars";
-  //     break;
-  //   case "commits":
-  //     value = ghStats?.commits2025 || 0;
-  //     label = "Commits";
-  //     break;
-  //   case "allcommits":
-  //     value = ghStats?.totalCommits || 0;
-  //     label = "Total Commits";
-  //     break;
-  //   case "currstreak":
-  //     value = ghStats?.currentStreak || 0;
-  //     label = "Current Streak";
-  //     break;
-  //   case "longstreak":
-  //     value = ghStats?.longestStreak || 0;
-  //     label = "Longest Streak";
-  //     break;
-  //   case "contributions":
-  //     value = ghStats?.totalContributions || 0;
-  //     label = "Contributions";
-  //     break;
-  //   case "repos":
-  //     value = userInfo?.public_repos || 0;
-  //     label = "Repositories";
-  //     break;
-  //   case "followers":
-  //     value = userInfo?.followers || 0;
-  //     label = "Followers";
-  //     break;
-  //   case "following":
-  //     value = userInfo?.following || 0;
-  //     label = "Following";
-  //     break;
-  //   case "issues":
-  //     value = ghStats?.totalIssues || 0;
-  //     label = "Issues";
-  //     break;
-  //   case "prs":
-  //     value = ghStats?.totalPRs || 0;
-  //     label = "Pull Requests";
-  //     break;
-  //   default:
-  //     value = 0;
-  //     label = "Unknown";
-  // }
-
   // return { label, value, title, link };
   return {
     name: json.name,
@@ -700,42 +501,6 @@ async function fetchRepoStat(repoPath, statType) {
     type
   };
 }
-
-
-
-// async function fetchHeatmapData() {
-//   const now = new Date();
-//   const fromDate = new Date(now);
-//   fromDate.setDate(now.getDate() - 133);
-
-//   const query = `{
-//     user(login: "${username}") {
-//       contributionsCollection(from: "${fromDate.toISOString()}", to: "${now.toISOString()}") {
-//         totalCommitContributions
-//         contributionCalendar {
-//           totalContributions
-//           weeks {
-//             contributionDays {
-//               contributionCount
-//               date
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }`;
-
-//   const req = new Request("https://api.github.com/graphql");
-//   req.method = "POST";
-//   req.headers = {
-//     Authorization: `Bearer ${token}`,
-//     "Content-Type": "application/json"
-//   };
-//   req.body = JSON.stringify({ query });
-
-//   const json = await req.loadJSON();
-//   return json.data.user.contributionsCollection;
-// }
 
 async function fetchHeatmapData() {
   const now = new Date();
@@ -811,7 +576,7 @@ async function createHeatmapWidget() {
 
   const widget = new ListWidget();
   widget.backgroundGradient = createGradientBackground();
-  widget.setPadding(12, 12, 12, 12);
+  widget.setPadding(11, 11, 11, 11);
   widget.addSpacer();
 
   const grid = widget.addStack();
@@ -834,7 +599,7 @@ async function createHeatmapWidget() {
       const cell = col.addStack();
       cell.size = new Size(boxSize, boxSize);
       cell.backgroundColor = getHeatmapColor(day?.contributionCount || 0);
-      cell.cornerRadius = 3;
+      cell.cornerRadius = 2;
     }
     grid.addSpacer(boxSpacing);
   }
@@ -903,33 +668,6 @@ async function createHeatmapSmallWidget() {
   // header.addSpacer(0);
   widget.addSpacer(5);
 
-  // === Days of Week Row ===
-  // const dayRow = widget.addStack();
-  // dayRow.layoutHorizontally();
-  // dayRow.centerAlignContent();
-  // // dayRow.lineSpacing = 5;
-
-  // const days = ["S", "M", "T", "W", "T", "F", "S"];
-  //   dayRow.addSpacer();
-  // for (let d = 0; d < 7; d++) {
-  //   const txt = dayRow.addText(days[d]);
-  //   txt.font = Font.systemFont(UI.font-2);
-  //   txt.textColor = new Color(heatmapThemes[themeParam].accent);
-  //   txt.centerAlignText();
-  //   // txt.lineSpacing = 6;
-  //   // dayRow.addSpacer(17);
-  //   if (d === 6) {
-  //   dayRow.addSpacer();
-  //   } else {
-  //   dayRow.addSpacer(14);
-  //   // setPadding(top: number, leading: number, bottom: number, trailing: number)
-
-  //   }
-  // }
-  // dayRow.addSpacer();
-
-  // widget.addSpacer(4);
-
   // === Grid (5x7) ===
   const grid = widget.addStack();
   grid.layoutHorizontally();
@@ -949,61 +687,6 @@ async function createHeatmapSmallWidget() {
     col.layoutVertically();
     col.spacing = boxSpacing;
 
-    // Add weekday initial at top of each column
-    // const labelWrap = col.addStack();
-    // labelWrap.layoutHorizontally();
-    // if (w === 0) {
-    //   labelWrap.setPadding(0, 5, 0, 0);
-    // } else if (w === 1) {
-    //   labelWrap.setPadding(0, 2, 0, 0);
-    // } else if (w === 2) {
-    //   labelWrap.setPadding(0, 5, 0, 0);
-    // } else if (w === 3) {
-    //   labelWrap.setPadding(0, 5, 0, 0);
-    // } else if (w === 4) {
-    //   labelWrap.setPadding(0, 5, 0, 0);
-    // } else if (w === 5) {
-    //   labelWrap.setPadding(0, 5, 0, 0);
-    // } else if (w === 6) {
-    //   labelWrap.setPadding(0, 5, 0, 0);
-    // }
-
-    // switch (w) {
-    //   case 0:
-    //     labelWrap.setPadding(0, 6, 0, 0);
-    //     break;
-    //   case 1:
-    //     labelWrap.setPadding(0, 0, 0, 0);
-    //     break;
-    //   case 2:
-    //     labelWrap.setPadding(0, 0, 0, 0);
-    //     break;
-    //   case 3:
-    //     labelWrap.setPadding(0, 0, 0, 0);
-    //     break;
-    //   case 4:
-    //     labelWrap.setPadding(0, 0, 0, 0);
-    //     break;
-    //   case 5:
-    //     labelWrap.setPadding(0, 0, 0, 0);
-    //     break;
-    //   case 6:
-    //     labelWrap.setPadding(0, 3, 0, 0);
-    //     break;
-    // }
-
-    // labelWrap.setPadding(0,2,0,0);
-    // labelWrap.centerAlignContent();
-    // labelWrap.addSpacer();
-
-    // labelWrap.spacing = 5;
-    // const label = labelWrap.addText(days[w]);
-    // label.font = Font.systemFont(UI.font - 2);
-    // label.textColor = new Color(heatmapThemes[themeParam].accent);
-    // // labelWrap.addSpacer();
-    // label.centerAlignText();
-    // label.minimumScaleFactor = 0.7;
-    // label.addSpacer();
     const labelWrap = col.addStack();
     labelWrap.layoutHorizontally();
     labelWrap.size = new Size(boxSize, boxSize); // restricts label width
@@ -1018,9 +701,6 @@ async function createHeatmapSmallWidget() {
     label.lineLimit = 1;
     // label.minimumScaleFactor = 0.5;
     // labelWrap.addSpacer();
-
-
-
     // col.addSpacer(2);
 
 
@@ -1035,100 +715,10 @@ async function createHeatmapSmallWidget() {
     grid.addSpacer(2);
   }
 
-  // grid.addSpacer();
-  //   // For each weekday (7 columns)
-  // for (let d = 0; d < 7; d++) {
-  //   const col = grid.addStack();
-  //   col.layoutVertically();
-  //   col.spacing = boxSpacing;
-
-  //   // For each week (5 rows)
-  //   for (let w = 0; w < 5; w++) {
-  //     const day = displayWeeks[w]?.contributionDays[d];
-  //     const cell = col.addStack();
-  //     cell.size = new Size(boxSize, boxSize);
-  //     cell.backgroundColor = getHeatmapColor(day?.contributionCount || 0);
-  //     cell.cornerRadius = 3;
-  //   }
-
-  //   grid.addSpacer(boxSpacing);
-  // }
-
   widget.addSpacer();
 
   return widget;
 }
-
-// async function createHeatmapSmallWidget() {
-//   const data = await fetchHeatmapData();
-//   const weeks = data.contributionCalendar.weeks.slice(-7); // last 5 weeks
-//   // const weeks = data.contributionCalendar.weeks.slice(-7).reverse();
-//   const widget = new ListWidget();
-//   widget.backgroundGradient = createGradientBackground();
-//   widget.useDefaultPadding();
-//   widget.addSpacer();
-
-//   // === Header: Month + GitHub logo ===
-//   const header = widget.addStack();
-//   header.layoutHorizontally();
-//   header.centerAlignContent();
-
-//   const monthText = header.addText(`September`);
-//   monthText.font = Font.semiboldSystemFont(UI.headfont - 6);
-//   monthText.textColor = new Color(heatmapThemes[themeParam]?.text || "#ffffff");
-
-//   header.addSpacer();
-
-//   const logoImg = await new Request("https://i.imgur.com/MJzROGa.png").loadImage();
-//   const logo = header.addImage(logoImg);
-//   logo.imageSize = new Size(UI.logo - 1, UI.logo - 1);
-//   logo.tintColor = new Color(heatmapThemes[themeParam].text);
-
-//   widget.addSpacer(5);
-
-
-//   // === Grid (7 columns for days, 5 rows for weeks) ===
-// const days = ["S", "M", "T", "W", "T", "F", "S"];
-// const displayWeeks = weeks;
-
-// const grid = widget.addStack();
-// grid.layoutHorizontally();
-// grid.centerAlignContent();
-
-// const boxSize = 18;
-// const boxSpacing = 2;
-
-// for (let d = 0; d < 7; d++) {
-//   const col = grid.addStack();
-//   col.layoutVertically();
-//   col.spacing = boxSpacing;
-
-//   // Add weekday initial at top of each column
-//   const label = col.addText(days[d]);
-//   label.font = Font.systemFont(UI.font - 2);
-//   label.textColor = new Color(heatmapThemes[themeParam].accent);
-//   label.centerAlignText();
-//   // label.minimumScaleFactor = 0.7;
-
-//   col.addSpacer(2);
-
-//   // 5 weeks vertically
-//   for (let w = 0; w < displayWeeks.length; w++) {
-//     const day = displayWeeks[w]?.contributionDays[d];
-//     const cell = col.addStack();
-//     cell.size = new Size(boxSize, boxSize);
-//     cell.backgroundColor = getHeatmapColor(day?.contributionCount || 0);
-//     cell.cornerRadius = 2;
-//   }
-
-//   if (d < 6) grid.addSpacer(boxSpacing);
-// }
-
-//   widget.addSpacer();
-
-//   return widget;
-// }
-
 
 function formatNumber(value) {
   value = parseInt(value);
@@ -1139,8 +729,6 @@ function formatNumber(value) {
   const num = (value / Math.pow(1000, order)).toFixed(1).replace(/\.0$/, "");
   return num + units[order - 1];
 }
-
-
 
 async function createWidget() {
   const userInfo = await fetchUserInfo();
@@ -1174,6 +762,7 @@ async function createWidget() {
   }
 
   w.url = `https://github.com/${username}`;
+
 
   return w;
 }
@@ -1495,25 +1084,10 @@ function renderLargeLayout(w, { userInfo, language, ghStats, logoImg, headClr, t
   // addTo(col1, "Streak", `${ghStats.currentStreak}d`, "🔥");
   // addTo(col1, "Longest", `${ghStats.longestStreak}d`, "🏆");
 
-
-
-
-
-
   w.addSpacer();
 
 }
 
-
-// const widget = await createWidget();
-// const widget = isHeatmap
-//   ? await createHeatmapWidget()
-//   : await createWidget();
-// if (!config.runsInWidget) await widget.presentSmall();
-// if (!config.runsInWidget) await widget.presentMedium();
-// if (!config.runsInWidget) await widget.presentLarge();
-// Script.setWidget(widget);
-// Script.complete();
 // ===================================
 const widget = isHeatmap
   ? (size === "small" ? await createHeatmapSmallWidget() : await createHeatmapWidget())
@@ -1525,66 +1099,3 @@ else if (!config.runsInWidget && size === "medium") await widget.presentMedium()
 else if (!config.runsInWidget && size === "large") await widget.presentLarge();
 Script.setWidget(widget);
 Script.complete();
-
-// // Update formatNumber if needed (already correct in your code)
-
-// // Example for renderMediumLayout:
-// function  renderMediumLayout(w, { userInfo, language, ghStats, logoImg, headClr, textClr, accClr }) {
-//   w.setPadding(UI.pad, UI.pad, UI.pad, UI.pad);
-//   w.addSpacer();
-
-
-
-//   const header = w.addStack();
-//   header.layoutHorizontally();
-//   header.centerAlignContent();
-
-//   const title = header.addText(`${username}'s GitHub Stats`);
-//   title.font = Font.boldSystemFont(UI.headfont);
-//   title.textColor = headClr;
-//   title.minimumScaleFactor = 0.8;
-//   title.lineLimit = 2;
-
-//   header.addSpacer();
-
-//   const logo = header.addImage(logoImg);
-//   logo.imageSize = new Size(UI.logo, UI.logo);
-//   logo.tintColor = headClr;
-
-//   w.addSpacer();
-
-//   // Only add row if value is not 0 or falsy
-//   const addStatRow = (label, value, icon) => {
-//     if (!value || value === 0) return;
-//     const row = w.addStack();
-//     row.layoutHorizontally();
-//     // const iconImg = svgToImage(svgIcons[svgKey]);
-
-
-
-//     const txt = row.addText(`${icon} ${label}: ${formatNumber(value)}`);
-//     txt.font = Font.mediumSystemFont(UI.font);
-//     txt.textColor = textClr;
-//     txt.opacity = 1;
-//     w.addSpacer(UI.lineSpacing);
-//   };
-
-//   addStatRow("Total Stars Earned", ghStats.totalStars, "⭐");
-//   addStatRow(`Total Commits (${year})`, ghStats.commits2025, "🕒");
-//   addStatRow("Total PRs", ghStats.totalPRs, "🔃");
-//   addStatRow("Total Issues", ghStats.totalIssues, "❗");
-//   addStatRow("Contributed to (last year)", ghStats.totalContributions, "📜");
-
-//   //   addStatRow("Total Stars Earned", ghStats.totalStars, "⭐");
-//   // addTo(col1, "Public Repos", userInfo.public_repos, "📦");
-//   // addTo(col1, "Followers", userInfo.followers, "👥");
-//   // addTo(col1, `Commits ('${year})`, ghStats.commits2025, "🕒");
-//   // addTo(col1, "Total Commits", ghStats.totalCommits, "📜");
-//   // addTo(col1, "Issues", ghStats.totalIssues, "❗");
-//   // addTo(col1, "PRs", ghStats.totalPRs, "🔃");
-//   // addTo(col1, "Streak", `${ghStats.currentStreak}d`, "🔥");
-//   // addTo(col1, "Longest", `${ghStats.longestStreak}d`, "🏆");
-
-
-//   w.addSpacer();
-// }

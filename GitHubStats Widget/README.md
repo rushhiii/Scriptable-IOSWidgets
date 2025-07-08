@@ -32,14 +32,12 @@ Track your GitHub stats — commits, contributions, streaks, PRs, issues, and re
 * 📁 GitHub GraphQL + REST API support
 * 🔑 Secure GitHub token storage using `Keychain`
 
----
 
 ### 🧰 Setup
 
 1. **Copy the script** into the Scriptable app.
 2. Save it as `GitHubStatsWidget.js`.
 
----
 
 ### 🔐 Token Setup
 
@@ -54,7 +52,6 @@ Track your GitHub stats — commits, contributions, streaks, PRs, issues, and re
    Keychain.set("github_token", "YOUR_TOKEN_HERE")
    ```
 
----
 
 ### 🧪 Widget Parameters
 
@@ -95,7 +92,8 @@ rushhiii/Scriptable-IOSWidgets,stars,indigo
 
 ### 🎨 Themes
 
-Available values for the third parameter:
+Available values for the third parameter,\
+For Widget stats Themes:
 
 * `auto`
 * `light`
@@ -108,23 +106,23 @@ Available values for the third parameter:
 * `gitgreen`
 * `indigo`
 
----
+For Widget heatmap Themes:
+> so when using parameter like, "heatmap,{heatmapThemeName}"
 
-### 🧪 Sample Outputs
-
-#### 🔹 Small
-
-> Shows commits for 2025 in a single stat display.
-
-#### 🔷 Medium
-
-> 5-line summary: Streak, Commits, Contributions, Repos, Followers.
-
-#### 🟣 Large
-
-> Grid layout of 8 stats split across 2 columns.
-
----
+* `auto`
+* `light`
+* `dark`
+* `red`
+* `green`
+* `forestCalm`
+* `forestCanopy`
+* `cyberPurple`
+* `sunsetGold`
+* `nordBlueV1`
+* `nordBlueV2`
+* `sunsetDusk`
+* `earthyWarm`
+* `arcticIce`
 
 ### 🛠 Example Use Cases
 
@@ -139,30 +137,28 @@ commits,blue
 night
 ```
 
----
-
 ### 📎 Notes
 
 * All API requests use GitHub’s GraphQL v4 and REST API v3.
 * Uses `Keychain.get("github_token")` for secure token storage.
 * Widget automatically adapts to light/dark mode when using `auto` theme.
 
----
 
-### 🖼 Screenshots
+### 📸 Screenshots
 
 > _Small Widget_
 
-| <img src="../.src/githubstats/githubstats_s_1.png" width="160"/> | <img src="../.src/githubstats/githubstats_s_2.png" width="160"/> |
+| <img src="../.src/githubstats/githubstats_s_1.png" width="160"/> | <img src="../.src/githubstats/githubstats_s_4.png" width="160"/> |
 |:--:|:--:|
-| <img src="../.src/githubstats/githubstats_s_3.png" width="160"/> | <img src="../.src/githubstats/githubstats_s_4.png" width="160"/> |
 | <img src="../.src/githubstats/githubstats_s_5.png" width="160"/> | <img src="../.src/githubstats/githubstats_s_6.png" width="160"/> |
 
 > _Medium Widgets_
 
-| <img src="../.src/githubstats/githubstats_m_1.png" width="260"/> | <img src="../.src/githubstats/githubstats_m_2.png" width="260"/> |
+| <img src="../.src/githubstats/github_stats_m_3.PNG" width="260"/> | <img src="../.src/githubstats/github_stats_m_4.PNG" width="260"/> |
 |:--:|:--:|
-| <img src="../.src/githubstats/githubstats_m_3.png" width="260"/> | <img src="../.src/githubstats/githubstats_m_4.png" width="260"/> |
+| <img src="../.src/githubstats/github_stats_m_@.png" width="260"/> | <img src="../.src/githubstats/githubstats_m_4.PNG" width="260"/> |
+| <img src="../.src/githubstats/github_stats_m.png" width="260"/> | <img src="../.src/githubstats/github_stats_m_5.png" width="260"/> |
+
 
 <!-- <img src="../.src/githubstats/githubstats_m_1.png" width="260"/> <img src="../.src/githubstats/githubstats_m_2.png" width="260"/>
 <img src="../.src/githubstats/githubstats_m_3.png" width="260"/> <img src="../.src/githubstats/githubstats_m_4.png" width="260"/> -->

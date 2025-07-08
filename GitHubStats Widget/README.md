@@ -148,9 +148,9 @@ night
 
 > _Small Widget_
 
-| <img src="../.src/githubstats/githubstats_s_1.png" width="160"/> | <img src="../.src/githubstats/githubstats_s_4.png" width="160"/> |
+| <img src="../.src/githubstats/githubstats_s_1.png" width="160"/> | <img src="../.src/githubstats/githubstats_s_2.png" width="160"/> |
 |:--:|:--:|
-| <img src="../.src/githubstats/githubstats_s_5.png" width="160"/> | <img src="../.src/githubstats/githubstats_s_6.png" width="160"/> |
+| <img src="../.src/githubstats/githubstats_s_6.png" width="160"/> | <img src="../.src/githubstats/github_stats_s_3.PNG" width="160"/> |
 
 > _Medium Widgets_
 

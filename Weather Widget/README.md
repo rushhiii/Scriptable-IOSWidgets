@@ -113,10 +113,8 @@ widget.refreshAfterDate = new Date(Date.now() + 30 * 60 * 1000);
 
 ## 📸 Screenshots
 
-<!-- ![](../.src/weather/weather_showcase.png) -->
-<img width="60%" src="../.src/weather/weather_showcase.png">
-<!-- ![](../.src/weather/weather1.png) 
-![](../.src/weather/weather2.png)  -->
+| <img src="../.src/weather/weather_s_1.png" width="160"/> | <img src="../.src/weather/weather_s_2.png" width="160"/> |
+|:--:|:--:|
 
 > NOTE: The the values may differ bassed on your current location, the above are just some examples
 

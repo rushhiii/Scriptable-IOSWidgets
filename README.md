@@ -118,7 +118,7 @@ Customize temperature units, color gradients, and update intervals to fit your a
 
 ### [GitHub Stats Widget](./GitHubStats%20Widget)
 
-![GitHubStats Widget](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/8f58656dd322a300196bc236f302d8f82d744691/.src/githubstats/githubstats_showcase.png)
+![GitHubStats Widget](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/d1c7af7462fdabb09e6d1cd311e66e07e0e7b47b/.src/githubstats/githubstats_showcase.png)
 
 📊 **Track your GitHub contributions, commits, stars, PRs, and more** — all from your iOS Home Screen. This dynamic widget leverages GitHub's GraphQL and REST APIs to show profile or repo-specific stats using multiple themes and widget sizes.\
 Supports Small, Medium, and Large layouts with parameter-based customization for themes and content. Keep your dev grind visible. Because contribution streaks matter.

@@ -29,12 +29,15 @@ After pushing the updated workflow, you need to configure GitHub Pages in your r
 - ❌ Missing permissions for GITHUB_TOKEN
 - ❌ Using deprecated peaceiris/actions-gh-pages@v3
 - ❌ No proper environment configuration
+- ❌ **MAJOR**: Base path configuration causing styling issues on GitHub Pages
 
 ### Solutions Applied:
 - ✅ Added proper permissions (`contents: read`, `pages: write`, `id-token: write`)
 - ✅ Updated to use official GitHub Pages actions
 - ✅ Added environment configuration for better security
 - ✅ Using modern `actions/deploy-pages@v4`
+- ✅ **FIXED**: Enabled base path `/Scriptable-IOSWidgets/` for proper asset loading
+- ✅ Added configurable base path for local development vs production
 
 ## 📝 Updated Workflow Features
 
@@ -58,5 +61,14 @@ If the deployment still fails:
 2. **Verify Workflow**: Check the Actions tab for detailed error logs
 3. **Repository Permissions**: Make sure your account has admin access to the repository
 4. **Branch Protection**: Ensure main branch allows Actions to run
+5. **Styling Issues**: If the site appears unstyled, ensure base path is correctly set to `/Scriptable-IOSWidgets/`
 
-The workflow should now deploy successfully! 🎉
+## 🛠️ Local Development
+
+For local development, use:
+```bash
+npm run docs:dev        # Standard dev server (with base path)
+npm run docs:dev-local  # Local dev without base path for easier development
+```
+
+The workflow should now deploy successfully with proper styling! 🎉

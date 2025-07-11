@@ -17,7 +17,30 @@ Calculate and display ages with precision down to days, months, and years. Perfe
 - ⚙️ **Easy Configuration**: Simple date setup
 - 🔄 **Daily Updates**: Automatic age progression
 
-## 🚀 Quick Setup
+## � Screenshots
+
+### Small Widget
+Perfect compact display for quick age reference.
+
+| Small Widget - Age Display |
+|:--:|
+| ![Birthday Small](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/birthday/birthday_s.png) |
+
+### Age Calculation Views
+Different display modes for various age calculation needs.
+
+| Precise Age | Next Birthday | Milestone View |
+|:--:|:--:|:--:|
+| ![Age Precise](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/birthday/birthday_precise.png) | ![Next Birthday](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/birthday/birthday_countdown.png) | ![Milestone](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/birthday/birthday_milestone.png) |
+
+### Color Themes
+Customize your birthday widget with different color schemes.
+
+| Default Theme | Birthday Theme | Celebration Theme |
+|:--:|:--:|:--:|
+| ![Birthday Default](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/birthday/birthday_default.png) | ![Birthday Party](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/birthday/birthday_party.png) | ![Birthday Celebration](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/birthday/birthday_celebration.png) |
+
+## �🚀 Quick Setup
 
 ### 1. Configure Your Birth Date
 
@@ -263,7 +286,7 @@ Personalize with relevant emojis:
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](../LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/LICENSE) file for details.
 
 ## 🤝 Contributing
 

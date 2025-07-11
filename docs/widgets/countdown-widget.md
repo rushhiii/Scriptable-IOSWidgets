@@ -18,7 +18,37 @@ A lightweight and customizable countdown widget built using Scriptable, powered 
 - 🔄 **Auto Sync**: Regular updates from your Google Sheet
 - 💾 **Offline Cache**: Works even without internet connection
 
-## 🚀 Quick Setup
+## � Screenshots
+
+### Large Widget
+Complete countdown overview with multiple events and detailed information.
+
+| Large Widget - Multi-Event View |
+|:--:|
+| ![Countdown Large](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_l.png) |
+
+### Medium Widget
+Essential countdown information in a balanced layout.
+
+| Medium Widget - Featured Events |
+|:--:|
+| ![Countdown Medium](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_m.png) |
+
+### Small Widget
+Single event focus for quick glances.
+
+| Small Widget - Single Event |
+|:--:|
+| ![Countdown Small](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_s.png) |
+
+### Custom Themes
+Personalize your countdown widget with custom colors and icons.
+
+| Birthday Theme | Anniversary Theme | Deadline Theme |
+|:--:|:--:|:--:|
+| ![Birthday Count](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_birthday.png) | ![Anniversary Count](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_anniversary.png) | ![Deadline Count](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_deadline.png) |
+
+## �🚀 Quick Setup
 
 ### 1. Create Your Google Sheet
 
@@ -227,7 +257,7 @@ Your events are stored in Google Sheets, providing:
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](../LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/LICENSE) file for details.
 
 ## 🤝 Contributing
 

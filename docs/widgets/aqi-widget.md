@@ -17,7 +17,37 @@ Monitor air quality in your area with real-time Air Quality Index (AQI) data. St
 - ⚠️ **Health Recommendations**: Suggestions based on current AQI
 - 🔄 **Auto Refresh**: Regular updates throughout the day
 
-## 🚀 Quick Setup
+## � Screenshots
+
+### Medium Widget
+Comprehensive air quality overview with detailed pollutant breakdown.
+
+| Medium Widget - Full AQI Dashboard |
+|:--:|
+| ![AQI Medium](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/aqi/aqi_m.png) |
+
+### Small Widget
+Essential AQI information in a compact, glanceable format.
+
+| Small Widget - AQI Overview |
+|:--:|
+| ![AQI Small](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/aqi/aqi_s.png) |
+
+### AQI Level Indicators
+Color-coded displays for different air quality levels.
+
+| Good (Green) | Moderate (Yellow) | Unhealthy (Red) |
+|:--:|:--:|:--:|
+| ![AQI Good](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/aqi/aqi_good.png) | ![AQI Moderate](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/aqi/aqi_moderate.png) | ![AQI Unhealthy](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/aqi/aqi_unhealthy.png) |
+
+### Pollutant Details
+Detailed breakdown view showing individual pollutant levels.
+
+| PM2.5 Focus | Multi-Pollutant | Health Advisory |
+|:--:|:--:|:--:|
+| ![AQI PM25](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/aqi/aqi_pm25.png) | ![AQI Multi](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/aqi/aqi_detailed.png) | ![AQI Health](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/aqi/aqi_health.png) |
+
+## �🚀 Quick Setup
 
 ### 1. Get OpenWeather API Key
 
@@ -213,7 +243,7 @@ OpenWeather free plan:
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](../LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/LICENSE) file for details.
 
 ## 🤝 Contributing
 

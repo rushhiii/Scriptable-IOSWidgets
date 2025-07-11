@@ -18,7 +18,30 @@ Display your GitHub coding activity and statistics right on your iOS home screen
 - 📱 **Responsive Layout**: Adapts to medium and large widget sizes
 - 🔄 **Real-time Updates**: Fetches latest data from GitHub API
 
-## 🚀 Quick Setup
+## � Screenshots
+
+### Large Widget
+Comprehensive GitHub dashboard with detailed statistics and contribution graph.
+
+| Large Widget - Full Dashboard |
+|:--:|
+| ![GitHub Stats Large](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/githubstats_l.png) |
+
+### Medium Widget
+Essential GitHub metrics in a compact, glanceable format.
+
+| Medium Widget - Key Stats |
+|:--:|
+| ![GitHub Stats Medium](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/githubstats_m.png) |
+
+### Theme Variations
+The widget supports multiple themes to match your home screen aesthetic.
+
+| Dark Theme | Light Theme | GitHub Theme |
+|:--:|:--:|:--:|
+| ![GitHub Stats Dark](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/githubstats_dark.png) | ![GitHub Stats Light](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/githubstats_light.png) | ![GitHub Stats GitHub](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/githubstats_github.png) |
+
+## �🚀 Quick Setup
 
 ### 1. Generate GitHub Personal Access Token
 
@@ -293,7 +316,7 @@ query($username: String!) {
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](../LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/LICENSE) file for details.
 
 ## 🤝 Contributing
 

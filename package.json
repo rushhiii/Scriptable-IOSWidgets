@@ -1,0 +1,37 @@
+{
+  "name": "scriptable-ios-widgets-docs",
+  "version": "1.0.0",
+  "description": "Documentation site for Scriptable iOS Widgets collection",
+  "keywords": ["ios", "widgets", "scriptable", "documentation", "vitepress"],
+  "homepage": "https://rushhiii.github.io/Scriptable-IOSWidgets/",
+  "bugs": {
+    "url": "https://github.com/rushhiii/Scriptable-IOSWidgets/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rushhiii/Scriptable-IOSWidgets.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "rushhiii",
+    "url": "https://github.com/rushhiii"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "deploy": "npm run docs:build && gh-pages -d docs/.vitepress/dist"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.0",
+    "vitepress": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

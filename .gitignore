@@ -1,13 +1,110 @@
-# echo ".DS_Store" >> .gitignore
-echo ".vscode/" >> .gitignore
-echo "node_modules/" >> .gitignore
-echo "*.pyc" >> .gitignore
-echo "*.class" >> .gitignore
-echo "*.log" >> .gitignore
-echo "Thumbs.db" >> .gitignore
-# echo "testing.md" >> .gitignore
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.eslintcache
+
+# Build outputs
+dist/
+build/
+*.tgz
+*.tar.gz
+
+# Logs
+*.log
+logs/
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+.nyc_output
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+.Python
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.git
+.mypy_cache
+.pytest_cache
+.hypothesis
+
+# Java
+*.class
+
+# Testing and development files
 **/testing.md
-# Local config file with private data
-**/config.js
+DEVELOPMENT.md
+
+# Widget-specific config files (NOT VitePress config!)
+# Only ignore config files in widget directories that contain sensitive data
+**/Countdown\ Widget/config.js
+**/widget-configs/config.js
+
+# VitePress build cache (but keep source files!)
+docs/.vitepress/cache/
+docs/.vitepress/dist/
+
+# Temporary files
+temp/
+tmp/
 
 

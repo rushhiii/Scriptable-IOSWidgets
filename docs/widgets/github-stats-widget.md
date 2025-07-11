@@ -6,6 +6,8 @@
 
 Display your GitHub coding activity and statistics right on your iOS home screen. Track contributions, repositories, followers, and more with a beautiful, customizable widget.
 
+![GitHub Stats Widget Preview](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/githubstats_showcase.png)
+
 ## ✨ Features
 
 - 📈 **Contribution Stats**: Daily, weekly, monthly, and yearly contributions

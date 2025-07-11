@@ -6,6 +6,8 @@
 
 Keep track of your university or work schedule with this comprehensive timetable widget. Perfect for students and professionals.
 
+![Schedule Widget Preview](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_showcase_1.png)
+
 *Documentation coming soon...*
 
 [View Source Code →](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/Schedule%20Widget/MyUniSchedule.js)

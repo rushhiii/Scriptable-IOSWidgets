@@ -6,6 +6,7 @@ hero:
   text: "Beautiful Custom Widgets"
   tagline: "A collection of custom iOS widgets built with Scriptable by rushhiii"
   image:
+    src: https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/scriptable_mockup_wall.png
     alt: Scriptable Widgets
   actions:
     - theme: brand

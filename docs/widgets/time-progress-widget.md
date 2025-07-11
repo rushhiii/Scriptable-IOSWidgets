@@ -6,6 +6,8 @@
 
 Visualize the passage of time with beautiful progress bars. Track daily, weekly, monthly, and yearly progress in an elegant widget.
 
+![Time Progress Widget Preview](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/timeprogress/timeprogress_showcase.png)
+
 *Documentation coming soon...*
 
 [View Source Code →](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/TimeProgress%20Widget/ModularTimeProgress.js)

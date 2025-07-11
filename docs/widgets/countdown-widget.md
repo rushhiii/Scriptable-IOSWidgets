@@ -6,6 +6,8 @@
 
 A lightweight and customizable countdown widget built using Scriptable, powered by Google Sheets. Track upcoming events like birthdays, anniversaries, or deadlines right from your iOS home screen.
 
+![Countdown Widget Preview](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdow_showcase.png)
+
 ## ✨ Features
 
 - 🗓️ **Dynamic Countdown**: Displays days remaining to events

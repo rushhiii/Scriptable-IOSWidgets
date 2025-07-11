@@ -6,6 +6,8 @@
 
 Stay connected with Hindu festivals, tithis, and auspicious dates. This widget displays the current Hindu calendar date with important festivals and religious observances.
 
+![Hindu Calendar Widget Preview](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/hinduclrwear/hinduclrwear_showcase.png)
+
 *Documentation coming soon...*
 
 [View Source Code →](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/HinduClrWear%20Widget/WearClrAccHindu.js)

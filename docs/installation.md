@@ -2,6 +2,8 @@
 
 Get started with Scriptable iOS Widgets in just a few simple steps!
 
+![Installation Preview](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/scriptable_mockup_wall.png)
+
 ## 📱 Prerequisites
 
 Before you begin, make sure you have:

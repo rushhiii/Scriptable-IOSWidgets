@@ -6,6 +6,8 @@
 
 Monitor air quality in your area with real-time Air Quality Index (AQI) data. Stay informed about pollution levels and make better decisions about outdoor activities.
 
+![AQI Widget Preview](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/weather/weather_showcase.png)
+
 ## ✨ Features
 
 - 🌬️ **Real-time AQI Data**: Current air quality measurements

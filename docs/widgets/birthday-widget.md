@@ -6,6 +6,8 @@
 
 Calculate and display ages with precision down to days, months, and years. Perfect for tracking birthdays, anniversaries, or any significant date milestones.
 
+![Birthday Widget Preview](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/birthday/birthday_showcase.png)
+
 ## ✨ Features
 
 - 🎂 **Precise Age Calculation**: Years, months, and days

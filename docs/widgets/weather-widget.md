@@ -6,6 +6,8 @@
 
 A clean and elegant iOS weather widget built with Scriptable, fetching real-time data from the OpenWeather API. The widget adapts layout and font size based on weather conditions and city names for improved readability.
 
+![Weather Widget Preview](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/weather/weather_showcase_s.png)
+
 ## ✨ Features
 
 - 📍 **Auto Location Detection**: Fetches your current coordinates using iOS GPS

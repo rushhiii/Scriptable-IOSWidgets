@@ -8,6 +8,22 @@
 			"group": "build",
 			"isBackground": true,
 			"problemMatcher": []
+		},
+		{
+			"label": "VitePress Dev Server",
+			"type": "shell",
+			"command": "npm run docs:dev",
+			"group": "build",
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Build VitePress Site",
+			"type": "shell",
+			"command": "npm run docs:build",
+			"group": "build",
+			"isBackground": false,
+			"problemMatcher": []
 		}
 	]
 }

@@ -6,9 +6,18 @@ on:
   pull_request:
     branches: [ main ]
 
+# Add permissions for GITHUB_TOKEN
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     
     steps:
     - name: Checkout repository
@@ -28,10 +37,17 @@ jobs:
     - name: Build documentation
       run: npm run docs:build
       
+    - name: Setup Pages
+      if: github.ref == 'refs/heads/main'
+      uses: actions/configure-pages@v4
+      
+    - name: Upload artifact
+      if: github.ref == 'refs/heads/main'
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: docs/.vitepress/dist
+        
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/main'
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: docs/.vitepress/dist
-        cname: # Add your custom domain here if you have one
+      id: deployment
+      uses: actions/deploy-pages@v4

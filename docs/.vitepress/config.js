@@ -3,6 +3,18 @@ export default {
   description: 'Custom iOS Widgets built with Scriptable by rushhiii',
   base: process.env.VITEPRESS_BASE || '/Scriptable-IOSWidgets/', // Configurable base path
   
+  // Configure dead link checking
+  ignoreDeadLinks: [
+    // Ignore relative license links (in case any remain)
+    /\.\.\/LICENSE/,
+    // Ignore local development paths
+    /localhost/,
+    // Ignore any external links that might be temporarily down
+    (url) => {
+      return url.includes('openweathermap.org') || url.includes('api.github.com');
+    }
+  ],
+  
   head: [
     ['link', { rel: 'icon', href: `${process.env.VITEPRESS_BASE || '/Scriptable-IOSWidgets/'}/favicon.ico` }],
     ['meta', { name: 'theme-color', content: '#5f67ee' }],

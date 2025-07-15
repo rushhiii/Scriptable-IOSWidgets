@@ -1,29 +1,18 @@
-# 📱 Scriptable iOS Widgets Collection
-
-<div align="center">
-
+# Scriptable
 ![Scriptable App](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/8f58656dd322a300196bc236f302d8f82d744691/.src/badges/scriptableBadge.svg) &nbsp; ![iOS](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/8f58656dd322a300196bc236f302d8f82d744691/.src/badges/iOS-badge.svg)
 
-**Transform your iOS home screen with powerful, personalized widgets**
+Welcome to my curated collection of **Scriptable** widgets and scripts, crafted to bring more power and personalization to your iOS home screen.
 
-<img alt="Scriptable Widgets Showcase" width="100%" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/8f58656dd322a300196bc236f302d8f82d744691/.src/scriptable_mockup_wall.png" />
+<!-- <img alt="widgets showcase" align="center" src=".src/widgets showcase.png" /> -->
+<img alt="Mockup wall" width="100%" align="center" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/8f58656dd322a300196bc236f302d8f82d744691/.src/scriptable_mockup_wall.png" />
 
-</div>
+<br>
 
----
+- Scriptable is an incredibly versatile IOS app that allows you to build custom widgets and automate tasks directly on your Apple devices.
+- From interactive calendars to dynamic quotes and real-time weather updates, my collection showcases how Scriptable can transform your device into a dynamic dashboard.
+- Explore, customize, and enjoy these widgets and scripts to make your iOS experience more fun and functional!
 
-## 🌟 About
-
-Welcome to a curated collection of **Scriptable** widgets and scripts designed to bring more power and personalization to your iOS home screen. 
-
-**Scriptable** is an incredibly versatile iOS app that allows you to build custom widgets and automate tasks directly on your Apple devices. From interactive calendars to dynamic quotes and real-time weather updates, this collection showcases how Scriptable can transform your device into a dynamic, functional dashboard.
-
-✨ **Features:**
-- 🎨 Beautiful, customizable designs
-- 📊 Real-time data integration
-- ⚡ Lightweight and efficient
-- 🔧 Easy to install and configure
-- 📱 Supports all widget sizes (Small, Medium, Large)
+<br/>
 
 ## Table of Contents
 <!-- <ul>

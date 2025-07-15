@@ -106,5 +106,6 @@ docs/.vitepress/dist/
 # Temporary files
 temp/
 tmp/
+pvt/
 
 LOCAL_DEVELOPMENT.md

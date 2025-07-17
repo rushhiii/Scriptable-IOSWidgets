@@ -8,7 +8,7 @@ hero:
   image:
     src: https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/scriptable_mockup_wall.png
     alt: Scriptable Widgets
-    width: 100% !improtant
+    width: 100% !important
   actions:
     - theme: brand
       text: Explore Widgets

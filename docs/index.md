@@ -8,7 +8,7 @@ hero:
   image:
     src: https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/scriptable_mockup_wall.png
     alt: Scriptable Widgets
-    width: 800px
+    width: 100%
   actions:
     - theme: brand
       text: Explore Widgets
@@ -399,5 +399,24 @@ html.dark .widget-image-container {
 /* Ensure consistent card heights */
 .widget-grid {
   align-items: stretch;
+}
+
+/* Hero image custom sizing */
+.VPHero .VPImage {
+  max-width: 800px !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.vp-doc .VPHero .image {
+  max-width: 800px !important;
+  width: 100% !important;
+}
+
+/* Alternative hero image targeting */
+.VPHome .VPHero .VPImage img {
+  max-width: 800px !important;
+  width: 100% !important;
+  height: auto !important;
 }
 </style>

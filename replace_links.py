@@ -23,49 +23,49 @@ def main():
         # Pattern 1: HTML img tags with relative paths
         content = re.sub(
             r'<img([^>]*?)src="\.\.?/([^"]*)"',
-            f'<img\\1src="{base_url}\\2?raw=true"',
+            f'<img\\1src="{base_url}\\2"',
             content
         )
         
         # Pattern 1b: Fix existing raw.githubusercontent.com links with ../
         content = re.sub(
             r'<img([^>]*?)src="https://raw\.githubusercontent\.com/([^/]+)/([^/]+)/[^/]+/\.\.?/([^"]*)"',
-            f'<img\\1src="{base_url}\\4?raw=true"',
+            f'<img\\1src="{base_url}\\4"',
             content
         )
         
         # Pattern 1c: Fix existing raw.githubusercontent.com links without ../
         content = re.sub(
             r'<img([^>]*?)src="https://raw\.githubusercontent\.com/([^/]+)/([^/]+)/[^/]+/([^"]*)"',
-            f'<img\\1src="{base_url}\\4?raw=true"',
+            f'<img\\1src="{base_url}\\4"',
             content
         )
         
         # Pattern 2: Markdown image syntax
         content = re.sub(
             r'!\[([^\]]*?)\]\(\.\.?/([^)]*?)\)',
-            f'![\\1]({base_url}\\2?raw=true)',
+            f'![\\1]({base_url}\\2)',
             content
         )
         
         # Pattern 2b: Fix existing raw.githubusercontent.com markdown images with ../
         content = re.sub(
             r'!\[([^\]]*?)\]\(https://raw\.githubusercontent\.com/([^/]+)/([^/]+)/[^/]+/\.\.?/([^)]*?)\)',
-            f'![\\1]({base_url}\\4?raw=true)',
+            f'![\\1]({base_url}\\4)',
             content
         )
         
         # Pattern 2c: Fix existing raw.githubusercontent.com markdown images without ../
         content = re.sub(
             r'!\[([^\]]*?)\]\(https://raw\.githubusercontent\.com/([^/]+)/([^/]+)/[^/]+/([^)]*?)\)',
-            f'![\\1]({base_url}\\4?raw=true)',
+            f'![\\1]({base_url}\\4)',
             content
         )
         
         # Pattern 3: Markdown links to images
         content = re.sub(
             r'\[([^\]]*?)\]\(\.\.?/([^)]*?\.(png|jpg|jpeg|gif|svg|webp))\)',
-            f'[\\1]({base_url}\\2?raw=true)',
+            f'[\\1]({base_url}\\2)',
             content,
             flags=re.IGNORECASE
         )
@@ -73,7 +73,7 @@ def main():
         # Pattern 3b: Fix existing raw.githubusercontent.com markdown links with ../
         content = re.sub(
             r'\[([^\]]*?)\]\(https://raw\.githubusercontent\.com/([^/]+)/([^/]+)/[^/]+/\.\.?/([^)]*?\.(png|jpg|jpeg|gif|svg|webp))\)',
-            f'[\\1]({base_url}\\4?raw=true)',
+            f'[\\1]({base_url}\\4)',
             content,
             flags=re.IGNORECASE
         )
@@ -81,7 +81,7 @@ def main():
         # Pattern 3c: Fix existing raw.githubusercontent.com markdown links without ../
         content = re.sub(
             r'\[([^\]]*?)\]\(https://raw\.githubusercontent\.com/([^/]+)/([^/]+)/[^/]+/([^)]*?\.(png|jpg|jpeg|gif|svg|webp))\)',
-            f'[\\1]({base_url}\\4?raw=true)',
+            f'[\\1]({base_url}\\4)',
             content,
             flags=re.IGNORECASE
         )

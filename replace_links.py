@@ -2,16 +2,17 @@ import sys
 import re
 
 def main():
-    if len(sys.argv) != 5:
-        print("Usage: python3 script.py file repo_owner repo_name commit_sha")
+    if len(sys.argv) != 6:
+        print("Usage: python3 script.py file repo_owner repo_name commit_sha branch")
         sys.exit(1)
         
     file_path = sys.argv[1]
     repo_owner = sys.argv[2]
     repo_name = sys.argv[3]
     commit_sha = sys.argv[4]
+    branch = sys.argv[5]
     
-    base_url = f"https://raw.githubusercontent.com/{repo_owner}/{repo_name}/{commit_sha}/"
+    base_url = f"https://github.com/{repo_owner}/{repo_name}/blob/{branch}/"
     
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
@@ -22,21 +23,21 @@ def main():
         # Pattern 1: HTML img tags with relative paths
         content = re.sub(
             r'<img([^>]*?)src="(\.\.?/[^"]*)"',
-            f'<img\\1src="{base_url}\\2"',
+            f'<img\\1src="{base_url}\\2?raw=true"',
             content
         )
         
         # Pattern 2: Markdown image syntax
         content = re.sub(
             r'!\[([^\]]*?)\]\((\.\.?/[^)]*?)\)',
-            f'![\\1]({base_url}\\2)',
+            f'![\\1]({base_url}\\2?raw=true)',
             content
         )
         
         # Pattern 3: Markdown links to images
         content = re.sub(
             r'\[([^\]]*?)\]\((\.\.?/[^)]*?\.(png|jpg|jpeg|gif|svg|webp))\)',
-            f'[\\1]({base_url}\\2)',
+            f'[\\1]({base_url}\\2?raw=true)',
             content,
             flags=re.IGNORECASE
         )

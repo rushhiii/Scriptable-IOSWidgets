@@ -22,21 +22,21 @@ def main():
         
         # Pattern 1: HTML img tags with relative paths
         content = re.sub(
-            r'<img([^>]*?)src="(\.\.?/[^"]*)"',
+            r'<img([^>]*?)src="\.\.?/([^"]*)"',
             f'<img\\1src="{base_url}\\2?raw=true"',
             content
         )
         
         # Pattern 2: Markdown image syntax
         content = re.sub(
-            r'!\[([^\]]*?)\]\((\.\.?/[^)]*?)\)',
+            r'!\[([^\]]*?)\]\(\.\.?/([^)]*?)\)',
             f'![\\1]({base_url}\\2?raw=true)',
             content
         )
         
         # Pattern 3: Markdown links to images
         content = re.sub(
-            r'\[([^\]]*?)\]\((\.\.?/[^)]*?\.(png|jpg|jpeg|gif|svg|webp))\)',
+            r'\[([^\]]*?)\]\(\.\.?/([^)]*?\.(png|jpg|jpeg|gif|svg|webp))\)',
             f'[\\1]({base_url}\\2?raw=true)',
             content,
             flags=re.IGNORECASE

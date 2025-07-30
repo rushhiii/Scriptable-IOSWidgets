@@ -8,6 +8,7 @@
 ![Scriptable Widget](https://img.shields.io/badge/Scriptable-iOS%20Widget-black?style=flat-square\&logo=apple)
 
 ![License](https://img.shields.io/github/license/rushhiii/Scriptable-IOSWidgets?style=flat)
+![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat)
 ![Built with JavaScript](https://img.shields.io/badge/Built%20with-JavaScript-F7DF1E?logo=javascript&style=flat)
 ![Platform](https://img.shields.io/badge/Platform-iOS-blue?style=flat&logo=apple)
 ![Scriptable](https://img.shields.io/badge/Scriptable-Compatible-success?style=flat&logo=scriptable)
@@ -15,13 +16,6 @@
 ![Widget Sizes](https://img.shields.io/badge/Sizes-Small%2C%20Medium%2C%20Large-informational?style=flat)
 ![iOS Widget](https://img.shields.io/badge/Scriptable-iOS%20Widget-black?style=flat&logo=apple)
 
-![License](https://img.shields.io/github/license/rushhiii/Scriptable-IOSWidgets?style=flat)
-![Built with JavaScript](https://img.shields.io/badge/Built%20with-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![Platform](https://img.shields.io/badge/Platform-iOS-blue?style=flat&logo=apple)
-![Scriptable](https://img.shields.io/badge/Scriptable-Compatible-success?style=flat&logo=scriptable)
-![Themes](https://img.shields.io/badge/Themes-10%2B-purple?style=flat)
-![Widget Sizes](https://img.shields.io/badge/Sizes-Small%2C%20Medium%2C%20Large-informational?style=flat)
-![iOS Widget](https://img.shields.io/badge/Scriptable-iOS%20Widget-black?style=flat&logo=apple)
 
 
 

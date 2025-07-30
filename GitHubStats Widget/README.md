@@ -1,5 +1,5 @@
 ## 📊 GitHub Stats Widget
-![GitHub](https://img.shields.io/github/license/rushhiii/Scriptable-IOSWidgets?style=flat-square)
+![GitHub](https://img.shields.io/github/license/rushhiii/Scriptable-IOSWidgets?style=badge)
 ![Language](https://img.shields.io/badge/Built%20with-JavaScript-F7DF1E?logo=javascript&style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-iOS-blue?style=flat-square&logo=apple)
 ![Scriptable](https://img.shields.io/badge/Scriptable-Compatible-success?style=flat-square&logo=scriptable)

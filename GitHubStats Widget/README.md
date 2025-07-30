@@ -156,7 +156,7 @@ night
 
 | <img src="../.src/githubstats/github_stats_m_3.PNG" width="260"/> | <img src="../.src/githubstats/github_stats_m_4.PNG" width="260"/> |
 |:--:|:--:|
-| <img src="../.src/githubstats/github_stats_m_@.png" width="260"/> | <img src="../.src/githubstats/githubstats_m_4.PNG" width="260"/> |
+| <img src="../.src/githubstats/github_stats_m_@.png" width="260"/> | <img src="../.src/githubstats/githubstats_m_4.png" width="260"/> |
 | <img src="../.src/githubstats/github_stats_m.png" width="260"/> | <img src="../.src/githubstats/github_stats_m_5.png" width="260"/> |
 
 

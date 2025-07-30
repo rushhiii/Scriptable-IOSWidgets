@@ -1,13 +1,4 @@
 ## 📊 GitHub Stats Widget
-![GitHub](https://img.shields.io/github/license/rushhiii/Scriptable-IOSWidgets?style=badge)
-![Language](https://img.shields.io/badge/Built%20with-JavaScript-F7DF1E?logo=javascript&style=flat-square)
-![Platform](https://img.shields.io/badge/Platform-iOS-blue?style=flat-square&logo=apple)
-![Scriptable](https://img.shields.io/badge/Scriptable-Compatible-success?style=flat-square&logo=scriptable)
-![Theme Support](https://img.shields.io/badge/Themes-10+-purple?style=flat-square)
-![Widget Size](https://img.shields.io/badge/Sizes-Small%2C%20Medium%2C%20Large-informational?style=flat-square)
-![Scriptable Widget](https://img.shields.io/badge/Scriptable-iOS%20Widget-black?style=flat-square\&logo=apple)
-
-![License](https://img.shields.io/github/license/rushhiii/Scriptable-IOSWidgets?style=flat)
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat)
 ![Built with JavaScript](https://img.shields.io/badge/Built%20with-JavaScript-F7DF1E?logo=javascript&style=flat)
 ![Platform](https://img.shields.io/badge/Platform-iOS-blue?style=flat&logo=apple)

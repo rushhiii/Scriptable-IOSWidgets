@@ -100,7 +100,7 @@ This widget supports **small**, **medium**, and **large** sizes. You can also pa
 📅 **The Class Schedule Widget** syncs your school or university timetable from a public Google Sheet and automatically displays today’s classes. It adapts to the widget size: from showing only the current class to displaying a full weekly schedule with a beautiful gradient background per weekday.\
 This widget supports **small**, **medium**, and **large** views. You can also simulate different days or class times using widget parameters.
 
-### [Modular Time Progress](./Modular%20Time%20Progress)
+### [Modular Time Progress](./TimeProgress%20Widget)
 
 ![timeProgress Widget](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/8f58656dd322a300196bc236f302d8f82d744691/.src/timeprogress/timeprogress_showcase.png)
 

@@ -8,6 +8,30 @@
 ![Scriptable Widget](https://img.shields.io/badge/Scriptable-iOS%20Widget-black?style=flat-square\&logo=apple)
 
 
+![License](https://img.shields.io/github/license/rushhiii/Scriptable-IOSWidgets?style=for-the-badge&color=blue)
+
+![Built with JavaScript](https://img.shields.io/badge/Built%20with-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+![Platform](https://img.shields.io/badge/Platform-iOS-000000?style=for-the-badge&logo=apple&logoColor=white)
+
+![Scriptable](https://img.shields.io/badge/Scriptable-Compatible-purple?style=for-the-badge&logo=scriptable)
+
+![Themes](https://img.shields.io/badge/Themes-10%2B-purple?style=for-the-badge)
+
+![Widget Sizes](https://img.shields.io/badge/Sizes-Small%2C%20Medium%2C%20Large-informational?style=for-the-badge)
+
+![View Info](https://img.shields.io/badge/View-Life%20Progress%20%7C%20Age%20%7C%20Days%20Lived-orange?style=for-the-badge)
+
+![Parameters](https://img.shields.io/badge/Customizable-Name%20%2F%20Birthday%20via%20Param-green?style=for-the-badge)
+
+![Theme](https://img.shields.io/badge/Theme-Dark%20Gradient-9cf?style=for-the-badge)
+
+![Status](https://img.shields.io/badge/Status-Stable-brightgreen?style=for-the-badge)
+
+![Last Updated](https://img.shields.io/badge/Updated-June%202025-yellow?style=for-the-badge)
+
+
+
 <!-- ![github logo](https://i.imgur.com/MJzROGa.png) -->
 
 <img src="../.src/githubstats/githubstats_showcase.png">

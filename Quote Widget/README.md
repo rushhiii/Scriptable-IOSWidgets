@@ -7,7 +7,7 @@
 ![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
 ![Last Updated](https://img.shields.io/badge/Updated-June%202025-yellow)
 
-![smartquote](../.src/quote/quote_showcase.png)
+![MyQuote Showcase](../.src/quotes/quote_showcase.png)
 
 
 

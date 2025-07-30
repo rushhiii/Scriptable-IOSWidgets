@@ -6,7 +6,9 @@
 ![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
 ![Last Updated](https://img.shields.io/badge/Updated-June%202025-yellow)
 
-![Modular Time Progress](../.src/timeprogress/timeprogress_showcase.png)
+<!-- ![Modular Time Progress](../.src/timeprogress/timeprogress_showcase.png) -->
+
+![Modular Time Progress](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.src/timeprogress/timeprogress_showcase.png?raw=true)
 
 Visualize your day, week, month, year, and more — all in one modular and minimalist design Scriptable widget.
 

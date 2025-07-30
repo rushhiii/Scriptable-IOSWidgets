@@ -78,7 +78,7 @@ It shows your **exact age** (to 2 decimal places), **total days lived**, and a *
 🧘‍♂️ **The Hindu Color Wear Widget** offers daily color suggestions based on traditional Hindu practices.\
 Each day of the week is mapped to a specific color, deity, and spiritual quality—helping you dress with intention and align your energy. The widget supports **all three sizes** (Small, Medium, Large) and changes layout accordingly: Small shows today’s color, Medium displays a full week grid, and Large includes spiritual reasoning. No parameters needed—it auto-detects the day and works offline.
 
-### [MyQuotes](./Quotes%20Widget)
+### [MyQuotes](./Quote%20Widget)
 
 <!-- ![MyQuotes Widget](.src/quote/quote_showcase.png)
  -->

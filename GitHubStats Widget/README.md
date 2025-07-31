@@ -1,6 +1,22 @@
 # 📊 GitHub Stats Widget
 
-![License: MIT](https://img.shields.i---
+![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat)
+![Built with JavaScript](https://img.shields.io/badge/Built%20with-JavaScript-F7DF1E?logo=javascript&style=flat)
+![Platform](https://img.shields.io/badge/Platform-iOS-blue?style=flat&logo=apple)
+![Scriptable](https://img.shields.io/badge/Scriptable-Compatible-success?style=flat&logo=scriptable)
+![Themes](https://img.shields.io/badge/Themes-20%2B-purple?style=flat)
+![Widget Sizes](https://img.shields.io/badge/Sizes-Small%2C%20Medium%2C%20Large-informational?style=flat)
+![Offline Support](https://img.shields.io/badge/Offline-Supported-green?style=flat)
+![Heatmap](https://img.shields.io/badge/Heatmap-Enabled-orange?style=flat)
+
+
+
+<img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/githubstats_showcase.png">
+
+**A comprehensive GitHub statistics widget for iOS** that displays your GitHub activity, contributions, and repository metrics directly on your home screen. Built for the Scriptable app with advanced features including **offline caching**, **contribution heatmaps**, and **20+ stunning themes**.
+
+> ✨ **New Features**: Offline support with intelligent caching, GitHub contribution heatmaps, enhanced themes, and repository-specific statistics
+
 
 ## 🚀 Quick Setup
 
@@ -36,22 +52,7 @@ const username = "your_github_username"; // Replace with your username
 1. Long press on your home screen
 2. Tap the "+" button to add a widget
 3. Search for "Scriptable" and select your preferred size
-4. Configure the widget to run your GitHub Stats scriptT-blue?style=flat)
-![Built with JavaScript](https://img.shields.io/badge/Built%20with-JavaScript-F7DF1E?logo=javascript&style=flat)
-![Platform](https://img.shields.io/badge/Platform-iOS-blue?style=flat&logo=apple)
-![Scriptable](https://img.shields.io/badge/Scriptable-Compatible-success?style=flat&logo=scriptable)
-![Themes](https://img.shields.io/badge/Themes-20%2B-purple?style=flat)
-![Widget Sizes](https://img.shields.io/badge/Sizes-Small%2C%20Medium%2C%20Large-informational?style=flat)
-![Offline Support](https://img.shields.io/badge/Offline-Supported-green?style=flat)
-![Heatmap](https://img.shields.io/badge/Heatmap-Enabled-orange?style=flat)
-
-<img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/githubstats_showcase.png">
-
-**A comprehensive GitHub statistics widget for iOS** that displays your GitHub activity, contributions, and repository metrics directly on your home screen. Built for the Scriptable app with advanced features including **offline caching**, **contribution heatmaps**, and **20+ stunning themes**.
-
-> 🚀 **New Features**: Offline support with intelligent caching, GitHub contribution heatmaps, enhanced themes, and repository-specific statistics
-
----
+4. Configure the widget to run your GitHub Stats script
 
 ## ✨ Features
 
@@ -78,14 +79,6 @@ const username = "your_github_username"; // Replace with your username
 - **🌓 Auto theme** - Adapts to iOS dark/light mode
 - **📊 Standard themes** - `light`, `dark`, `blue`, `night`, `day`, `gray`, `green`, `gitgreen`, `indigo`
 - **� Heatmap themes** - `forestCalm`, `forestCanopy`, `cyberPurple`, `sunsetGold`, `nordBlueV1`, `nordBlueV2`, `sunsetDusk`, `earthyWarm`, `arcticIce`
-
-### 📱 **Responsive Widget Layouts**
-
-### 🌐 **Smart Connectivity**
-
-### 🔧 **Technical Features**
-
-
 
 
 ## 🎛️ Widget Configuration
@@ -130,31 +123,30 @@ heatmap,theme_name
 
 ### 🎨 **Theme Selection**
 
-#### **Standard Widget Themes:**
-- `auto` - Adapts to iOS appearance
-- `light` - Clean light theme
-- `dark` - Sleek dark theme
-- `blue` - Ocean blue gradient
-- `night` - Deep space theme
-- `day` - Bright sky theme
-- `gray` - Sophisticated gray
-- `green` - Nature-inspired
-- `gitgreen` - GitHub green
-- `indigo` - Purple-blue gradient
 
-#### **Heatmap-Specific Themes:**
-- `auto` - Adapts to iOS appearance
-- `light` / `dark` - Standard GitHub colors
-- `red` - Red intensity theme
-- `green` - Green contribution theme
-- `forestCalm` - Peaceful forest greens
-- `forestCanopy` - Rich forest colors
-- `cyberPurple` - Futuristic purple
-- `sunsetGold` - Warm sunset colors
-- `nordBlueV1` / `nordBlueV2` - Nordic blue themes
-- `sunsetDusk` - Evening sky colors
-- `earthyWarm` - Warm earth tones
-- `arcticIce` - Cool arctic theme
+Available values for the third parameter,\
+For Widget stats Themes:
+
+| Theme | Description | Theme | Description |
+|-------|-------------|-------|-------------|
+| `auto` | Adapts to iOS appearance | `day` | Bright sky theme |
+| `light` | Clean light theme | `gray` | Sophisticated gray |
+| `dark` | Sleek dark theme | `green` | Nature-inspired |
+| `blue` | Ocean blue gradient | `gitgreen` | GitHub green |
+| `night` | Deep space theme | `indigo` | Purple-blue gradient |
+
+For Widget heatmap Themes:
+> so when using parameter like, "heatmap,{heatmapThemeName}"
+
+| Theme | Description | Theme | Description |
+|-------|-------------|-------|-------------|
+| `auto` | Adapts to iOS appearance | `cyberPurple` | Futuristic purple theme |
+| `light` | Standard GitHub light | `sunsetGold` | Warm sunset colors |
+| `dark` | Standard GitHub dark | `nordBlueV1` | Nordic blue variant 1 |
+| `red` | Red intensity theme | `nordBlueV2` | Nordic blue variant 2 |
+| `green` | Green contribution theme | `sunsetDusk` | Evening sky colors |
+| `forestCalm` | Peaceful forest greens | `earthyWarm` | Warm earth tones |
+| `forestCanopy` | Rich forest colors | `arcticIce` | Cool arctic theme |
 
 ### 💡 **Configuration Examples**
 
@@ -166,8 +158,6 @@ heatmap,theme_name
 | `heatmap,forestCalm` | Contribution heatmap with forest theme | GitHub-style activity grid |
 | `currstreak,auto` | Current streak with auto theme | Streak count adapting to iOS theme |
 | `repos,green` | Repository count with green theme | Total public repos in green |
-
----
 
 ## � Widget Layout Guide
 
@@ -316,53 +306,6 @@ console.log(Keychain.get("github_token_here"));
 - 👁️ **Visual offline indicators** for transparency
 - 🎨 **Adaptive themes** that respond to iOS appearance
 - 📊 **Professional value formatting** (1.2k, 345m)
-
-### 📐 Widget Layouts
-
-| Size   | Layout Details                                 |
-| ------ | ---------------------------------------------- |
-| Small  | Focused repo or profile stat + minimal details |
-| Medium | Header + 5 stat lines                          |
-| Large  | Two-column detailed layout (up to 8 metrics)   |
-
-### 🎨 Themes
-
-Available values for the third parameter,\
-For Widget stats Themes:
-
-| Theme | Description | Theme | Description |
-|-------|-------------|-------|-------------|
-| `auto` | Adapts to iOS appearance | `day` | Bright sky theme |
-| `light` | Clean light theme | `gray` | Sophisticated gray |
-| `dark` | Sleek dark theme | `green` | Nature-inspired |
-| `blue` | Ocean blue gradient | `gitgreen` | GitHub green |
-| `night` | Deep space theme | `indigo` | Purple-blue gradient |
-
-For Widget heatmap Themes:
-> so when using parameter like, "heatmap,{heatmapThemeName}"
-
-| Theme | Description | Theme | Description |
-|-------|-------------|-------|-------------|
-| `auto` | Adapts to iOS appearance | `cyberPurple` | Futuristic purple theme |
-| `light` | Standard GitHub light | `sunsetGold` | Warm sunset colors |
-| `dark` | Standard GitHub dark | `nordBlueV1` | Nordic blue variant 1 |
-| `red` | Red intensity theme | `nordBlueV2` | Nordic blue variant 2 |
-| `green` | Green contribution theme | `sunsetDusk` | Evening sky colors |
-| `forestCalm` | Peaceful forest greens | `earthyWarm` | Warm earth tones |
-| `forestCanopy` | Rich forest colors | `arcticIce` | Cool arctic theme |
-
-### 🛠 Example Use Cases
-
-```text
-// Shows pull requests on a repo with indigo theme
-rushhiii/Scriptable-IOSWidgets,prs,indigo
-
-// Shows 2025 commits in blue theme
-commits,blue
-
-// Shows profile stats in dark mode
-night
-```
 
 ### 📎 Notes
 

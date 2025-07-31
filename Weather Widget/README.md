@@ -113,7 +113,7 @@ widget.refreshAfterDate = new Date(Date.now() + 30 * 60 * 1000);
 
 ## 📸 Screenshots
 
-| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/weather/weather_s_1.png" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/weather/weather_s_2.png" width="160"/> |
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/weather/weather_s_1.PNG" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/weather/weather_s_2.png" width="160"/> |
 |:--:|:--:|
 
 > NOTE: The the values may differ bassed on your current location, the above are just some examples

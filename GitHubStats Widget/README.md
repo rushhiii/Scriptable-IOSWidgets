@@ -12,7 +12,7 @@
 
 <!-- ![github logo](https://i.imgur.com/MJzROGa.png) -->
 
-<img src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.src/githubstats/githubstats_showcase.png?raw=true">
+<img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/githubstats_showcase.png">
 
 Track your GitHub stats — commits, contributions, streaks, PRs, issues, and repo insights — all beautifully displayed on your iOS home screen using Scriptable.
 
@@ -150,24 +150,24 @@ night
 
 > _Small Widget_
 
-| <img src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.src/githubstats/githubstats_s_1.png?raw=true" width="160"/> | <img src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.src/githubstats/githubstats_s_2.png?raw=true" width="160"/> |
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/githubstats_s_1.png" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/githubstats_s_2.png" width="160"/> |
 |:--:|:--:|
-| <img src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.src/githubstats/githubstats_s_6.png?raw=true" width="160"/> | <img src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.src/githubstats/github_stats_s_3.PNG?raw=true" width="160"/> |
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/githubstats_s_6.png" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/github_stats_s_3.PNG" width="160"/> |
 
 > _Medium Widgets_
 
-| <img src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.src/githubstats/github_stats_m_3.PNG?raw=true" width="260"/> | <img src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.src/githubstats/github_stats_m_4.PNG?raw=true" width="260"/> |
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/github_stats_m_3.PNG" width="260"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/github_stats_m_4.PNG" width="260"/> |
 |:--:|:--:|
-| <img src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.src/githubstats/github_stats_m_@.png?raw=true" width="260"/> | <img src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.src/githubstats/githubstats_m_4.png?raw=true" width="260"/> |
-| <img src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.src/githubstats/github_stats_m.png?raw=true" width="260"/> | <img src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.src/githubstats/github_stats_m_5.png?raw=true" width="260"/> |
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/github_stats_m_@.png" width="260"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/githubstats_m_4.png" width="260"/> |
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/github_stats_m.png" width="260"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/github_stats_m_5.png" width="260"/> |
 
 
-<!-- <img src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.src/githubstats/githubstats_m_1.png?raw=true" width="260"/> <img src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.src/githubstats/githubstats_m_2.png?raw=true" width="260"/>
-<img src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.src/githubstats/githubstats_m_3.png?raw=true" width="260"/> <img src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.src/githubstats/githubstats_m_4.png?raw=true" width="260"/> -->
+<!-- <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/githubstats_m_1.png" width="260"/> <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/githubstats_m_2.png" width="260"/>
+<img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/githubstats_m_3.png" width="260"/> <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/githubstats_m_4.png" width="260"/> -->
 
 > _Large Widget_
 
-<img src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.src/githubstats/githubstats_l.png?raw=true" width="360"/>
+<img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/githubstats_l.png" width="360"/>
 
 ## 🙌 Feedback
 

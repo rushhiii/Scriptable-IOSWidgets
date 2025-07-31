@@ -12,7 +12,7 @@ def main():
     commit_sha = sys.argv[4]
     branch = sys.argv[5]
     
-    base_url = f"https://github.com/{repo_owner}/{repo_name}/blob/{branch}/"
+    base_url = f"https://raw.githubusercontent.com/{repo_owner}/{repo_name}/{branch}/"
     
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
@@ -41,6 +41,13 @@ def main():
             content
         )
         
+        # Pattern 1d: Fix existing GitHub blob links
+        content = re.sub(
+            r'<img([^>]*?)src="https://github\.com/([^/]+)/([^/]+)/blob/[^/]+/([^"?]*?)(?:\?raw=true)?"',
+            f'<img\\1src="{base_url}\\4"',
+            content
+        )
+        
         # Pattern 2: Markdown image syntax
         content = re.sub(
             r'!\[([^\]]*?)\]\(\.\.?/([^)]*?)\)',
@@ -58,6 +65,13 @@ def main():
         # Pattern 2c: Fix existing raw.githubusercontent.com markdown images without ../
         content = re.sub(
             r'!\[([^\]]*?)\]\(https://raw\.githubusercontent\.com/([^/]+)/([^/]+)/[^/]+/([^)]*?)\)',
+            f'![\\1]({base_url}\\4)',
+            content
+        )
+        
+        # Pattern 2d: Fix existing GitHub blob markdown images
+        content = re.sub(
+            r'!\[([^\]]*?)\]\(https://github\.com/([^/]+)/([^/]+)/blob/[^/]+/([^)?]*?)(?:\?raw=true)?\)',
             f'![\\1]({base_url}\\4)',
             content
         )
@@ -81,6 +95,14 @@ def main():
         # Pattern 3c: Fix existing raw.githubusercontent.com markdown links without ../
         content = re.sub(
             r'\[([^\]]*?)\]\(https://raw\.githubusercontent\.com/([^/]+)/([^/]+)/[^/]+/([^)]*?\.(png|jpg|jpeg|gif|svg|webp))\)',
+            f'[\\1]({base_url}\\4)',
+            content,
+            flags=re.IGNORECASE
+        )
+        
+        # Pattern 3d: Fix existing GitHub blob markdown links
+        content = re.sub(
+            r'\[([^\]]*?)\]\(https://github\.com/([^/]+)/([^/]+)/blob/[^/]+/([^)?]*?\.(png|jpg|jpeg|gif|svg|webp))(?:\?raw=true)?\)',
             f'[\\1]({base_url}\\4)',
             content,
             flags=re.IGNORECASE

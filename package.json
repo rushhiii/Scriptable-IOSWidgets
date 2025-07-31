@@ -2,7 +2,13 @@
   "name": "scriptable-ios-widgets-docs",
   "version": "1.0.0",
   "description": "Documentation site for Scriptable iOS Widgets collection",
-  "keywords": ["ios", "widgets", "scriptable", "documentation", "vitepress"],
+  "keywords": [
+    "ios",
+    "widgets",
+    "scriptable",
+    "documentation",
+    "vitepress"
+  ],
   "homepage": "https://rushhiii.github.io/Scriptable-IOSWidgets/",
   "bugs": {
     "url": "https://github.com/rushhiii/Scriptable-IOSWidgets/issues"
@@ -25,7 +31,7 @@
   },
   "devDependencies": {
     "gh-pages": "^6.1.0",
-    "vitepress": "^1.0.0"
+    "vitepress": "^1.6.3"
   },
   "engines": {
     "node": ">=18.0.0"

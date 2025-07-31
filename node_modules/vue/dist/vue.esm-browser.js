@@ -1,5 +1,5 @@
 /**
-* vue v3.5.17
+* vue v3.5.18
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
@@ -383,6 +383,24 @@ const stringifySymbol = (v, i = "") => {
     isSymbol(v) ? `Symbol(${(_a = v.description) != null ? _a : i})` : v
   );
 };
+
+function normalizeCssVarValue(value) {
+  if (value == null) {
+    return "initial";
+  }
+  if (typeof value === "string") {
+    return value === "" ? " " : value;
+  }
+  if (typeof value !== "number" || !Number.isFinite(value)) {
+    {
+      console.warn(
+        "[Vue warn] Invalid value used for CSS binding. Expected a string or a finite number but received:",
+        value
+      );
+    }
+  }
+  return String(value);
+}
 
 function warn$2(msg, ...args) {
   console.warn(`[Vue warn] ${msg}`, ...args);
@@ -4451,10 +4469,8 @@ function resolveCssVars(instance, vnode, expectedMap) {
   if (instance.getCssVars && (vnode === root || root && root.type === Fragment && root.children.includes(vnode))) {
     const cssVars = instance.getCssVars();
     for (const key in cssVars) {
-      expectedMap.set(
-        `--${getEscapedCssVarName(key)}`,
-        String(cssVars[key])
-      );
+      const value = normalizeCssVarValue(cssVars[key]);
+      expectedMap.set(`--${getEscapedCssVarName(key)}`, value);
     }
   }
   if (vnode === root && instance.parent) {
@@ -4643,16 +4659,19 @@ function defineAsyncComponent(source) {
     __asyncLoader: load,
     __asyncHydrate(el, instance, hydrate) {
       let patched = false;
-      const doHydrate = hydrateStrategy ? () => {
-        const performHydrate = () => {
-          if (patched) {
+      (instance.bu || (instance.bu = [])).push(() => patched = true);
+      const performHydrate = () => {
+        if (patched) {
+          {
             warn$1(
-              `Skipping lazy hydration for component '${getComponentName(resolvedComp)}': it was updated before lazy hydration performed.`
+              `Skipping lazy hydration for component '${getComponentName(resolvedComp) || resolvedComp.__file}': it was updated before lazy hydration performed.`
             );
-            return;
           }
-          hydrate();
-        };
+          return;
+        }
+        hydrate();
+      };
+      const doHydrate = hydrateStrategy ? () => {
         const teardown = hydrateStrategy(
           performHydrate,
           (cb) => forEachElement(el, cb)
@@ -4660,8 +4679,7 @@ function defineAsyncComponent(source) {
         if (teardown) {
           (instance.bum || (instance.bum = [])).push(teardown);
         }
-        (instance.u || (instance.u = [])).push(() => patched = true);
-      } : hydrate;
+      } : performHydrate;
       if (resolvedComp) {
         doHydrate();
       } else {
@@ -5540,15 +5558,15 @@ function withDefaults(props, defaults) {
   return null;
 }
 function useSlots() {
-  return getContext().slots;
+  return getContext("useSlots").slots;
 }
 function useAttrs() {
-  return getContext().attrs;
+  return getContext("useAttrs").attrs;
 }
-function getContext() {
+function getContext(calledFunctionName) {
   const i = getCurrentInstance();
   if (!i) {
-    warn$1(`useContext() called without active instance.`);
+    warn$1(`${calledFunctionName}() called without active instance.`);
   }
   return i.setupContext || (i.setupContext = createSetupContext(i));
 }
@@ -5799,7 +5817,8 @@ function applyOptions(instance) {
       expose.forEach((key) => {
         Object.defineProperty(exposed, key, {
           get: () => publicThis[key],
-          set: (val) => publicThis[key] = val
+          set: (val) => publicThis[key] = val,
+          enumerable: true
         });
       });
     } else if (!instance.exposed) {
@@ -6249,7 +6268,7 @@ function provide(key, value) {
   }
 }
 function inject(key, defaultValue, treatDefaultAsFactory = false) {
-  const instance = currentInstance || currentRenderingInstance;
+  const instance = getCurrentInstance();
   if (instance || currentApp) {
     let provides = currentApp ? currentApp._context.provides : instance ? instance.parent == null || instance.ce ? instance.vnode.appContext && instance.vnode.appContext.provides : instance.parent.provides : void 0;
     if (provides && key in provides) {
@@ -6264,7 +6283,7 @@ function inject(key, defaultValue, treatDefaultAsFactory = false) {
   }
 }
 function hasInjectionContext() {
-  return !!(currentInstance || currentRenderingInstance || currentApp);
+  return !!(getCurrentInstance() || currentApp);
 }
 
 const internalObjectProto = {};
@@ -6678,7 +6697,7 @@ function isBoolean(...args) {
   return args.some((elem) => elem.toLowerCase() === "boolean");
 }
 
-const isInternalKey = (key) => key[0] === "_" || key === "$stable";
+const isInternalKey = (key) => key === "_" || key === "__" || key === "_ctx" || key === "$stable";
 const normalizeSlotValue = (value) => isArray(value) ? value.map(normalizeVNode) : [normalizeVNode(value)];
 const normalizeSlot = (key, rawSlot, ctx) => {
   if (rawSlot._n) {
@@ -7420,6 +7439,7 @@ function baseCreateRenderer(options, createHydrationFns) {
       if (!initialVNode.el) {
         const placeholder = instance.subTree = createVNode(Comment);
         processCommentNode(null, placeholder, container, anchor);
+        initialVNode.placeholder = placeholder.el;
       }
     } else {
       setupRenderEffect(
@@ -7921,7 +7941,11 @@ function baseCreateRenderer(options, createHydrationFns) {
       for (i = toBePatched - 1; i >= 0; i--) {
         const nextIndex = s2 + i;
         const nextChild = c2[nextIndex];
-        const anchor = nextIndex + 1 < l2 ? c2[nextIndex + 1].el : parentAnchor;
+        const anchorVNode = c2[nextIndex + 1];
+        const anchor = nextIndex + 1 < l2 ? (
+          // #13559, fallback to el placeholder for unresolved async component
+          anchorVNode.el || anchorVNode.placeholder
+        ) : parentAnchor;
         if (newIndexToOldIndexMap[i] === 0) {
           patch(
             null,
@@ -9814,6 +9838,7 @@ function cloneVNode(vnode, extraProps, mergeRef = false, cloneTransition = false
     suspense: vnode.suspense,
     ssContent: vnode.ssContent && cloneVNode(vnode.ssContent),
     ssFallback: vnode.ssFallback && cloneVNode(vnode.ssFallback),
+    placeholder: vnode.placeholder,
     el: vnode.el,
     anchor: vnode.anchor,
     ctx: vnode.ctx,
@@ -10605,7 +10630,7 @@ function isMemoSame(cached, memo) {
   return true;
 }
 
-const version = "3.5.17";
+const version = "3.5.18";
 const warn = warn$1 ;
 const ErrorTypeStrings = ErrorTypeStrings$1 ;
 const devtools = devtools$1 ;
@@ -11118,8 +11143,9 @@ function setVarsOnNode(el, vars) {
     const style = el.style;
     let cssText = "";
     for (const key in vars) {
-      style.setProperty(`--${key}`, vars[key]);
-      cssText += `--${key}: ${vars[key]};`;
+      const value = normalizeCssVarValue(vars[key]);
+      style.setProperty(`--${key}`, value);
+      cssText += `--${key}: ${value};`;
     }
     style[CSS_VAR_TEXT] = cssText;
   }
@@ -13834,7 +13860,7 @@ function isCoreComponent(tag) {
       return BASE_TRANSITION;
   }
 }
-const nonIdentifierRE = /^\d|[^\$\w\xA0-\uFFFF]/;
+const nonIdentifierRE = /^$|^\d|[^\$\w\xA0-\uFFFF]/;
 const isSimpleIdentifier = (name) => !nonIdentifierRE.test(name);
 const validFirstIdentCharRE = /[A-Za-z_$\xA0-\uFFFF]/;
 const validIdentCharRE = /[\.\?\w$\xA0-\uFFFF]/;
@@ -13945,6 +13971,9 @@ function hasDynamicKeyVBind(node) {
 }
 function isText$1(node) {
   return node.type === 5 || node.type === 2;
+}
+function isVPre(p) {
+  return p.type === 7 && p.name === "pre";
 }
 function isVSlot(p) {
   return p.type === 7 && p.name === "slot";
@@ -14204,7 +14233,7 @@ const tokenizer = new Tokenizer(stack, {
   ondirarg(start, end) {
     if (start === end) return;
     const arg = getSlice(start, end);
-    if (inVPre) {
+    if (inVPre && !isVPre(currentProp)) {
       currentProp.name += arg;
       setLocEnd(currentProp.nameLoc, end);
     } else {
@@ -14219,7 +14248,7 @@ const tokenizer = new Tokenizer(stack, {
   },
   ondirmodifier(start, end) {
     const mod = getSlice(start, end);
-    if (inVPre) {
+    if (inVPre && !isVPre(currentProp)) {
       currentProp.name += "." + mod;
       setLocEnd(currentProp.nameLoc, end);
     } else if (currentProp.name === "slot") {
@@ -14764,6 +14793,11 @@ function walk(node, parent, context, doNotHoistNode = false, inFor = false) {
     } else if (child.type === 12) {
       const constantType = doNotHoistNode ? 0 : getConstantType(child, context);
       if (constantType >= 2) {
+        if (child.codegenNode.type === 14 && child.codegenNode.arguments.length > 0) {
+          child.codegenNode.arguments.push(
+            -1 + (` /* ${PatchFlagNames[-1]} */` )
+          );
+        }
         toCache.push(child);
         continue;
       }
@@ -16199,7 +16233,7 @@ const transformBind = (dir, _node, context) => {
     arg.children.unshift(`(`);
     arg.children.push(`) || ""`);
   } else if (!arg.isStatic) {
-    arg.content = `${arg.content} || ""`;
+    arg.content = arg.content ? `${arg.content} || ""` : `""`;
   }
   if (modifiers.some((mod) => mod.content === "camel")) {
     if (arg.type === 4) {

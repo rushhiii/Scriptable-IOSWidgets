@@ -138,10 +138,8 @@ Use the following options when editing the widget:
     <td>Text</td>
     <td>
       <ul>
-        <li>For e.g., <code>age</code>, <code>2</code>, <code>john,age</code>, <code>col</code>    
-        </li>
+        <li>For e.g., <code>age</code>, <code>2</code>, <code>john,age</code>, <code>col</code></li>
         <li><a href="#note">Read below</a> for more instructions</li>
-      </ul>
       </ul>
     </td>
   </tr>
@@ -149,46 +147,19 @@ Use the following options when editing the widget:
 
 > _Here's a Screenshot of widget's config panal_
 
-<img height="auto" width="500px" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_config_panal.PNG" alt="countdown_config_panal.png">
+
+![countdown_config_panal.png](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_config_panal.PNG)
 
 
 
-
-**Widget Parameter Notes:**
-
-- `col` parameter works **only for Medium and Large** widgets.
-  - **Medium widget** shows top **4** events.
-  - **Large widget** shows top **10** events.
-- If no `col` is used, widget defaults to **list view**:
-  - **Medium:** top **3** events.
-  - **Large:** top **7** events.
-- In **small** widgets:
-
-  - Type any name from your Google Sheet (e.g., `mom`, `dad`) to show that person's event.
-    - If the emoji is 🎂, it will automatically append `'s Birthday`.
-    - If it's 🥂, it appends `'s Anniversary`.
-    - It only supports these two emojis, but you can always add more to your liking by updating the `titleSuffixes` array.
-  - You can also use numeric indexes (e.g., `1`, `2`) to select an upcoming event by position.
-  - Default is the **most upcoming event**.
-  - Using `age` shows the years passed since the event date — useful for birthdays or anniversaries. If today is the event date, countdown is hidden and only age is shown.
-
-**Pagination (`pg`)**:
-- Use `pg1`, `pg2`, `pg3`, etc., to display **multiple pages** of events.
-  - In **list view** (default):
-    - **Medium widget**: each page displays **3 events**.
-    - **Large widget**: each page displays **7 events**.
-  - In **grid view** (`col`):
-    - **Medium widget**: each page displays **4 events**.
-    - **Large widget**: each page displays **10 events**.
-  - Example:
-    - `pg2`: shows the second page of events.
-    - `col,pg3`: shows the third page of events in grid view.
-
-**Offline Fallback & Regular Sync:**
-- Events are automatically cached locally in the `.cache` folder.
-- Widget gracefully **falls back to cached data** when offline.
-- Data automatically updates daily at **2:00 AM**.
-
+<b>Widget Parameter Notes:</b>
+<ul><li><b>col</b> parameter works <b>only for Medium and Large</b> widgets.<ul><li><b>Medium widget</b> shows top <b>4</b> events.</li><li><b>Large widget</b> shows top <b>10</b> events.</li></ul></li><li>If no <b>col</b> is used, widget defaults to <b>list view</b>:<ul><li><b>Medium:</b> top <b>3</b> events.</li><li><b>Large:</b> top <b>7</b> events.</li></ul></li></ul>
+<b>In small widgets:</b>
+<ul><li>Type any name from your Google Sheet (e.g., <code>mom</code>, <code>dad</code>) to show that person's event.</li><li>If the emoji is 🎂, it will automatically append <code>'s Birthday</code>.</li><li>If it's 🥂, it appends <code>'s Anniversary</code>.</li><li>It only supports these two emojis, but you can always add more to your liking by updating the <code>titleSuffixes</code> array.</li><li>You can also use numeric indexes (e.g., <code>1</code>, <code>2</code>) to select an upcoming event by position.</li><li>Default is the <b>most upcoming event</b>.</li><li>Using <code>age</code> shows the years passed since the event date — useful for birthdays or anniversaries. If today is the event date, countdown is hidden and only age is shown.</li></ul>
+<b>Pagination (<code>pg</code>):</b>
+<ul><li>Use <code>pg1</code>, <code>pg2</code>, <code>pg3</code>, etc., to display <b>multiple pages</b> of events.<ul><li>In <b>list view</b> (default):<ul><li><b>Medium widget</b>: each page displays <b>3 events</b>.</li><li><b>Large widget</b>: each page displays <b>7 events</b>.</li></ul></li><li>In <b>grid view</b> (<code>col</code>):<ul><li><b>Medium widget</b>: each page displays <b>4 events</b>.</li><li><b>Large widget</b>: each page displays <b>10 events</b>.</li></ul></li><li>Example:<ul><li><code>pg2</code>: shows the second page of events.</li><li><code>col,pg3</code>: shows the third page of events in grid view.</li></ul></li></ul></li></ul>
+<b>Offline Fallback & Regular Sync:</b>
+<ul><li>Events are automatically cached locally in the <code>.cache</code> folder.</li><li>Widget gracefully <b>falls back to cached data</b> when offline.</li><li>Data automatically updates daily at <b>2:00 AM</b>.</li></ul>
 
 ## 📷 Screenshots
 

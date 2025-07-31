@@ -6,9 +6,9 @@
 ![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
 ![Last Updated](https://img.shields.io/badge/Updated-June%202025-yellow)
 
-<!-- ![Modular Time Progress](../.src/timeprogress/timeprogress_showcase.png) -->
+<!-- ![Modular Time Progress](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/timeprogress/timeprogress_showcase.png) -->
 
-![Modular Time Progress](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.src/timeprogress/timeprogress_showcase.png?raw=true)
+![Modular Time Progress](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/timeprogress/timeprogress_showcase.png)
 
 Visualize your day, week, month, year, and more — all in one modular and minimalist design Scriptable widget.
 
@@ -47,17 +47,17 @@ Visualize your day, week, month, year, and more — all in one modular and minim
 
 <!-- 
 
-| <img src="../.src/timeprogress/timeprogress_s_1.png" width="160"/> | <img src="../.src/timeprogress/timeprogress_s_2.png" width="160"/> |
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/timeprogress/timeprogress_s_1.png" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/timeprogress/timeprogress_s_2.png" width="160"/> |
 |:--:|:--:|
-| <img src="../.src/timeprogress/timeprogress_s_3.png" width="160"/> | <img src="../.src/timeprogress/timeprogress_s_4.png" width="160"/> |
-| <img src="../.src/timeprogress/timeprogress_s_5.png" width="160"/> | <img src="../.src/timeprogress/timeprogress_s_6.png" width="160"/> |
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/timeprogress/timeprogress_s_3.png" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/timeprogress/timeprogress_s_4.png" width="160"/> |
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/timeprogress/timeprogress_s_5.png" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/timeprogress/timeprogress_s_6.png" width="160"/> |
 
 
-| <img src="../.src/timeprogress/timeprogress_m_1.png" width="260"/> | <img src="../.src/timeprogress/timeprogress_m_2.png" width="260"/> |
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/timeprogress/timeprogress_m_1.png" width="260"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/timeprogress/timeprogress_m_2.png" width="260"/> |
 |:--:|:--:|
 
 
-| <img src="../.src/timeprogress/timeprogress_l.png" width="360"/> |
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/timeprogress/timeprogress_l.png" width="360"/> |
 |:--:| -->
 
 
@@ -66,42 +66,42 @@ Visualize your day, week, month, year, and more — all in one modular and minim
 
 Displays progress through the current day as a circular progress ring.
 
-<img src="../.src/timeprogress/timeprogress_s_7.png" width="160"/>
+<img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/timeprogress/timeprogress_s_7.png" width="160"/>
 
 ### Month Progress (`month`)
 
 Dot grid showing how far you are into the current month.
 
 <!-- ![Month Preview](images/timeProgress/month.png) -->
-<img src="../.src/timeprogress/timeprogress_s_2.png" width="160"/>
+<img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/timeprogress/timeprogress_s_2.png" width="160"/>
 
 ### Year Progress (`year`)
 
 Circular ring showing yearly progress with days passed.
 
 <!-- ![Year Preview](images/timeProgress/year.png) -->
-<img src="../.src/timeprogress/timeprogress_s_1.png" height="120"/> <img src="../.src/timeprogress/timeprogress_m_1.png" width="260"/><br>
-<img src="../.src/timeprogress/timeprogress_l.png" width="360"/>
+<img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/timeprogress/timeprogress_s_1.png" height="120"/> <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/timeprogress/timeprogress_m_1.png" width="260"/><br>
+<img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/timeprogress/timeprogress_l.png" width="360"/>
 
 ### Week Progress (`week`)
 
 Displays how far you are through the current week.
 
 <!-- ![Week Ring](images/timeProgress/week-ring.png) -->
-<img src="../.src/timeprogress/timeprogress_s_5.png" width="160"/>
+<img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/timeprogress/timeprogress_s_5.png" width="160"/>
 
 ### Week Number Dot View (`weeknum`)
 
 Circular ring showing yearly progress with weeks passed.
 
-<img src="../.src/timeprogress/timeprogress_s_4.png" width="160"/>
+<img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/timeprogress/timeprogress_s_4.png" width="160"/>
 
 ### Week Number Dot View (`weeknumdot`)
 
 Dot grid marking each week of the year.
 
 <!-- ![Week Dot](images/timeProgress/week-dots.png) -->
-<img src="../.src/timeprogress/timeprogress_s_3.png" width="160"/>
+<img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/timeprogress/timeprogress_s_3.png" width="160"/>
 
 ### Default Mode (`default`)
 
@@ -113,7 +113,7 @@ Stacked bars showing:
 * This Year
 
 <!-- ![Default Preview](images/timeProgress/default.png) -->
-<img src="../.src/timeprogress/timeprogress_m_2.png" height="150"/> <img src="../.src/timeprogress/timeprogress_s_6.png" height="150"/> 
+<img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/timeprogress/timeprogress_m_2.png" height="150"/> <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/timeprogress/timeprogress_s_6.png" height="150"/> 
 
 
 

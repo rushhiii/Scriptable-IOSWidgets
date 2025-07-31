@@ -78,7 +78,7 @@ const username = "your_github_username"; // Replace with your username
 ### 🎨 **Advanced Theming System**
 - **🌓 Auto theme** - Adapts to iOS dark/light mode
 - **📊 Standard themes** - `light`, `dark`, `blue`, `night`, `day`, `gray`, `green`, `gitgreen`, `indigo`
-- **� Heatmap themes** - `forestCalm`, `forestCanopy`, `cyberPurple`, `sunsetGold`, `nordBlueV1`, `nordBlueV2`, `sunsetDusk`, `earthyWarm`, `arcticIce`
+- **🗺️ Heatmap themes** - `forestCalm`, `forestCanopy`, `cyberPurple`, `sunsetGold`, `nordBlueV1`, `nordBlueV2`, `sunsetDusk`, `earthyWarm`, `arcticIce`
 
 
 ## 🎛️ Widget Configuration
@@ -157,7 +157,7 @@ Widget heatmap Themes:
 | `currstreak,auto` | Current streak with auto theme | Streak count adapting to iOS theme |
 | `repos,green` | Repository count with green theme | Total public repos in green |
 
-## � Widget Layout Guide
+## ❔ Widget Layout Guide
 
 ### **Small Widget (1x1)**
 

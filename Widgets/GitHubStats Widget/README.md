@@ -11,7 +11,7 @@
 
 
 
-<img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/githubstats_showcase.png">
+<img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/githubstats/githubstats_showcase.png">
 
 **A comprehensive GitHub statistics widget for iOS** that displays your GitHub activity, contributions, and repository metrics directly on your home screen. Built for the Scriptable app with advanced features including **offline caching**, **contribution heatmaps**, and **20+ stunning themes**.
 
@@ -317,28 +317,28 @@ console.log(Keychain.get("github_token_here"));
 ### **Small Widgets**
 Compact yet informative displays perfect for quick stats checking
 
-| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/githubstats_s_1.png" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/githubstats_s_2.png" width="160"/> |
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/githubstats/githubstats_s_1.png" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/githubstats/githubstats_s_2.png" width="160"/> |
 |:--:|:--:|
 | **Heatmap View** | **Profile Stats** |
-| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/githubstats_s_6.png" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/github_stats_s_3.PNG" width="160"/> |
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/githubstats/githubstats_s_6.png" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/githubstats/github_stats_s_3.PNG" width="160"/> |
 | **Repository Stats** | **Custom Theme** |
 
 ### **Medium Widgets**
 Comprehensive overviews with dual-column layouts
 
-| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/github_stats_m_3.PNG" width="260"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/github_stats_m_4.PNG" width="260"/> |
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/githubstats/github_stats_m_3.PNG" width="260"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/githubstats/github_stats_m_4.PNG" width="260"/> |
 |:--:|:--:|
 | **Heatmap Display** | **Dark Theme** |
-| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/github_stats_m_@.png" width="260"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/githubstats_m_4.png" width="260"/> |
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/githubstats/github_stats_m_@.png" width="260"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/githubstats/githubstats_m_4.png" width="260"/> |
 | **Complete Stats Dashboard** | **Custom Color Scheme** |
-| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/github_stats_m.png" width="260"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/github_stats_m_5.png" width="260"/> |
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/githubstats/github_stats_m.png" width="260"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/githubstats/github_stats_m_5.png" width="260"/> |
 | **Professional Theme** | **Minimalist Design** |
 
 ### **Large Widget**
 Ultimate dashboard experience with language breakdown
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/githubstats_l.png" width="360"/>
+<img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/githubstats/githubstats_l.png" width="360"/>
 
 **Complete Developer Dashboard**
 *Full statistics + programming language analysis*

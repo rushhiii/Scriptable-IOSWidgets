@@ -7,7 +7,7 @@
 ![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
 ![Last Updated](https://img.shields.io/badge/Updated-June%202025-yellow)
 
-![countdown widget](../.src/countdown/countdow_showcase.png)
+![countdown widget](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdow_showcase.png)
 
 A lightweight and customizable countdown widget built using the [Scriptable app](https://scriptable.app), powered by Google Sheets. It helps you track upcoming events like birthdays, anniversaries, or deadlines—right from your iOS home screen.
 
@@ -149,7 +149,7 @@ Use the following options when editing the widget:
 
 > _Here's a Screenshot of widget's config panal_
 
-<img height="auto" width="500px" src="../.src/countdown/countdown_config_panal.PNG" alt="countdown_config_panal.png">
+<img height="auto" width="500px" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_config_panal.PNG" alt="countdown_config_panal.png">
 
 <br/>
 <div id="note"></div>
@@ -203,11 +203,11 @@ Use the following options when editing the widget:
 
 <!--
 
-| ![](../src/countdown/countdown_s.png) | ![](../src/countdown/countdown_age_s.PNG) | ![](../src/countdown//countdown_bday_s.PNG) |
+| ![](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/src/countdown/countdown_s.png) | ![](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/src/countdown/countdown_age_s.PNG) | ![](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/src/countdown//countdown_bday_s.PNG) |
 |:--:|:--:|:--:|
 | Countdown | Age Display | On Birthday |
 
-| ![](../src/countdown/countdown_m.PNG) | ![](../src/countdown//countdown_col_m.PNG) | ![](../src/countdown//countdown_l.PNG) |
+| ![](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/src/countdown/countdown_m.PNG) | ![](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/src/countdown//countdown_col_m.PNG) | ![](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/src/countdown//countdown_l.PNG) |
 |:--:|:--:|:--:|
 | Medium Widget | Color View | Large View |
 
@@ -215,19 +215,19 @@ Use the following options when editing the widget:
 
 > _Small Widgets_ 
 
-| <img src="../.src/countdown/countdown_s.PNG" width="160"/> | <img src="../.src/countdown/countdown_age_s.PNG" width="160"/> |
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_s.PNG" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_age_s.PNG" width="160"/> |
 |:--:|:--:|
-| <img src="../.src/countdown/countdown_bday_s.PNG" width="160"/> | <img src="../.src/countdown/countdown_1_s.PNG" width="160"/> |
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_bday_s.PNG" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_1_s.PNG" width="160"/> |
 
 > _Medium Widgets_
 
-| <img src="../.src/countdown/countdown_m.PNG" width="260"/> | <img src="../.src/countdown/countdown_col_m.PNG" width="260"/> |
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_m.PNG" width="260"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_col_m.PNG" width="260"/> |
 |:--:|:--:|
 
 
 > _Large Widgets_
 
-| <img src="../.src/countdown/countdown_l.PNG" width="360"/> | <img src="../.src/countdown/countdown_col_l.png" width="360"/> |
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_l.PNG" width="360"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_col_l.png" width="360"/> |
 |:--:|:--:|
 
 

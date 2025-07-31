@@ -1,192 +1,136 @@
-# 🌤️ Weather Widget
+# ⛅ Weather Widget
 
 ![Scriptable](https://img.shields.io/badge/Scriptable-Compatible-purple)
 ![Widget Size](https://img.shields.io/badge/Supports-Small%2C%20Medium%2C%20Large-blue)
 ![API](https://img.shields.io/badge/API-OpenWeatherMap-orange)
+![Location](https://img.shields.io/badge/Location-GPS%20Auto--Detect-green)
+![Theme](https://img.shields.io/badge/Theme-Gradient%20Backgrounds-9cf)
+![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
+![Last Updated](https://img.shields.io/badge/Updated-June%202025-yellow)
 
-A clean and elegant iOS weather widget built with Scriptable, fetching real-time data from the OpenWeather API. The widget adapts layout and font size based on weather conditions and city names for improved readability.
+<!-- ![weather widget](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/weather/weather_showcase_s.png) -->
 
-![Weather Widget Preview](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/weather/weather_showcase_s.png)
+<img width="60%" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/weather/weather_showcase_s.png">
+
+
+A clean and elegant iOS weather widget built with [Scriptable](https://scriptable.app), fetching real-time data from the **OpenWeather API**. The widget adapts layout and font size based on weather conditions and city names for improved readability.
 
 ## ✨ Features
 
-- 📍 **Auto Location Detection**: Fetches your current coordinates using iOS GPS
-- 🌤️ **Real-Time Forecast**: Displays current temperature and condition
-- 🏙️ **City Recognition**: Dynamically detects and displays the city name
-- 📐 **Responsive Typography**: Adjusts font size based on widget size and content
-- 🎨 **Gradient Backgrounds**: Custom gradients for stylish appearance
-- 🔁 **Auto Refresh**: Refreshes every 30 minutes to stay updated
+* 📍 **Auto Location Detection**: Fetches your current coordinates using iOS GPS.
+* 🌤️ **Real-Time Forecast**: Displays current temperature and condition.
+* 🏙️ **City Recognition**: Dynamically detects and displays the city name.
+* 📐 **Responsive Typography**: Adjusts font size based on widget size, text length, and content.
+* 🎨 **Gradient Backgrounds**: Custom gradients for stylish appearance.
+* 🔁 **Auto Refresh**: Refreshes every 30 minutes to stay updated.
 
-## 🚀 Quick Setup
+## ⚙️ Setup Instructions
 
-### 1. Get Your Free OpenWeather API Key
+### Step 1: Get Your Free OpenWeather API Key
 
-1. Visit [OpenWeatherMap API](https://openweathermap.org/api)
-2. Create a free account or log in
-3. Go to [API Keys](https://home.openweathermap.org/api_keys) page
-4. Generate a new key and copy it
+1. Go to [https://openweathermap.org/api](https://openweathermap.org/api)
+2. Create a **free account** or log in.
+3. Visit the [API Keys](https://home.openweathermap.org/api_keys) page.
+4. Click **Generate** to create a new key.
+5. Copy the generated key.
 
-### 2. Configure the Widget
+### Step 2: Add Your API Key
 
-```javascript
-// Replace with your API key
+In the script file, replace this line:
+
+```js
+const API_KEY = "YOUR_FREE_API_KEY";
+```
+
+With:
+
+```js
 const API_KEY = "your_actual_key_here";
 ```
 
-### 3. Install in Scriptable
+### Step 3: Add the Script to Scriptable
 
-1. Copy the code from [`MinimalWeather.js`](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/Weather%20Widget/MinimalWeather.js)
-2. Open Scriptable app
-3. Tap the "+" to create a new script
-4. Paste the code and save as "Weather Widget"
-5. Run once to test
+1. Open the **Scriptable** app on your iPhone or iPad.
+2. Tap the **+** button to create a new script.
+3. Paste the entire code into the editor.
+4. Save the file with a name like `Weather Widget`.
 
-### 4. Add to Home Screen
+### Step 4: Add the Widget to Home Screen
 
-1. Long press on your home screen
-2. Tap the "+" in the top corner
-3. Search for "Scriptable"
-4. Choose your preferred widget size
-5. Select "Weather Widget" script
+1. Long-press the Home Screen to enter edit mode.
+2. Tap the **+** button at the top.
+3. Search for and select **Scriptable**.
+4. Choose a widget size (Small, Medium, or Large).
+5. Tap **Add Widget**.
+6. Long-press the widget and tap **Edit Widget**.
+7. Set the **Script** to your saved weather widget script.
+8. Leave parameters blank (it auto-detects location).
 
-## ⚙️ Configuration Options
+## 🌈 Customization Options
 
-### Widget Sizes
+You can tweak the following parts of the script to personalize the widget:
 
-| Size | Best For | Features |
-|------|----------|----------|
-| **Small** | Quick glance | Temperature, condition, city |
-| **Medium** | Balanced view | Full weather info with icons |
-| **Large** | Detailed display | Extended forecast (coming soon) |
+### Background Themes
 
-### Customization
+Update this line to switch between preset themes:
 
-You can customize several aspects of the widget:
-
-```javascript
-// Refresh interval (minutes)
-const REFRESH_INTERVAL = 30;
-
-// Temperature unit (metric/imperial)
-const UNITS = "metric"; // or "imperial"
-
-// Background gradient colors
-const gradientColors = [
-  new Color("#74b9ff"), // Light blue
-  new Color("#0984e3")  // Darker blue
-];
+```js
+createGradientBackground(widget, testGradientClr);
 ```
 
-## 🎨 Themes & Styling
+Other options include:
 
-The widget automatically adapts its appearance based on:
+* `blackBlueGradientClr`
+* `lightDarkBlueGradientClr`
 
-- **Time of day** (lighter during day, darker at night)
-- **Weather conditions** (different gradients for sunny, cloudy, rainy weather)
-- **Widget size** (typography scales appropriately)
+### Units
 
-## 📱 Widget Sizes Support
+Choose between Celsius and Fahrenheit:
 
-### Small Widget
-- Current temperature
-- Weather condition
-- City name
-- Weather icon
-
-### Medium Widget  
-- All small widget features
-- Feels like temperature
-- Humidity and wind speed
-- Larger, more readable text
-
-### Large Widget
-- All medium widget features
-- Extended forecast (future update)
-- More detailed weather information
-
-## 🔧 Advanced Configuration
-
-### Custom Location
-
-If you want to set a fixed location instead of auto-detection:
-
-```javascript
-// Set custom coordinates
-const CUSTOM_LAT = 40.7128;
-const CUSTOM_LON = -74.0060;
-const USE_CUSTOM_LOCATION = true;
+```js
+const WEATHER_UNITS = "metric"; // or "imperial"
 ```
 
-### Styling Options
+## 🧠 How It Works
 
-```javascript
-// Font configurations
-const FONT_NAME = "Avenir-Heavy";
-const TITLE_SIZE = 16;
-const TEMP_SIZE = 32;
-const SUBTITLE_SIZE = 12;
+* **Location** is retrieved using `Location.current()`.
+* The **weather API** uses your coordinates to return:
 
-// Color scheme
-const TEXT_COLOR = Color.white();
-const BACKGROUND_OPACITY = 0.8;
+  * `feels_like` temperature
+  * weather `description`
+  * `city` name
+* The widget parses this and smartly adjusts the text layout.
+
+  * E.g., long descriptions like "scattered intensity rain" will wrap.
+  * City names like "New York" will only display "New" to keep layout clean.
+
+## 🔄 Refresh Logic
+
+The widget is set to automatically refresh every 30 minutes:
+
+```js
+widget.refreshAfterDate = new Date(Date.now() + 30 * 60 * 1000);
 ```
 
-## 🚨 Troubleshooting
+## 📸 Screenshots
 
-### Common Issues
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/weather/weather_s_1.PNG" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/weather/weather_s_2.png" width="160"/> |
+|:--:|:--:|
 
-**Widget shows "Error" or doesn't load:**
-- Check your API key is correct and active
-- Ensure location permissions are enabled for Scriptable
-- Verify internet connection
+> NOTE: The the values may differ bassed on your current location, the above are just some examples
 
-**Location not detected:**
-- Enable Location Services for Scriptable in iOS Settings
-- Try running the script manually first
-- Check if location permissions prompt appeared
+## 🙌 Feedback & Credits
 
-**Weather data seems outdated:**
-- Widget refreshes automatically every 30 minutes
-- Manually refresh by running the script in Scriptable
-- Check OpenWeather API status
+Have questions or want to request a feature?
+DM me on [Instagram](https://www.instagram.com/the.tirth12) or email: [rushiofficial1205@gmail.com](mailto:rushiofficial1205@gmail.com)
 
-### API Limits
+This widget is a reflection of clean UI and practical design. If you'd like to expand it (e.g., 3-day forecasts, icon-based UI), feel free to fork it.
 
-The free OpenWeather plan includes:
-- 1,000 API calls per day
-- Updates every 30 minutes = ~48 calls per day
-- Well within the free limit!
 
-## 🔄 Updates & Changelog
+## 📜 License
 
-### Latest Version Features:
-- Improved error handling
-- Better location detection
-- Responsive font sizing
-- Multiple widget size support
-- Custom gradient backgrounds
+This project is licensed under the **MIT License**. Feel free to remix, reuse, and modify with attribution.
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/LICENSE) file for details.
-
-## 🤝 Contributing
-
-Found a bug or want to add a feature? 
-
-1. [Open an issue](https://github.com/rushhiii/Scriptable-IOSWidgets/issues)
-2. Fork the repository
-3. Create your feature branch
-4. Submit a pull request
-
-## 🌟 Show Your Support
-
-If you found this widget helpful, please:
-- ⭐ Star this repository
-- 🔄 Share with friends
-- 🐛 Report any issues
-- 💡 Suggest new features
-
----
-
-**Made with ❤️ by [rushhiii](https://github.com/rushhiii)**
+<p align="center">
+Stay informed, stay stylish – RP
+</p>

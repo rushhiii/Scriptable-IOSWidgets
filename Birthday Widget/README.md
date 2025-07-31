@@ -1,4 +1,4 @@
-# 🎉 Birthday Life Progress Widget
+# 🎂 Birthday Life Progress Widget
 ![Scriptable](https://img.shields.io/badge/Scriptable-Compatible-purple)
 ![Widget Size](https://img.shields.io/badge/Supports-Small-blue)
 ![Display](https://img.shields.io/badge/View-Life%20Progress%20%2B%20Age%20%2B%20Days%20Lived-orange)

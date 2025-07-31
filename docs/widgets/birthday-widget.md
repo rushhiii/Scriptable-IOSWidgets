@@ -1,302 +1,103 @@
-# 🎂 Birthday Widget
-
+# 🎂 Birthday Life Progress Widget
 ![Scriptable](https://img.shields.io/badge/Scriptable-Compatible-purple)
 ![Widget Size](https://img.shields.io/badge/Supports-Small-blue)
-![Type](https://img.shields.io/badge/Type-Age%20Calculator-green)
+![Display](https://img.shields.io/badge/View-Life%20Progress%20%2B%20Age%20%2B%20Days%20Lived-orange)
+![Parameter](https://img.shields.io/badge/Customizable-Name%20%2B%20Birthday%20via%20Param-green)
+![Theme](https://img.shields.io/badge/Theme-Dark%20Gradient-9cf)
+![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
+![Last Updated](https://img.shields.io/badge/Updated-June%202025-yellow)
 
-Calculate and display ages with precision down to days, months, and years. Perfect for tracking birthdays, anniversaries, or any significant date milestones.
+<img width="60%" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/birthday/birthday_showcase.png">
 
-![Birthday Widget Preview](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/birthday/birthday_showcase.png)
+A minimalist Scriptable widget that shows:
+- 🎂 Your age in years (accurate to 2 decimals)
+- 📅 Total days lived
+- 💫 Animated ring showing how far you are from your next birthday
+
+> A beautiful way to reflect on your life — at a glance.
 
 ## ✨ Features
 
-- 🎂 **Precise Age Calculation**: Years, months, and days
-- 📅 **Next Birthday Countdown**: Days until next birthday
-- 🎉 **Milestone Tracking**: Special age milestones
-- 📱 **Compact Display**: Perfect for small widget size
-- ⚙️ **Easy Configuration**: Simple date setup
-- 🔄 **Daily Updates**: Automatic age progression
+- 🧠 Calculates **exact age** from your birthdate (2 decimal precision)
+- 📆 Shows total **days lived** since birth
+- 🔄 **Next birthday countdown** (as a circular progress bar)
+- 📊 Progress ring updates dynamically each day
+- 🎨 Clean dark gradient background
+- 🔧 Customize with your **name and birthdate** via widget parameter
 
-## � Screenshots
+## 📥 Setup Instructions
 
-### Small Widget
-Perfect compact display for quick age reference.
+### 1. Add the Script to Scriptable
 
-| Small Widget - Age Display |
-|:--:|
-| ![Birthday Small](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/birthday/birthday_s.png) |
+1. Install the [Scriptable app](https://apps.apple.com/app/scriptable/id1405459188)
+2. Create a new script named `BirthdayWidget`
+3. Paste the full widget code into the editor
+4. Save the script
 
-### Age Calculation Views
-Different display modes for various age calculation needs.
+### 2. Add to Your Home Screen
 
-| Precise Age | Next Birthday | Milestone View |
-|:--:|:--:|:--:|
-| ![Age Precise](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/birthday/birthday_precise.png) | ![Next Birthday](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/birthday/birthday_countdown.png) | ![Milestone](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/birthday/birthday_milestone.png) |
+1. Long-press your Home Screen → tap **+**
+2. Search for **Scriptable**
+3. Choose **Small Widget**
+4. Tap **Add Widget**
+5. Long-press the widget → tap **Edit Widget**
+6. Set the **Script** to `BirthdayWidget`
+7. Set the **Parameter** as:
 
-### Color Themes
-Customize your birthday widget with different color schemes.
-
-| Default Theme | Birthday Theme | Celebration Theme |
-|:--:|:--:|:--:|
-| ![Birthday Default](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/birthday/birthday_default.png) | ![Birthday Party](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/birthday/birthday_party.png) | ![Birthday Celebration](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/birthday/birthday_celebration.png) |
-
-## �🚀 Quick Setup
-
-### 1. Configure Your Birth Date
-
-```javascript
-// Set your birth date (YYYY-MM-DD format)
-const BIRTH_DATE = "1990-05-15";
-
-// Optional: Customize display name
-const DISPLAY_NAME = "My Age";
+```
+<name>, <birthdate>
+```
+> Example:
+```
+rushi, May 11 2005
 ```
 
-### 2. Install the Widget
+## 🧩 Widget Parameter Format
 
-1. Download [`HowOldmi.js`](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/Birthday%20Widget/HowOldmi.js)
-2. Create new script in Scriptable
-3. Paste code and set your birth date
-4. Add small widget to home screen
+| Parameter Example           | Behavior                                      |
+|----------------------------|-----------------------------------------------|
+| `rushi, May 11 2005`       | Sets name to `Rushi`, birthdate to `May 11 2005` |
+| `janvi, apr 24 2011`       | Sets name to `Janvi`, birthday ring updates accordingly |
 
-## 📱 Widget Display
+> The widget capitalizes the first letter of the name and displays `Name's Life`.
 
-### Information Shown
-- **Current Age**: Exact years, months, days
-- **Next Birthday**: Countdown in days
-- **Special Milestones**: Noteworthy age markers
-- **Birthday Status**: "Today is your birthday!" on special day
+## 📐 Layout Breakdown
 
-### Display Format
-```
-🎂 John's Age
-25 years, 3 months, 12 days
+| Element            | Description                                  |
+|--------------------|----------------------------------------------|
+| 🟡 Progress Ring    | Visual progress toward next birthday         |
+| 📛 Name Text       | `Name’s Life`                                |
+| 📅 Date Info       | Shows birthday (e.g., `May 11 2005`) and days lived |
+| 🔢 Age Block       | Shows age in years with line-wrapped "years old" |
 
-Next Birthday: 264 days
-```
+## 🎨 Theme
 
-## ⚙️ Customization Options
+- Uses a **dark gradient** background (`#202020 → #000000`)
+- Progress ring color: `#FFD723` (golden yellow)
+- Text colors:
+  - Name: `#ccff00`
+  - Age: `#b8bdfb`
+  - Subtext: `gray`
 
-### Multiple People
+Feel free to modify these in the script for a more personal palette.
 
-Create separate widgets for family members:
+## 📸 Screenshots
 
-```javascript
-// Widget 1: Your age
-const BIRTH_DATE_SELF = "1990-05-15";
-const NAME_SELF = "My Age";
+<img width="160px" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/birthday/birthday_s.png">
 
-// Widget 2: Partner's age  
-const BIRTH_DATE_PARTNER = "1988-09-22";
-const NAME_PARTNER = "Sarah's Age";
-```
+## 🙌 Feedback
 
-### Display Preferences
+Got feature ideas or want a version with weekly/monthly views?  
+DM me on [Instagram](https://www.instagram.com/the.tirth12) or email me at <rushiofficial1205@gmail.com>.
 
-```javascript
-// Customization options
-const CONFIG = {
-  showMonthsAndDays: true,
-  showNextBirthday: true,
-  showMilestones: true,
-  birthdayEmoji: "🎂",
-  celebrationEmoji: "🎉"
-};
-```
+Widgets aren’t just tools — they’re reflections of your life. Let’s build something personal.
 
-### Special Milestones
+## 📜 License
 
-The widget highlights special ages:
+This widget is open-source under the **MIT License**.  
+Feel free to fork, remix, and personalize — just give credit.
 
-- **Sweet 16** (16 years)
-- **Coming of Age** (18, 21 years)
-- **Milestone Decades** (30, 40, 50, etc.)
-- **Century Celebrations** (100+ years)
-
-## 🎉 Birthday Features
-
-### On Your Birthday
-- Special birthday message
-- Celebration emojis
-- Age milestone recognition
-- "Happy Birthday!" display
-
-### Birthday Countdown
-- Shows exact days until next birthday
-- Updates daily automatically
-- Special formatting as birthday approaches
-
-### Anniversary Support
-Use the same widget for:
-- Wedding anniversaries
-- Relationship milestones
-- Work anniversaries
-- Any significant date
-
-## 📊 Age Calculation Details
-
-### Precision Levels
-
-**Exact Age Calculation**:
-- Accounts for leap years
-- Handles month-end dates correctly
-- Considers varying month lengths
-- Accurate to the day
-
-**Smart Display**:
-- Rounds to appropriate precision
-- Shows relevant time units
-- Adapts based on age magnitude
-
-### Technical Implementation
-
-```javascript
-// Age calculation example
-function calculateAge(birthDate) {
-  const today = new Date();
-  const birth = new Date(birthDate);
-  
-  let years = today.getFullYear() - birth.getFullYear();
-  let months = today.getMonth() - birth.getMonth();
-  let days = today.getDate() - birth.getDate();
-  
-  // Adjust for negative values
-  if (days < 0) {
-    months--;
-    days += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
-  }
-  
-  if (months < 0) {
-    years--;
-    months += 12;
-  }
-  
-  return { years, months, days };
-}
-```
-
-## 🔧 Advanced Features
-
-### Multiple Date Tracking
-
-Track multiple important dates:
-
-```javascript
-const IMPORTANT_DATES = [
-  { name: "My Age", date: "1990-05-15", type: "birthday" },
-  { name: "Anniversary", date: "2015-06-20", type: "anniversary" },
-  { name: "Career Start", date: "2012-08-01", type: "milestone" }
-];
-```
-
-### Notification Integration
-
-Combine with iOS Shortcuts for:
-- Birthday reminder notifications
-- Milestone celebration alerts
-- Anniversary notifications
-- Family birthday tracking
-
-## 🎨 Styling Options
-
-### Color Themes
-
-```javascript
-// Color customization
-const THEMES = {
-  birthday: {
-    background: "#ff6b9d",
-    text: "#ffffff",
-    accent: "#ffd93d"
-  },
-  anniversary: {
-    background: "#ff9ff3",
-    text: "#ffffff", 
-    accent: "#f368e0"
-  },
-  default: {
-    background: "#667eea",
-    text: "#ffffff",
-    accent: "#764ba2"
-  }
-};
-```
-
-### Custom Emojis
-
-Personalize with relevant emojis:
-- 🎂 Traditional birthday
-- 💕 Romantic anniversaries
-- 🎉 Celebrations
-- 📅 General milestones
-- 👶 Baby age tracking
-
-## 📱 Use Cases
-
-### Personal Tracking
-- Your own age with precise calculation
-- Track how long you've been at current job
-- Monitor relationship milestones
-- Celebrate life achievements
-
-### Family Management
-- Children's ages for school enrollment
-- Track multiple family birthdays
-- Anniversary reminders
-- Grandparent age celebrations
-
-### Professional Use
-- Company anniversary tracking
-- Project timeline milestones
-- Career progression markers
-- Professional development goals
-
-## 🔧 Troubleshooting
-
-### Common Issues
-
-**Wrong age calculation:**
-- Verify birth date format (YYYY-MM-DD)
-- Check for typos in date entry
-- Ensure valid date (not future date)
-
-**Widget not updating:**
-- iOS automatically refreshes small widgets
-- Manually refresh by running script
-- Check if device date/time is correct
-
-**Display formatting issues:**
-- Verify widget size is set to "Small"
-- Check text length fits widget constraints
-- Adjust display options if needed
-
-## 🎯 Tips & Best Practices
-
-### Setup Tips
-- Use YYYY-MM-DD format for reliability
-- Test with today's date to verify calculation
-- Consider time zones for international users
-- Keep names short for better display
-
-### Usage Ideas
-- Create widgets for each family member
-- Track pet ages (convert to human years)
-- Monitor business/project milestones
-- Celebrate sobriety anniversaries
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/LICENSE) file for details.
-
-## 🤝 Contributing
-
-Help make age tracking even better:
-
-1. [Report calculation bugs](https://github.com/rushhiii/Scriptable-IOSWidgets/issues)
-2. [Suggest new features](https://github.com/rushhiii/Scriptable-IOSWidgets/discussions)
-3. Share creative use cases
-4. Contribute localization support
-
----
-
-**Made with ❤️ by [rushhiii](https://github.com/rushhiii)** | **Celebrate every moment! 🎉**
+##
+<p align="center">
+Enjoy tracking your journey ~ RP
+</p>

@@ -1,278 +1,180 @@
-# 📚 Schedule Widget
-
+# 📅 Class Schedule Viewer Widget
 ![Scriptable](https://img.shields.io/badge/Scriptable-Compatible-purple)
 ![Widget Size](https://img.shields.io/badge/Supports-Small%2C%20Medium%2C%20Large-blue)
 ![Data Source](https://img.shields.io/badge/Data-Google%20Sheets-brightgreen)
 ![Schedule Type](https://img.shields.io/badge/Schedule-Dynamic%20Class%20View-lightgrey)
+![Theme](https://img.shields.io/badge/Theme-Gradient%20by%20Weekday-9cf)
+![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
+![Last Updated](https://img.shields.io/badge/Updated-June%202025-yellow)
 
-Keep track of your university or work schedule with this comprehensive timetable widget. Perfect for students and professionals who need to stay organized throughout their day.
+<!-- ![schedule-widget](https://user-images.githubusercontent.com/your-image-here.png) -->
 
-![Schedule Widget Preview](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_showcase_1.png)
+![Schedule Widget](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_showcase.png)
+
+A powerful iOS widget built with **Scriptable** that displays your university or high school class schedule directly from a public Google Sheet.  
+
+It dynamically adapts to the day of the week, highlights the current or upcoming class, and supports a weekly overview.
+
+> Designed to bring clarity to your day—at a glance.
 
 ## ✨ Features
 
-- 🗓️ **Automatic Daily View**: Shows today's classes automatically
-- ⏱️ **Current Class Highlighting**: Displays countdown to current or next class
-- 📅 **Weekly Overview**: Full weekly schedule with "full view" mode
-- 🌈 **Dynamic Themes**: Gradient backgrounds that change by weekday
-- 🔍 **Time Simulation**: Preview future days and times for testing
-- 🔄 **Auto-Refresh**: Updates every 15 minutes to stay current
-- 📱 **All Widget Sizes**: Optimized layouts for small, medium, and large widgets
+- 🗓️ Automatically shows today’s classes
+- ⏱️ Displays countdown to current or next class
+- 📅 Full weekly overview with `full view` mode
+- 🌈 Gradient backgrounds based on weekday
+- 🔍 Simulated time/day view for preview/testing
+- 🔄 Auto-refresh every 15 minutes
 
-## 🚀 Quick Setup
 
-### 1. Prepare Your Google Sheet
+## 📂 Google Sheet Format
 
-Create a Google Sheet with these **required columns**:
+The Sheet should be **published to the web** as a CSV file.
+
+### Required Columns
+
+Your CSV **must contain** the following headers:
 
 | Day | Start | End | Title | Type | Section | Building | Location |
 |-----|-------|-----|-------|------|---------|----------|----------|
-| 1 | 10:00 | 11:30 | CPS109 | Lecture | 011 | VIC | 105 |
-| 1 | 13:00 | 14:30 | MTH110 | Tutorial | 02 | SID | 350 |
-| 2 | 09:00 | 10:30 | ENG101 | Seminar | A1 | RYE | 201 |
 
-**Day Numbers:**
+Example row:
+
+| Day | Start | End | Title | Type | Section | Building | Location |
+|-----|-------|-----|-------|------|---------|----------|----------|
+| 1   | 10:00 | 11:30 | CPS109 | Lecture | 011 | VIC | 105 |
+
+Where `Day` is:
 - 0 = Sunday
-- 1 = Monday  
-- 2 = Tuesday
-- 3 = Wednesday
-- 4 = Thursday
-- 5 = Friday
+- 1 = Monday
+- ...
 - 6 = Saturday
 
-### 2. Publish Your Sheet
 
-1. **File** → **Share** → **Publish to web**
-2. Choose **Comma-separated values (.csv)**
-3. Select the correct sheet/tab
-4. Copy the generated URL
+## 🔗 How to Get Your Google Sheets CSV URL
 
-### 3. Configure the Widget
+1. Open your Google Sheet
+2. Click on `File` > `Share` > `Publish to web`
+3. Choose `Comma-separated values (.csv)` and the correct sheet/tab
+4. Copy the generated link
 
-```javascript
-// Replace with your Google Sheets CSV URL
+It will look like this:
+
+```
+https://docs.google.com/spreadsheets/d/e/.../pub?output=csv
+```
+
+Paste it into your script by replacing the value of `SHEET_URL`.
+
+```js
 const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/your-url-here/pub?output=csv";
 ```
 
-### 4. Install and Run
+## 📏 Widget Sizes and Modes
 
-1. Download [`MyUniSchedule.js`](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/Schedule%20Widget/MyUniSchedule.js)
-2. Create new script in Scriptable
-3. Replace the `SHEET_URL` with your published CSV link
-4. Add widget to home screen with optional parameters
+### Default Mode
+
+Shows classes for **today** based on current system time.
+
+### Full View Mode
+
+Shows the **entire week’s schedule** in grid format.  
+Set the parameter:
+
+```
+full view
+```
+
+### Simulate Specific Day or Time
+
+To test future days or class times:
+
+```
+test mon 10:30
+```
+
+### View Other Days
+
+To view the schedule for a specific day:
+
+```
+get tue
+```
+
 
 ## ⚙️ Widget Parameters
 
-Customize your widget behavior with these parameters:
+Use any of the following:
 
-| Parameter | Purpose | Example |
-|-----------|---------|---------|
-| `full view` | Show entire weekly schedule | Grid layout |
-| `test tue 11:00` | Simulate specific day/time | For testing |
-| `get wed` | Show Wednesday's classes | Specific day view |
-| *(empty)* | Show today's schedule | Default behavior |
+| Parameter        | Purpose                              |
+|------------------|--------------------------------------|
+| `full view`      | Show weekly grid                     |
+| `test tue 11:00` | Simulate time + weekday              |
+| `get wed`        | Show Wednesday's classes             |
+| *(empty)*        | Show today’s schedule (default)      |
 
-### Parameter Examples
 
-```
-full view           → Weekly overview
-test mon 10:30     → Simulate Monday 10:30 AM
-get tue            → Show Tuesday's schedule
-```
+## 🎨 Gradient Themes
 
-## 📸 Screenshots
+Each day of the week has its own background theme, defined in the code as:
 
-### Small Widgets
-
-| Current Day | Next Class |
-|:--:|:--:|
-| ![Schedule Small 1](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_s.png) | ![Schedule Small 2](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_s_1.png) |
-
-### Medium Widget
-
-| Daily Overview |
-|:--:|
-| ![Schedule Medium](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_m.png) |
-
-### Large Widgets
-
-| Full Day Schedule | Weekly View |
-|:--:|:--:|
-| ![Schedule Large 1](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_l.png) | ![Schedule Large 2](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_l_1.png) |
-
-## 🎨 Dynamic Themes
-
-Each weekday has its own gradient theme for visual variety:
-
-```javascript
+```js
 const gradientThemes = {
-  monday: ["#0f2027", "#203a43"],    // Dark blue-grey
-  tuesday: ["#2c3e50", "#4ca1af"],   // Blue-teal
-  wednesday: ["#134e5e", "#71b280"], // Green-blue
-  thursday: ["#ec6f66", "#f3a183"],  // Orange-coral
-  friday: ["#614385", "#516395"],    // Purple-blue
-  saturday: ["#868f96", "#596164"],  // Grey
-  sunday: ["#bc4e9c", "#f80759"]     // Pink-red
+  monday: ["#0f2027", "#203a43"],
+  tuesday: ["#2c3e50", "#4ca1af"],
+  ...
 };
 ```
 
-## 📱 Widget Size Layouts
+Feel free to modify these for your aesthetic preference.
 
-### Small Widget
-- **Current/Next Class**: Shows the most relevant class
-- **Time Information**: Start/end times and countdown
-- **Location**: Building and room number
-- **Compact Design**: Essential information only
 
-### Medium Widget
-- **Daily Schedule**: All classes for the current day
-- **Class Details**: Full information for each class
-- **Progress Indicators**: Visual time progress
-- **Multiple Classes**: Scrollable if many classes
+## 📸 Screenshot
 
-### Large Widget
-- **Full Day View**: Complete daily schedule with details
-- **Weekly Mode**: 7-day overview with "full view" parameter
-- **Rich Information**: All class details including sections
-- **Visual Hierarchy**: Clear separation between classes
+> _Small Widget_
 
-## 🔧 Advanced Configuration
+<!-- | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_s.png" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_s_1.png" width="160"/> |
+|:--:|:--:| -->
+<img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_s.png" width="160"/> <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_s_1.png" width="160"/>
 
-### Google Sheets Tips
+> _Medium Widget_
+<!-- 
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_m.png" width="260"/> |
+|:--:| -->
 
-**Sheet Structure Best Practices:**
-- Use 24-hour time format (e.g., "14:30" not "2:30 PM")
-- Keep class names short for better display
-- Use consistent building/location naming
-- Sort by day and time for easier management
+<img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_m.png" width="360"/>
 
-**Column Details:**
-- **Day**: 0-6 (Sunday to Saturday)
-- **Start/End**: HH:MM format
-- **Title**: Course code or class name
-- **Type**: Lecture, Tutorial, Lab, etc.
-- **Section**: Class section identifier
-- **Building**: Building code or name
-- **Location**: Room number
+> _large Widget_
 
-### Custom Themes
+<!-- | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_l.png" width="360"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_l_1.png" width="360"/> |
+|:--:|:--:| -->
 
-Modify gradient themes to match your school colors:
+<img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_l.png" width="360"/> <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_l_1.png" width="360"/>
 
-```javascript
-// Example: Custom university theme
-const customTheme = {
-  monday: ["#003366", "#0066cc"],    // University blue
-  tuesday: ["#cc0000", "#ff3333"],   // University red
-  // ... customize all days
-};
-```
 
-### Time Format Customization
 
-```javascript
-// 12-hour format
-const time12 = "10:30 AM";
 
-// 24-hour format (recommended)
-const time24 = "10:30";
-```
+## 🧪 Development Tips
 
-## 🔄 Auto-Refresh Features
+- During testing, use `widget.presentLarge()` to preview widget output in-app.
+- Use `console.log()` to debug any parsing issues.
+- Always ensure your Google Sheet is **public and published** as CSV.
 
-### Smart Updates
-- **15-minute intervals**: Keeps schedule current
-- **Class progress**: Updates countdown timers
-- **Day transitions**: Automatically switches to new day
-- **Weekend handling**: Shows next weekday if no weekend classes
 
-### Development Mode
-```javascript
-// Test different times and days
-if (!config.runsInWidget) {
-  await widget.presentLarge();
-}
-```
+## 🙌 Feedback
 
-## 🚨 Troubleshooting
+Have questions or want help customizing it? DM me on [Instagram](https://www.instagram.com/the.tirth12) or email me at <rushiofficial1205@gmail.com>.
 
-### Common Issues
+Widgets shouldn’t be limited to timers—I’d love to build tools that help you passively learn, reflect, or stay organized. If you have a unique concept in mind, I’d love to collaborate.
 
-**"No classes found":**
-- Verify Google Sheet is published as CSV
-- Check day numbers (0-6 format)
-- Ensure time format is HH:MM
+## 📜 License
 
-**Widget not updating:**
-- Check internet connection
-- Verify CSV URL is accessible
-- Try running script manually in Scriptable
+This project is licensed under the **MIT License**.
 
-**Incorrect times:**
-- Use 24-hour format in Google Sheet
-- Check device timezone settings
-- Verify start/end time formats
+Feel free to fork, build upon, and remix with attribution.
 
-### Sheet Publishing Issues
+##
 
-**CSV not accessible:**
-1. Make sheet "Anyone with link can view"
-2. Publish to web as CSV format
-3. Use the direct CSV URL in script
-4. Test URL in browser first
-
-## 💡 Usage Tips
-
-### Best Practices
-- **Regular Updates**: Keep your sheet current with semester changes
-- **Consistent Naming**: Use standard building/room codes
-- **Time Management**: Include buffer time between classes
-- **Color Coding**: Use consistent type names (Lecture, Lab, Tutorial)
-
-### Student Tips
-- **Exam Schedules**: Create separate sheet for exam periods
-- **Office Hours**: Include professor office hours
-- **Study Blocks**: Add study time as "blocks"
-- **Deadlines**: Include assignment due dates
-
-### Professional Use
-- **Meetings**: Replace classes with meetings
-- **Projects**: Track project deadlines
-- **Appointments**: Schedule client meetings
-- **Tasks**: Block time for important tasks
-
-## 🎯 Widget Variations
-
-### Different Display Modes
-
-**Daily Focus**: Default mode for current day
-**Weekly Planning**: `full view` for week overview
-**Future Planning**: `get mon` for specific days
-**Testing**: `test tue 14:00` for development
-
-### Academic Calendar Integration
-
-```javascript
-// Add special events
-const events = [
-  { day: 1, start: "09:00", end: "10:30", title: "Midterm Exam", type: "Exam" },
-  { day: 5, start: "17:00", end: "18:00", title: "Office Hours", type: "Help" }
-];
-```
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/LICENSE) file for details.
-
-## 🤝 Contributing
-
-Help improve the Schedule Widget:
-
-1. [Share schedule templates](https://github.com/rushhiii/Scriptable-IOSWidgets/discussions)
-2. [Report bugs](https://github.com/rushhiii/Scriptable-IOSWidgets/issues)
-3. [Suggest features](https://github.com/rushhiii/Scriptable-IOSWidgets/discussions)
-4. Submit improvements and customizations
-
----
-
-**Made with ❤️ by [rushhiii](https://github.com/rushhiii)** | **Stay organized, stay ahead! 📚**
+<p align="center">
+Enjoy using this widget ~ RP
+</p>

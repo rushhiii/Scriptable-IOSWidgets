@@ -1,259 +1,120 @@
-# 🌬️ AQI Widget
+# 🌬️ AQI Widget + Temp Widget
 
 ![Scriptable](https://img.shields.io/badge/Scriptable-Compatible-purple)
-![Widget Size](https://img.shields.io/badge/Supports-Small%2C%20Medium-blue)
-![API](https://img.shields.io/badge/API-OpenWeather%20AQI-orange)
+![Widget Size](https://img.shields.io/badge/Supports-Small%2C%20Medium%2C%20Large-blue)
+![Data Source](https://img.shields.io/badge/Data-OpenWeatherMap-brightgreen)
+![Customization](https://img.shields.io/badge/Configurable-Temperature%20%2B%20AQI%20%2B%20City%20%2B%20Icon-orange)
+![Offline Support](https://img.shields.io/badge/Fallback-Offline%20Cache%20%2B%20Auto%20Sync-lightgrey)
+![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
+![Last Updated](https://img.shields.io/badge/Updated-June%202025-yellow)
 
-Monitor air quality in your area with real-time Air Quality Index (AQI) data. Stay informed about pollution levels and make better decisions about outdoor activities.
+![air widget](../.src/air_widget_showcase.png)
 
-![AQI Widget Preview](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/weather/weather_showcase.png)
+A dynamic and customizable air quality and temperature widget built using the [Scriptable app](https://scriptable.app), powered by OpenWeatherMap. This widget displays the air quality index (AQI) and temperature for your location directly on your iOS home screen.
+
+> **Mention:** Air quality and temperature widget
+> If the links don't work, check the [backup](./backup) folder.
 
 ## ✨ Features
 
-- 🌬️ **Real-time AQI Data**: Current air quality measurements
-- 📍 **Location-based**: Automatic location detection or custom coordinates
-- 🎨 **Color-coded Display**: Visual indicators for air quality levels
-- 📊 **Detailed Breakdown**: PM2.5, PM10, O3, NO2, SO2, CO levels
-- ⚠️ **Health Recommendations**: Suggestions based on current AQI
-- 🔄 **Auto Refresh**: Regular updates throughout the day
+* 🌡️ **Temperature Display**: Displays current temperature, high, low, and hourly changes.
+* 🌍 **Air Quality Index (AQI)**: Real-time AQI for your location, with color-coded severity.
+* 🌬️ **Pollution Data**: PM2.5, PM10, and other pollutants.
+* 🎨 **Customizable Layout**: Select small, medium, or large widget sizes.
+* 📶 **Offline Fallback**: Automatically switches to cached data when offline.
 
-## � Screenshots
+## 🚀 How It Works
 
-### Medium Widget
-Comprehensive air quality overview with detailed pollutant breakdown.
+The widget fetches data from the OpenWeatherMap API to display:
 
-| Medium Widget - Full AQI Dashboard |
-|:--:|
-| ![AQI Medium](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/aqi/aqi_m.png) |
+* **Current Temperature** and weather details.
+* **Air Quality Index** based on the OpenWeatherMap AQI scale.
+* **Pollution Levels** for PM2.5, PM10, etc.
+* Customizable icon and color scheme based on AQI severity.
 
-### Small Widget
-Essential AQI information in a compact, glanceable format.
+## 🔧 Setup
 
-| Small Widget - AQI Overview |
-|:--:|
-| ![AQI Small](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/aqi/aqi_s.png) |
+### 1. Get OpenWeatherMap API Key
 
-### AQI Level Indicators
-Color-coded displays for different air quality levels.
+1. Go to [OpenWeatherMap](https://openweathermap.org/).
+2. Create an account and generate an API key.
 
-| Good (Green) | Moderate (Yellow) | Unhealthy (Red) |
-|:--:|:--:|:--:|
-| ![AQI Good](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/aqi/aqi_good.png) | ![AQI Moderate](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/aqi/aqi_moderate.png) | ![AQI Unhealthy](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/aqi/aqi_unhealthy.png) |
+### 2. Update the Script
 
-### Pollutant Details
-Detailed breakdown view showing individual pollutant levels.
+In the `air_widget.js` script, update the `API_KEY` variable with your OpenWeatherMap API key.
 
-| PM2.5 Focus | Multi-Pollutant | Health Advisory |
-|:--:|:--:|:--:|
-| ![AQI PM25](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/aqi/aqi_pm25.png) | ![AQI Multi](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/aqi/aqi_detailed.png) | ![AQI Health](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/aqi/aqi_health.png) |
-
-## �🚀 Quick Setup
-
-### 1. Get OpenWeather API Key
-
-1. Visit [OpenWeatherMap](https://openweathermap.org/api)
-2. Sign up for a free account
-3. Navigate to API Keys section
-4. Generate and copy your API key
-
-### 2. Configure the Widget
-
-```javascript
-// API Configuration
-const API_KEY = "your_openweather_api_key";
-
-// Location Settings (optional - uses GPS if not set)
-const CUSTOM_LAT = null; // e.g., 40.7128
-const CUSTOM_LON = null; // e.g., -74.0060
+```js
+const API_KEY = "YOUR_API_HERE"; // OpenWeatherMap API key
 ```
 
-### 3. Install and Run
+### 3. Add the Script to Scriptable
 
-1. Download [`OpenWeatherAQI.js`](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/AQI%20Widget/OpenWeatherAQI.js)
-2. Create new script in Scriptable
-3. Paste code and configure settings
-4. Add to home screen
+1. **Option A – Upload Method**:
 
-## 📊 AQI Scale & Colors
+   * Download the [`air_widget.js`](./air_widget.js) script.
+   * Move it to the `Scriptable` folder in your **iCloud Drive**.
 
-| AQI Range | Level | Color | Health Impact |
-|-----------|-------|-------|---------------|
-| 0-50 | Good | 🟢 Green | Minimal impact |
-| 51-100 | Moderate | 🟡 Yellow | Sensitive groups may experience minor issues |
-| 101-150 | Unhealthy for Sensitive Groups | 🟠 Orange | Sensitive individuals should limit outdoor activity |
-| 151-200 | Unhealthy | 🔴 Red | Everyone may experience health effects |
-| 201-300 | Very Unhealthy | 🟣 Purple | Health alert - everyone should avoid outdoor activity |
-| 301+ | Hazardous | 🟤 Maroon | Emergency conditions - all outdoor activity discouraged |
+2. **Option B – Manual Method**:
 
-## 📱 Widget Display
+   * Open Scriptable, tap the **+** icon, and paste the script content.
+   * Name the script (e.g., `Smart Air Widget`).
 
-### Small Widget
-- Current AQI value
-- Air quality level (Good, Moderate, etc.)
-- Color-coded background
-- Location name
+### 4. Add Widget to Home Screen
 
-### Medium Widget
-- All small widget features
-- Detailed pollutant breakdown
-- Health recommendations
-- Last update timestamp
+1. Long-press your iOS Home Screen to enter "jiggle mode."
+2. Tap the **+** icon, scroll to add a **Scriptable** widget.
+3. Choose the desired widget size (Small/Medium/Large).
+4. Edit the widget settings:
 
-## ⚙️ Customization Options
+   * Select the script (`Smart Air Widget`).
+   * Configure widget parameters (temperature, AQI, etc.).
 
-### Display Preferences
+## ⚙️ Configure Parameters
 
-```javascript
-// Widget configuration
-const CONFIG = {
-  showDetailedPollutants: true,
-  showHealthAdvice: true,
-  showLastUpdate: true,
-  use24HourFormat: true,
-  temperatureUnit: "celsius" // or "fahrenheit"
-};
-```
+You can modify the following parameters:
 
-### Health Recommendations
+| Option              | Defaults         | Change to                          |
+| ------------------- | ---------------- | ---------------------------------- |
+| Script              | Smart Air Widget | Your script name                   |
+| Parameters          | Text             | For example, `temp`, `aqi`, `city` |
+| Temperature Display | `temp`           | `true` or `false`                  |
+| AQI Display         | `aqi`            | `true` or `false`                  |
+| City                | Automatically    | Set a specific city                |
 
-The widget provides contextual advice based on AQI levels:
+> Note: The widget will show the temperature and AQI data for your current location by default. You can configure the widget to display specific cities or data.
 
-- **Good (0-50)**: "Great day for outdoor activities! 🌟"
-- **Moderate (51-100)**: "Air quality is acceptable for most people 👍"
-- **Unhealthy for Sensitive Groups (101-150)**: "Sensitive individuals should limit outdoor exposure ⚠️"
-- **Unhealthy (151-200)**: "Consider reducing outdoor activities 🚫"
-- **Very Unhealthy (201-300)**: "Avoid outdoor activities! Stay indoors 🏠"
-- **Hazardous (301+)**: "Emergency conditions! Minimize exposure ☣️"
+## 📷 Screenshots
 
-## 🔬 Pollutant Details
+> *Small Widgets*
 
-### Primary Pollutants Tracked
+| <img src="../.src/air_widget_s.png" width="160"/> | <img src="../.src/air_widget_s_2.png" width="160"/> |
+| :-----------------------------------------------: | :-------------------------------------------------: |
+|                Temperature Display                |                      AQI Level                      |
 
-**PM2.5 (Fine Particulate Matter)**
-- Size: ≤ 2.5 micrometers
-- Sources: Vehicle emissions, industrial processes
-- Health impact: Respiratory and cardiovascular issues
+> *Medium Widgets*
 
-**PM10 (Coarse Particulate Matter)**  
-- Size: ≤ 10 micrometers
-- Sources: Dust, pollen, construction
-- Health impact: Respiratory irritation
+| <img src="../.src/air_widget_m.png" width="260"/> | <img src="../.src/air_widget_m_2.png" width="260"/> |
+| :-----------------------------------------------: | :-------------------------------------------------: |
+|                  Air Quality Info                 |                   City & Pollution                  |
 
-**O3 (Ground-level Ozone)**
-- Formation: Chemical reaction in sunlight
-- Sources: Vehicle and industrial emissions
-- Health impact: Lung irritation, breathing difficulties
+> *Large Widgets*
 
-**NO2 (Nitrogen Dioxide)**
-- Sources: Vehicle emissions, power plants
-- Health impact: Respiratory problems, especially for asthmatics
+| <img src="../.src/air_widget_l.png" width="360"/> | <img src="../.src/air_widget_l_2.png" width="360"/> |
+| :-----------------------------------------------: | :-------------------------------------------------: |
+|                   Full Data View                  |                  Detailed City Info                 |
 
-**SO2 (Sulfur Dioxide)**
-- Sources: Fossil fuel combustion, industrial processes
-- Health impact: Respiratory system irritation
+## 🙌 Feedback
 
-**CO (Carbon Monoxide)**
-- Sources: Vehicle emissions, incomplete combustion
-- Health impact: Reduces oxygen delivery to organs
+Have suggestions or issues? DM me on [Instagram](https://www.instagram.com/the.tirth12) or email at [rushiofficial1205@gmail.com](mailto:rushiofficial1205@gmail.com).
 
-## 🌍 Location Services
+## 📜 License
 
-### Automatic Location Detection
-- Uses iOS GPS services
-- Requires location permission for Scriptable
-- Updates based on current location
+This project is licensed under the **MIT License**.
 
-### Custom Location Setup
-```javascript
-// Set specific coordinates
-const CUSTOM_LAT = 40.7128;  // New York City
-const CUSTOM_LON = -74.0060;
-const USE_CUSTOM_LOCATION = true;
-```
+Feel free to fork, build upon, and remix with attribution.
 
-### Multiple Locations
-You can create multiple widget instances for different locations:
-1. Duplicate the script
-2. Set different coordinates for each
-3. Name them distinctly (e.g., "AQI Home", "AQI Work")
+##
 
-## 🔧 Troubleshooting
-
-### Common Issues
-
-**"Location not available":**
-- Enable Location Services for Scriptable in iOS Settings
-- Check internet connection
-- Try running script manually first
-
-**API errors:**
-- Verify OpenWeather API key is valid
-- Check if you've exceeded free tier limits (1000 calls/day)
-- Ensure API key has Air Pollution access
-
-**Outdated data:**
-- Widget updates every hour automatically
-- Manual refresh by running script in Scriptable
-- Check OpenWeather service status
-
-### API Limits
-
-OpenWeather free plan:
-- **1,000 API calls per day**
-- **Hourly updates** = 24 calls per day
-- Well within free limits
-
-## 🔄 Data Updates
-
-### Refresh Schedule
-- **Automatic**: Every 60 minutes
-- **Manual**: Run script in Scriptable app
-- **Background**: Updates when widget is visible
-
-### Offline Support
-- Caches last known values
-- Shows cached data when offline
-- Indicates when data is stale
-
-## 🌟 Pro Tips
-
-### Best Practices
-- Check AQI before outdoor workouts
-- Use for planning daily activities
-- Monitor trends over time
-- Share alerts with family members
-
-### Health-Conscious Usage
-- Set up multiple locations (home, work, gym)
-- Check before opening windows
-- Plan outdoor activities around better AQI times
-- Use data to make informed health decisions
-
-## 📱 Integration Ideas
-
-### With Other Widgets
-- Combine with Weather Widget for complete environmental data
-- Use alongside Calendar for outdoor event planning
-- Pair with Fitness widgets for workout timing
-
-### Automation Ideas
-- iOS Shortcuts integration for AQI-based notifications
-- Combine with smart home systems
-- Weather app comparison and validation
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/LICENSE) file for details.
-
-## 🤝 Contributing
-
-Help improve air quality monitoring:
-
-1. [Report issues](https://github.com/rushhiii/Scriptable-IOSWidgets/issues)
-2. [Suggest features](https://github.com/rushhiii/Scriptable-IOSWidgets/discussions)
-3. Share customizations and improvements
-4. Help with translations for international users
-
----
-
-**Made with ❤️ by [rushhiii](https://github.com/rushhiii)** | **Stay safe, breathe clean! 🌱**
+<p align="center">
+Enjoy using this widget ~ RP
+</p>

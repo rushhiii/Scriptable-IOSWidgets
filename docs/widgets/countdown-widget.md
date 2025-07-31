@@ -1,277 +1,250 @@
 # ⏰ Countdown Widget
-
 ![Scriptable](https://img.shields.io/badge/Scriptable-Compatible-purple)
 ![Widget Size](https://img.shields.io/badge/Supports-Small%2C%20Medium%2C%20Large-blue)
 ![Data Source](https://img.shields.io/badge/Data-Google%20Sheet%20Web%20App-brightgreen)
+![Customization](https://img.shields.io/badge/Configurable-Color%20%2B%20Icon%20%2B%20Age%20%2B%20Pages-orange)
+![Offline Support](https://img.shields.io/badge/Fallback-Offline%20Cache%20%2B%20Auto%20Sync-lightgrey)
+![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
+![Last Updated](https://img.shields.io/badge/Updated-June%202025-yellow)
 
-A lightweight and customizable countdown widget built using Scriptable, powered by Google Sheets. Track upcoming events like birthdays, anniversaries, or deadlines right from your iOS home screen.
+![countdown widget](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdow_showcase.png)
 
-![Countdown Widget Preview](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdow_showcase.png)
+A lightweight and customizable countdown widget built using the [Scriptable app](https://scriptable.app), powered by Google Sheets. It helps you track upcoming events like birthdays, anniversaries, or deadlines—right from your iOS home screen.
+
+> **Mention:** Minimal design widget
+> https://jvscholz.com/blog/countdown.html
+> if the links dosent work look in the [backup](./backup) foolder
 
 ## ✨ Features
 
-- 🗓️ **Dynamic Countdown**: Displays days remaining to events
-- 🎂 **Age Display**: Automatically shows age or anniversary years
-- 📅 **Google Sheets Integration**: Events loaded from your own spreadsheet
-- 🎨 **Color Customization**: Assign vibrant colors and icons per event
-- 📱 **Multiple Layouts**: Adaptable to different widget sizes
-- 🔄 **Auto Sync**: Regular updates from your Google Sheet
-- 💾 **Offline Cache**: Works even without internet connection
+* 🗓️ **Dynamic Countdown**: Displays days remaining to an event.
+* 🎂 **Age Display**: Automatically shows age or anniversary years.
+* 📅 **Google Sheets Integration**: Events loaded from your own sheet.
+* 🎨 **Color Customization**: Assign vibrant colors and icons per event.
+* ⚙️ **Flexible Layouts**: Adaptable to different widget sizes and views.
 
-## � Screenshots
+## 🚀 How It Works
 
-### Large Widget
-Complete countdown overview with multiple events and detailed information.
+The widget fetches events from a Google Sheets Web App link and automatically displays the nearest upcoming event(s). Depending on widget size and provided parameters, it can show:
 
-| Large Widget - Multi-Event View |
-|:--:|
-| ![Countdown Large](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_l.png) |
+* A **single event** (Small widget)
+* A **grid of events** (use `col` parameter)
+* A **list of upcoming events** (default for Medium and Large widgets)
 
-### Medium Widget
-Essential countdown information in a balanced layout.
+## 🔧 Setup
 
-| Medium Widget - Featured Events |
-|:--:|
-| ![Countdown Medium](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_m.png) |
+### 1. Prepare Google Sheets
 
-### Small Widget
-Single event focus for quick glances.
+Create a sheet like this:
 
-| Small Widget - Single Event |
-|:--:|
-| ![Countdown Small](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_s.png) |
+| name | date       | icon | color   |
+| ---- | ---------- | ---- | ------- |
+| Mom  | 2003-09-25 | 🎂   | #2980b9 |
+| Dad  | 1975-07-01 | 🎂   | #F79F39 |
 
-### Custom Themes
-Personalize your countdown widget with custom colors and icons.
+> Ensure dates are formatted as `YYYY-MM-DD`.
 
-| Birthday Theme | Anniversary Theme | Deadline Theme |
-|:--:|:--:|:--:|
-| ![Birthday Count](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_birthday.png) | ![Anniversary Count](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_anniversary.png) | ![Deadline Count](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_deadline.png) |
+### 2. Turn Sheet into Web App
 
-## �🚀 Quick Setup
+1. Go to **Extensions > Apps Script**.
+2. Paste this code:
 
-### 1. Create Your Google Sheet
-
-Set up a spreadsheet with these columns:
-
-| name | date | icon | color |
-|------|------|------|-------|
-| Mom's Birthday | 2003-09-25 | 🎂 | #2980b9 |
-| Anniversary | 1975-07-01 | 💕 | #F79F39 |
-| Project Deadline | 2024-12-31 | 📝 | #e74c3c |
-
-::: tip Date Format
-Use `YYYY-MM-DD` format for dates. This ensures proper parsing and countdown calculation.
-:::
-
-### 2. Create Google Sheets Web App
-
-1. In your Google Sheet, go to **Extensions > Apps Script**
-2. Delete any existing code and paste this:
-
-```javascript
+```js
 function doGet() {
-  const sheet = SpreadsheetApp.getActiveSheet();
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
   const data = sheet.getDataRange().getValues();
-  const headers = data[0];
-  const rows = data.slice(1);
-  
-  const events = rows.map(row => {
-    const event = {};
-    headers.forEach((header, index) => {
-      event[header] = row[index];
-    });
-    return event;
-  });
-  
-  return ContentService
-    .createTextOutput(JSON.stringify(events))
-    .setMimeType(ContentService.MimeType.JSON);
+  const events = [];
+  for (let i = 1; i < data.length; i++) {
+    const [name, date, icon = "🗓️", color = ""] = data[i];
+    if (!name || !date) continue;
+    let formattedDate = date instanceof Date
+      ? Utilities.formatDate(date, Session.getScriptTimeZone(), "yyyy-MM-dd")
+      : date;
+    let event = { name, date: formattedDate, icon };
+    if (color) event.color = color;
+    events.push(event);
+  }
+  return ContentService.createTextOutput(JSON.stringify(events))
+      .setMimeType(ContentService.MimeType.JSON);
 }
 ```
 
-3. Click **Deploy > New Deployment**
-4. Choose **Execute as: Me** and **Who has access: Anyone**
-5. Copy the Web App URL
+3. **Deploy > New Deployment**
+4. Select type **Web app**
+5. Set access to **Anyone**
+6. Click **Deploy**, then copy the **Web App URL**
 
-### 3. Configure the Widget
+### 3. Link Scriptable Script
 
-1. Download [`MyCountdowns.js`](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/Countdown%20Widget/MyCountdowns.js)
-2. Open Scriptable and create a new script
-3. Paste the code and update the configuration:
+In your `countdown.js` file, update:
 
-```javascript
-// Replace with your Google Sheets Web App URL
-const SHEET_URL = "your_web_app_url_here";
-
-// Widget configuration
-const CONFIG = {
-  refreshInterval: 60, // minutes
-  maxEvents: 5,
-  showAge: true,
-  dateFormat: "YYYY-MM-DD"
-};
+```js
+const SHEET_API_URL = "https://script.google.com/macros/s/YOUR_ID/exec";
 ```
 
-## 📱 Widget Layouts
+Then save the script in Scriptable.
 
-### Small Widget
-- Shows the **next upcoming event**
-- Displays countdown in days
-- Shows event icon and name
-- Color-coded background
+### 4. Load Repeat Icon
 
-### Medium Widget
-- Shows **multiple events** in a grid or list
-- Configurable layout with `col` parameter
-- More details per event
+If you see a ❗ warning or square character instead of the **repeat icon**, it's likely because the required icon font isn't available. To fix this:
 
-### Large Widget
-- Shows **comprehensive event list**
-- Additional event details
-- Better spacing and readability
+1. **Download the `repeat.png` icon** from the repository’s `assets` folder (or use your own).
+2. Save it inside your `iCloud Drive > Scriptable > .assets` folder.
+3. Ensure the file is named exactly: `repeat.png`
+4. The widget will automatically load this icon when it detects a recurring event.
 
-## ⚙️ Advanced Configuration
+> 🔧 Tip: You can replace `repeat.png` with any custom icon (e.g., circular arrows) — just make sure it’s 60x60 px and in PNG format.
 
-### Widget Parameters
 
-Add parameters when setting up the widget to customize behavior:
+### 5. Add Widget
 
-| Parameter | Description | Example |
-|-----------|-------------|---------|
-| `col=2` | Display in 2-column grid | For medium widget |
-| `maxEvents=3` | Limit number of events | Show only 3 events |
-| `showAge=false` | Hide age calculation | For non-birthday events |
+1. **Download** the [Scriptable app](https://apps.apple.com/in/app/scriptable/id1405459188) from the App Store.
+2. **Option A – Upload Method**
 
-### Color Customization
+   * **Download** the [`CountdownWidget.js`](./Countdown.js) script from this repository.
+   * Move it into the `Scriptable` folder in your **iCloud Drive** (this folder is created automatically after installing the Scriptable app).
+3. **Option B – Manual Method**
 
-Use hex color codes in your Google Sheet:
+   * Open the Scriptable app.
+   * Tap the **+** icon to create a new script.
+   * **Copy and paste** the script content from this repo manually.
+   * Name the script however you'd like (e.g., `Countdown Widget`).
+4. Long-press anywhere on your iOS Home Screen to enter "jiggle mode", tap the **+** button on the top-left, and scroll to add a **Scriptable** widget.
+5. Choose the desired **widget size** (Small/Medium/Large) and tap **\[+ Add Widget]**.
+6. Long-press the newly added widget, tap **Edit Widget ⓘ**, and configure the **script and parameter values** as described [see below](#️-configure-parameters).
 
-```
-#e74c3c  // Red
-#3498db  // Blue  
-#2ecc71  // Green
-#f39c12  // Orange
-#9b59b6  // Purple
-```
+## ⚙️ Configure Parameters
 
-### Icons
+Use the following options when editing the widget:
 
-Use any emoji or Unicode character:
+<table>
+  <tr>
+    <th>Option</th>
+    <th>Defaults</th>
+    <th>Change to</th>
+  </tr>
+  <tr>
+    <td>Script</td>
+    <td>Choose</td>
+    <td>Widget Name (e.g., Countdown Widget)</td>
+  </tr>
+  <tr>
+    <td>While Interacting (optional)</td>
+    <td>Open App</td>
+    <td>Run Script</td>
+  </tr>
+  <tr>
+    <td>Parameters</td>
+    <td>Text</td>
+    <td>
+      <ul>
+        <li>For e.g., <code>age</code>, <code>2</code>, <code>john,age</code>, <code>col</code>    
+        </li>
+        <li><a href="#note">Read below</a> for more instructions</li>
+      </ul>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-```
-🎂 Birthday
-💕 Anniversary  
-📝 Deadline
-🎓 Graduation
-🏆 Goal
-```
+> _Here's a Screenshot of widget's config panal_
 
-## 🎨 Styling Options
+<img height="auto" width="500px" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_config_panal.PNG" alt="countdown_config_panal.png">
 
-The widget automatically adapts its appearance based on:
+<br/>
+<div id="note"></div>
 
-- **Event colors** from your Google Sheet
-- **Widget size** (typography and layout scaling)
-- **Time remaining** (urgent events highlighted)
-- **iOS theme** (respects dark/light mode)
+> [!NOTE]
+> 
+> * `col` parameter works **only for Medium and Large** widgets.
+>
+>   * **Medium widget** shows top **4** events.
+>   * **Large widget** shows top **10** events.
+> * If no `col` is used, widget defaults to **list view**:
+>
+>   * **Medium:** top **3** events.
+>   * **Large:** top **7** events.
+> * In **small** widgets:
+>
+>   * Type any name from your Google Sheet (e.g., `mom`, `dad`) to show that person's event.
+>
+>     * If the emoji is 🎂, it will automatically append `'s Birthday`.
+>     * If it's 🥂, it appends `'s Anniversary`.
+>     * *It only supports these two emojis, but you can always add more to your liking by updating the `titleSuffixes` array.*
+>   * You can also use numeric indexes (e.g., `1`, `2`) to select an upcoming event by position.
+>   * Default is the **most upcoming event**.
+>   * Using `age` shows the years passed since the event date — useful for birthdays or anniversaries.
+>
+>    * If today is the event date, countdown is hidden and only age is shown.
+> 
+> *  **Pagination (`pg`)**:
+>    * Use `pg1`, `pg2`, `pg3`, etc., to display **multiple pages** of events.
+> 
+>       * In **list view** (default):
+>           * **Medium widget**: each page displays **3 events**.
+>         * **Large widget**: each page displays **7 events**.
+>       * In **grid view** (`col`):
+>
+>         * **Medium widget**: each page displays **4 events**.
+>         * **Large widget**: each page displays **10 events**.
+>
+>     * Example:
+>       * `pg2`: shows the second page of events.
+>       * `col,pg3`: shows the third page of events in grid view.
+>
+> * **Offline Fallback & Regular Sync**:
+>
+>   * Events are automatically cached locally in the `.cache` folder.
+>   * Widget gracefully **falls back to cached data** when offline.
+>   * Data automatically updates daily at **2:00 AM**.
 
-## 📊 Event Types
 
-### Birthday Events
-- Automatically calculates age
-- Shows "turns X" or "X years old"
-- Special birthday emoji support
+## 📷 Screenshots
 
-### Anniversary Events  
-- Tracks years together
-- Shows milestone celebrations
-- Custom anniversary messages
+<!--
 
-### Deadline Events
-- Shows urgency with color coding
-- Countdown to specific dates
-- Project and task tracking
+| ![](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/src/countdown/countdown_s.png) | ![](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/src/countdown/countdown_age_s.PNG) | ![](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/src/countdown//countdown_bday_s.PNG) |
+|:--:|:--:|:--:|
+| Countdown | Age Display | On Birthday |
 
-## 🔧 Troubleshooting
+| ![](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/src/countdown/countdown_m.PNG) | ![](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/src/countdown//countdown_col_m.PNG) | ![](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/src/countdown//countdown_l.PNG) |
+|:--:|:--:|:--:|
+| Medium Widget | Color View | Large View |
 
-### Widget Not Loading
-- Verify Google Sheets Web App URL is correct
-- Check internet connection
-- Ensure Web App permissions are set to "Anyone"
+-->
 
-### Events Not Updating
-- Check Google Sheets date format (YYYY-MM-DD)
-- Verify Web App is deployed correctly
-- Try refreshing the widget manually
+> _Small Widgets_ 
 
-### Display Issues
-- Check widget size matches your layout preference
-- Verify color codes are valid hex values
-- Ensure icons are proper Unicode characters
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_s.PNG" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_age_s.PNG" width="160"/> |
+|:--:|:--:|
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_bday_s.PNG" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_1_s.PNG" width="160"/> |
 
-## 🔄 Backup & Sync
+> _Medium Widgets_
 
-### Offline Support
-The widget caches your events locally, so it works even without internet:
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_m.PNG" width="260"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_col_m.PNG" width="260"/> |
+|:--:|:--:|
 
-- **Auto-sync** when connection is available
-- **Fallback** to cached data when offline
-- **Smart updates** to minimize data usage
 
-### Data Backup
-Your events are stored in Google Sheets, providing:
+> _Large Widgets_
 
-- **Cloud backup** of all your events
-- **Easy editing** from any device
-- **Sharing** with family members
-- **Version history** in Google Sheets
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_l.PNG" width="360"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_col_l.png" width="360"/> |
+|:--:|:--:|
 
-## 📈 Usage Tips
 
-### Best Practices
-- Keep event names short for better display
-- Use consistent color schemes for event types
-- Update dates annually for recurring events
-- Test widget after adding new events
+## 🙌 Feedback
 
-### Organization Tips
-- Group similar events with same colors
-- Use clear, descriptive names
-- Sort by date in your Google Sheet
-- Archive past events to keep list clean
+Have feature ideas or issues? DM me on [Instagram](https://www.instagram.com/the.tirth12) or email me at <rushiofficial1205@gmail.com>.
 
-## 🚀 Updates & Roadmap
+Widgets shouldn’t be limited to timers—I’d love to build tools that help you passively learn, reflect, or stay organized. If you have a unique concept in mind, I’d love to collaborate.
 
-### Recent Updates
-- Improved offline caching
-- Better error handling  
-- Enhanced layout options
-- Color customization support
+## 📜 License
 
-### Coming Soon
-- Recurring event support
-- Notification reminders
-- Custom date formats
-- Widget themes
+This project is licensed under the **MIT License**.
 
-## 📝 License
+Feel free to fork, build upon, and remix with attribution.
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/LICENSE) file for details.
+##
 
-## 🤝 Contributing
-
-Want to improve the Countdown Widget?
-
-1. [Report bugs](https://github.com/rushhiii/Scriptable-IOSWidgets/issues)
-2. [Suggest features](https://github.com/rushhiii/Scriptable-IOSWidgets/discussions)
-3. Submit pull requests
-4. Share your configurations
-
-## 🌟 Inspiration
-
-This widget was inspired by the minimal design philosophy of [jvscholz's countdown widget](https://jvscholz.com/blog/countdown.html). We've enhanced it with Google Sheets integration and additional customization options.
-
----
-
-**Made with ❤️ by [rushhiii](https://github.com/rushhiii)**
+<p align="center">
+Enjoy using this widget ~ RP
+</p>

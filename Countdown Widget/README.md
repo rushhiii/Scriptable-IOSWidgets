@@ -13,7 +13,7 @@ A lightweight and customizable countdown widget built using the [Scriptable app]
 
 > **Mention:** Minimal design widget
 > https://jvscholz.com/blog/countdown.html
-> if the links dosent work look in the [backup](./backup) foolder
+> if the links dosent work look in the [backup](https://github.com/rushhiii/Scriptable-IOSWidgets/tree/main/.src/backups) foolder
 
 ## ✨ Features
 

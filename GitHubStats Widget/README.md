@@ -378,7 +378,7 @@ This project is licensed under the [**MIT License**](https://github.com/rushhiii
 
 *Built with ❤️ for the iOS developer community*
 
-**~ Rushi Patel (RP) ~**
+** ~ by Rushi Patel (RP) ~ **
 
 [![GitHub](https://img.shields.io/badge/GitHub-rushhiii-black?style=for-the-badge&logo=github)](https://github.com/rushhiii)
 [![Instagram](https://img.shields.io/badge/Instagram-the.tirth12-E4405F?style=for-the-badge&logo=instagram)](https://www.instagram.com/the.tirth12)

@@ -2,7 +2,7 @@
 
 Welcome to the complete collection of Scriptable iOS widgets! Each widget is designed to be beautiful, functional, and easy to set up.
 
-![Widgets Showcase](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/scriptable_mockup_wall.png)
+![Widgets Showcase](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/scriptable_mockup_wall.png)
 
 ## 🌟 Popular Widgets
 

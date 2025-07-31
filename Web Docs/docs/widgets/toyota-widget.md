@@ -7,7 +7,7 @@
 
 Connect with your Toyota vehicle and display important information like fuel level, maintenance reminders, and vehicle status right on your iOS home screen.
 
-![Toyota Widget Preview](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/toyota/toyota_l.png)
+![Toyota Widget Preview](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/toyota/toyota_l.png)
 
 ## ✨ Features
 
@@ -64,14 +64,14 @@ Comprehensive vehicle dashboard with all information.
 
 | Large Widget - Full Dashboard |
 |:--:|
-| ![Toyota Large](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/toyota/toyota_l.png) |
+| ![Toyota Large](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/toyota/toyota_l.png) |
 
 ### Medium Widget
 Essential vehicle information in compact format.
 
 | Medium Widget - Key Info |
 |:--:|
-| ![Toyota Medium](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/toyota/toyota_m.png) |
+| ![Toyota Medium](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/toyota/toyota_m.png) |
 
 ## 📊 Information Displayed
 

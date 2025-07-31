@@ -7,7 +7,7 @@
 ![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
 ![Last Updated](https://img.shields.io/badge/Updated-June%202025-yellow)
 
-![MyQuote Showcase](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/quotes/quote_showcase.png)
+![MyQuote Showcase](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/quotes/quote_showcase.png)
 
 
 
@@ -133,19 +133,19 @@ The **order doesn't matter**. Examples:
 
 > _Small Widgets_
 
-| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/quotes/quote_s.png" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/quotes/quote_s_1.png" width="160"/> |
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/quotes/quote_s.png" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/quotes/quote_s_1.png" width="160"/> |
 |:--:|:--:|
-| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/quotes/quote_s_2.png" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/quotes/quote_s_3.png" width="160"/> |
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/quotes/quote_s_2.png" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/quotes/quote_s_3.png" width="160"/> |
 
 > _Medium Widgets_
  
-| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/quotes/quote_m_1.png" width="260"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/quotes/quote_m_2.png" width="260"/> |
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/quotes/quote_m_1.png" width="260"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/quotes/quote_m_2.png" width="260"/> |
 |:--:|:--:|
-| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/quotes/quote_m_3.png" width="260"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/quotes/quote_m_4.png" width="260"/> |
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/quotes/quote_m_3.png" width="260"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/quotes/quote_m_4.png" width="260"/> |
 
 > _Large Widgets_
 
-| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/quotes/quote_l_1.png" width="360"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/quotes/quote_l_2.png" width="360"/> |
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/quotes/quote_l_1.png" width="360"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/quotes/quote_l_2.png" width="360"/> |
 |:--:|:--:|
 
 

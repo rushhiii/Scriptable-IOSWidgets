@@ -3,7 +3,6 @@
 
 Welcome to my curated collection of **Scriptable** widgets and scripts, crafted to bring more power and personalization to your iOS home screen.
 
-<!-- <img alt="widgets showcase" align="center" src=".src/widgets showcase.png" /> -->
 <img alt="Mockup wall" width="100%" align="center" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/scriptable_mockup_wall.png" />
 
 <br>
@@ -17,19 +16,6 @@ Welcome to my curated collection of **Scriptable** widgets and scripts, crafted 
 <br/>
 
 ## Table of Contents
-<!-- <ul>
-  <li><a  href="#scriptable">Scriptable Overview</a></li>
-  <li><a href="#📜-list-of-widgets">List of Widgets</a>
-    <ul>
-      <li><a href="#countdown">MyCountdowns</a></li>
-      <li><a href="#myquotes">MyQuotes</a></li>
-    </ul>
-  </li>
-  <li><a  href="#📖-how-to-use-these-scriptable-widgets?">How to Use Scriptable Widgets?</a></li>
-  <li><a href="#🙌-feedback">Feedback</a></li>
-  <li><a href="#📜-license">License</a></li>
-</ul> -->
-
 
 <ul>
   <li><a href="#scriptable">Scriptable Overview</a></li>
@@ -54,26 +40,21 @@ Welcome to my curated collection of **Scriptable** widgets and scripts, crafted 
 
 ## 📜 List of Widgets
 
-### [Countdown](./Countdown%20Widget)
+### [Countdown](./Countdown)
 
-![countdown widget](.src/countdown/countdow_showcase.png)
+![countdown widget](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.src/countdown/countdow_showcase.png?raw=true)
 
 📆 **Track life’s important moments—right from your home screen.**\
 The **Countdown Widget** helps you stay on top of upcoming events like birthdays, anniversaries, holidays, or personal milestones. It supports **multiple display modes** based on widget size (Small, Medium, Large) and can be fully customized using script parameters. You can show specific events, display color-coded grids, or even track multiple events in column layout. The widget fetches data from a local `.json` or a connected Google Sheet for dynamic updates.
 
 ### [Birthday](./Birthday%20Widget)
 
-<!-- 
-![Birthday Widget](.src/birthday/birthday_showcase.png) -->
-
-<img width="60%" src=".src/birthday/birthday_showcase.png">
+<img width="60%" src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.src/birthday/birthday_showcase.png?raw=true">
 
 🎉 The **Birthday Widget** gives you a beautiful, minimal way to reflect on your life.\
 It shows your **exact age** (to 2 decimal places), **total days lived**, and a **progress ring** indicating how close you are to your next birthday. Designed for the **Small widget size**, it offers a clean dark-gradient background and supports **parameter customization** to set your name and birthdate. You’ll see your name (e.g., “Rushi’s Life”), a countdown ring that updates daily, and age stats—all in one elegant glance.
 
 ### [HinduClrWear](./HinduClrWear%20Widget)
-
-<!-- ![HinduClrWear Widget](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/hinduclrwear/hinduclrwear_showcase.png) -->
 
 <img width="80%" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/hinduclrwear/hinduclrwear_showcase.png">
 
@@ -82,20 +63,13 @@ Each day of the week is mapped to a specific color, deity, and spiritual quality
 
 ### [MyQuotes](./Quote%20Widget)
 
-<!-- ![MyQuotes Widget](.src/quote/quote_showcase.png)
- -->
-
-<img width="60%" src=".src/quotes/quote_showcase_1.png">
-
-<!-- <img width="100%" src=".src/quote/quote_showcase.png"> -->
+<img width="60%" src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.src/quotes/quote_showcase_1.png?raw=true">
 
 💬 **The Quote of the Day Widget** delivers a daily dose of inspiration, wisdom, or stoic reflection.\
 Based on the selected category (like *Zen*, *Gita*, *Aurelius*, or *Kafka*), it fetches quotes dynamically from a Google Sheet. The widget adapts its size and style to fit the quote length and device size, and refreshes every night at midnight. Font and background colors can be pulled from the sheet or randomized from a curated palette.\
 This widget supports **small**, **medium**, and **large** sizes. You can also pass an optional index to show a specific quote or change the category with a parameter.
 
 ### [Class Schedule Viewer](./Schedule%20Widget)
-
-<!-- ![Schedule Widget](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_showcase_1.png) -->
 
 <img width="60%" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_showcase_1.png">
 

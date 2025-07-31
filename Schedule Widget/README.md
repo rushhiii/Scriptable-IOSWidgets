@@ -9,7 +9,7 @@
 
 <!-- ![schedule-widget](https://user-images.githubusercontent.com/your-image-here.png) -->
 
-![Schedule Widget](../.src/schedule/schedule_showcase.png)
+![Schedule Widget](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_showcase.png)
 
 A powerful iOS widget built with **Scriptable** that displays your university or high school class schedule directly from a public Google Sheet.  
 
@@ -133,23 +133,23 @@ Feel free to modify these for your aesthetic preference.
 
 > _Small Widget_
 
-<!-- | <img src="../.src/schedule/schedule_s.png" width="160"/> | <img src="../.src/schedule/schedule_s_1.png" width="160"/> |
+<!-- | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_s.png" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_s_1.png" width="160"/> |
 |:--:|:--:| -->
-<img src="../.src/schedule/schedule_s.png" width="160"/> <img src="../.src/schedule/schedule_s_1.png" width="160"/>
+<img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_s.png" width="160"/> <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_s_1.png" width="160"/>
 
 > _Medium Widget_
 <!-- 
-| <img src="../.src/schedule/schedule_m.png" width="260"/> |
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_m.png" width="260"/> |
 |:--:| -->
 
-<img src="../.src/schedule/schedule_m.png" width="360"/>
+<img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_m.png" width="360"/>
 
 > _large Widget_
 
-<!-- | <img src="../.src/schedule/schedule_l.png" width="360"/> | <img src="../.src/schedule/schedule_l_1.png" width="360"/> |
+<!-- | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_l.png" width="360"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_l_1.png" width="360"/> |
 |:--:|:--:| -->
 
-<img src="../.src/schedule/schedule_l.png" width="360"/> <img src="../.src/schedule/schedule_l_1.png" width="360"/>
+<img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_l.png" width="360"/> <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_l_1.png" width="360"/>
 
 
 

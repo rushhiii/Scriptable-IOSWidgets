@@ -86,12 +86,23 @@ const username = "your_github_username"; // Replace with your username
 Widget behavior is controlled through **widget parameters**. Set these when configuring your widget on the home screen.
 
 ### 📊 **Basic Profile Stats**
-Display your overall GitHub profile statistics:
 
-```text
-auto
+By defualt display your overall GitHub profile statistics with the `auto` theme: auto theme (adapts to iOS dark/light mode).
+
 ```
-Shows your complete GitHub profile with auto theme (adapts to iOS dark/light mode).
+indigo
+```
+
+Themes:
+
+| Theme | Description | Theme | Description |
+|-------|-------------|-------|-------------|
+| `auto` | Adapts to iOS appearance | `day` | Bright sky theme |
+| `light` | Clean light theme | `gray` | Sophisticated gray |
+| `dark` | Sleek dark theme | `green` | Nature-inspired |
+| `blue` | Ocean blue gradient | `gitgreen` | GitHub green |
+| `night` | Deep space theme | `indigo` | Purple-blue gradient |
+
 
 ### 📦 **Repository-Specific Stats**
 Get detailed statistics for a specific repository:
@@ -121,22 +132,9 @@ Display a GitHub-style contribution heatmap:
 heatmap,theme_name
 ```
 
-### 🎨 **Theme Selection**
-
-
-Available values for the third parameter,\
-For Widget stats Themes:
-
-| Theme | Description | Theme | Description |
-|-------|-------------|-------|-------------|
-| `auto` | Adapts to iOS appearance | `day` | Bright sky theme |
-| `light` | Clean light theme | `gray` | Sophisticated gray |
-| `dark` | Sleek dark theme | `green` | Nature-inspired |
-| `blue` | Ocean blue gradient | `gitgreen` | GitHub green |
-| `night` | Deep space theme | `indigo` | Purple-blue gradient |
-
-For Widget heatmap Themes:
+Widget heatmap Themes:
 > so when using parameter like, "heatmap,{heatmapThemeName}"
+> NOTE: these theme only work with the heatmap only.
 
 | Theme | Description | Theme | Description |
 |-------|-------------|-------|-------------|

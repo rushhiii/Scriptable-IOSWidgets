@@ -13,7 +13,7 @@
 A dynamic and customizable air quality and temperature widget built using the [Scriptable app](https://scriptable.app), powered by OpenWeatherMap. This widget displays the air quality index (AQI) and temperature for your location directly on your iOS home screen.
 
 > **Mention:** Air quality and temperature widget
-> If the links don't work, check the [backup](./backup) folder.
+> If the links don't work, check the [backup](https://github.com/rushhiii/Scriptable-IOSWidgets/tree/main/.assets/backups) folder.
 
 ## ✨ Features
 

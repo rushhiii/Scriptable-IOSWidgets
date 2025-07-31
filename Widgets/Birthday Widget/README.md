@@ -7,7 +7,7 @@
 ![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
 ![Last Updated](https://img.shields.io/badge/Updated-June%202025-yellow)
 
-<img width="60%" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/birthday/birthday_showcase.png">
+<img width="60%" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/birthday/birthday_showcase.png">
 
 A minimalist Scriptable widget that shows:
 - 🎂 Your age in years (accurate to 2 decimals)
@@ -83,7 +83,7 @@ Feel free to modify these in the script for a more personal palette.
 
 ## 📸 Screenshots
 
-<img width="160px" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/birthday/birthday_s.png">
+<img width="160px" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/birthday/birthday_s.png">
 
 ## 🙌 Feedback
 

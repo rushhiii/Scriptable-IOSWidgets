@@ -7,9 +7,9 @@
 ![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
 ![Last Updated](https://img.shields.io/badge/Updated-June%202025-yellow)
 
-<!-- ![weather widget](../.src/weather/weather_showcase_s.png) -->
+<!-- ![weather widget](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/weather/weather_showcase_s.png) -->
 
-<img width="60%" src="../.src/weather/weather_showcase_s.png">
+<img width="60%" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/weather/weather_showcase_s.png">
 
 
 A clean and elegant iOS weather widget built with [Scriptable](https://scriptable.app), fetching real-time data from the **OpenWeather API**. The widget adapts layout and font size based on weather conditions and city names for improved readability.
@@ -113,7 +113,7 @@ widget.refreshAfterDate = new Date(Date.now() + 30 * 60 * 1000);
 
 ## 📸 Screenshots
 
-| <img src="../.src/weather/weather_s_1.png" width="160"/> | <img src="../.src/weather/weather_s_2.png" width="160"/> |
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/weather/weather_s_1.png" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/weather/weather_s_2.png" width="160"/> |
 |:--:|:--:|
 
 > NOTE: The the values may differ bassed on your current location, the above are just some examples

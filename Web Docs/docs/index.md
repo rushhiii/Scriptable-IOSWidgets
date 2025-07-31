@@ -6,7 +6,7 @@ hero:
   text: "Beautiful Custom Widgets"
   tagline: "A collection of custom iOS widgets built with Scriptable by rushhiii"
   image:
-    src: https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/scriptable_mockup_wall.png
+    src: https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/scriptable_mockup_wall.png
     alt: Scriptable Widgets
     width: 100%
   actions:
@@ -52,7 +52,7 @@ features:
 
 <div class="widget-card">
   <div class="widget-image-container">
-    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/weather/weather_showcase.png" alt="Weather Widget" class="widget-image"/>
+    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/weather/weather_showcase.png" alt="Weather Widget" class="widget-image"/>
   </div>
   <div class="widget-content">
     <p><strong>🌤️ Weather Widget</strong></p>
@@ -68,7 +68,7 @@ features:
 
 <div class="widget-card">
   <div class="widget-image-container">
-    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/weather/weather_s_2.png" alt="AQI Widget" class="widget-image"/>
+    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/weather/weather_s_2.png" alt="AQI Widget" class="widget-image"/>
   </div>
   <div class="widget-content">
     <p><strong>🌬️ AQI Widget</strong></p>
@@ -84,7 +84,7 @@ features:
 
 <div class="widget-card">
   <div class="widget-image-container">
-    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdow_showcase.png" alt="Countdown Widget" class="widget-image"/>
+    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/countdown/countdow_showcase.png" alt="Countdown Widget" class="widget-image"/>
   </div>
   <div class="widget-content">
     <p><strong>⏰ Countdown Widget</strong></p>
@@ -100,7 +100,7 @@ features:
 
 <div class="widget-card">
   <div class="widget-image-container">
-    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/githubstats_showcase.png" alt="GitHub Stats Widget" class="widget-image"/>
+    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/githubstats/githubstats_showcase.png" alt="GitHub Stats Widget" class="widget-image"/>
   </div>
   <div class="widget-content">
     <p><strong>📊 GitHub Stats Widget</strong></p>
@@ -116,7 +116,7 @@ features:
 
 <div class="widget-card">
   <div class="widget-image-container">
-    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/birthday/birthday_showcase.png" alt="Birthday Widget" class="widget-image"/>
+    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/birthday/birthday_showcase.png" alt="Birthday Widget" class="widget-image"/>
   </div>
   <div class="widget-content">
     <p><strong>🎂 Birthday Widget</strong></p>
@@ -132,7 +132,7 @@ features:
 
 <div class="widget-card">
   <div class="widget-image-container">
-    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/quotes/quote_showcase.png" alt="Quote Widget" class="widget-image"/>
+    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/quotes/quote_showcase.png" alt="Quote Widget" class="widget-image"/>
   </div>
   <div class="widget-content">
     <p><strong>💬 Quote Widget</strong></p>
@@ -148,7 +148,7 @@ features:
 
 <div class="widget-card">
   <div class="widget-image-container">
-    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_showcase.png" alt="Schedule Widget" class="widget-image"/>
+    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/schedule/schedule_showcase.png" alt="Schedule Widget" class="widget-image"/>
   </div>
   <div class="widget-content">
     <p><strong>📚 Schedule Widget</strong></p>
@@ -164,7 +164,7 @@ features:
 
 <div class="widget-card">
   <div class="widget-image-container">
-    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/timeprogress/timeprogress_showcase.png" alt="Time Progress Widget" class="widget-image"/>
+    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/timeprogress/timeprogress_showcase.png" alt="Time Progress Widget" class="widget-image"/>
   </div>
   <div class="widget-content">
     <p><strong>⏳ Time Progress Widget</strong></p>
@@ -180,7 +180,7 @@ features:
 
 <div class="widget-card">
   <div class="widget-image-container">
-    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/hinduclrwear/hinduclrwear_showcase.png" alt="Hindu Calendar Widget" class="widget-image"/>
+    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/hinduclrwear/hinduclrwear_showcase.png" alt="Hindu Calendar Widget" class="widget-image"/>
   </div>
   <div class="widget-content">
     <p><strong>🕉️ Hindu Calendar Widget</strong></p>
@@ -196,7 +196,7 @@ features:
 
 <div class="widget-card">
   <div class="widget-image-container">
-    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/toyota/toyota_l.png" alt="Toyota Widget" class="widget-image"/>
+    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/toyota/toyota_l.png" alt="Toyota Widget" class="widget-image"/>
   </div>
   <div class="widget-content">
     <p><strong>🚗 Toyota Widget</strong></p>

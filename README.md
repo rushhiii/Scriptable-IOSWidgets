@@ -12,7 +12,7 @@ Welcome to my curated collection of **Scriptable** widgets and scripts, crafted 
 - From interactive calendars to dynamic quotes and real-time weather updates, my collection showcases how Scriptable can transform your device into a dynamic dashboard.
 - Explore, customize, and enjoy these widgets and scripts to make your iOS experience more fun and functional!
 
-[Check out my Shareable page](https://shareable.vercel.app/user/876239dd-7775-4992-af92-25528d41e8b9)
+> Check out my [Shareable](https://shareable.vercel.app/user/876239dd-7775-4992-af92-25528d41e8b9) page.
 
 <br/>
 

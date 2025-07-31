@@ -80,21 +80,10 @@ const username = "your_github_username"; // Replace with your username
 - **� Heatmap themes** - `forestCalm`, `forestCanopy`, `cyberPurple`, `sunsetGold`, `nordBlueV1`, `nordBlueV2`, `sunsetDusk`, `earthyWarm`, `arcticIce`
 
 ### 📱 **Responsive Widget Layouts**
-- **Small** - Focused stats or contribution grid
-- **Medium** - Comprehensive overview with key metrics
-- **Large** - Full dashboard with language breakdown
 
 ### 🌐 **Smart Connectivity**
-- **📶 Offline support** with intelligent 24-hour caching
-- **🔄 Auto-fallback** to cached data when offline
-- **⚡ Fast loading** with optimized API calls
-- **📡 Network detection** with offline indicators
 
 ### 🔧 **Technical Features**
-- **🔑 Secure token storage** using iOS Keychain
-- **📊 GraphQL + REST API** integration
-- **🎯 Efficient caching** system with iCloud sync
-- **💻 Programming language** detection and color coding
 
 
 
@@ -183,58 +172,37 @@ heatmap,theme_name
 ## � Widget Layout Guide
 
 ### **Small Widget (1x1)**
-**Perfect for:** Quick stats check or contribution heatmap preview
 
-**Profile Mode:**
-- Username with GitHub logo
-- Current streak with fire emoji
-- Annual commits count
-- Total contributions
-- Repository count
-- Follower count
-
-**Repository Mode:**
-- Repository name and stat type
-- Large formatted stat value
-- Clean, focused display
-
-**Heatmap Mode:**
-- 7×5 contribution grid
-- Month name header
-- GitHub logo
-- Weekday labels
+| Mode | Display Elements | Use Case |
+|------|------------------|----------|
+| **👤 Profile** | Username + logo, 🔥 streak, 🕒 commits, 📅 contributions, 📦 repos, 👥 followers | Personal stats summary |
+| **📦 Repository** | Repo name, large stat value, clean focus | Specific repo metrics |
+| **🗺️ Heatmap** | 7×5 contribution grid, month header, weekday labels | Activity visualization |
 
 ### **Medium Widget (2x1)**
-**Perfect for:** Comprehensive overview
 
-**Features:**
-- Full header with username and GitHub logo
-- Two-column layout with 10+ metrics:
-  - Left: Stars earned, annual commits, total commits, issues, PRs
-  - Right: Current streak, longest streak, repos, followers
-- Optimized spacing and typography
-- Smart value formatting (e.g., 1.2k, 345m)
+| Section | Left Column | Right Column |
+|---------|-------------|--------------|
+| **Header** | Username + GitHub logo | - |
+| **Stats** | ⭐ Stars, 🕒 Commits, 📜 Total commits, ❗ Issues, 🔃 PRs | 🔥 Current streak, 🏆 Longest streak, 📦 Repos, 👥 Followers |
+| **Format** | Smart value formatting (1.2k, 345m) | Optimized spacing |
 
 ### **Large Widget (2x2)**
-**Perfect for:** Complete dashboard experience
 
-**Features:**
-- Same comprehensive stats as medium
-- **Bonus: Programming language breakdown**
-  - Top languages with percentages
-  - Color-coded language indicators
-  - Two-column language grid
-- Maximum information density
-- Enhanced visual hierarchy
+| Section | Content | Details |
+|---------|---------|---------|
+| **Header** | Username + GitHub logo | Same as medium |
+| **Stats Grid** | All medium widget metrics | Two-column comprehensive view |
+| **Languages** | 💻 Programming language breakdown | Color-coded indicators, percentages, two-column grid |
+| **Density** | Maximum information | Enhanced visual hierarchy |
 
 ### **Heatmap Widgets**
-**Contribution Calendar Display:**
-- **Medium/Large:** Full 19-week contribution grid
-- **Color intensity** based on daily contributions
-- **Footer stats:** Current streak + total contributions
-- **Responsive design** that adapts to theme colors
 
----
+| Widget Size | Grid | Additional Info |
+|-------------|------|-----------------|
+| **Small** | 7×5 contribution cells | Month name, GitHub logo, weekday labels |
+| **Medium/Large** | Full 19-week grid | Color intensity levels, current streak + total contributions |
+| **Features** | Responsive design | Adapts to selected theme colors |
 
 ## 🌐 Offline Support & Caching
 
@@ -255,30 +223,6 @@ heatmap,theme_name
 - Automatic cleanup of expired cache
 - Manual cache testing available in script
 - Robust error handling with fallback strategies
-
----
-
-## 🎨 Theme Gallery
-
-### **Auto Theme**
-Intelligently adapts to your iOS appearance settings:
-- **Light mode:** Clean whites and soft greens
-- **Dark mode:** Deep space blues with bright accents
-
-### **Signature Themes**
-- **🌊 Blue:** Ocean-inspired gradients
-- **🌙 Night:** Deep space with stellar accents  
-- **☀️ Day:** Bright sky blues and crisp whites
-- **🌫️ Gray:** Sophisticated storm cloud gradients
-
-### **Heatmap Specialties**
-- **🌲 Forest Calm/Canopy:** Nature-inspired greens
-- **🚀 Cyber Purple:** Futuristic technology vibes
-- **🌅 Sunset Gold/Dusk:** Warm evening colors
-- **🏔️ Nordic Blue:** Cool Scandinavian aesthetics
-- **❄️ Arctic Ice:** Pristine white and blue tones
-
----
 
 ## ⚙️ Technical Details
 
@@ -305,8 +249,6 @@ Intelligently adapts to your iOS appearance settings:
 - **User-friendly error messages**
 - **Automatic retry logic** with exponential backoff
 - **Fallback to cached data** maintains functionality
-
----
 
 ## 🛠️ Troubleshooting
 
@@ -352,8 +294,6 @@ console.log(Keychain.get("github_token_here"));
 - Cache duration: 24 hours
 - iCloud sync required for offline access
 
----
-
 ## 🔄 Changelog & Updates
 
 ### **Latest Version Features**
@@ -377,8 +317,6 @@ console.log(Keychain.get("github_token_here"));
 - 🎨 **Adaptive themes** that respond to iOS appearance
 - 📊 **Professional value formatting** (1.2k, 345m)
 
----
-
 ### 📐 Widget Layouts
 
 | Size   | Layout Details                                 |
@@ -387,53 +325,31 @@ console.log(Keychain.get("github_token_here"));
 | Medium | Header + 5 stat lines                          |
 | Large  | Two-column detailed layout (up to 8 metrics)   |
 
----
-
 ### 🎨 Themes
 
 Available values for the third parameter,\
 For Widget stats Themes:
 
-* `auto`
-* `light`
-* `dark`
-* `blue`
-* `night`
-* `day`
-* `gray`
-* `green`
-* `gitgreen`
-* `indigo`
+| Theme | Description | Theme | Description |
+|-------|-------------|-------|-------------|
+| `auto` | Adapts to iOS appearance | `day` | Bright sky theme |
+| `light` | Clean light theme | `gray` | Sophisticated gray |
+| `dark` | Sleek dark theme | `green` | Nature-inspired |
+| `blue` | Ocean blue gradient | `gitgreen` | GitHub green |
+| `night` | Deep space theme | `indigo` | Purple-blue gradient |
 
 For Widget heatmap Themes:
 > so when using parameter like, "heatmap,{heatmapThemeName}"
 
-<div style="disply:flex;">
-
-<div>
-
-* `auto`
-* `light`
-* `dark`
-* `red`
-* `green`
-* `forestCalm`
-* `forestCanopy`
-
-</div>
-<div>
-
-* `cyberPurple`
-* `sunsetGold`
-* `nordBlueV1`
-* `nordBlueV2`
-* `sunsetDusk`
-* `earthyWarm`
-* `arcticIce`
-
-</div>
-
-</div>
+| Theme | Description | Theme | Description |
+|-------|-------------|-------|-------------|
+| `auto` | Adapts to iOS appearance | `cyberPurple` | Futuristic purple theme |
+| `light` | Standard GitHub light | `sunsetGold` | Warm sunset colors |
+| `dark` | Standard GitHub dark | `nordBlueV1` | Nordic blue variant 1 |
+| `red` | Red intensity theme | `nordBlueV2` | Nordic blue variant 2 |
+| `green` | Green contribution theme | `sunsetDusk` | Evening sky colors |
+| `forestCalm` | Peaceful forest greens | `earthyWarm` | Warm earth tones |
+| `forestCanopy` | Rich forest colors | `arcticIce` | Cool arctic theme |
 
 ### 🛠 Example Use Cases
 

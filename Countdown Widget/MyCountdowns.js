@@ -1,9 +1,9 @@
-// icon-color: brown; icon-glyph: calendar-check;
 // Variables used by Scriptable.
 // These must be at the very top of the file. Do not edit.
+// icon-color: deep-green; icon-glyph: clock;
 
 // === CONFIG ===
-const SHEET_API_URL = ""; // YOUR API URL here
+const SHEET_API_URL = "https://script.google.com/macros/s/..../exec"; // YOUR API URL here
 const colorPalette = ["#CB2443", "#8e44ad", "#2980b9", "#F79F39", "#CEA834", "#7b9a50"];
 
 // === Fetch Data from Google Sheets Web App (instead of local JSON) ===
@@ -72,14 +72,19 @@ await fm.downloadFileFromiCloud(fontPath);
 const roboto = (size) => new Font(fontPath, size);
 
 // === Load Repeat Icon ===
-const repeatPath = fm.joinPath(fm.joinPath(fm.documentsDirectory(), ".assets"), "repeat_icon.png");
+const repeatPath = fm.joinPath(fm.joinPath(fm.documentsDirectory(), ".source"), "repeat_icon.png");
 await fm.downloadFileFromiCloud(repeatPath);
 const repeatIcon = fm.readImage(repeatPath);
 
 
 // === Parameter Handling for Small Widget ===
 const param = args.widgetParameter ? args.widgetParameter.trim().toLowerCase() : null;
-let selectedEvent = events[0]; // default: soonest event
+// Find the most recent upcoming event (soonest event)
+let selectedEvent = events.reduce((closest, event) => {
+  const daysToEvent = daysUntil(event.date);
+  const daysToClosest = daysUntil(closest.date);
+  return daysToEvent < daysToClosest ? event : closest;
+}, events[0]);
 let showAgeMode = false; // default off
 let page = 1; // default page
 

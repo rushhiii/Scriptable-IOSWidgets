@@ -374,7 +374,7 @@ This project is licensed under the [**MIT License**](https://github.com/rushhiii
 
 <div align="center">
 
-🌟 **Enjoy Your GitHub Stats Widget!**
+**Enjoy Your GitHub Stats Widget!**
 
 *Built with ❤️ for the iOS developer community*
 

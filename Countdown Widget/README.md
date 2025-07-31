@@ -1,170 +1,19 @@
-
-# ⏰ Interactive Countdown Widget Script
-
+# ⏰ Countdown Widget
 ![Scriptable](https://img.shields.io/badge/Scriptable-Compatible-purple)
 ![Widget Size](https://img.shields.io/badge/Supports-Small%2C%20Medium%2C%20Large-blue)
 ![Data Source](https://img.shields.io/badge/Data-Google%20Sheet%20Web%20App-brightgreen)
 ![Customization](https://img.shields.io/badge/Configurable-Color%20%2B%20Icon%20%2B%20Age%20%2B%20Pages-orange)
-![Offline Support](https://img.shields.io/badge/Offline%20Cache%20%2B%20Auto%20Sync-lightgrey)
+![Offline Support](https://img.shields.io/badge/Fallback-Offline%20Cache%20%2B%20Auto%20Sync-lightgrey)
 ![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
 ![Last Updated](https://img.shields.io/badge/Updated-June%202025-yellow)
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdow_showcase.png" width="500" alt="Countdown Widget Screenshot"/>
-</p>
+![countdown widget](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdow_showcase.png)
 
----
+A lightweight and customizable countdown widget built using the [Scriptable app](https://scriptable.app), powered by Google Sheets. It helps you track upcoming events like birthdays, anniversaries, or deadlines—right from your iOS home screen.
 
-## 📋 Overview
-
-The Interactive Countdown Widget is a lightweight, customizable JavaScript widget for displaying dynamic countdowns to important events (birthdays, anniversaries, deadlines, etc.) on your iOS home screen using the [Scriptable app](https://scriptable.app). Data is fetched from a Google Sheet, making it easy to update events without editing code.
-
----
-
-## ✨ Features
-
-- **Dynamic Countdown**: Shows days remaining to each event.
-- **Age/Anniversary Display**: Automatically calculates and displays age or years together.
-- **Google Sheets Integration**: Manage events via a simple spreadsheet.
-- **Customizable Appearance**: Set unique colors and icons for each event.
-- **Multiple Layouts**: Supports list and grid views, with pagination.
-- **Offline Support**: Caches data for use when offline.
-- **Widget Parameter Support**: Filter, paginate, or change display modes via widget parameters.
-
----
-
-## 🛠️ Installation
-
-### 1. Download or Clone the Repository
-
-```sh
-git clone https://github.com/rushhiii/Scriptable-IOSWidgets.git
-```
-Or download the ZIP and extract it.
-
-### 2. Add the Script to Scriptable
-
-- Copy `Countdown Widget/MyCountdowns.js` to your iCloud Drive’s `Scriptable` folder.
-- Or, open Scriptable, create a new script, and paste the contents of `MyCountdowns.js`.
-
-### 3. Include the Script in Scriptable
-
-No HTML `<script>` tag is needed—this widget runs inside the [Scriptable app](https://scriptable.app) on iOS.
-
-### 4. Dependencies
-
-- **Scriptable app** (iOS, free on App Store)
-- **Google Sheets** (for event data)
-- No external JS/CSS dependencies required.
-
----
-
-## 🚀 Usage Example
-
-### Basic Setup
-
-1. **Prepare your Google Sheet** (see below for format).
-2. **Set your Google Sheets Web App URL** in the script:
-   ```js
-   const SHEET_API_URL = "https://script.google.com/macros/s/YOUR_ID/exec";
-   ```
-3. **Add the widget** to your home screen via Scriptable.
-
-### Example Widget Initialization
-
-- In Scriptable, select the script and add it as a widget.
-- Configure widget parameters for advanced options (see below).
-
----
-
-## ⚙️ Customization Options
-
-You can customize the widget’s behavior and appearance using parameters and by editing the Google Sheet.
-
-### Widget Parameters
-
-| Parameter Example      | Effect                                      |
-|-----------------------|----------------------------------------------|
-| `age`                 | Show age/years for the event                 |
-| `col`                 | Grid view (medium/large widgets only)        |
-| `2`                   | Show the 2nd event in the list               |
-| `john,age`            | Show John's event with age display           |
-| `pg2`                 | Show page 2 of events                        |
-| `col,pg3`             | Grid view, page 3                            |
-
-- **Small widget**: Show a single event (by name or index).
-- **Medium/Large**: Show a list or grid of events, with pagination.
-
-### Google Sheet Format
-
-| name | date       | icon | color   |
-|------|------------|------|---------|
-| Mom  | 2003-09-25 | 🎂   | #2980b9 |
-| Dad  | 1975-07-01 | 🎂   | #F79F39 |
-
-- Dates must be in `YYYY-MM-DD` format.
-- Icons can be any emoji.
-- Colors are hex codes (optional).
-
-### Customizing Appearance
-
-- Change event colors/icons in your Google Sheet.
-- Edit the color palette in the script for default colors.
-- Replace the repeat icon by placing a PNG in your Scriptable `.assets` folder.
-
----
-
-## 🧩 Advanced Usage
-
-- **Offline Caching**: The widget automatically caches data and syncs daily.
-- **Recurring Events**: Use the repeat icon for recurring events.
-- **Custom Fonts/Icons**: Place custom assets in the Scriptable iCloud folders as described in the script comments.
-
----
-
-## 🤝 Contribution Guidelines
-
-1. **Fork** the repository.
-2. **Create a branch** for your feature or fix.
-3. **Commit** your changes with clear messages.
-4. **Submit a pull request** describing your changes.
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](../LICENSE).
-
----
-
-## 📬 Contact & Support
-
-- **Instagram**: [@the.tirth12](https://www.instagram.com/the.tirth12)
-- **Email**: rushiofficial1205@gmail.com
-
-Feel free to reach out for help, feature requests, or collaboration ideas!
-
----
-
-## 🖼️ Screenshots / GIFs
-
-> _Add screenshots or GIFs here to showcase the widget in action._
-
-| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_s.PNG" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_age_s.PNG" width="160"/> |
-|:--:|:--:|
-| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_bday_s.PNG" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_1_s.PNG" width="160"/> |
-
-| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_m.PNG" width="260"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_col_m.PNG" width="260"/> |
-|:--:|:--:|
-
-| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_l.PNG" width="360"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/countdown/countdown_col_l.png" width="360"/> |
-|:--:|:--:|
-
----
-
-<p align="center">
-Enjoy using the Interactive Countdown Widget!
-</p>
+> **Mention:** Minimal design widget
+> https://jvscholz.com/blog/countdown.html
+> if the links dosent work look in the [backup](./backup) foolder
 
 ## ✨ Features
 

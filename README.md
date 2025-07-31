@@ -1,9 +1,9 @@
 # Scriptable
-![Scriptable App](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/badges/scriptableBadge.svg) &nbsp; ![iOS](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/badges/iOS-badge.svg)
+![Scriptable App](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/badges/scriptableBadge.svg) &nbsp; ![iOS](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/badges/iOS-badge.svg)
 
 Welcome to my curated collection of **Scriptable** widgets and scripts, crafted to bring more power and personalization to your iOS home screen.
 
-<img alt="Mockup wall" width="100%" align="center" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/scriptable_mockup_wall.png" />
+<img alt="Mockup wall" width="100%" align="center" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/scriptable_mockup_wall.png" />
 
 <br>
 
@@ -42,28 +42,28 @@ Welcome to my curated collection of **Scriptable** widgets and scripts, crafted 
 
 ### [Countdown](./Countdown)
 
-![countdown widget](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.src/countdown/countdow_showcase.png?raw=true)
+![countdown widget](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.assets/countdown/countdow_showcase.png?raw=true)
 
 📆 **Track life’s important moments—right from your home screen.**\
 The **Countdown Widget** helps you stay on top of upcoming events like birthdays, anniversaries, holidays, or personal milestones. It supports **multiple display modes** based on widget size (Small, Medium, Large) and can be fully customized using script parameters. You can show specific events, display color-coded grids, or even track multiple events in column layout. The widget fetches data from a local `.json` or a connected Google Sheet for dynamic updates.
 
 ### [Birthday](./Birthday%20Widget)
 
-<img width="60%" src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.src/birthday/birthday_showcase.png?raw=true">
+<img width="60%" src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.assets/birthday/birthday_showcase.png?raw=true">
 
 🎉 The **Birthday Widget** gives you a beautiful, minimal way to reflect on your life.\
 It shows your **exact age** (to 2 decimal places), **total days lived**, and a **progress ring** indicating how close you are to your next birthday. Designed for the **Small widget size**, it offers a clean dark-gradient background and supports **parameter customization** to set your name and birthdate. You’ll see your name (e.g., “Rushi’s Life”), a countdown ring that updates daily, and age stats—all in one elegant glance.
 
 ### [HinduClrWear](./HinduClrWear%20Widget)
 
-<img width="80%" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/hinduclrwear/hinduclrwear_showcase.png">
+<img width="80%" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/hinduclrwear/hinduclrwear_showcase.png">
 
 🧘‍♂️ **The Hindu Color Wear Widget** offers daily color suggestions based on traditional Hindu practices.\
 Each day of the week is mapped to a specific color, deity, and spiritual quality—helping you dress with intention and align your energy. The widget supports **all three sizes** (Small, Medium, Large) and changes layout accordingly: Small shows today’s color, Medium displays a full week grid, and Large includes spiritual reasoning. No parameters needed—it auto-detects the day and works offline.
 
 ### [MyQuotes](./Quote%20Widget)
 
-<img width="60%" src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.src/quotes/quote_showcase_1.png?raw=true">
+<img width="60%" src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.assets/quotes/quote_showcase_1.png?raw=true">
 
 💬 **The Quote of the Day Widget** delivers a daily dose of inspiration, wisdom, or stoic reflection.\
 Based on the selected category (like *Zen*, *Gita*, *Aurelius*, or *Kafka*), it fetches quotes dynamically from a Google Sheet. The widget adapts its size and style to fit the quote length and device size, and refreshes every night at midnight. Font and background colors can be pulled from the sheet or randomized from a curated palette.\
@@ -71,14 +71,14 @@ This widget supports **small**, **medium**, and **large** sizes. You can also pa
 
 ### [Class Schedule Viewer](./Schedule%20Widget)
 
-<img width="60%" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/schedule/schedule_showcase_1.png">
+<img width="60%" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/schedule/schedule_showcase_1.png">
 
 📅 **The Class Schedule Widget** syncs your school or university timetable from a public Google Sheet and automatically displays today’s classes. It adapts to the widget size: from showing only the current class to displaying a full weekly schedule with a beautiful gradient background per weekday.\
 This widget supports **small**, **medium**, and **large** views. You can also simulate different days or class times using widget parameters.
 
 ### [Modular Time Progress](./TimeProgress%20Widget)
 
-![timeProgress Widget](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/timeprogress/timeprogress_showcase.png)
+![timeProgress Widget](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/timeprogress/timeprogress_showcase.png)
 
 ⏳ **The Modular Time Progress Widget** lets you visualize your life in motion— from the minutes in your day to the weeks in your year. This fully modular Scriptable widget supports multiple modes like day, week, month, year, and week number views. Each mode features a clean, minimalist design with gradient themes and dynamic progress animations.\
 Use parameters like `day`, `month`, or `weeknumring` to customize each instance — perfect for stacking small, medium, or large widgets for a complete time dashboard.
@@ -87,14 +87,14 @@ Use parameters like `day`, `month`, or `weeknumring` to customize each instance 
 
 <!-- ![Weather Widget](.src/weather/weather_showcase_s.png) -->
 
-<img width="60%" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/weather/weather_showcase_s.png">
+<img width="60%" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/weather/weather_showcase_s.png">
 
 ⛅ **The Dynamic Weather Widget** gives you real-time weather data in a stylish, minimal layout. It auto-detects your current location, fetches current conditions from OpenWeatherMap, and presents the info with dynamically sized text and gradient backgrounds. Whether you use it in small, medium, or large format — it adapts gracefully.\
 Customize temperature units, color gradients, and update intervals to fit your aesthetic and practical needs.
 
 ### [GitHub Stats Widget](./GitHubStats%20Widget)
 
-![GitHubStats Widget](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/githubstats/githubstats_showcase.png)
+![GitHubStats Widget](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/githubstats/githubstats_showcase.png)
 
 📊 **Track your GitHub contributions, commits, stars, PRs, and more** — all from your iOS Home Screen. This dynamic widget leverages GitHub's GraphQL and REST APIs to show profile or repo-specific stats using multiple themes and widget sizes.\
 Supports Small, Medium, and Large layouts with parameter-based customization for themes and content. Keep your dev grind visible. Because contribution streaks matter.

@@ -1,4 +1,4 @@
-# OpenWeather AQI + Temperature Widget
+# 🍃 OpenWeather AQI + Temperature Widget
 
 ![Scriptable](https://img.shields.io/badge/Scriptable-Compatible-purple)
 ![Widget Size](https://img.shields.io/badge/Supports-Small%20Widget-blue)
@@ -174,8 +174,8 @@ Temperature mode uses different color schemes based on temperature ranges:
 
 | AQI Level | Example | Description |
 |-----------|---------|-------------|
-| Hazardous (350 AQI) | ![Hazardous AQI](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.assets/aqi/openweatheraqi_s_1.png) | Purple/Maroon background, shows severe air pollution |
-| Moderate (51 AQI) | ![Moderate AQI](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.assets/aqi/openweatheraqi_s_2.png) | Yellow background, acceptable air quality |
+| Hazardous (350 AQI) | <img alt="Hazardous AQI" src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.assets/aqi/openweatheraqi_s_1.png?raw=true" width="160"/> | Purple/Maroon background, shows severe air pollution |
+| Moderate (51 AQI) | <img alt="Moderate AQI" src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.assets/aqi/openweatheraqi_s_2.png?raw=true" width="160"/> | Yellow background, acceptable air quality |
 
 **AQI Mode displays:**
 - "AIR QUALITY" header
@@ -190,7 +190,7 @@ Temperature mode uses different color schemes based on temperature ranges:
 
 | Temperature Range | Example | Description |
 |-------------------|---------|-------------|
-| Cool Weather (23°C) | ![Cool Temperature](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.assets/aqi/openweatheraqi_s_3.png) | Blue background for comfortable temperatures |
+| Cool Weather (23°C) | <img alt="Cool Temperature" src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.assets/aqi/openweatheraqi_s_3.png?raw=true" width="160"/> | Blue background for comfortable temperatures |
 
 **Temperature Mode displays:**
 - Large current temperature

@@ -1,4 +1,4 @@
-# ✒️ Quotes Widget
+# Quotes Widget
 ![Scriptable](https://img.shields.io/badge/Scriptable-Compatible-purple)
 ![Widget Size](https://img.shields.io/badge/Supports-Small%2C%20Medium%2C%20Large-blue)
 ![Data Source](https://img.shields.io/badge/Data-Google%20Sheet%20(CSV)-green)

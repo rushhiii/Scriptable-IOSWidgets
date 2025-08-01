@@ -1,4 +1,4 @@
-# ⏰ Countdown Widget
+# Countdown Widget
 ![Scriptable](https://img.shields.io/badge/Scriptable-Compatible-purple)
 ![Widget Size](https://img.shields.io/badge/Supports-Small%2C%20Medium%2C%20Large-blue)
 ![Data Source](https://img.shields.io/badge/Data-Google%20Sheet%20Web%20App-brightgreen)
@@ -118,35 +118,38 @@ If you see a ❗ warning or square character instead of the **repeat icon**, it'
 Use the following options when editing the widget:
 
 <table>
-  <tr>
-    <th>Option</th>
-    <th>Defaults</th>
-    <th>Change to</th>
-  </tr>
-  <tr>
-    <td>Script</td>
-    <td>Choose</td>
-    <td>Widget Name (e.g., Countdown Widget)</td>
-  </tr>
-  <tr>
-    <td>While Interacting (optional)</td>
-    <td>Open App</td>
-    <td>Run Script</td>
-  </tr>
-  <tr>
-    <td>Parameters</td>
-    <td>Text</td>
-    <td>
-      <ul>
-        <li>For e.g., <code>age</code>, <code>2</code>, <code>john,age</code>, <code>col</code></li>
-        <li><a href="#note">Read below</a> for more instructions</li>
-      </ul>
-    </td>
-  </tr>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Defaults</th>
+      <th>Change to</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Script</td>
+      <td>Choose</td>
+      <td>Widget Name (e.g., Countdown Widget)</td>
+    </tr>
+    <tr>
+      <td>While Interacting (optional)</td>
+      <td>Open App</td>
+      <td>Run Script</td>
+    </tr>
+    <tr>
+      <td>Parameters</td>
+      <td>Text</td>
+      <td>
+        <ul>
+          <li>For e.g., <code>age</code>, <code>2</code>, <code>john,age</code>, <code>col</code></li>
+          <li><a href="#note">Read below</a> for more instructions</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 > _Here's a Screenshot of widget's config panal_
-
 
 ![countdown_config_panal.png](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/countdown/countdown_config_panal.PNG)
 
@@ -165,20 +168,23 @@ Use the following options when editing the widget:
 
 > _Small Widgets_ 
 
-| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/countdown/countdown_s.PNG" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/countdown/countdown_age_s.PNG" width="160"/> |
+| Default View | Age View |
 |:--:|:--:|
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/countdown/countdown_s.PNG" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/countdown/countdown_age_s.PNG" width="160"/> |
 | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/countdown/countdown_bday_s.PNG" width="160"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/countdown/countdown_1_s.PNG" width="160"/> |
 
 > _Medium Widgets_
 
-| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/countdown/countdown_m.PNG" width="260"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/countdown/countdown_col_m.PNG" width="260"/> |
+| List View | Grid View |
 |:--:|:--:|
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/countdown/countdown_m.PNG" width="260"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/countdown/countdown_col_m.PNG" width="260"/> |
 
 
 > _Large Widgets_
 
-| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/countdown/countdown_l.PNG" width="360"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/countdown/countdown_col_l.png" width="360"/> |
+| List View | Grid View |
 |:--:|:--:|
+| <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/countdown/countdown_l.PNG" width="360"/> | <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/countdown/countdown_col_l.png" width="360"/> |
 
 
 ## 🙌 Feedback

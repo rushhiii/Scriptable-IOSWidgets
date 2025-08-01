@@ -1,4 +1,4 @@
-## 📊 GitHub Stats Widget
+# GitHub Stats Widget
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat)
 ![Built with JavaScript](https://img.shields.io/badge/Built%20with-JavaScript-F7DF1E?logo=javascript&style=flat)
 ![Platform](https://img.shields.io/badge/Platform-iOS-blue?style=flat&logo=apple)

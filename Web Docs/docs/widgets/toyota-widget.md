@@ -1,4 +1,4 @@
-# 🚗 Toyota Widget
+# Toyota Widget
 
 ![Scriptable](https://img.shields.io/badge/Scriptable-Compatible-purple)
 ![Widget Size](https://img.shields.io/badge/Supports-Medium%2C%20Large-blue)

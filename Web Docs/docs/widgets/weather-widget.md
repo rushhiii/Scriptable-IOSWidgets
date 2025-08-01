@@ -1,4 +1,4 @@
-# ⛅ Weather Widget
+# Weather Widget
 
 ![Scriptable](https://img.shields.io/badge/Scriptable-Compatible-purple)
 ![Widget Size](https://img.shields.io/badge/Supports-Small%2C%20Medium%2C%20Large-blue)

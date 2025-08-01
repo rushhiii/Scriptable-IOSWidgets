@@ -1,4 +1,4 @@
-# 🌬️ OpenWeather AQI + Temperature Widget
+# OpenWeather AQI + Temperature Widget
 
 ![Scriptable](https://img.shields.io/badge/Scriptable-Compatible-purple)
 ![Widget Size](https://img.shields.io/badge/Supports-Small%20Widget-blue)

@@ -24,6 +24,7 @@ Welcome to my curated collection of **Scriptable** widgets and scripts, crafted 
       <li><a href="#countdown">Countdown Widget</a></li>
       <li><a href="#myquotes">Quote Widget</a></li>
       <li><a href="#github-stats-widget">GitHubStats Widget</a></li>
+      <li><a href="#aqi-widget">AQI Widget</a></li>
       <li><a href="#dynamic-weather-widget">Weather Widget</a></li>
       <li><a href="#class-schedule-viewer">Schedule Widget</a></li>
       <li><a href="#modular-time-progress">TimeProgress Widget</a></li>
@@ -98,6 +99,13 @@ Customize temperature units, color gradients, and update intervals to fit your a
 
 📊 **Track your GitHub contributions, commits, stars, PRs, and more** — all from your iOS Home Screen. This dynamic widget leverages GitHub's GraphQL and REST APIs to show profile or repo-specific stats using multiple themes and widget sizes.\
 Supports Small, Medium, and Large layouts with parameter-based customization for themes and content. Keep your dev grind visible. Because contribution streaks matter.
+
+### [AQI Widget](./Widgets/AQI%20Widget)
+
+<img width="60%" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/aqi/aqi_showcase.png">
+
+🌍 **The OpenWeather AQI + Temperature Widget** brings real-time air quality and weather data to your home screen with beautiful color-coded backgrounds. This dual-mode widget displays either Air Quality Index (AQI) information or temperature data, both sourced from OpenWeatherMap APIs.\
+Features automatic location detection, EPA-standard AQI color coding, temperature-based themes, and smart theming that adapts to your device's appearance. Supports parameter customization for switching between modes and forcing light/dark themes. Inspired by Jason Snell's PurpleAir widget.
 
 ## 🌐 Other Mentionable Widgets
 

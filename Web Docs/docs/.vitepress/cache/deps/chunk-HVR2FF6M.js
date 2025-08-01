@@ -301,6 +301,23 @@ var stringifySymbol = (v, i = "") => {
     isSymbol(v) ? `Symbol(${(_a = v.description) != null ? _a : i})` : v
   );
 };
+function normalizeCssVarValue(value) {
+  if (value == null) {
+    return "initial";
+  }
+  if (typeof value === "string") {
+    return value === "" ? " " : value;
+  }
+  if (typeof value !== "number" || !Number.isFinite(value)) {
+    if (true) {
+      console.warn(
+        "[Vue warn] Invalid value used for CSS binding. Expected a string or a finite number but received:",
+        value
+      );
+    }
+  }
+  return String(value);
+}
 
 // node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js
 function warn(msg, ...args) {
@@ -4330,10 +4347,8 @@ function resolveCssVars(instance, vnode, expectedMap) {
   if (instance.getCssVars && (vnode === root || root && root.type === Fragment && root.children.includes(vnode))) {
     const cssVars = instance.getCssVars();
     for (const key in cssVars) {
-      expectedMap.set(
-        `--${getEscapedCssVarName(key, false)}`,
-        String(cssVars[key])
-      );
+      const value = normalizeCssVarValue(cssVars[key]);
+      expectedMap.set(`--${getEscapedCssVarName(key, false)}`, value);
     }
   }
   if (vnode === root && instance.parent) {
@@ -4533,16 +4548,19 @@ function defineAsyncComponent(source) {
     __asyncLoader: load,
     __asyncHydrate(el, instance, hydrate2) {
       let patched = false;
-      const doHydrate = hydrateStrategy ? () => {
-        const performHydrate = () => {
-          if (patched) {
+      (instance.bu || (instance.bu = [])).push(() => patched = true);
+      const performHydrate = () => {
+        if (patched) {
+          if (true) {
             warn$1(
-              `Skipping lazy hydration for component '${getComponentName(resolvedComp)}': it was updated before lazy hydration performed.`
+              `Skipping lazy hydration for component '${getComponentName(resolvedComp) || resolvedComp.__file}': it was updated before lazy hydration performed.`
             );
-            return;
           }
-          hydrate2();
-        };
+          return;
+        }
+        hydrate2();
+      };
+      const doHydrate = hydrateStrategy ? () => {
         const teardown = hydrateStrategy(
           performHydrate,
           (cb) => forEachElement(el, cb)
@@ -4550,8 +4568,7 @@ function defineAsyncComponent(source) {
         if (teardown) {
           (instance.bum || (instance.bum = [])).push(teardown);
         }
-        (instance.u || (instance.u = [])).push(() => patched = true);
-      } : hydrate2;
+      } : performHydrate;
       if (resolvedComp) {
         doHydrate();
       } else {
@@ -5421,15 +5438,15 @@ function withDefaults(props, defaults) {
   return null;
 }
 function useSlots() {
-  return getContext().slots;
+  return getContext("useSlots").slots;
 }
 function useAttrs() {
-  return getContext().attrs;
+  return getContext("useAttrs").attrs;
 }
-function getContext() {
+function getContext(calledFunctionName) {
   const i = getCurrentInstance();
   if (!i) {
-    warn$1(`useContext() called without active instance.`);
+    warn$1(`${calledFunctionName}() called without active instance.`);
   }
   return i.setupContext || (i.setupContext = createSetupContext(i));
 }
@@ -5681,7 +5698,8 @@ function applyOptions(instance) {
       expose.forEach((key) => {
         Object.defineProperty(exposed, key, {
           get: () => publicThis[key],
-          set: (val) => publicThis[key] = val
+          set: (val) => publicThis[key] = val,
+          enumerable: true
         });
       });
     } else if (!instance.exposed) {
@@ -6131,7 +6149,7 @@ function provide(key, value) {
   }
 }
 function inject(key, defaultValue, treatDefaultAsFactory = false) {
-  const instance = currentInstance || currentRenderingInstance;
+  const instance = getCurrentInstance();
   if (instance || currentApp) {
     let provides = currentApp ? currentApp._context.provides : instance ? instance.parent == null || instance.ce ? instance.vnode.appContext && instance.vnode.appContext.provides : instance.parent.provides : void 0;
     if (provides && key in provides) {
@@ -6146,7 +6164,7 @@ function inject(key, defaultValue, treatDefaultAsFactory = false) {
   }
 }
 function hasInjectionContext() {
-  return !!(currentInstance || currentRenderingInstance || currentApp);
+  return !!(getCurrentInstance() || currentApp);
 }
 var internalObjectProto = {};
 var createInternalObject = () => Object.create(internalObjectProto);
@@ -6569,7 +6587,7 @@ function isExplicable(type) {
 function isBoolean(...args) {
   return args.some((elem) => elem.toLowerCase() === "boolean");
 }
-var isInternalKey = (key) => key[0] === "_" || key === "$stable";
+var isInternalKey = (key) => key === "_" || key === "__" || key === "_ctx" || key === "$stable";
 var normalizeSlotValue = (value) => isArray(value) ? value.map(normalizeVNode) : [normalizeVNode(value)];
 var normalizeSlot = (key, rawSlot, ctx) => {
   if (rawSlot._n) {
@@ -7348,6 +7366,7 @@ function baseCreateRenderer(options, createHydrationFns) {
       if (!initialVNode.el) {
         const placeholder = instance.subTree = createVNode(Comment);
         processCommentNode(null, placeholder, container, anchor);
+        initialVNode.placeholder = placeholder.el;
       }
     } else {
       setupRenderEffect(
@@ -7849,7 +7868,11 @@ function baseCreateRenderer(options, createHydrationFns) {
       for (i = toBePatched - 1; i >= 0; i--) {
         const nextIndex = s2 + i;
         const nextChild = c2[nextIndex];
-        const anchor = nextIndex + 1 < l2 ? c2[nextIndex + 1].el : parentAnchor;
+        const anchorVNode = c2[nextIndex + 1];
+        const anchor = nextIndex + 1 < l2 ? (
+          // #13559, fallback to el placeholder for unresolved async component
+          anchorVNode.el || anchorVNode.placeholder
+        ) : parentAnchor;
         if (newIndexToOldIndexMap[i] === 0) {
           patch(
             null,
@@ -9735,6 +9758,7 @@ function cloneVNode(vnode, extraProps, mergeRef = false, cloneTransition = false
     suspense: vnode.suspense,
     ssContent: vnode.ssContent && cloneVNode(vnode.ssContent),
     ssFallback: vnode.ssFallback && cloneVNode(vnode.ssFallback),
+    placeholder: vnode.placeholder,
     el: vnode.el,
     anchor: vnode.anchor,
     ctx: vnode.ctx,
@@ -10534,7 +10558,7 @@ function isMemoSame(cached, memo) {
   }
   return true;
 }
-var version = "3.5.17";
+var version = "3.5.18";
 var warn2 = true ? warn$1 : NOOP;
 var ErrorTypeStrings = ErrorTypeStrings$1;
 var devtools = true ? devtools$1 : void 0;
@@ -11044,8 +11068,9 @@ function setVarsOnNode(el, vars) {
     const style = el.style;
     let cssText = "";
     for (const key in vars) {
-      style.setProperty(`--${key}`, vars[key]);
-      cssText += `--${key}: ${vars[key]};`;
+      const value = normalizeCssVarValue(vars[key]);
+      style.setProperty(`--${key}`, value);
+      cssText += `--${key}: ${value};`;
     }
     style[CSS_VAR_TEXT] = cssText;
   }
@@ -12580,7 +12605,7 @@ export {
 
 @vue/shared/dist/shared.esm-bundler.js:
   (**
-  * @vue/shared v3.5.17
+  * @vue/shared v3.5.18
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
@@ -12588,14 +12613,14 @@ export {
 
 @vue/reactivity/dist/reactivity.esm-bundler.js:
   (**
-  * @vue/reactivity v3.5.17
+  * @vue/reactivity v3.5.18
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
 
 @vue/runtime-core/dist/runtime-core.esm-bundler.js:
   (**
-  * @vue/runtime-core v3.5.17
+  * @vue/runtime-core v3.5.18
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
@@ -12603,7 +12628,7 @@ export {
 
 @vue/runtime-dom/dist/runtime-dom.esm-bundler.js:
   (**
-  * @vue/runtime-dom v3.5.17
+  * @vue/runtime-dom v3.5.18
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
@@ -12611,9 +12636,9 @@ export {
 
 vue/dist/vue.runtime.esm-bundler.js:
   (**
-  * vue v3.5.17
+  * vue v3.5.18
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
 */
-//# sourceMappingURL=chunk-DDXJJ377.js.map
+//# sourceMappingURL=chunk-HVR2FF6M.js.map

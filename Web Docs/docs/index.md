@@ -4,10 +4,10 @@ layout: home
 hero:
   name: "Scriptable iOS Widgets"
   text: "Beautiful Custom Widgets"
-  tagline: "A collection of custom iOS widgets built with Scriptable by rushhiii"
+  tagline: "A curated collection of powerful iOS widgets built with Scriptable - bringing more functionality and beauty to your home screen"
   image:
     src: https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/scriptable_mockup_wall.png
-    alt: Scriptable Widgets
+    alt: Scriptable Widgets Collection
     width: 100%
   actions:
     - theme: brand
@@ -18,24 +18,24 @@ hero:
       link: https://github.com/rushhiii/Scriptable-IOSWidgets
 
 features:
-  - icon: 🌡️
-    title: Weather & AQI
-    details: Get real-time weather updates and air quality information with beautiful minimal designs.
+  - icon: 🍃
+    title: Environmental Data
+    details: Real-time weather updates and air quality monitoring with beautiful color-coded designs and smart theming.
   - icon: ⏰
-    title: Time & Progress
-    details: Track countdowns, schedules, and time progress with customizable widgets.
+    title: Time & Life Tracking
+    details: Track countdowns, birthdays, schedules, and time progress with customizable widgets and Google Sheets integration.
   - icon: 📊
-    title: GitHub Stats
-    details: Display your GitHub contribution stats and repository information.
-  - icon: 📱
-    title: Personal Widgets
-    details: Birthday reminders, quotes, Toyota integration, and Hindu calendar widgets.
+    title: Developer Tools
+    details: Display your GitHub contribution stats, repository information, and coding activity with beautiful graphs.
   - icon: 🎨
-    title: Beautiful UI
-    details: Modern, clean designs that blend perfectly with your iOS home screen.
-  - icon: ⚙️
-    title: Easy Setup
-    details: Simple installation process with detailed documentation for each widget.
+    title: Personal & Cultural
+    details: Daily quotes, Hindu calendar wisdom, vehicle integration, and personalized birthday tracking widgets.
+  - icon: 🛠️
+    title: Easy Customization
+    details: Parameter-based configuration, multiple themes, and detailed documentation for every widget.
+  - icon: 📱
+    title: iOS Optimized
+    details: Native iOS design patterns, efficient performance, and seamless integration with your home screen.
 ---
 
 ## 🚀 Quick Start
@@ -46,39 +46,39 @@ features:
 4. **Configure** your widget settings
 5. **Add to home screen** and enjoy!
 
-## 📱 Widget Collection
+## Widget Collection
 
 <div class="widget-grid">
 
 <div class="widget-card">
   <div class="widget-image-container">
-    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/weather/weather_showcase.png" alt="Weather Widget" class="widget-image"/>
+    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/weather/weather_showcase_s.png" alt="Weather Widget" class="widget-image"/>
   </div>
   <div class="widget-content">
     <p><strong>🌤️ Weather Widget</strong></p>
-    <p>Beautiful, clean weather display with multiple themes and customization options. Perfect for quick weather checks.</p>
+    <p>Beautiful, minimal weather display with real-time conditions, temperature, and location-based forecasts.</p>
     <div class="widget-features">
       <span class="feature-tag">🌡️ Temperature</span>
       <span class="feature-tag">🌧️ Conditions</span>
-      <span class="feature-tag">🎨 Themes</span>
+      <span class="feature-tag">🎨 Minimal Design</span>
     </div>
-    <a href="/widgets/weather-widget" class="widget-link">Learn More →</a>
+    <a href="./widgets/weather-widget" class="widget-link"><span>Learn More</span></a>
   </div>
 </div>
 
 <div class="widget-card">
   <div class="widget-image-container">
-    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/weather/weather_s_2.png" alt="AQI Widget" class="widget-image"/>
+    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/aqi/openweatheraqi_showcase.png" alt="AQI Widget" class="widget-image"/>
   </div>
   <div class="widget-content">
     <p><strong>🌬️ AQI Widget</strong></p>
-    <p>Stay informed about air quality with real-time AQI data and health recommendations for your area.</p>
+    <p>Monitor air quality and temperature with real-time data from OpenWeatherMap. Features dual-mode display and smart theming.</p>
     <div class="widget-features">
-      <span class="feature-tag">🌬️ AQI Data</span>
-      <span class="feature-tag">📍 Location</span>
-      <span class="feature-tag">⚠️ Alerts</span>
+      <span class="feature-tag">� AQI Data</span>
+      <span class="feature-tag">🌡️ Temperature</span>
+      <span class="feature-tag">🎨 Smart Themes</span>
     </div>
-    <a href="/widgets/aqi-widget" class="widget-link">Learn More →</a>
+    <a href="./widgets/aqi-widget" class="widget-link"><span>Learn More</span></a>
   </div>
 </div>
 
@@ -94,7 +94,7 @@ features:
       <span class="feature-tag">🗓️ Google Sheets</span>
       <span class="feature-tag">🎨 Custom Colors</span>
     </div>
-    <a href="/widgets/countdown-widget" class="widget-link">Learn More →</a>
+    <a href="./widgets/countdown-widget" class="widget-link"><span>Learn More</span></a>
   </div>
 </div>
 
@@ -110,7 +110,7 @@ features:
       <span class="feature-tag">⭐ Repositories</span>
       <span class="feature-tag">🔥 Streaks</span>
     </div>
-    <a href="/widgets/github-stats-widget" class="widget-link">Learn More →</a>
+    <a href="./widgets/github-stats-widget" class="widget-link"><span>Learn More</span></a>
   </div>
 </div>
 
@@ -126,39 +126,39 @@ features:
       <span class="feature-tag">📅 Countdown</span>
       <span class="feature-tag">🎉 Milestones</span>
     </div>
-    <a href="/widgets/birthday-widget" class="widget-link">Learn More →</a>
+    <a href="./widgets/birthday-widget" class="widget-link"><span>Learn More</span></a>
   </div>
 </div>
 
 <div class="widget-card">
   <div class="widget-image-container">
-    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/quotes/quote_showcase.png" alt="Quote Widget" class="widget-image"/>
+    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/quotes/quote_showcase_1.png" alt="Quote Widget" class="widget-image"/>
   </div>
   <div class="widget-content">
     <p><strong>💬 Quote Widget</strong></p>
-    <p>Get motivated with beautiful quotes that change daily. Support for multiple themes and custom quotes.</p>
+    <p>Get inspired with beautiful quotes that change daily. Support for multiple categories and custom themes.</p>
     <div class="widget-features">
-      <span class="feature-tag">💬 Quotes</span>
-      <span class="feature-tag">🌅 Daily</span>
+      <span class="feature-tag">💬 Daily Quotes</span>
+      <span class="feature-tag">📚 Categories</span>
       <span class="feature-tag">🎨 Themes</span>
     </div>
-    <a href="/widgets/quote-widget" class="widget-link">Learn More →</a>
+    <a href="./widgets/quote-widget" class="widget-link"><span>Learn More</span></a>
   </div>
 </div>
 
 <div class="widget-card">
   <div class="widget-image-container">
-    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/schedule/schedule_showcase.png" alt="Schedule Widget" class="widget-image"/>
+    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/schedule/schedule_showcase_1.png" alt="Schedule Widget" class="widget-image"/>
   </div>
   <div class="widget-content">
     <p><strong>📚 Schedule Widget</strong></p>
-    <p>Stay organized with your class schedule. Perfect for students with customizable subjects and timings.</p>
+    <p>Stay organized with your class schedule. Google Sheets integration for easy updates and customization.</p>
     <div class="widget-features">
       <span class="feature-tag">📚 Classes</span>
       <span class="feature-tag">⏰ Timings</span>
-      <span class="feature-tag">🎓 Students</span>
+      <span class="feature-tag">🗓️ Google Sheets</span>
     </div>
-    <a href="/widgets/schedule-widget" class="widget-link">Learn More →</a>
+    <a href="./widgets/schedule-widget" class="widget-link"><span>Learn More</span></a>
   </div>
 </div>
 
@@ -174,7 +174,7 @@ features:
       <span class="feature-tag">📅 Multiple</span>
       <span class="feature-tag">🎨 Visual</span>
     </div>
-    <a href="/widgets/time-progress-widget" class="widget-link">Learn More →</a>
+    <a href="./widgets/time-progress-widget" class="widget-link"><span>Learn More</span></a>
   </div>
 </div>
 
@@ -184,94 +184,118 @@ features:
   </div>
   <div class="widget-content">
     <p><strong>🕉️ Hindu Calendar Widget</strong></p>
-    <p>Traditional Hindu calendar with color-coded daily information, festivals, and auspicious timings.</p>
+    <p>Traditional Hindu calendar with daily color recommendations, festivals, and auspicious timings for spiritual guidance.</p>
     <div class="widget-features">
       <span class="feature-tag">🕉️ Traditional</span>
-      <span class="feature-tag">🎨 Colors</span>
+      <span class="feature-tag">🎨 Daily Colors</span>
       <span class="feature-tag">🎊 Festivals</span>
     </div>
-    <a href="/widgets/hindu-calendar-widget" class="widget-link">Learn More →</a>
-  </div>
-</div>
-
-<div class="widget-card">
-  <div class="widget-image-container">
-    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/toyota/toyota_l.png" alt="Toyota Widget" class="widget-image"/>
-  </div>
-  <div class="widget-content">
-    <p><strong>🚗 Toyota Widget</strong></p>
-    <p>Connect with your Toyota vehicle to display fuel level, maintenance alerts, and vehicle status information.</p>
-    <div class="widget-features">
-      <span class="feature-tag">🚗 Vehicle</span>
-      <span class="feature-tag">⛽ Fuel</span>
-      <span class="feature-tag">🔧 Maintenance</span>
-    </div>
-    <a href="/widgets/toyota-widget" class="widget-link">Learn More →</a>
+    <a href="./widgets/hindu-calendar-widget" class="widget-link"><span>Learn More</span></a>
   </div>
 </div>
 
 </div>
 
-## 🌟 Why Choose These Widgets?
+## Why Choose These Widgets?
 
-- **Actively Maintained** - Regular updates and improvements
-- **Well Documented** - Clear setup instructions for each widget  
-- **Customizable** - Personalize colors, layouts, and data sources
-- **Performance Optimized** - Efficient code that won't drain your battery
-- **Community Driven** - Open source with community contributions welcome
+- **🔄 Actively Maintained** - Regular updates and improvements with community feedback
+- **📖 Well Documented** - Clear setup instructions and troubleshooting guides for each widget  
+- **🎨 Fully Customizable** - Personalize colors, layouts, themes, and data sources
+- **⚡ Performance Optimized** - Efficient code that won't drain your battery or slow your device
+- **🤝 Community Driven** - Open source with community contributions and feature requests welcome
+- **🔗 Google Sheets Integration** - Many widgets support dynamic data from Google Sheets
+- **🌙 Smart Theming** - Automatic light/dark mode support with manual override options
 
-## 📞 Support & Contributing
+## Support & Contributing
 
 Found a bug or have a feature request? We'd love to hear from you!
 
 - 🐛 [Report Issues](https://github.com/rushhiii/Scriptable-IOSWidgets/issues)
 - 💡 [Request Features](https://github.com/rushhiii/Scriptable-IOSWidgets/discussions)
 - 🤝 [Contributing Guide](/contributing)
+- 📧 [Email Support](mailto:rushiofficial1205@gmail.com)
+- 📱 [Instagram](https://www.instagram.com/the.tirth12)
 
 <style>
 .widget-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin: 2rem 0;
   padding: 0;
 }
 
 .widget-card {
-  border: 1px solid var(--vp-c-border);
-  border-radius: 16px;
+  border: 1px solid var(--vp-c-border-soft);
+  border-radius: 20px;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   background: var(--vp-c-bg-soft);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   height: 100%;
+  position: relative;
+}
+
+.widget-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--vp-c-brand-lighter), var(--vp-c-brand-soft), var(--vp-c-brand-lighter));
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
 .widget-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-  border-color: var(--vp-c-brand);
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  border-color: var(--vp-c-brand-soft);
+}
+
+.widget-card:hover::before {
+  opacity: 1;
 }
 
 .widget-image-container {
   width: 100%;
   height: 220px;
   overflow: hidden;
-  background: var(--vp-c-bg);
+  background: linear-gradient(135deg, var(--vp-c-bg), var(--vp-c-bg-soft));
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.widget-image-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--vp-c-border), transparent);
 }
 
 .widget-image {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: 12px;
   background: transparent;
+  transition: all 0.4s ease;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
+}
+
+.widget-card:hover .widget-image {
+  transform: scale(1.05);
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.15));
 }
 
 .widget-content {
@@ -311,13 +335,20 @@ Found a bug or have a feature request? We'd love to hear from you!
 }
 
 .feature-tag {
-  background: var(--vp-c-brand-soft);
+  background: linear-gradient(135deg, var(--vp-c-brand-soft), var(--vp-c-brand-softer));
   color: var(--vp-c-brand-dark);
-  padding: 0.375rem 0.75rem;
-  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
   font-size: 0.8rem;
   font-weight: 500;
   white-space: nowrap;
+  border: 1px solid var(--vp-c-brand-softer);
+  transition: all 0.3s ease;
+}
+
+.widget-card:hover .feature-tag {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(var(--vp-c-brand-rgb), 0.15);
 }
 
 .widget-link {
@@ -327,30 +358,108 @@ Found a bug or have a feature request? We'd love to hear from you!
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
-  border-bottom: 2px solid transparent;
-  transition: all 0.2s ease;
   margin-top: auto;
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(135deg, var(--vp-c-brand-soft), var(--vp-c-brand-softer));
+  border-radius: 12px;
+  border: 1px solid var(--vp-c-brand-soft);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.widget-link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--vp-c-brand), var(--vp-c-brand-dark));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.widget-link::after {
+  content: '→';
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.widget-link span {
+  position: relative;
+  z-index: 1;
+}
+
+a.widget-link { 
+  text-decoration: none;
+}
+
+.widget-card:hover .widget-link {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(var(--vp-c-brand-rgb), 0.3);
+  border-color: var(--vp-c-brand);
+}
+
+.widget-link:hover::before {
+  opacity: 1;
 }
 
 .widget-link:hover {
-  border-bottom-color: var(--vp-c-brand);
+  color: white;
+  transform: translateY(-4px);
+}
+
+.widget-link:hover::after {
   transform: translateX(4px);
 }
 
 /* Dark mode adjustments */
 html.dark .widget-card {
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
-}
-
-html.dark .widget-card:hover {
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
-}
-
-html.dark .widget-image-container {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border-color: var(--vp-c-border-hard);
   background: var(--vp-c-bg-alt);
 }
 
-/* Mobile responsiveness */
+html.dark .widget-card::before {
+  background: linear-gradient(135deg, var(--vp-c-brand), var(--vp-c-brand-light), var(--vp-c-brand));
+}
+
+html.dark .widget-card:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border-color: var(--vp-c-brand);
+}
+
+html.dark .widget-image-container {
+  background: linear-gradient(135deg, var(--vp-c-bg-soft), var(--vp-c-bg));
+}
+
+html.dark .feature-tag {
+  background: linear-gradient(135deg, var(--vp-c-brand-dark), var(--vp-c-brand-soft));
+  color: var(--vp-c-brand-lighter);
+  border-color: var(--vp-c-brand-dark);
+}
+
+html.dark .widget-link {
+  background: linear-gradient(135deg, var(--vp-c-brand-dark), var(--vp-c-brand-soft));
+  border-color: var(--vp-c-brand-dark);
+  color: var(--vp-c-brand-lighter);
+}
+
+html.dark .widget-link::before {
+  background: linear-gradient(135deg, var(--vp-c-brand-light), var(--vp-c-brand));
+}
+
+/* Image loading and fallback */
+.widget-image {
+  transition: opacity 0.3s ease;
+}
+
+.widget-image:not([src]) {
+  opacity: 0;
+}
+
+/* Better mobile experience */
 @media (max-width: 768px) {
   .widget-grid {
     grid-template-columns: 1fr;
@@ -374,11 +483,17 @@ html.dark .widget-image-container {
   .widget-content p:not(:first-child) {
     font-size: 0.9rem;
   }
+  
+  .feature-tag {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
 }
 
 @media (max-width: 480px) {
   .widget-grid {
     gap: 1rem;
+    margin: 1rem 0;
   }
   
   .widget-image-container {
@@ -391,17 +506,25 @@ html.dark .widget-image-container {
   }
   
   .feature-tag {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     padding: 0.25rem 0.5rem;
+  }
+  
+  .widget-link {
+    font-size: 0.9rem;
   }
 }
 
-/* Ensure consistent card heights */
+/* Ensure consistent card heights and better grid layout */
 .widget-grid {
   align-items: stretch;
 }
 
-/* Hero image custom sizing */
+.widget-card {
+  min-height: 420px;
+}
+
+/* Hero image optimization */
 .VPHero .VPImage {
   max-width: 800px !important;
   width: 100% !important;
@@ -413,10 +536,71 @@ html.dark .widget-image-container {
   width: 100% !important;
 }
 
-/* Alternative hero image targeting */
 .VPHome .VPHero .VPImage img {
   max-width: 800px !important;
   width: 100% !important;
   height: auto !important;
+}
+
+/* Improved accessibility */
+.widget-card:focus-within {
+  outline: 3px solid var(--vp-c-brand);
+  outline-offset: 4px;
+  transform: translateY(-4px);
+}
+
+.widget-link:focus {
+  outline: 3px solid var(--vp-c-brand);
+  outline-offset: 4px;
+  border-radius: 12px;
+}
+
+/* Loading states */
+.widget-card {
+  position: relative;
+}
+
+.widget-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  transition: left 0.8s ease;
+  pointer-events: none;
+  border-radius: 20px;
+}
+
+.widget-card:hover::after {
+  left: 100%;
+}
+
+/* Enhanced mobile responsiveness */
+@media (max-width: 768px) {
+  .widget-card:hover {
+    transform: translateY(-8px) scale(1.01);
+  }
+  
+  .widget-link {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .widget-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .widget-link {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  
+  .feature-tag {
+    padding: 0.4rem 0.7rem;
+  }
 }
 </style>

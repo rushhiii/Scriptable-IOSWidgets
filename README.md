@@ -102,9 +102,9 @@ Supports Small, Medium, and Large layouts with parameter-based customization for
 
 ### [AQI Widget](./Widgets/AQI%20Widget)
 
-<img width="60%" src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/aqi/aqi_showcase.png">
+<img width="60%" src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.assets/aqi/openweatheraqi_showcase.png">
 
-🌍 **The OpenWeather AQI + Temperature Widget** brings real-time air quality and weather data to your home screen with beautiful color-coded backgrounds. This dual-mode widget displays either Air Quality Index (AQI) information or temperature data, both sourced from OpenWeatherMap APIs.\
+🍃 **The OpenWeather AQI + Temperature Widget** brings real-time air quality and weather data to your home screen with beautiful color-coded backgrounds. This dual-mode widget displays either Air Quality Index (AQI) information or temperature data, both sourced from OpenWeatherMap APIs.\
 Features automatic location detection, EPA-standard AQI color coding, temperature-based themes, and smart theming that adapts to your device's appearance. Supports parameter customization for switching between modes and forcing light/dark themes. Inspired by Jason Snell's PurpleAir widget.
 
 ## 🌐 Other Mentionable Widgets

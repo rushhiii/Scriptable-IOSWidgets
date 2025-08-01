@@ -7,11 +7,9 @@
 ![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
 ![Last Updated](https://img.shields.io/badge/Updated-July%202025-yellow)
 
-
+![OpenWeatherAQI Showcase](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.assets/aqi/openweatheraqi_showcase.png)
 
 A powerful dual-mode widget for Scriptable that displays either **Air Quality Index (AQI)** or **Temperature** information with beautiful color-coded backgrounds. Built for iOS using the [Scriptable app](https://scriptable.app) and powered by OpenWeatherMap APIs.
-
-
 
 > **Inspiration & Credits:** This widget was inspired by and adapted from [Jason Snell's PurpleAir AQI Scriptable Widget](https://github.com/jasonsnell/PurpleAir-AQI-Scriptable-Widget). Special thanks to Jason for the original concept and design patterns that made this enhanced version possible.
 
@@ -174,8 +172,8 @@ Temperature mode uses different color schemes based on temperature ranges:
 
 | AQI Level | Example | Description |
 |-----------|---------|-------------|
-| Hazardous (350 AQI) | ![Hazardous AQI](https://via.placeholder.com/150x150/76205d/f0f0f0?text=AIR+QUALITY%0AHazardous%0A350%0ATokoy) | Purple/Maroon background, shows severe air pollution |
-| Moderate (51 AQI) | ![Moderate AQI](https://via.placeholder.com/150x150/f2e269/1f1f1f?text=AIR+QUALITY%0AModerate%0A51%0AWoodbridge) | Yellow background, acceptable air quality |
+| Hazardous (350 AQI) | ![Hazardous AQI](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.assets/aqi/openweatheraqi_s_1.png) | Purple/Maroon background, shows severe air pollution |
+| Moderate (51 AQI) | ![Moderate AQI](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.assets/aqi/openweatheraqi_s_2.png) | Yellow background, acceptable air quality |
 
 **AQI Mode displays:**
 - "AIR QUALITY" header
@@ -190,7 +188,7 @@ Temperature mode uses different color schemes based on temperature ranges:
 
 | Temperature Range | Example | Description |
 |-------------------|---------|-------------|
-| Cool Weather (23°C) | ![Cool Temperature](https://via.placeholder.com/150x150/87ceeb/000000?text=23%C2%B0%0AHigh+23%C2%B0+Low+21%C2%B0%0A1%C2%B0+warmer+than+feels+like%0A2%C2%B0+range+today%0AWoodbridge) | Blue background for comfortable temperatures |
+| Cool Weather (23°C) | ![Cool Temperature](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.assets/aqi/openweatheraqi_s_3.png) | Blue background for comfortable temperatures |
 
 **Temperature Mode displays:**
 - Large current temperature

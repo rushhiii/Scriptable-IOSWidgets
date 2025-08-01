@@ -7,7 +7,9 @@
 ![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
 ![Last Updated](https://img.shields.io/badge/Updated-July%202025-yellow)
 
-![OpenWeatherAQI Showcase](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.assets/aqi/openweatheraqi_showcase.png)
+<!-- ![OpenWeatherAQI Showcase](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.assets/aqi/openweatheraqi_showcase.png) -->
+
+<img src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.assets/aqi/openweatheraqi_showcase.png" atl="OpenWeatherAQI Showcase" />
 
 A powerful dual-mode widget for Scriptable that displays either **Air Quality Index (AQI)** or **Temperature** information with beautiful color-coded backgrounds. Built for iOS using the [Scriptable app](https://scriptable.app) and powered by OpenWeatherMap APIs.
 

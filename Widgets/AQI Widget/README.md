@@ -9,6 +9,10 @@
 
 A powerful dual-mode widget for Scriptable that displays either **Air Quality Index (AQI)** or **Temperature** information with beautiful color-coded backgrounds. Built for iOS using the [Scriptable app](https://scriptable.app) and powered by OpenWeatherMap APIs.
 
+
+
+> **Inspiration & Credits:** This widget was inspired by and adapted from [Jason Snell's PurpleAir AQI Scriptable Widget](https://github.com/jasonsnell/PurpleAir-AQI-Scriptable-Widget). Special thanks to Jason for the original concept and design patterns that made this enhanced version possible.
+
 > **Note:** All example screenshots in this documentation are shown in **light mode**. If your phone is in dark mode, the widget background will appear pitch black by default. If you prefer the colorful backgrounds shown in the examples, add `"light"` to your widget parameter to force light theme colors.
 
 ## ✨ Features
@@ -284,7 +288,7 @@ Have questions, suggestions, or issues? Reach out:
 
 This project is licensed under the **MIT License**. Feel free to fork, modify, and share with attribution.
 
----
+#
 
 <p align="center">
 <strong>Enjoy monitoring your air quality and weather! 🌍🌡️</strong><br>

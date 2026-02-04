@@ -41,7 +41,7 @@ Welcome to my curated collection of **Scriptable** widgets and scripts, crafted 
 
 ## 📜 List of Widgets
 
-### AQI + Temp. Widget
+### [AQI + Temp. Widget](./Widgets/AQI%20Widget)
 
 <img width="60%" src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.assets/aqi/openweatheraqi_showcase.png">
 
@@ -55,7 +55,7 @@ Features automatic location detection, EPA-standard AQI color coding, temperatur
 ⛅ **The Dynamic Weather Widget** gives you real-time weather data in a stylish, minimal layout. It auto-detects your current location, fetches current conditions from OpenWeatherMap, and presents the info with dynamically sized text and gradient backgrounds. Whether you use it in small, medium, or large format — it adapts gracefully.
 Customize temperature units, color gradients, and update intervals to fit your aesthetic and practical needs.
 
-### [Countdown](./Widgets/Countdown)
+### [Countdown](./Widgets/Countdown%20Widget)
 
 ![countdown widget](https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.assets/countdown/countdow_showcase.png?raw=true)
 

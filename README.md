@@ -64,7 +64,7 @@ Customize temperature units, color gradients, and update intervals to fit your a
 📆 **Track life's important moments—right from your home screen.**
 The **Countdown Widget** helps you stay on top of upcoming events like birthdays, anniversaries, holidays, or personal milestones. It supports **multiple display modes** based on widget size (Small, Medium, Large) and can be fully customized using script parameters. You can show specific events, display color-coded grids, or even track multiple events in column layout. The widget fetches data from a local `.json` or a connected Google Sheet for dynamic updates.
 > NEW VERSION UPDATE! [Countdown Widget v2](./Widgets/Countdown%20Widget/v2/)
-> Countdown Widget v2 — timezone-aware events on your home screen.
+> — timezone-aware events on your home screen.
 > Notion-to-Scriptable sync, relative reminder handling, emoji/color columns, and a ready-to-use Google Calendar bridge.
 
 

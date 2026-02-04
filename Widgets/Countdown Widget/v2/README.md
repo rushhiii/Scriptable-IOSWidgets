@@ -11,7 +11,7 @@
 ![Last Updated](https://img.shields.io/badge/Updated-Feb%202026-yellow)
 
 
-![countdown widget v2 Banner](assets/banner.png)
+![countdown widget v2 Banner](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/countdown/countdown_v2_showcase.png)
 
 ### Birthdays & Events Tracker
 A Scriptable widget powered by a Notion → Google Sheets → Google Calendar pipeline, with a lightweight JSON feed for the widget UI.
@@ -115,17 +115,6 @@ In your Scriptable script:
 
 The widget sorts by next upcoming date and shows countdowns.
 
-
-## Screenshots
-
-Drop your images in [assets](assets) and update these links:
-
-- ![Small widget](assets/widget-small.png)
-- ![Medium widget](assets/widget-medium.png)
-- ![Large widget](assets/widget-large.png)
-- ![Poster / collage](assets/poster.png)
-
-
 ## Data flow (overview)
 
 Notion → Google Sheets → Apps Script → Google Calendar → Scriptable Widget
@@ -138,12 +127,9 @@ Notion → Google Sheets → Apps Script → Google Calendar → Scriptable Widg
 
 ## Notion template & dashboard
 
-- **Template link**: _add your public Notion template link here_
-- **Dashboard preview**: add your screenshot in [assets](assets) and link it here:
+![Notion dashboard](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/countdown/notion-dashboard.png)
 
-**Suggested dashboard name:** `Events Hub` (or `Birthday & Event Tracker`)
-
-![Notion dashboard](assets/notion-dashboard.png)
+**Template link**: [Birthday & Event Tracker Dashboard [Template]](https://lavish-nasturtium-67d.notion.site/Birthday-Event-Tracker-Template-2fc92758f55a8050a0f4c0207b5eeda5?source=copy_link)
 
 
 ## Troubleshooting

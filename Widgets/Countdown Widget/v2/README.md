@@ -30,7 +30,6 @@ A Scriptable widget powered by a Notion → Google Sheets → Google Calendar pi
 - **Developers**: want full automation and timezone-aware reminders
 - **Non‑developers**: can edit Notion and let automation handle the rest
 
----
 
 ## Quick start
 
@@ -107,7 +106,6 @@ In your Scriptable script:
 - Choose this script.
 - Pick Small, Medium, or Large.
 
----
 
 ## Widget size behavior
 
@@ -117,7 +115,6 @@ In your Scriptable script:
 
 The widget sorts by next upcoming date and shows countdowns.
 
----
 
 ## Screenshots
 
@@ -128,7 +125,6 @@ Drop your images in [assets](assets) and update these links:
 - ![Large widget](assets/widget-large.png)
 - ![Poster / collage](assets/poster.png)
 
----
 
 ## Data flow (overview)
 
@@ -139,7 +135,6 @@ Notion → Google Sheets → Apps Script → Google Calendar → Scriptable Widg
 - Apps Script creates calendar events/reminders and serves JSON
 - Scriptable reads JSON and renders the widget
 
----
 
 ## Notion template & dashboard
 
@@ -150,7 +145,6 @@ Notion → Google Sheets → Apps Script → Google Calendar → Scriptable Widg
 
 ![Notion dashboard](assets/notion-dashboard.png)
 
----
 
 ## Troubleshooting
 

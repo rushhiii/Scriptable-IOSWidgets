@@ -2,7 +2,6 @@
 
 This guide explains how to use the system day‑to‑day, including the meaning of each column, reminder formats, and how Notion ↔ Sheets mappings should be set up.
 
----
 
 ## 1) Core columns (Sheet)
 
@@ -51,7 +50,6 @@ These columns must exist in your Google Sheet (tab `Main` by default):
 - **Widget Clr**
   - Hex color for the widget tile (e.g., `#2980b9`).
 
----
 
 ## 2) Notion property names (mapping)
 
@@ -71,7 +69,6 @@ When using Addsync, map your Notion properties to the sheet columns like this:
 
 Note: In Notion, the reminders field is called **Reminders**. It should map to **Relative Reminders** in Sheets.
 
----
 
 ## 3) How reminders work
 
@@ -79,7 +76,6 @@ Note: In Notion, the reminders field is called **Reminders**. It should map to *
 - If the timezone offsets are the same, reminders attach directly to the main event.
 - Every event also gets a **0‑minute popup reminder** at its start time.
 
----
 
 ## 4) Adding new events
 
@@ -87,14 +83,12 @@ Note: In Notion, the reminders field is called **Reminders**. It should map to *
 2. Make sure required fields are filled.
 3. The script will create the calendar event and write the ID back into the sheet.
 
----
 
 ## 5) Editing or deleting events
 
 - **Edit**: change any field and the next sync updates the event.
 - **Delete**: removing a row deletes both the main event and its reminder series.
 
----
 
 ## 6) Widget fields used
 
@@ -105,7 +99,6 @@ The widget only reads:
 - Widget Emoji
 - Widget Clr
 
----
 
 ## 7) Example row
 

@@ -2,7 +2,6 @@
 
 This document explains the architecture, data model, and runtime behavior of the v2 widget stack from a developer POV.
 
----
 
 ## 1) Architecture overview
 
@@ -16,7 +15,6 @@ This document explains the architecture, data model, and runtime behavior of the
 - **Google Calendar**: native reminders and timezone handling.
 - **Scriptable**: fast, local UI for iOS widgets.
 
----
 
 ## 2) Data model (Sheet schema)
 
@@ -41,7 +39,6 @@ Core columns (used by sync and widget):
 - `Exact Local Time` is optional and can be derived.
 - `Widget Emoji` auto-fills from Event Type if empty.
 
----
 
 ## 3) Sync engine (Apps Script)
 
@@ -59,7 +56,6 @@ Core columns (used by sync and widget):
 - **Debounce + lock**: avoids duplicate syncs from multiple triggers.
 - **Auto emoji**: fills `Widget Emoji` based on `Event Type`.
 
----
 
 ## 4) Timezone & reminders logic
 
@@ -80,7 +76,6 @@ Core columns (used by sync and widget):
   - It derives a local time from the smallest reminder offset.
   - Writes the derived time back to the sheet.
 
----
 
 ## 5) Widget data feed
 
@@ -99,7 +94,6 @@ The widget expects:
 - `icon`
 - `color` (optional)
 
----
 
 ## 6) Widget rendering
 
@@ -107,7 +101,6 @@ The widget expects:
 - Shows 1 / 3 / 6 items based on size.
 - Small widget supports optional “age mode.”
 
----
 
 ## 7) Notifications
 
@@ -116,7 +109,7 @@ The widget expects:
 
 To avoid duplicates, disable alerts in one of the calendars.
 
----
+
 
 ## 8) Extensibility
 
@@ -125,7 +118,6 @@ To avoid duplicates, disable alerts in one of the calendars.
 - Swap UI layout: modify Scriptable stacks.
 - Add fields: update Code.gs + widget parser.
 
----
 
 ## 9) Known tradeoffs
 

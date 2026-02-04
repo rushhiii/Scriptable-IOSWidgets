@@ -1,404 +1,47 @@
----
-layout: home
+# Scriptable iOS Widgets
 
-hero:
-  name: "Scriptable iOS Widgets"
-  text: "Beautiful Custom Widgets"
-  tagline: "A curated collection of powerful iOS widgets built with Scriptable - bringing more functionality and beauty to your home screen"
-  image:
-    src: https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/scriptable_mockup_wall.png
-    alt: Scriptable Widgets Collection
-    width: 100%
-  actions:
-    - theme: brand
-      text: Explore Widgets
-      link: /widgets/
-    - theme: alt
-      text: View on GitHub
-      link: https://github.com/rushhiii/Scriptable-IOSWidgets
+![Widget collection preview](https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/scriptable_mockup_wall.png)
 
-features:
-  - icon: 🍃
-    title: Environmental Data
-    details: Real-time weather updates and air quality monitoring with beautiful color-coded designs and smart theming.
-  - icon: ⏰
-    title: Time & Life Tracking
-    details: Track countdowns, birthdays, schedules, and time progress with customizable widgets and Google Sheets integration.
-  - icon: 📊
-    title: Developer Tools
-    details: Display your GitHub contribution stats, repository information, and coding activity with beautiful graphs.
-  - icon: 🎨
-    title: Personal & Cultural
-    details: Daily quotes, Hindu calendar wisdom, vehicle integration, and personalized birthday tracking widgets.
-  - icon: 🛠️
-    title: Easy Customization
-    details: Parameter-based configuration, multiple themes, and detailed documentation for every widget.
-  - icon: 📱
-    title: iOS Optimized
-    details: Native iOS design patterns, efficient performance, and seamless integration with your home screen.
----
+Scriptable iOS Widgets is a curated set of home screen widgets for the [Scriptable](https://scriptable.app) app. Each widget ships with clean JavaScript code, detailed setup guidance, and practical examples so you can go from idea to a polished home screen in minutes.
 
-## 🚀 Quick Start
+## Quick Start
 
-1. **Install Scriptable** from the App Store
-2. **Choose a widget** from our collection below
-3. **Copy the code** and paste it into Scriptable
-4. **Configure** your widget settings
-5. **Add to home screen** and enjoy!
+1. Install Scriptable from the iOS App Store.
+2. Pick a widget from the [Widget Library](widgets/index.md).
+3. Copy the script into Scriptable and add any required API keys.
+4. Test the script inside Scriptable to confirm everything runs.
+5. Add the widget to your home screen and tweak parameters as desired.
 
-## Widget Collection
+## Widget Highlights
 
-<div class="widget-grid">
+| Widget | What it excels at | Learn more |
+| --- | --- | --- |
+| 🌤️ Weather | Minimal current conditions with themed layouts | [Weather Widget](widgets/weather-widget.md)
+| 🌬️ AQI | Air quality + temperature with smart theming | [AQI Widget](widgets/aqi-widget.md)
+| ⏰ Countdown | Google Sheets powered countdown boards | [Countdown Widget](widgets/countdown-widget.md)
+| 📊 GitHub Stats | Personal GitHub analytics dashboard | [GitHub Stats Widget](widgets/github-stats-widget.md)
+| 🎂 Birthday | Accurate age tracking and reminders | [Birthday Widget](widgets/birthday-widget.md)
+| 💬 Quote | Daily inspirational quotes with light/dark themes | [Quote Widget](widgets/quote-widget.md)
 
-<div class="widget-card">
-  <div class="widget-image-container">
-    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/weather/weather_showcase_s.png" alt="Weather Widget" class="widget-image"/>
-  </div>
-  <div class="widget-content">
-    <p><strong>🌤️ Weather Widget</strong></p>
-    <p>Beautiful, minimal weather display with real-time conditions, temperature, and location-based forecasts.</p>
-    <div class="widget-features">
-      <span class="feature-tag">🌡️ Temperature</span>
-      <span class="feature-tag">🌧️ Conditions</span>
-      <span class="feature-tag">🎨 Minimal Design</span>
-    </div>
-    <a href="./widgets/weather-widget" class="widget-link"><span>Learn More</span></a>
-  </div>
-</div>
+Visit the [full widget catalog](widgets/index.md) for screenshots, feature tables, and setup notes for every available widget.
 
-<div class="widget-card">
-  <div class="widget-image-container">
-    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/aqi/openweatheraqi_showcase.png" alt="AQI Widget" class="widget-image"/>
-  </div>
-  <div class="widget-content">
-    <p><strong>🌬️ AQI Widget</strong></p>
-    <p>Monitor air quality and temperature with real-time data from OpenWeatherMap. Features dual-mode display and smart theming.</p>
-    <div class="widget-features">
-      <span class="feature-tag">� AQI Data</span>
-      <span class="feature-tag">🌡️ Temperature</span>
-      <span class="feature-tag">🎨 Smart Themes</span>
-    </div>
-    <a href="./widgets/aqi-widget" class="widget-link"><span>Learn More</span></a>
-  </div>
-</div>
+## Why People Use These Widgets
 
-<div class="widget-card">
-  <div class="widget-image-container">
-    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/countdown/countdow_showcase.png" alt="Countdown Widget" class="widget-image"/>
-  </div>
-  <div class="widget-content">
-    <p><strong>⏰ Countdown Widget</strong></p>
-    <p>Track important events with Google Sheets integration. Perfect for birthdays, anniversaries, and deadlines.</p>
-    <div class="widget-features">
-      <span class="feature-tag">📅 Events</span>
-      <span class="feature-tag">🗓️ Google Sheets</span>
-      <span class="feature-tag">🎨 Custom Colors</span>
-    </div>
-    <a href="./widgets/countdown-widget" class="widget-link"><span>Learn More</span></a>
-  </div>
-</div>
+- 🔄 **Maintained & tested**: scripts receive regular fixes and improvements.
+- 📚 **Detailed docs**: each widget explains parameters, APIs, and troubleshooting steps.
+- 🎨 **Customizable**: colors, layouts, API choices, and themes are easy to override.
+- ⚡ **Optimized**: lightweight JavaScript keeps refreshes quick and battery friendly.
+- 🔗 **Data friendly**: several widgets pull from Google Sheets or external APIs so content stays fresh.
 
-<div class="widget-card">
-  <div class="widget-image-container">
-    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/githubstats/githubstats_showcase.png" alt="GitHub Stats Widget" class="widget-image"/>
-  </div>
-  <div class="widget-content">
-    <p><strong>📊 GitHub Stats Widget</strong></p>
-    <p>Display your coding activity, contribution stats, and repository information with beautiful graphs.</p>
-    <div class="widget-features">
-      <span class="feature-tag">📈 Contributions</span>
-      <span class="feature-tag">⭐ Repositories</span>
-      <span class="feature-tag">🔥 Streaks</span>
-    </div>
-    <a href="./widgets/github-stats-widget" class="widget-link"><span>Learn More</span></a>
-  </div>
-</div>
+## Support & Community
 
-<div class="widget-card">
-  <div class="widget-image-container">
-    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/birthday/birthday_showcase.png" alt="Birthday Widget" class="widget-image"/>
-  </div>
-  <div class="widget-content">
-    <p><strong>🎂 Birthday Widget</strong></p>
-    <p>Calculate precise age in years, months, and days. Track birthdays and important milestones.</p>
-    <div class="widget-features">
-      <span class="feature-tag">🎂 Age</span>
-      <span class="feature-tag">📅 Countdown</span>
-      <span class="feature-tag">🎉 Milestones</span>
-    </div>
-    <a href="./widgets/birthday-widget" class="widget-link"><span>Learn More</span></a>
-  </div>
-</div>
-
-<div class="widget-card">
-  <div class="widget-image-container">
-    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/quotes/quote_showcase_1.png" alt="Quote Widget" class="widget-image"/>
-  </div>
-  <div class="widget-content">
-    <p><strong>💬 Quote Widget</strong></p>
-    <p>Get inspired with beautiful quotes that change daily. Support for multiple categories and custom themes.</p>
-    <div class="widget-features">
-      <span class="feature-tag">💬 Daily Quotes</span>
-      <span class="feature-tag">📚 Categories</span>
-      <span class="feature-tag">🎨 Themes</span>
-    </div>
-    <a href="./widgets/quote-widget" class="widget-link"><span>Learn More</span></a>
-  </div>
-</div>
-
-<div class="widget-card">
-  <div class="widget-image-container">
-    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/schedule/schedule_showcase_1.png" alt="Schedule Widget" class="widget-image"/>
-  </div>
-  <div class="widget-content">
-    <p><strong>📚 Schedule Widget</strong></p>
-    <p>Stay organized with your class schedule. Google Sheets integration for easy updates and customization.</p>
-    <div class="widget-features">
-      <span class="feature-tag">📚 Classes</span>
-      <span class="feature-tag">⏰ Timings</span>
-      <span class="feature-tag">🗓️ Google Sheets</span>
-    </div>
-    <a href="./widgets/schedule-widget" class="widget-link"><span>Learn More</span></a>
-  </div>
-</div>
-
-<div class="widget-card">
-  <div class="widget-image-container">
-    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/timeprogress/timeprogress_showcase.png" alt="Time Progress Widget" class="widget-image"/>
-  </div>
-  <div class="widget-content">
-    <p><strong>⏳ Time Progress Widget</strong></p>
-    <p>Visualize time progress for day, week, month, and year with beautiful progress bars and percentages.</p>
-    <div class="widget-features">
-      <span class="feature-tag">📊 Progress</span>
-      <span class="feature-tag">📅 Multiple</span>
-      <span class="feature-tag">🎨 Visual</span>
-    </div>
-    <a href="./widgets/time-progress-widget" class="widget-link"><span>Learn More</span></a>
-  </div>
-</div>
-
-<div class="widget-card">
-  <div class="widget-image-container">
-    <img src="https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/hinduclrwear/hinduclrwear_showcase.png" alt="Hindu Calendar Widget" class="widget-image"/>
-  </div>
-  <div class="widget-content">
-    <p><strong>🕉️ Hindu Calendar Widget</strong></p>
-    <p>Traditional Hindu calendar with daily color recommendations, festivals, and auspicious timings for spiritual guidance.</p>
-    <div class="widget-features">
-      <span class="feature-tag">🕉️ Traditional</span>
-      <span class="feature-tag">🎨 Daily Colors</span>
-      <span class="feature-tag">🎊 Festivals</span>
-    </div>
-    <a href="./widgets/hindu-calendar-widget" class="widget-link"><span>Learn More</span></a>
-  </div>
-</div>
-
-</div>
-
-## Why Choose These Widgets?
-
-- **🔄 Actively Maintained** - Regular updates and improvements with community feedback
-- **📖 Well Documented** - Clear setup instructions and troubleshooting guides for each widget  
-- **🎨 Fully Customizable** - Personalize colors, layouts, themes, and data sources
-- **⚡ Performance Optimized** - Efficient code that won't drain your battery or slow your device
-- **🤝 Community Driven** - Open source with community contributions and feature requests welcome
-- **🔗 Google Sheets Integration** - Many widgets support dynamic data from Google Sheets
-- **🌙 Smart Theming** - Automatic light/dark mode support with manual override options
-
-## Support & Contributing
-
-Found a bug or have a feature request? We'd love to hear from you!
-
-- 🐛 [Report Issues](https://github.com/rushhiii/Scriptable-IOSWidgets/issues)
-- 💡 [Request Features](https://github.com/rushhiii/Scriptable-IOSWidgets/discussions)
-- 🤝 [Contributing Guide](/contributing)
-- 📧 [Email Support](mailto:rushiofficial1205@gmail.com)
+- 🐛 [Report an issue](https://github.com/rushhiii/Scriptable-IOSWidgets/issues)
+- 💬 [Start a discussion](https://github.com/rushhiii/Scriptable-IOSWidgets/discussions)
+- 🤝 [Read the contributing guide](contributing.md)
+- 📧 [Email support](mailto:rushiofficial1205@gmail.com)
 - 📱 [Instagram](https://www.instagram.com/the.tirth12)
 
-<style>
-.widget-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin: 2rem 0;
-  padding: 0;
-}
-
-.widget-card {
-  border: 1px solid var(--vp-c-border-soft);
-  border-radius: 20px;
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  background: var(--vp-c-bg-soft);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  position: relative;
-}
-
-.widget-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 20px;
-  padding: 2px;
-  background: linear-gradient(135deg, var(--vp-c-brand-lighter), var(--vp-c-brand-soft), var(--vp-c-brand-lighter));
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: xor;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.widget-card:hover {
-  transform: translateY(-12px) scale(1.02);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-  border-color: var(--vp-c-brand-soft);
-}
-
-.widget-card:hover::before {
-  opacity: 1;
-}
-
-.widget-image-container {
-  width: 100%;
-  height: 220px;
-  overflow: hidden;
-  background: linear-gradient(135deg, var(--vp-c-bg), var(--vp-c-bg-soft));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-  position: relative;
-}
-
-.widget-image-container::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--vp-c-border), transparent);
-}
-
-.widget-image {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  border-radius: 12px;
-  background: transparent;
-  transition: all 0.4s ease;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
-}
-
-.widget-card:hover .widget-image {
-  transform: scale(1.05);
-  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.15));
-}
-
-.widget-content {
-  padding: 1.5rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.widget-content p:first-child {
-  margin: 0 0 0.75rem 0;
-  color: var(--vp-c-text-1);
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1.3;
-}
-
-.widget-content p:first-child strong {
-  color: var(--vp-c-text-1);
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
-.widget-content p:not(:first-child) {
-  margin: 0 0 1.25rem 0;
-  color: var(--vp-c-text-2);
-  font-size: 0.95rem;
-  line-height: 1.6;
-  flex: 1;
-}
-
-.widget-features {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.25rem;
-}
-
-.feature-tag {
-  background: linear-gradient(135deg, var(--vp-c-brand-soft), var(--vp-c-brand-softer));
-  color: var(--vp-c-brand-dark);
-  padding: 0.5rem 1rem;
-  border-radius: 12px;
-  font-size: 0.8rem;
-  font-weight: 500;
-  white-space: nowrap;
-  border: 1px solid var(--vp-c-brand-softer);
-  transition: all 0.3s ease;
-}
-
-.widget-card:hover .feature-tag {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(var(--vp-c-brand-rgb), 0.15);
-}
-
-.widget-link {
-  display: inline-flex;
-  align-items: center;
-  color: var(--vp-c-brand);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  margin-top: auto;
-  padding: 0.75rem 1.25rem;
-  background: linear-gradient(135deg, var(--vp-c-brand-soft), var(--vp-c-brand-softer));
-  border-radius: 12px;
-  border: 1px solid var(--vp-c-brand-soft);
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  position: relative;
-  overflow: hidden;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.widget-link::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, var(--vp-c-brand), var(--vp-c-brand-dark));
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.widget-link::after {
-  content: '→';
-  transition: transform 0.3s ease;
-  position: relative;
-  z-index: 1;
-}
-
-.widget-link span {
-  position: relative;
-  z-index: 1;
-}
-
-a.widget-link { 
-  text-decoration: none;
-}
-
-.widget-card:hover .widget-link {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(var(--vp-c-brand-rgb), 0.3);
-  border-color: var(--vp-c-brand);
+Need onboarding help or want to showcase your setup? Open a discussion and share screenshots—we love seeing creative layouts.
 }
 
 .widget-link:hover::before {

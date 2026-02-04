@@ -1,7 +1,7 @@
 export default {
   title: 'Scriptable iOS Widgets',
   description: 'Custom iOS Widgets built with Scriptable by rushhiii',
-  base: process.env.VITEPRESS_BASE || '/Scriptable-iOSWidgets/', // Configurable base path
+  base: process.env.VITEPRESS_BASE || '/Scriptable-IOSWidgets/', // Configurable base path
   
   // Transform page titles to remove emojis for clean browser tabs
   transformPageData(pageData) {
@@ -24,8 +24,8 @@ export default {
   ],
   
   head: [
-    ['link', { rel: 'icon', href: `${process.env.VITEPRESS_BASE || '/Scriptable-iOSWidgets/'}/favicon.png`, id: 'favicon' }],
-    ['link', { rel: 'apple-touch-icon', href: `${process.env.VITEPRESS_BASE || '/Scriptable-iOSWidgets/'}/favicon.png`, id: 'apple-favicon' }],
+    ['link', { rel: 'icon', href: `${process.env.VITEPRESS_BASE || '/Scriptable-IOSWidgets/'}/favicon.png`, id: 'favicon' }],
+    ['link', { rel: 'apple-touch-icon', href: `${process.env.VITEPRESS_BASE || '/Scriptable-IOSWidgets/'}/favicon.png`, id: 'apple-favicon' }],
     ['script', {}, `
       // Dynamic favicon function
       window.updateDynamicFavicon = function() {
@@ -60,7 +60,7 @@ export default {
             const favicon = document.getElementById('favicon') || document.querySelector('link[rel="icon"]');
             const appleFavicon = document.getElementById('apple-favicon') || document.querySelector('link[rel="apple-touch-icon"]');
             
-            const staticFaviconUrl = '${process.env.VITEPRESS_BASE || '/Scriptable-iOSWidgets/'}/favicon.png';
+            const staticFaviconUrl = '${process.env.VITEPRESS_BASE || '/Scriptable-IOSWidgets/'}/favicon.png';
             if (favicon) favicon.href = staticFaviconUrl;
             if (appleFavicon) appleFavicon.href = staticFaviconUrl;
             return;
@@ -123,17 +123,17 @@ export default {
     ['meta', { property: 'og:locale', content: 'en' }],
     ['meta', { property: 'og:title', content: 'Scriptable iOS Widgets | Beautiful Custom Widgets' }],
     ['meta', { property: 'og:site_name', content: 'Scriptable iOS Widgets' }],
-    ['meta', { property: 'og:url', content: 'https://rushhiii.github.io/Scriptable-iOSWidgets/' }]
+    ['meta', { property: 'og:url', content: 'https://rushhiii.github.io/Scriptable-IOSWidgets/' }]
   ],
   
   themeConfig: {
-    logo: 'https://raw.githubusercontent.com/rushhiii/Scriptable-iOSWidgets/main/.src/scriptable_icon.png',
+    logo: 'https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/scriptable_icon.png',
     
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Overview', link: '/widgets/' },
       { text: 'Installation', link: '/installation' },
-      { text: 'GitHub', link: 'https://github.com/rushhiii/Scriptable-iOSWidgets' }
+      { text: 'GitHub', link: 'https://github.com/rushhiii/Scriptable-IOSWidgets' }
     ],
     
     sidebar: [
@@ -169,7 +169,7 @@ export default {
     ],
     
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/rushhiii/Scriptable-iOSWidgets' }
+      { icon: 'github', link: 'https://github.com/rushhiii/Scriptable-IOSWidgets' }
     ],
     
     footer: {
@@ -181,7 +181,7 @@ export default {
     },
     
     editLink: {
-      pattern: 'https://github.com/rushhiii/Scriptable-iOSWidgets/edit/main/docs/:path'
+      pattern: 'https://github.com/rushhiii/Scriptable-IOSWidgets/edit/main/docs/:path'
     },
     
     search: {

@@ -9,13 +9,13 @@
     "documentation",
     "vitepress"
   ],
-  "homepage": "https://rushhiii.github.io/Scriptable-iOSWidgets/",
+  "homepage": "https://rushhiii.github.io/Scriptable-IOSWidgets/",
   "bugs": {
-    "url": "https://github.com/rushhiii/Scriptable-iOSWidgets/issues"
+    "url": "https://github.com/rushhiii/Scriptable-IOSWidgets/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rushhiii/Scriptable-iOSWidgets.git"
+    "url": "git+https://github.com/rushhiii/Scriptable-IOSWidgets.git"
   },
   "license": "MIT",
   "author": {

@@ -1,68 +1,46 @@
-# 🖼️ Images Added to VitePress Documentation
+# 🖼️ Media Asset Reference
 
-## ✅ Successfully Added Images
+The widgets rely on a consistent set of showcase images stored inside `.src/`. This page documents which image belongs to which guide so you can maintain them easily while migrating to GitBook.
 
-All widget documentation pages now include beautiful preview images sourced from your existing `.src` folder!
+## Primary Visuals
 
-### 🏠 Homepage
-- **Hero Image**: Main mockup wall showcasing all widgets
-- **Logo**: Scriptable app icon in navigation
+- **Library hero**: `.assets/scriptable_mockup_wall.png`
+- **App icon**: `.assets/scriptable_icon.png`
 
-### 📱 Widget Pages
+## Widget Previews
 
-| Widget | Image Added | Source |
-|--------|-------------|---------|
-| 🌤️ **Weather Widget** | ✅ | `.src/weather/weather_showcase_s.png` |
-| ⏰ **Countdown Widget** | ✅ | `.src/countdown/countdow_showcase.png` |
-| 📊 **GitHub Stats Widget** | ✅ | `.src/githubstats/githubstats_showcase.png` |
-| 🎂 **Birthday Widget** | ✅ | `.src/birthday/birthday_showcase.png` |
-| 🌬️ **AQI Widget** | ✅ | `.src/weather/weather_showcase.png` |
-| 🕉️ **Hindu Calendar Widget** | ✅ | `.src/hinduclrwear/hinduclrwear_showcase.png` |
-| 💭 **Quote Widget** | ✅ | `.src/quotes/quote_showcase_1.png` |
-| 📚 **Schedule Widget** | ✅ | `.src/schedule/schedule_showcase_1.png` |
-| ⏰ **Time Progress Widget** | ✅ | `.src/timeprogress/timeprogress_showcase.png` |
-| 🚗 **Toyota Widget** | ✅ | `.src/toyota/toyota_l.png` |
+| Widget | Image | Relative Path |
+| --- | --- | --- |
+| 🌤️ Weather | `weather_showcase_s.png` | `.assets/weather/weather_showcase_s.png` |
+| ⏰ Countdown | `countdow_showcase.png` | `.assets/countdown/countdow_showcase.png` |
+| 📊 GitHub Stats | `githubstats_showcase.png` | `.assets/githubstats/githubstats_showcase.png` |
+| 🎂 Birthday | `birthday_showcase.png` | `.assets/birthday/birthday_showcase.png` |
+| 🌬️ AQI | `openweatheraqi_showcase.png` | `.assets/aqi/openweatheraqi_showcase.png` |
+| 🕉️ Hindu Calendar | `hinduclrwear_showcase.png` | `.assets/hinduclrwear/hinduclrwear_showcase.png` |
+| 💭 Quote | `quote_showcase_1.png` | `.assets/quotes/quote_showcase_1.png` |
+| 📚 Schedule | `schedule_showcase_1.png` | `.assets/schedule/schedule_showcase_1.png` |
+| ⏳ Time Progress | `timeprogress_showcase.png` | `.assets/timeprogress/timeprogress_showcase.png` |
+| 🚗 Toyota | `toyota_l.png` | `.assets/toyota/toyota_l.png` |
 
-### 📚 Other Pages
-- **Installation Guide**: Hero image showing widget collection
-- **Widgets Overview**: Main showcase image
+## Referencing Images in GitBook
 
-## 🌐 Image Source Strategy
+Use GitHub raw links so GitBook always fetches the latest asset:
 
-**Using GitHub Raw URLs**: All images are referenced directly from your GitHub repository using raw URLs like:
 ```
-https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.src/[folder]/[image].png
+https://raw.githubusercontent.com/rushhiii/Scriptable-IOSWidgets/main/.assets/<folder>/<file>.png
 ```
 
-### ✅ Benefits:
-- **No Build Issues**: Images don't need to be copied locally
-- **Always Up-to-Date**: Images automatically update when you update the source
-- **Fast Loading**: GitHub CDN delivers images quickly
-- **Version Controlled**: Images are part of your repository
+Benefits:
 
-### 🚀 What This Gives You:
+- ✅ No manual uploads—images stay version controlled with the code.
+- ✅ Fast delivery via GitHub's CDN.
+- ✅ Automatic updates when assets change.
 
-1. **Beautiful Documentation**: Every widget now has a visual preview
-2. **Professional Look**: Your site looks polished and complete
-3. **Better User Experience**: Users can see what widgets look like before installing
-4. **Consistent Branding**: All images maintain your design aesthetic
+## Maintenance Tips
 
-## 🎯 Next Steps
+1. **Keep alt text descriptive** so GitBook pages remain accessible.
+2. **Compress PNGs/WebP** before committing to keep pages lightweight.
+3. **Batch new assets** in `.assets/<widget>/` to stay organized.
+4. **Document additions here** whenever you add or rename an image.
 
-Your documentation now looks amazing with all the widget images! Here's what you can do next:
-
-1. **📱 Test the Site**: Run `npm run docs:dev` and visit `http://localhost:5173`
-2. **🌐 Deploy**: Push to GitHub to trigger automatic deployment
-3. **📸 Add More Images**: Consider adding setup screenshots, configuration examples
-4. **🎨 Customize**: Adjust image sizes or add captions if desired
-
-## 📝 Image Optimization Tips
-
-If you want to optimize the images further:
-
-- **Compress images** for faster loading
-- **Add alt text** for accessibility
-- **Consider WebP format** for better compression
-- **Add loading="lazy"** for performance
-
-Your VitePress documentation site is now visually stunning and ready to impress! 🎉
+With this reference you can cross-check every page before enabling GitHub ↔ GitBook sync and ensure all visuals resolve correctly.

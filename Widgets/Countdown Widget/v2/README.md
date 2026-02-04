@@ -1,8 +1,11 @@
-# ⏰ Countdown Widget v2
+# 🧭 Countdown Widget v2
+### Birthdays & Events Tracker
 
 ![Scriptable](https://img.shields.io/badge/Scriptable-Compatible-purple)
 ![Widget Size](https://img.shields.io/badge/Supports-Small%2C%20Medium%2C%20Large-blue)
 ![Data Source](https://img.shields.io/badge/Data-Google%20Sheet%20Web%20App-brightgreen)
+![Notion](https://img.shields.io/badge/Notion-Database-black)
+![Sync](https://img.shields.io/badge/Sync-Addsync-lightgrey)
 ![Customization](https://img.shields.io/badge/Configurable-Color%20%2B%20Icon%20%2B%20Age%20%2B%20Pages-orange)
 ![Offline Support](https://img.shields.io/badge/Fallback-Offline%20Cache%20%2B%20Auto%20Sync-lightgrey)
 ![Status](https://img.shields.io/badge/Status-Stable-brightgreen)

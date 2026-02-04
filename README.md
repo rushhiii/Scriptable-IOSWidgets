@@ -21,7 +21,7 @@ Welcome to my curated collection of **Scriptable** widgets and scripts, crafted 
   <li><a href="#scriptable">Scriptable Overview</a></li>
   <li><a href="#-list-of-widgets">List of Widgets</a>
     <ul>
-      <li><a href="#aqi-+-temp.-widget">AQI Widget</a></li>
+      <li><a href="#aqi-&-temp.-widget">AQI Widget</a></li>
       <li><a href="#dynamic-weather-widget">Weather Widget</a></li>
       <li><a href="#countdown">Countdown Widget</a></li>
       <li><a href="#birthday">Birthday Widget</a></li>
@@ -41,7 +41,7 @@ Welcome to my curated collection of **Scriptable** widgets and scripts, crafted 
 
 ## 📜 List of Widgets
 
-### [AQI + Temp. Widget](./Widgets/AQI%20Widget)
+### [AQI & Temp. Widget](./Widgets/AQI%20Widget)
 
 <img width="60%" src="https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/.assets/aqi/openweatheraqi_showcase.png">
 

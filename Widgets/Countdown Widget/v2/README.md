@@ -1,5 +1,4 @@
 # 🧭 Countdown Widget v2
-### Birthdays & Events Tracker
 
 ![Scriptable](https://img.shields.io/badge/Scriptable-Compatible-purple)
 ![Widget Size](https://img.shields.io/badge/Supports-Small%2C%20Medium%2C%20Large-blue)
@@ -14,6 +13,7 @@
 
 ![countdown widget v2 Banner](assets/banner.png)
 
+### Birthdays & Events Tracker
 A Scriptable widget powered by a Notion → Google Sheets → Google Calendar pipeline, with a lightweight JSON feed for the widget UI.
 
 

@@ -1,4 +1,4 @@
-# 📲 Installation Guide
+# Installation Guide
 
 Get started with Scriptable iOS Widgets in just a few simple steps!
 
@@ -8,9 +8,9 @@ Get started with Scriptable iOS Widgets in just a few simple steps!
 
 Before you begin, make sure you have:
 
-- **iOS 14 or later** (required for widgets)
-- **Scriptable app** (free from App Store)
-- **Internet connection** (for API-based widgets)
+* **iOS 14 or later** (required for widgets)
+* **Scriptable app** (free from App Store)
+* **Internet connection** (for API-based widgets)
 
 ## 🚀 Step-by-Step Installation
 
@@ -23,11 +23,11 @@ Before you begin, make sure you have:
 
 ### 2. Choose Your Widget
 
-Browse our [widget collection](/widgets/) and pick the one you want to install. Each widget has:
+Browse our [widget collection](../../widgets/) and pick the one you want to install. Each widget has:
 
-- **Detailed documentation** with setup instructions
-- **Configuration options** for customization
-- **Source code** ready to copy and paste
+* **Detailed documentation** with setup instructions
+* **Configuration options** for customization
+* **Source code** ready to copy and paste
 
 ### 3. Copy Widget Code
 
@@ -48,9 +48,9 @@ Browse our [widget collection](/widgets/) and pick the one you want to install. 
 
 Most widgets require some configuration:
 
-- **API keys** (for weather, GitHub stats, etc.)
-- **Personal information** (birth dates, usernames, etc.)
-- **Preferences** (colors, display options, etc.)
+* **API keys** (for weather, GitHub stats, etc.)
+* **Personal information** (birth dates, usernames, etc.)
+* **Preferences** (colors, display options, etc.)
 
 Follow the specific instructions in each widget's documentation.
 
@@ -88,9 +88,9 @@ After adding a widget to your home screen:
 
 Most widgets support these parameters:
 
-- **Script**: Choose which Scriptable script to run
-- **When Interacting**: Choose "Run Script" or "Open App"
-- **Parameter**: Optional text for widget customization
+* **Script**: Choose which Scriptable script to run
+* **When Interacting**: Choose "Run Script" or "Open App"
+* **Parameter**: Optional text for widget customization
 
 ## 🔧 Troubleshooting
 
@@ -98,38 +98,43 @@ Most widgets support these parameters:
 
 **Check these common issues:**
 
-- ✅ Script is saved in Scriptable
-- ✅ Required API keys are configured
-- ✅ Internet connection is available
-- ✅ Location permissions granted (if needed)
-- ✅ Widget size matches script requirements
+* ✅ Script is saved in Scriptable
+* ✅ Required API keys are configured
+* ✅ Internet connection is available
+* ✅ Location permissions granted (if needed)
+* ✅ Widget size matches script requirements
 
 ### Error Messages
 
 **"Script not found":**
-- Ensure script name matches exactly
-- Check for typos in script selection
+
+* Ensure script name matches exactly
+* Check for typos in script selection
 
 **"API Error" or "Network Error":**
-- Verify API keys are correct and active
-- Check internet connection
-- Try running script manually in Scriptable
+
+* Verify API keys are correct and active
+* Check internet connection
+* Try running script manually in Scriptable
 
 **"Permission Denied":**
-- Enable location services for Scriptable
-- Grant necessary permissions in iOS Settings
+
+* Enable location services for Scriptable
+* Grant necessary permissions in iOS Settings
 
 ### Performance Issues
 
 **Widget loading slowly:**
-- Check internet connection speed
-- Reduce refresh frequency if configurable
-- Clear Scriptable app cache
+
+* Check internet connection speed
+* Reduce refresh frequency if configurable
+* Clear Scriptable app cache
 
 **Battery drain:**
-- Widgets update automatically on schedule
-- Most widgets are optimized for efficiency
-- Consider reducing update frequency for complex widgets
+
+* Widgets update automatically on schedule
+* Most widgets are optimized for efficiency
+* Consider reducing update frequency for complex widgets
 
 ## 📚 Advanced Tips
 
@@ -144,18 +149,18 @@ You can have multiple instances of the same widget:
 
 ### Widget Sizes Guide
 
-| Size | Dimensions | Best For | Typical Content |
-|------|------------|----------|-----------------|
-| **Small** | 2x2 | Quick info | Temperature, single stat |
-| **Medium** | 4x2 | Balanced view | Weather + forecast |
-| **Large** | 4x4 | Detailed info | Full dashboard |
+| Size       | Dimensions | Best For      | Typical Content          |
+| ---------- | ---------- | ------------- | ------------------------ |
+| **Small**  | 2x2        | Quick info    | Temperature, single stat |
+| **Medium** | 4x2        | Balanced view | Weather + forecast       |
+| **Large**  | 4x4        | Detailed info | Full dashboard           |
 
 ### Customization Tips
 
-- **Read the documentation** for each widget thoroughly
-- **Test configurations** in Scriptable before adding to home screen
-- **Start with defaults** and customize gradually
-- **Join the community** for tips and custom configurations
+* **Read the documentation** for each widget thoroughly
+* **Test configurations** in Scriptable before adding to home screen
+* **Start with defaults** and customize gradually
+* **Join the community** for tips and custom configurations
 
 ## 🔄 Updating Widgets
 
@@ -171,45 +176,45 @@ You can have multiple instances of the same widget:
 
 Currently, widgets don't auto-update. We recommend:
 
-- **Star the repository** to get notified of updates
-- **Check back periodically** for new features
-- **Follow release notes** for breaking changes
+* **Star the repository** to get notified of updates
+* **Check back periodically** for new features
+* **Follow release notes** for breaking changes
 
 ## 🆘 Getting Help
 
 ### Documentation
 
-- **Widget-specific docs**: Each widget has detailed setup instructions
-- **Troubleshooting guides**: Common issues and solutions
-- **Configuration examples**: Sample setups and customizations
+* **Widget-specific docs**: Each widget has detailed setup instructions
+* **Troubleshooting guides**: Common issues and solutions
+* **Configuration examples**: Sample setups and customizations
 
 ### Community Support
 
-- **GitHub Issues**: [Report bugs and ask questions](https://github.com/rushhiii/Scriptable-IOSWidgets/issues)
-- **Discussions**: [Share tips and get help](https://github.com/rushhiii/Scriptable-IOSWidgets/discussions)
-- **Examples**: Check existing issues for similar problems
+* **GitHub Issues**: [Report bugs and ask questions](https://github.com/rushhiii/Scriptable-IOSWidgets/issues)
+* **Discussions**: [Share tips and get help](https://github.com/rushhiii/Scriptable-IOSWidgets/discussions)
+* **Examples**: Check existing issues for similar problems
 
 ### Before Asking for Help
 
 Please include:
 
-- **Widget name** and version
-- **iOS version** and device model
-- **Error messages** (screenshots help!)
-- **Configuration details** (remove sensitive info like API keys)
-- **Steps to reproduce** the issue
+* **Widget name** and version
+* **iOS version** and device model
+* **Error messages** (screenshots help!)
+* **Configuration details** (remove sensitive info like API keys)
+* **Steps to reproduce** the issue
 
----
+***
 
 ## 🎉 You're All Set!
 
-Congratulations! You should now have beautiful, functional widgets on your iOS home screen. 
+Congratulations! You should now have beautiful, functional widgets on your iOS home screen.
 
 **What's next?**
 
-- Explore more widgets from our [collection](/widgets/)
-- Customize colors and settings to match your style
-- Share your setups with the community
-- Consider contributing improvements or new widgets
+* Explore more widgets from our [collection](../../widgets/)
+* Customize colors and settings to match your style
+* Share your setups with the community
+* Consider contributing improvements or new widgets
 
 **Enjoy your enhanced iOS experience!** 📱✨

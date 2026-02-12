@@ -1,23 +1,23 @@
-# 🤝 Contributing to Scriptable iOS Widgets
+# Contributing
 
 We love your input! We want to make contributing to Scriptable iOS Widgets as easy and transparent as possible, whether it's:
 
-- Reporting a bug
-- Discussing the current state of the code
-- Submitting a fix
-- Proposing new features
-- Becoming a maintainer
+* Reporting a bug
+* Discussing the current state of the code
+* Submitting a fix
+* Proposing new features
+* Becoming a maintainer
 
 ## 🚀 Getting Started
 
 ### Ways to Contribute
 
-- **🐛 Report bugs** - Found something broken? Let us know!
-- **💡 Suggest features** - Have an idea for a new widget or improvement?
-- **📝 Improve documentation** - Help make our docs clearer and more helpful
-- **🔧 Submit code** - Fix bugs or add new features
-- **🎨 Share designs** - Contribute themes, layouts, or UI improvements
-- **🧪 Test widgets** - Help test new releases and report issues
+* **🐛 Report bugs** - Found something broken? Let us know!
+* **💡 Suggest features** - Have an idea for a new widget or improvement?
+* **📝 Improve documentation** - Help make our docs clearer and more helpful
+* **🔧 Submit code** - Fix bugs or add new features
+* **🎨 Share designs** - Contribute themes, layouts, or UI improvements
+* **🧪 Test widgets** - Help test new releases and report issues
 
 ### Before You Start
 
@@ -48,13 +48,13 @@ We use GitHub Flow, so all code changes happen through pull requests:
 
 Great bug reports tend to have:
 
-- **A quick summary** and/or background
-- **Steps to reproduce** - be specific!
-- **What you expected** would happen
-- **What actually happens**
-- **Screenshots** if applicable
-- **Device info** (iOS version, device model)
-- **Widget configuration** (remove sensitive data)
+* **A quick summary** and/or background
+* **Steps to reproduce** - be specific!
+* **What you expected** would happen
+* **What actually happens**
+* **Screenshots** if applicable
+* **Device info** (iOS version, device model)
+* **Widget configuration** (remove sensitive data)
 
 ### Bug Report Template
 
@@ -88,10 +88,10 @@ Any other context about the problem.
 
 We love new ideas! When suggesting features:
 
-- **Explain the problem** you're trying to solve
-- **Describe your solution** in detail
-- **Consider alternatives** you've thought about
-- **Provide examples** or mockups if helpful
+* **Explain the problem** you're trying to solve
+* **Describe your solution** in detail
+* **Consider alternatives** you've thought about
+* **Provide examples** or mockups if helpful
 
 ### Feature Request Template
 
@@ -122,11 +122,11 @@ Screenshots, mockups, or examples.
 
 #### JavaScript Standards
 
-- **Use ES6+ features** where appropriate
-- **Consistent indentation** (2 spaces)
-- **Meaningful variable names**
-- **Comment complex logic**
-- **Error handling** for API calls
+* **Use ES6+ features** where appropriate
+* **Consistent indentation** (2 spaces)
+* **Meaningful variable names**
+* **Comment complex logic**
+* **Error handling** for API calls
 
 #### Widget-Specific Guidelines
 
@@ -154,11 +154,11 @@ function createWeatherWidget(data) {
 
 #### Documentation Standards
 
-- **Clear setup instructions**
-- **Configuration examples**
-- **Troubleshooting section**
-- **Screenshots or examples**
-- **API requirements**
+* **Clear setup instructions**
+* **Configuration examples**
+* **Troubleshooting section**
+* **Screenshots or examples**
+* **API requirements**
 
 ### Testing Your Changes
 
@@ -174,54 +174,54 @@ Before submitting:
 
 ### Areas That Need Help
 
-- **Widget setup guides** - Step-by-step instructions
-- **Troubleshooting** - Common issues and solutions
-- **Configuration examples** - Sample setups and customizations
-- **Best practices** - Tips for optimal widget usage
-- **Translations** - Help make docs accessible globally
+* **Widget setup guides** - Step-by-step instructions
+* **Troubleshooting** - Common issues and solutions
+* **Configuration examples** - Sample setups and customizations
+* **Best practices** - Tips for optimal widget usage
+* **Translations** - Help make docs accessible globally
 
 ### Documentation Style Guide
 
-- **Be clear and concise**
-- **Use step-by-step instructions**
-- **Include code examples**
-- **Add screenshots when helpful**
-- **Test instructions yourself**
+* **Be clear and concise**
+* **Use step-by-step instructions**
+* **Include code examples**
+* **Add screenshots when helpful**
+* **Test instructions yourself**
 
 ## 🎨 Design Contributions
 
 ### UI/UX Improvements
 
-- **Color schemes** and themes
-- **Layout optimizations**
-- **Accessibility improvements**
-- **Icon and emoji suggestions**
-- **Visual design enhancements**
+* **Color schemes** and themes
+* **Layout optimizations**
+* **Accessibility improvements**
+* **Icon and emoji suggestions**
+* **Visual design enhancements**
 
 ### Design Guidelines
 
-- **iOS-native look and feel**
-- **Respect system themes** (dark/light mode)
-- **Accessibility compliance**
-- **Performance optimization**
-- **Consistency across widgets**
+* **iOS-native look and feel**
+* **Respect system themes** (dark/light mode)
+* **Accessibility compliance**
+* **Performance optimization**
+* **Consistency across widgets**
 
 ## 🔍 Code Review Process
 
 ### What We Look For
 
-- **Functionality** - Does it work as intended?
-- **Code quality** - Is it readable and maintainable?
-- **Performance** - Is it efficient and fast?
-- **Documentation** - Are changes properly documented?
-- **Testing** - Has it been thoroughly tested?
+* **Functionality** - Does it work as intended?
+* **Code quality** - Is it readable and maintainable?
+* **Performance** - Is it efficient and fast?
+* **Documentation** - Are changes properly documented?
+* **Testing** - Has it been thoroughly tested?
 
 ### Review Timeline
 
-- **Initial response**: Within 48 hours
-- **Full review**: Within 1 week
-- **Feedback incorporation**: Ongoing discussion
-- **Merge decision**: After all concerns addressed
+* **Initial response**: Within 48 hours
+* **Full review**: Within 1 week
+* **Feedback incorporation**: Ongoing discussion
+* **Merge decision**: After all concerns addressed
 
 ## 🏷️ Release Process
 
@@ -229,15 +229,15 @@ Before submitting:
 
 We use semantic versioning:
 
-- **MAJOR** - Breaking changes
-- **MINOR** - New features, backwards compatible
-- **PATCH** - Bug fixes, backwards compatible
+* **MAJOR** - Breaking changes
+* **MINOR** - New features, backwards compatible
+* **PATCH** - Bug fixes, backwards compatible
 
 ### Release Schedule
 
-- **Bug fixes** - Released as needed
-- **Minor features** - Monthly releases
-- **Major updates** - Quarterly releases
+* **Bug fixes** - Released as needed
+* **Minor features** - Monthly releases
+* **Major updates** - Quarterly releases
 
 ## 🎖️ Recognition
 
@@ -245,37 +245,37 @@ We use semantic versioning:
 
 All contributors are recognized in:
 
-- **README.md** - Contributors section
-- **Release notes** - Feature/fix attribution
-- **Documentation** - Author credits where appropriate
+* **README.md** - Contributors section
+* **Release notes** - Feature/fix attribution
+* **Documentation** - Author credits where appropriate
 
 ### Maintainers
 
 Active contributors may be invited to become maintainers with:
 
-- **Commit access** to the repository
-- **Review privileges** for pull requests
-- **Release responsibilities**
-- **Community leadership** roles
+* **Commit access** to the repository
+* **Review privileges** for pull requests
+* **Release responsibilities**
+* **Community leadership** roles
 
 ## 📞 Getting Help
 
 ### Questions?
 
-- **GitHub Discussions** - General questions and ideas
-- **GitHub Issues** - Bug reports and feature requests
-- **Code reviews** - Feedback on specific contributions
+* **GitHub Discussions** - General questions and ideas
+* **GitHub Issues** - Bug reports and feature requests
+* **Code reviews** - Feedback on specific contributions
 
 ### Contact
 
-- **Repository**: [Scriptable-IOSWidgets](https://github.com/rushhiii/Scriptable-IOSWidgets)
-- **Maintainer**: [@rushhiii](https://github.com/rushhiii)
+* **Repository**: [Scriptable-IOSWidgets](https://github.com/rushhiii/Scriptable-IOSWidgets)
+* **Maintainer**: [@rushhiii](https://github.com/rushhiii)
 
 ## 📜 License
 
 By contributing, you agree that your contributions will be licensed under the MIT License.
 
----
+***
 
 ## 🙏 Thank You!
 

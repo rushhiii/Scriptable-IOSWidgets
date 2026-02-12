@@ -1,6 +1,6 @@
-# Summary
+# Table of contents
 
-* [Welcome](index.md)
+* [Welcome](README.md)
 * [Installation Guide](installation.md)
 * [Contributing](contributing.md)
 * [Media Asset Reference](IMAGES_ADDED.md)
